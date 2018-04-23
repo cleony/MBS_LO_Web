@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="0" />
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="4">
+      <value>,TotalCapital,TotalCapital,System.String,,False,False</value>
+      <value>,Term,Term,System.String,,False,False</value>
+      <value>,InterestRate,InterestRate,System.String,,False,False</value>
+      <value>,MinPayment,MinPayment,System.String,,False,False</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV1</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="2" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="13">
+        <Text141 Ref="3" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.6,0.6,3.2,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14.25,Regular,Point,False,0</Font>
+          <Guid>4e296a9312c64fdda8a549adf70145f0</Guid>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text141</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>จำนวนเงินกู้ตามสัญญา</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text141>
+        <Text142 Ref="4" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>4,0.6,2.4,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14.25,Bold,Point,False,0</Font>
+          <Guid>204d7e5bc49a4e45a952f30f47b38d04</Guid>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text142</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalCapital}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text142>
+        <Text143 Ref="5" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,0.6,0.8,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14.25,Regular,Point,False,0</Font>
+          <Guid>8eb3d6317a064e059e783195100fda4e</Guid>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text143</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>บาท</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text143>
+        <Text144 Ref="6" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,1.2,0.6,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14.25,Regular,Point,False,0</Font>
+          <Guid>35881aba832e46a0ae7922f787448220</Guid>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text144</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>% </Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text144>
+        <Text145 Ref="7" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>7.4,0.6,4,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14.25,Regular,Point,False,0</Font>
+          <Guid>2f91046d0d494c27ada83ebcf3bc6c99</Guid>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text145</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>จำนวนงวดการผ่อนชำระ</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text145>
+        <Text148 Ref="8" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.8,0.6,0.8,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14.25,Regular,Point,False,0</Font>
+          <Guid>1bd9061a3c8e465d99032c0f0ac89b31</Guid>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text148</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>งวด</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text148>
+        <Text151 Ref="9" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.8,1.2,1.2,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14.25,Regular,Point,False,0</Font>
+          <Guid>dd66739a62774f358e4e93222465584f</Guid>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text151</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>บาท</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text151>
+        <Text152 Ref="10" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>7.4,1.2,4,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14.25,Regular,Point,False,0</Font>
+          <Guid>cfe444d33d0549af91826ed5a711c90b</Guid>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text152</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>จำนวนเงินที่ต้องชำระต่องวด</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text152>
+        <Text153 Ref="11" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.6,1.2,3.2,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14.25,Regular,Point,False,0</Font>
+          <Guid>da7717f5648b4c8eaa6d7cde34d3cedd</Guid>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text153</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>อัตราดอกเบี้ยต่อปี</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text153>
+        <Text154 Ref="12" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.4,1.8,13.8,0.4</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14</Font>
+          <Guid>0f83e8a69eea4e58816e21cf8aec2dbe</Guid>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text154</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>* * * * * * * * * * * * * * * * * * * * * * * * * * </Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text154>
+        <Text155 Ref="13" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>11.4,0.6,1.4,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14.25,Bold,Point,False,0</Font>
+          <Guid>6caa8d8f22bd48fdaa263e55ce51b016</Guid>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text155</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Term}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text155>
+        <Text156 Ref="14" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>4,1.2,2.4,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14.25,Bold,Point,False,0</Font>
+          <Guid>549b1dec40c14c5bb6cc1da38b3247dc</Guid>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text156</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{InterestRate}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text156>
+        <Text157 Ref="15" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>11.4,1.2,1.4,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14.25,Bold,Point,False,0</Font>
+          <Guid>b556eca817a343308e906fe7f6bc138e</Guid>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text157</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MinPayment}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text157>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>0ea3e93495304ca2bdc2103c2ebdda16</Guid>
+      <Margins>0.2,0.2,0.5,0.5</Margins>
+      <Name>Page1</Name>
+      <PageHeight>21</PageHeight>
+      <PageWidth>14.8</PageWidth>
+      <PaperSize>A5</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="16" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="17" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>10/7/2016 3:40:58 PM</ReportChanged>
+  <ReportCreated>9/6/2009 12:22:40 PM</ReportCreated>
+  <ReportFile>\\DEV-SERVER\Source Code\Project_Mixpro\โปรแกรมธนาคาร\MBSV5.0\BankSystem\bin\Debug\Form\LoanBookHead.mrt</ReportFile>
+  <ReportGuid>bbe30fd875014e9fb062e875d4428fd7</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2011.3.1200</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        
+        public Report()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

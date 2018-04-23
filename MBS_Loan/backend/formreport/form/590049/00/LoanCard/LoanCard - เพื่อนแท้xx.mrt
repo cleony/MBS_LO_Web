@@ -1,0 +1,4549 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="0" />
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="254">
+      <value>,AccountNo,AccountNo,System.String,,False,False</value>
+      <value>,AccountName,AccountName,System.String,,False,False</value>
+      <value>,TypeName,TypeName,System.String,,False,False</value>
+      <value>,PersonId,PersonId,System.String,,False,False</value>
+      <value>,IDCard,IDCard,System.String,,False,False</value>
+      <value>,RefundName,RefundName,System.String,,False,False</value>
+      <value>,PrintHead,PrintHead,System.String,,False,False</value>
+      <value>,CurrentPage,CurrentPage,System.Int32,,False,False</value>
+      <value>,TotalCapital,TotalCapital,System.String,,False,False</value>
+      <value>,MovementDate1,MovementDate1,System.String,_x0020_,False,False</value>
+      <value>,MovementDate2,MovementDate2,System.String,,False,False</value>
+      <value>,MovementDate3,MovementDate3,System.String,,False,False</value>
+      <value>,MovementDate4,MovementDate4,System.String,,False,False</value>
+      <value>,MovementDate5,MovementDate5,System.String,,False,False</value>
+      <value>,MovementDate6,MovementDate6,System.String,,False,False</value>
+      <value>,MovementDate7,MovementDate7,System.String,,False,False</value>
+      <value>,MovementDate8,MovementDate8,System.String,,False,False</value>
+      <value>,MovementDate9,MovementDate9,System.String,,False,False</value>
+      <value>,MovementDate10,MovementDate10,System.String,,False,False</value>
+      <value>,MovementDate11,MovementDate11,System.String,,False,False</value>
+      <value>,MovementDate12,MovementDate12,System.String,,False,False</value>
+      <value>,MovementDate13,MovementDate13,System.String,,False,False</value>
+      <value>,MovementDate14,MovementDate14,System.String,,False,False</value>
+      <value>,MovementDate15,MovementDate15,System.String,,False,False</value>
+      <value>,MovementDate16,MovementDate16,System.String,,False,False</value>
+      <value>,MovementDate17,MovementDate17,System.String,,False,False</value>
+      <value>,MovementDate18,MovementDate18,System.String,,False,False</value>
+      <value>,MovementDate19,MovementDate19,System.String,,False,False</value>
+      <value>,MovementDate20,MovementDate20,System.String,,False,False</value>
+      <value>,MovementDate21,MovementDate21,System.String,,False,False</value>
+      <value>,MovementDate22,MovementDate22,System.String,,False,False</value>
+      <value>,Code1,Code1,System.String,,False,False</value>
+      <value>,Code2,Code2,System.String,,False,False</value>
+      <value>,Code3,Code3,System.String,,False,False</value>
+      <value>,Code4,Code4,System.String,,False,False</value>
+      <value>,Code5,Code5,System.String,,False,False</value>
+      <value>,Code6,Code6,System.String,,False,False</value>
+      <value>,Code7,Code7,System.String,,False,False</value>
+      <value>,Code8,Code8,System.String,,False,False</value>
+      <value>,Code9,Code9,System.String,,False,False</value>
+      <value>,Code10,Code10,System.String,,False,False</value>
+      <value>,Code11,Code11,System.String,,False,False</value>
+      <value>,Code12,Code12,System.String,,False,False</value>
+      <value>,Code13,Code13,System.String,,False,False</value>
+      <value>,Code14,Code14,System.String,,False,False</value>
+      <value>,Code15,Code15,System.String,,False,False</value>
+      <value>,Code16,Code16,System.String,,False,False</value>
+      <value>,Code17,Code17,System.String,,False,False</value>
+      <value>,Code18,Code18,System.String,,False,False</value>
+      <value>,Code19,Code19,System.String,,False,False</value>
+      <value>,Code20,Code20,System.String,,False,False</value>
+      <value>,Code21,Code21,System.String,,False,False</value>
+      <value>,Code22,Code22,System.String,,False,False</value>
+      <value>,MovementDate23,MovementDate23,System.String,,False,False</value>
+      <value>,MovementDate24,MovementDate24,System.String,,False,False</value>
+      <value>,MovementDate25,MovementDate25,System.String,,False,False</value>
+      <value>,MovementDate26,MovementDate26,System.String,,False,False</value>
+      <value>,MovementDate27,MovementDate27,System.String,,False,False</value>
+      <value>,MovementDate28,MovementDate28,System.String,,False,False</value>
+      <value>,MovementDate29,MovementDate29,System.String,,False,False</value>
+      <value>,MovementDate30,MovementDate30,System.String,,False,False</value>
+      <value>,Code23,Code23,System.String,,False,False</value>
+      <value>,Code24,Code24,System.String,,False,False</value>
+      <value>,Code25,Code25,System.String,,False,False</value>
+      <value>,Code26,Code26,System.String,,False,False</value>
+      <value>,Code27,Code27,System.String,,False,False</value>
+      <value>,Code28,Code28,System.String,,False,False</value>
+      <value>,Code29,Code29,System.String,,False,False</value>
+      <value>,Code30,Code30,System.String,,False,False</value>
+      <value>,TotalAmount1,TotalAmount1,System.String,,False,False</value>
+      <value>,TotalAmount2,TotalAmount2,System.String,,False,False</value>
+      <value>,TotalAmount3,TotalAmount3,System.String,,False,False</value>
+      <value>,TotalAmount4,TotalAmount4,System.String,,False,False</value>
+      <value>,TotalAmount5,TotalAmount5,System.String,,False,False</value>
+      <value>,TotalAmount6,TotalAmount6,System.String,,False,False</value>
+      <value>,TotalAmount7,TotalAmount7,System.String,,False,False</value>
+      <value>,TotalAmount8,TotalAmount8,System.String,,False,False</value>
+      <value>,TotalAmount9,TotalAmount9,System.String,,False,False</value>
+      <value>,TotalAmount10,TotalAmount10,System.String,,False,False</value>
+      <value>,TotalAmount11,TotalAmount11,System.String,,False,False</value>
+      <value>,TotalAmount12,TotalAmount12,System.String,,False,False</value>
+      <value>,TotalAmount13,TotalAmount13,System.String,,False,False</value>
+      <value>,TotalAmount14,TotalAmount14,System.String,,False,False</value>
+      <value>,TotalAmount15,TotalAmount15,System.String,,False,False</value>
+      <value>,TotalAmount16,TotalAmount16,System.String,,False,False</value>
+      <value>,TotalAmount17,TotalAmount17,System.String,,False,False</value>
+      <value>,TotalAmount18,TotalAmount18,System.String,,False,False</value>
+      <value>,TotalAmount19,TotalAmount19,System.String,,False,False</value>
+      <value>,TotalAmount20,TotalAmount20,System.String,,False,False</value>
+      <value>,TotalAmount21,TotalAmount21,System.String,,False,False</value>
+      <value>,TotalAmount22,TotalAmount22,System.String,,False,False</value>
+      <value>,TotalAmount23,TotalAmount23,System.String,,False,False</value>
+      <value>,TotalAmount24,TotalAmount24,System.String,,False,False</value>
+      <value>,TotalAmount25,TotalAmount25,System.String,,False,False</value>
+      <value>,TotalAmount26,TotalAmount26,System.String,,False,False</value>
+      <value>,TotalAmount27,TotalAmount27,System.String,,False,False</value>
+      <value>,TotalAmount28,TotalAmount28,System.String,,False,False</value>
+      <value>,TotalAmount29,TotalAmount29,System.String,,False,False</value>
+      <value>,TotalAmount30,TotalAmount30,System.String,,False,False</value>
+      <value>,Capital1,Capital1,System.String,,False,False</value>
+      <value>,Capital2,Capital2,System.String,,False,False</value>
+      <value>,Capital3,Capital3,System.String,,False,False</value>
+      <value>,Capital4,Capital4,System.String,,False,False</value>
+      <value>,Capital5,Capital5,System.String,,False,False</value>
+      <value>,Capital6,Capital6,System.String,,False,False</value>
+      <value>,Capital7,Capital7,System.String,,False,False</value>
+      <value>,Capital8,Capital8,System.String,,False,False</value>
+      <value>,Capital9,Capital9,System.String,,False,False</value>
+      <value>,Capital10,Capital10,System.String,,False,False</value>
+      <value>,Capital11,Capital11,System.String,,False,False</value>
+      <value>,Capital12,Capital12,System.String,,False,False</value>
+      <value>,Capital13,Capital13,System.String,,False,False</value>
+      <value>,Capital14,Capital14,System.String,,False,False</value>
+      <value>,Capital15,Capital15,System.String,,False,False</value>
+      <value>,Capital16,Capital16,System.String,,False,False</value>
+      <value>,Capital17,Capital17,System.String,,False,False</value>
+      <value>,Capital18,Capital18,System.String,,False,False</value>
+      <value>,Capital19,Capital19,System.String,,False,False</value>
+      <value>,Capital20,Capital20,System.String,,False,False</value>
+      <value>,Capital21,Capital21,System.String,,False,False</value>
+      <value>,Capital22,Capital22,System.String,,False,False</value>
+      <value>,Capital23,Capital23,System.String,,False,False</value>
+      <value>,Capital24,Capital24,System.String,,False,False</value>
+      <value>,Capital25,Capital25,System.String,,False,False</value>
+      <value>,Capital26,Capital26,System.String,,False,False</value>
+      <value>,Capital27,Capital27,System.String,,False,False</value>
+      <value>,Capital28,Capital28,System.String,,False,False</value>
+      <value>,Capital29,Capital29,System.String,,False,False</value>
+      <value>,Capital30,Capital30,System.String,,False,False</value>
+      <value>,LoanInterest1,LoanInterest1,System.String,,False,False</value>
+      <value>,LoanInterest2,LoanInterest2,System.String,,False,False</value>
+      <value>,LoanInterest3,LoanInterest3,System.String,,False,False</value>
+      <value>,LoanInterest4,LoanInterest4,System.String,,False,False</value>
+      <value>,LoanInterest5,LoanInterest5,System.String,,False,False</value>
+      <value>,LoanInterest6,LoanInterest6,System.String,,False,False</value>
+      <value>,LoanInterest7,LoanInterest7,System.String,,False,False</value>
+      <value>,LoanInterest8,LoanInterest8,System.String,,False,False</value>
+      <value>,LoanInterest9,LoanInterest9,System.String,,False,False</value>
+      <value>,LoanInterest10,LoanInterest10,System.String,,False,False</value>
+      <value>,LoanInterest11,LoanInterest11,System.String,,False,False</value>
+      <value>,LoanInterest12,LoanInterest12,System.String,,False,False</value>
+      <value>,LoanInterest13,LoanInterest13,System.String,,False,False</value>
+      <value>,LoanInterest14,LoanInterest14,System.String,,False,False</value>
+      <value>,LoanInterest15,LoanInterest15,System.String,,False,False</value>
+      <value>,LoanInterest16,LoanInterest16,System.String,,False,False</value>
+      <value>,LoanInterest17,LoanInterest17,System.String,,False,False</value>
+      <value>,LoanInterest18,LoanInterest18,System.String,,False,False</value>
+      <value>,LoanInterest19,LoanInterest19,System.String,,False,False</value>
+      <value>,LoanInterest20,LoanInterest20,System.String,,False,False</value>
+      <value>,LoanInterest21,LoanInterest21,System.String,,False,False</value>
+      <value>,LoanInterest22,LoanInterest22,System.String,,False,False</value>
+      <value>,LoanInterest23,LoanInterest23,System.String,,False,False</value>
+      <value>,LoanInterest24,LoanInterest24,System.String,,False,False</value>
+      <value>,LoanInterest25,LoanInterest25,System.String,,False,False</value>
+      <value>,LoanInterest26,LoanInterest26,System.String,,False,False</value>
+      <value>,LoanInterest27,LoanInterest27,System.String,,False,False</value>
+      <value>,LoanInterest28,LoanInterest28,System.String,,False,False</value>
+      <value>,LoanInterest29,LoanInterest29,System.String,,False,False</value>
+      <value>,LoanInterest30,LoanInterest30,System.String,,False,False</value>
+      <value>,Mulct1,Mulct1,System.String,,False,False</value>
+      <value>,Mulct2,Mulct2,System.String,,False,False</value>
+      <value>,Mulct3,Mulct3,System.String,,False,False</value>
+      <value>,Mulct4,Mulct4,System.String,,False,False</value>
+      <value>,Mulct5,Mulct5,System.String,,False,False</value>
+      <value>,Mulct6,Mulct6,System.String,,False,False</value>
+      <value>,Mulct7,Mulct7,System.String,,False,False</value>
+      <value>,Mulct8,Mulct8,System.String,,False,False</value>
+      <value>,Mulct9,Mulct9,System.String,,False,False</value>
+      <value>,Mulct10,Mulct10,System.String,,False,False</value>
+      <value>,Mulct11,Mulct11,System.String,,False,False</value>
+      <value>,Mulct12,Mulct12,System.String,,False,False</value>
+      <value>,Mulct13,Mulct13,System.String,,False,False</value>
+      <value>,Mulct14,Mulct14,System.String,,False,False</value>
+      <value>,Mulct15,Mulct15,System.String,,False,False</value>
+      <value>,Mulct16,Mulct16,System.String,,False,False</value>
+      <value>,Mulct17,Mulct17,System.String,,False,False</value>
+      <value>,Mulct18,Mulct18,System.String,,False,False</value>
+      <value>,Mulct19,Mulct19,System.String,,False,False</value>
+      <value>,Mulct20,Mulct20,System.String,,False,False</value>
+      <value>,Mulct21,Mulct21,System.String,,False,False</value>
+      <value>,Mulct22,Mulct22,System.String,,False,False</value>
+      <value>,Mulct23,Mulct23,System.String,,False,False</value>
+      <value>,Mulct24,Mulct24,System.String,,False,False</value>
+      <value>,Mulct25,Mulct25,System.String,,False,False</value>
+      <value>,Mulct26,Mulct26,System.String,,False,False</value>
+      <value>,Mulct27,Mulct27,System.String,,False,False</value>
+      <value>,Mulct28,Mulct28,System.String,,False,False</value>
+      <value>,Mulct29,Mulct29,System.String,,False,False</value>
+      <value>,Mulct30,Mulct30,System.String,,False,False</value>
+      <value>,Remain1,Remain1,System.String,,False,False</value>
+      <value>,Remain2,Remain2,System.String,,False,False</value>
+      <value>,Remain3,Remain3,System.String,,False,False</value>
+      <value>,Remain4,Remain4,System.String,,False,False</value>
+      <value>,Remain5,Remain5,System.String,,False,False</value>
+      <value>,Remain6,Remain6,System.String,,False,False</value>
+      <value>,Remain7,Remain7,System.String,,False,False</value>
+      <value>,Remain8,Remain8,System.String,,False,False</value>
+      <value>,Remain9,Remain9,System.String,,False,False</value>
+      <value>,Remain10,Remain10,System.String,,False,False</value>
+      <value>,Remain11,Remain11,System.String,,False,False</value>
+      <value>,Remain12,Remain12,System.String,,False,False</value>
+      <value>,Remain13,Remain13,System.String,,False,False</value>
+      <value>,Remain14,Remain14,System.String,,False,False</value>
+      <value>,Remain15,Remain15,System.String,,False,False</value>
+      <value>,Remain16,Remain16,System.String,,False,False</value>
+      <value>,Remain17,Remain17,System.String,,False,False</value>
+      <value>,Remain18,Remain18,System.String,,False,False</value>
+      <value>,Remain19,Remain19,System.String,,False,False</value>
+      <value>,Remain20,Remain20,System.String,,False,False</value>
+      <value>,Remain21,Remain21,System.String,,False,False</value>
+      <value>,Remain22,Remain22,System.String,,False,False</value>
+      <value>,Remain23,Remain23,System.String,,False,False</value>
+      <value>,Remain24,Remain24,System.String,,False,False</value>
+      <value>,Remain25,Remain25,System.String,,False,False</value>
+      <value>,Remain26,Remain26,System.String,,False,False</value>
+      <value>,Remain27,Remain27,System.String,,False,False</value>
+      <value>,Remain28,Remain28,System.String,,False,False</value>
+      <value>,Remain29,Remain29,System.String,,False,False</value>
+      <value>,Remain30,Remain30,System.String,,False,False</value>
+      <value>,InterestRate,InterestRate,System.String,,False,False</value>
+      <value>,ItemNo1,ItemNo1,System.String,,False,False</value>
+      <value>,ItemNo2,ItemNo2,System.String,,False,False</value>
+      <value>,ItemNo3,ItemNo3,System.String,,False,False</value>
+      <value>,ItemNo4,ItemNo4,System.String,,False,False</value>
+      <value>,ItemNo5,ItemNo5,System.String,,False,False</value>
+      <value>,ItemNo6,ItemNo6,System.String,,False,False</value>
+      <value>,ItemNo7,ItemNo7,System.String,,False,False</value>
+      <value>,ItemNo8,ItemNo8,System.String,,False,False</value>
+      <value>,ItemNo9,ItemNo9,System.String,,False,False</value>
+      <value>,ItemNo10,ItemNo10,System.String,,False,False</value>
+      <value>,ItemNo11,ItemNo11,System.String,,False,False</value>
+      <value>,ItemNo12,ItemNo12,System.String,,False,False</value>
+      <value>,ItemNo13,ItemNo13,System.String,,False,False</value>
+      <value>,ItemNo14,ItemNo14,System.String,,False,False</value>
+      <value>,ItemNo15,ItemNo15,System.String,,False,False</value>
+      <value>,ItemNo16,ItemNo16,System.String,,False,False</value>
+      <value>,ItemNo17,ItemNo17,System.String,,False,False</value>
+      <value>,ItemNo18,ItemNo18,System.String,,False,False</value>
+      <value>,ItemNo19,ItemNo19,System.String,,False,False</value>
+      <value>,ItemNo20,ItemNo20,System.String,,False,False</value>
+      <value>,ItemNo21,ItemNo21,System.String,,False,False</value>
+      <value>,ItemNo22,ItemNo22,System.String,,False,False</value>
+      <value>,ItemNo23,ItemNo23,System.String,,False,False</value>
+      <value>,ItemNo24,ItemNo24,System.String,,False,False</value>
+      <value>,ItemNo25,ItemNo25,System.String,,False,False</value>
+      <value>,ItemNo26,ItemNo26,System.String,,False,False</value>
+      <value>,ItemNo27,ItemNo27,System.String,,False,False</value>
+      <value>,ItemNo28,ItemNo28,System.String,,False,False</value>
+      <value>,ItemNo29,ItemNo29,System.String,,False,False</value>
+      <value>,ItemNo30,ItemNo30,System.String,,False,False</value>
+      <value>,CFDate,CFDate,System.DateTime,_x0039__x002F_30_x002F_2013_x0020_12:00:00_x0020_AM,False,False</value>
+      <value>,Term,Term,System.String,,False,False</value>
+      <value>,MinPayment,MinPayment,System.Double,,False,False</value>
+      <value>,BarcodeId,BarcodeId,System.String,,False,False</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV1</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="2" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="266">
+        <PageHeader1 Ref="3" type="PageHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,20.3,4</ClientRectangle>
+          <Components isList="true" count="51">
+            <Text112 Ref="4" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.8,0,18.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,14,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text112</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>{RefundName}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text112>
+            <Text139 Ref="5" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11.6,0.6,8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,14</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text139</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>{AccountName}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text139>
+            <Text114 Ref="6" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.4,0.6,2.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,14</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text114</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>{IDCard}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text114>
+            <Text115 Ref="7" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.2,0.6,1.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,14</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text115</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>{PersonId}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text115>
+            <Text116 Ref="8" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10,0.6,1.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,14</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text116</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>ชื่อสมาชิก</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text116>
+            <Text117 Ref="9" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.8,0.6,2.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,14</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text117</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>เลขบัตรประชาชน</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text117>
+            <Text118 Ref="10" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.8,0.6,2.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,14</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text118</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>ผู้กู้ :  เลขสมาชิก</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text118>
+            <Text111 Ref="11" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.8,2,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,14</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text111</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>จำนวนเงินกู้</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text111>
+            <Text217 Ref="12" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.6,2,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,14</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text217</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>{TotalCapital}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text217>
+            <Text218 Ref="13" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.8,2,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,14</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text218</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>บาท อัตราดอกเบี้ย</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text218>
+            <Text113 Ref="14" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12,1.4,7.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,14</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text113</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>{TypeName}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text113>
+            <Text120 Ref="15" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10,1.4,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,14</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text120</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>ประเภทเงินกู้</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text120>
+            <Text262 Ref="16" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.4,2,1,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,14</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text262</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>{InterestRate}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text262>
+            <Text261 Ref="17" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11.6,2.6,8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,11</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text261</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>**หมายถึง รายการที่ยกเลิกการรับชำระเงิน หน้า {CurrentPage +1}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text261>
+            <Text264 Ref="18" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.8,1.4,1.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,14</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text264</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>วันที่กู้</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text264>
+            <Text265 Ref="19" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,1.4,2.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,14</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text265</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>{CFDate}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="20" type="DateFormat" isKey="true" />
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text265>
+            <Text266 Ref="21" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.8,1.4,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,14</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text266</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>เลขสัญญากู้</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text266>
+            <Text267 Ref="22" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.4,1.4,2.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,14</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text267</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>{AccountNo}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text267>
+            <Text268 Ref="23" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.4,2,1.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,14</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text268</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>% / ปี</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text268>
+            <Text269 Ref="24" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.8,2.6,10.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,11</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text269</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>รายละเอียดการชำระเงินกู้</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text269>
+            <Text270 Ref="25" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.6,2,2.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,14</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text270</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>จำนวนงวดผ่อน</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text270>
+            <Text271 Ref="26" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12,2,1.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,14</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text271</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>{Term}   งวด</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text271>
+            <Text272 Ref="27" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>13.6,2,2.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,14</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text272</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>ยอดชำระคืนต่องวด</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text272>
+            <Text273 Ref="28" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16.4,2,2.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,14</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text273</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>{MinPayment}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="29" type="NumberFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+              </TextFormat>
+              <Type>Expression</Type>
+            </Text273>
+            <Text274 Ref="30" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>18.8,2,0.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,14</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text274</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>บาท</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text274>
+            <BarCode2 Ref="31" type="Stimulsoft.Report.BarCodes.StiBarCode" isKey="true">
+              <AutoScale>True</AutoScale>
+              <BackColor>White</BackColor>
+              <BarCodeType Ref="32" type="Stimulsoft.Report.BarCodes.StiCode128cBarCodeType" isKey="true" />
+              <ClientRectangle>15.4,0,4.8,1</ClientRectangle>
+              <Code>{IIF(BarcodeId == "" ," ", BarcodeId )}</Code>
+              <Conditions isList="true" count="1">
+                <value>_x007B_BarcodeId_x0020__x0021__x003D__x0020__x0022__x0022__x007D_,Red,Transparent,Arial_x002C_8,True,False,</value>
+              </Conditions>
+              <Enabled>False</Enabled>
+              <Font>Arial,6,Bold,Point,False,0</Font>
+              <ForeColor>Black</ForeColor>
+              <Guid>7378171939574499b9f029f666d3cd7b</Guid>
+              <HorAlignment>Right</HorAlignment>
+              <Name>BarCode2</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+            </BarCode2>
+            <Text140 Ref="33" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.8,3.4,0.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,13</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text140</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>งวดที่</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text140>
+            <Text141 Ref="34" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.8,3.4,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,13</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text141</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>เลขที่รับชำระ</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text141>
+            <Text142 Ref="35" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.2,3.4,1.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,13</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text142</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>วันที่จ่าย</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text142>
+            <Text143 Ref="36" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.4,3.4,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,13</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text143</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>ยอดที่ชำระ</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text143>
+            <Text144 Ref="37" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>8.4,3.4,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,13</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text144</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>เงินต้น</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text144>
+            <Text145 Ref="38" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>6.6,3.4,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,13</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text145</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>ดอกเบี้ย</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text145>
+            <Text148 Ref="39" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10.4,3.4,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,13</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text148</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>ค่าปรับ</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text148>
+            <Text119 Ref="40" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.6,3.4,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,13</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text119</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>เงินต้นคงเหลือ</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text119>
+            <Text275 Ref="41" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16.8,3.4,1.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,13</Font>
+              <Guid>51313fcf72e64216be3d6c7b86c915a5</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text275</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>โดย</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text275>
+            <Text276 Ref="42" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.6,3.4,1.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,13</Font>
+              <Guid>61e5e11c43d84411b7339dc84f97916c</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text276</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>ครบกำหนด</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text276>
+            <Text277 Ref="43" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>18,3.4,1.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>AngsanaUPC,13</Font>
+              <Guid>8c26e2a9b5294dd1adf4ee03e4855cdd</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text277</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <Text>ผู้รับเงิน</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text277>
+            <HorizontalLine1 Ref="44" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>0.8,4,18.8,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="45" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>HorizontalLine1</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <StartCap Ref="46" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLine1>
+            <HorizontalLine2 Ref="47" type="HorizontalLinePrimitive" isKey="true">
+              <ClientRectangle>0.8,3.4,18.8,0.0254</ClientRectangle>
+              <Color>Black</Color>
+              <EndCap Ref="48" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </EndCap>
+              <Name>HorizontalLine2</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <StartCap Ref="49" type="Cap" isKey="true">
+                <Color>Black</Color>
+              </StartCap>
+            </HorizontalLine2>
+            <StartPointPrimitive1 Ref="50" type="Stimulsoft.Report.Components.StiStartPointPrimitive" isKey="true">
+              <ClientRectangle>1.6,3.4,0,0</ClientRectangle>
+              <Name>StartPointPrimitive1</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <ReferenceToGuid>f07fdabdc7e3436187fcbd6905a8a1bd</ReferenceToGuid>
+            </StartPointPrimitive1>
+            <StartPointPrimitive2 Ref="51" type="Stimulsoft.Report.Components.StiStartPointPrimitive" isKey="true">
+              <ClientRectangle>3.2,3.4,0,0</ClientRectangle>
+              <Name>StartPointPrimitive2</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <ReferenceToGuid>98cb92f8fd904742a9b8d7db4bc84345</ReferenceToGuid>
+            </StartPointPrimitive2>
+            <StartPointPrimitive3 Ref="52" type="Stimulsoft.Report.Components.StiStartPointPrimitive" isKey="true">
+              <ClientRectangle>4.8,3.4,0,0</ClientRectangle>
+              <Name>StartPointPrimitive3</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <ReferenceToGuid>66b86168b1af4fcf8e40ecb582f57ec6</ReferenceToGuid>
+            </StartPointPrimitive3>
+            <StartPointPrimitive4 Ref="53" type="Stimulsoft.Report.Components.StiStartPointPrimitive" isKey="true">
+              <ClientRectangle>6.6,3.4,0,0</ClientRectangle>
+              <Name>StartPointPrimitive4</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <ReferenceToGuid>803f7220de234e6ba103d8f409272fa7</ReferenceToGuid>
+            </StartPointPrimitive4>
+            <StartPointPrimitive5 Ref="54" type="Stimulsoft.Report.Components.StiStartPointPrimitive" isKey="true">
+              <ClientRectangle>8.4,3.4,0,0</ClientRectangle>
+              <Name>StartPointPrimitive5</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <ReferenceToGuid>ac87be4bc62e400ab24440181b8f819a</ReferenceToGuid>
+            </StartPointPrimitive5>
+            <StartPointPrimitive6 Ref="55" type="Stimulsoft.Report.Components.StiStartPointPrimitive" isKey="true">
+              <ClientRectangle>10.4,3.4,0,0</ClientRectangle>
+              <Name>StartPointPrimitive6</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <ReferenceToGuid>c8ef4d24b5194936a22e6afe940278dc</ReferenceToGuid>
+            </StartPointPrimitive6>
+            <StartPointPrimitive7 Ref="56" type="Stimulsoft.Report.Components.StiStartPointPrimitive" isKey="true">
+              <ClientRectangle>12.4,3.4,0,0</ClientRectangle>
+              <Name>StartPointPrimitive7</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <ReferenceToGuid>4f72c6e0864b4cf491d6d16d2e40d5e7</ReferenceToGuid>
+            </StartPointPrimitive7>
+            <StartPointPrimitive8 Ref="57" type="Stimulsoft.Report.Components.StiStartPointPrimitive" isKey="true">
+              <ClientRectangle>14.6,3.4,0,0</ClientRectangle>
+              <Name>StartPointPrimitive8</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <ReferenceToGuid>cac646440da44639ba882a8799b642ca</ReferenceToGuid>
+            </StartPointPrimitive8>
+            <StartPointPrimitive9 Ref="58" type="Stimulsoft.Report.Components.StiStartPointPrimitive" isKey="true">
+              <ClientRectangle>16.8,3.4,0,0</ClientRectangle>
+              <Name>StartPointPrimitive9</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <ReferenceToGuid>5bd976eaf16d4b34acca07c71efa756b</ReferenceToGuid>
+            </StartPointPrimitive9>
+            <StartPointPrimitive10 Ref="59" type="Stimulsoft.Report.Components.StiStartPointPrimitive" isKey="true">
+              <ClientRectangle>18,3.4,0,0</ClientRectangle>
+              <Name>StartPointPrimitive10</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <ReferenceToGuid>41610ffa8a264063a7835580e886d083</ReferenceToGuid>
+            </StartPointPrimitive10>
+            <StartPointPrimitive11 Ref="60" type="Stimulsoft.Report.Components.StiStartPointPrimitive" isKey="true">
+              <ClientRectangle>19.6,3.4,0,0</ClientRectangle>
+              <Name>StartPointPrimitive11</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <ReferenceToGuid>751094da0b4741e486f0f93f2f3ce936</ReferenceToGuid>
+            </StartPointPrimitive11>
+            <StartPointPrimitive12 Ref="61" type="Stimulsoft.Report.Components.StiStartPointPrimitive" isKey="true">
+              <ClientRectangle>0.8,3.4,0,0</ClientRectangle>
+              <Name>StartPointPrimitive12</Name>
+              <Page isRef="2" />
+              <Parent isRef="3" />
+              <ReferenceToGuid>83ff894c6bb8411ba491aa73170a3922</ReferenceToGuid>
+            </StartPointPrimitive12>
+          </Components>
+          <Conditions isList="true" count="1">
+            <value>_x007B_PrintHead_x0020__x003D__x003D__x0020__x0022_1_x0022__x0020__x007D_,Red,Transparent,Arial_x002C_8,True,False,</value>
+          </Conditions>
+          <Enabled>False</Enabled>
+          <Name>PageHeader1</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+        </PageHeader1>
+        <Text47 Ref="62" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,6,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text47</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount3}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text47>
+        <Text146 Ref="63" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,5.2,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text146</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate2 == ""),"", ItemNo2)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text146>
+        <Text147 Ref="64" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,6,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text147</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate3 == ""),"", ItemNo3)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text147>
+        <Text149 Ref="65" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,6.8,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text149</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate4 == ""),"", ItemNo4 )}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text149>
+        <Text150 Ref="66" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,7.6,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text150</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate5 == ""),"", ItemNo5)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text150>
+        <Text165 Ref="67" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,8.4,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text165</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate6 == ""),"", ItemNo6)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text165>
+        <Text166 Ref="68" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,9.2,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text166</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate7 == ""),"", ItemNo7)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text166>
+        <Text167 Ref="69" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,10,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text167</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate8 == ""),"",  ItemNo8)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text167>
+        <Text168 Ref="70" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,10.8,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text168</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate9 == ""),"", ItemNo9)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text168>
+        <Text183 Ref="71" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,11.6,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text183</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate10 == ""),"",  ItemNo10)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text183>
+        <Text184 Ref="72" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,12.4,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text184</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate11 == ""),"", ItemNo11)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text184>
+        <Text185 Ref="73" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,13.2,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text185</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate12 == ""),"", ItemNo12)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text185>
+        <Text186 Ref="74" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,14,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text186</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate13 == ""),"", ItemNo13)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text186>
+        <Text201 Ref="75" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,14.8,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text201</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate14 == ""),"", ItemNo14)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text201>
+        <Text202 Ref="76" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,15.6,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text202</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate15 == ""),"", ItemNo15)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text202>
+        <Text203 Ref="77" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,16.4,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text203</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate16 == ""),"", ItemNo16)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text203>
+        <Text204 Ref="78" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,17.2,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text204</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate17 == ""),"", ItemNo17)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text204>
+        <Text213 Ref="79" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,18,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text213</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate18 == ""),"", ItemNo18)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text213>
+        <Text214 Ref="80" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,18.8,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text214</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate19 == ""),"", ItemNo19)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text214>
+        <Text219 Ref="81" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,19.6,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text219</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate20 == ""),"", ItemNo20)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text219>
+        <Text220 Ref="82" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,20.4,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text220</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate21 == ""),"", ItemNo21)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text220>
+        <Text221 Ref="83" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,21.2,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text221</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate22 == ""),"", ItemNo22)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text221>
+        <Text222 Ref="84" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,22,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text222</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate23 == ""),"", ItemNo23)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text222>
+        <Text223 Ref="85" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,22.8,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text223</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate24 == ""),"", ItemNo24)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text223>
+        <Text224 Ref="86" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,23.6,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text224</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate25== ""),"", ItemNo25)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text224>
+        <Text225 Ref="87" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,24.4,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text225</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate26 == ""),"", ItemNo26)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text225>
+        <Text226 Ref="88" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,25.2,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text226</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate27 == ""),"", ItemNo27)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text226>
+        <Text227 Ref="89" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,26,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text227</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate28 == ""),"", ItemNo28)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text227>
+        <Text228 Ref="90" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,26.8,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text228</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate29 == ""),"", ItemNo29)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text228>
+        <Text229 Ref="91" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,27.6,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text229</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate30 == ""),"", ItemNo30)}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text229>
+        <Text1 Ref="92" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,5.2,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text1</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate2}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text1>
+        <Text2 Ref="93" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,6,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text2</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate3}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text2>
+        <Text3 Ref="94" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,6.8,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text3</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate4}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text3>
+        <Text4 Ref="95" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,7.6,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text4</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate5}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text4>
+        <Text5 Ref="96" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,8.4,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text5</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate6}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text5>
+        <Text6 Ref="97" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,9.2,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text6</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate7}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text6>
+        <Text7 Ref="98" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,10,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text7</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate8}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text7>
+        <Text8 Ref="99" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,10.8,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text8</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate9}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text8>
+        <Text9 Ref="100" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,11.6,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text9</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate10}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text9>
+        <Text10 Ref="101" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,12.4,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text10</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate11}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text10>
+        <Text11 Ref="102" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,13.2,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text11</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate12}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text11>
+        <Text12 Ref="103" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,14,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text12</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate13}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text12>
+        <Text13 Ref="104" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,14.8,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text13</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate14}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text13>
+        <Text14 Ref="105" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,15.6,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text14</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate15}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text14>
+        <Text15 Ref="106" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,16.4,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text15</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate16}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text15>
+        <Text16 Ref="107" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,17.2,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text16</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate17}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text16>
+        <Text17 Ref="108" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,18,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text17</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate18}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text17>
+        <Text18 Ref="109" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,21.2,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text18</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate22}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text18>
+        <Text19 Ref="110" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,18.8,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text19</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate19}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text19>
+        <Text20 Ref="111" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,19.6,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text20</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate20}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text20>
+        <Text21 Ref="112" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,20.4,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text21</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate21}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text21>
+        <Text22 Ref="113" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,22,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text22</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate23}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text22>
+        <Text133 Ref="114" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,22.8,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text133</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate24}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text133>
+        <Text134 Ref="115" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,24.4,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text134</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate26}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text134>
+        <Text135 Ref="116" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,23.6,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text135</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate25}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text135>
+        <Text136 Ref="117" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,25.2,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text136</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate27}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text136>
+        <Text137 Ref="118" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,26,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text137</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate28}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text137>
+        <Text138 Ref="119" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,26.8,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text138</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate29}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text138>
+        <Text193 Ref="120" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,27.6,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text193</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate30}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text193>
+        <Text24 Ref="121" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,5.2,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text24</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code2}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text24>
+        <Text25 Ref="122" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,6,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text25</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code3}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text25>
+        <Text26 Ref="123" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,6.8,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text26</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code4}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text26>
+        <Text27 Ref="124" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,7.6,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text27</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code5}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text27>
+        <Text28 Ref="125" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,8.4,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text28</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code6}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text28>
+        <Text29 Ref="126" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,9.2,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text29</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code7}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text29>
+        <Text30 Ref="127" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,10,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text30</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code8}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text30>
+        <Text31 Ref="128" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,10.8,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text31</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code9}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text31>
+        <Text32 Ref="129" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,11.6,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text32</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code10}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text32>
+        <Text33 Ref="130" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,12.4,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text33</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code11}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text33>
+        <Text34 Ref="131" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,13.2,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text34</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code12}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text34>
+        <Text35 Ref="132" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,14,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text35</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code13}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text35>
+        <Text36 Ref="133" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,14.8,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text36</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code14}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text36>
+        <Text37 Ref="134" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,15.6,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text37</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code15}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text37>
+        <Text38 Ref="135" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,16.4,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text38</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code16}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text38>
+        <Text39 Ref="136" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,17.2,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text39</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code17}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text39>
+        <Text40 Ref="137" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,18,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text40</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code18}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text40>
+        <Text41 Ref="138" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,18.8,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text41</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code19}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text41>
+        <Text42 Ref="139" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,19.6,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text42</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code20}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text42>
+        <Text43 Ref="140" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,20.4,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text43</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code21}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text43>
+        <Text44 Ref="141" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,21.2,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text44</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code22}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text44>
+        <Text45 Ref="142" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,22,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text45</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code23}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text45>
+        <Text151 Ref="143" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,22.8,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text151</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code24}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text151>
+        <Text152 Ref="144" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,23.6,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text152</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code25}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text152>
+        <Text153 Ref="145" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,24.4,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text153</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code26}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text153>
+        <Text154 Ref="146" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,25.2,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text154</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code27}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text154>
+        <Text155 Ref="147" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,26,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text155</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code28}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text155>
+        <Text156 Ref="148" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,26.8,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text156</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code29}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text156>
+        <Text195 Ref="149" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,27.6,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text195</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code30}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text195>
+        <Text23 Ref="150" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,5.2,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text23</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount2}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text23>
+        <Text46 Ref="151" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,6.8,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text46</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount4}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text46>
+        <Text48 Ref="152" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,7.6,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text48</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount5}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text48>
+        <Text49 Ref="153" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,8.4,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text49</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount6}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text49>
+        <Text50 Ref="154" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,9.2,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text50</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount7}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text50>
+        <Text51 Ref="155" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,10,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text51</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount8}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text51>
+        <Text52 Ref="156" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,10.8,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text52</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount9}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text52>
+        <Text53 Ref="157" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,11.6,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text53</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount10}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text53>
+        <Text54 Ref="158" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,12.4,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text54</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount11}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text54>
+        <Text55 Ref="159" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,14,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text55</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount13}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text55>
+        <Text56 Ref="160" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,13.2,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text56</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount12}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text56>
+        <Text57 Ref="161" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,14.8,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text57</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount14}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text57>
+        <Text58 Ref="162" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,15.65,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text58</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount15}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text58>
+        <Text59 Ref="163" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,16.4,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text59</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount16}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text59>
+        <Text60 Ref="164" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,17.2,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text60</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount17}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text60>
+        <Text61 Ref="165" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,18,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text61</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount18}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text61>
+        <Text62 Ref="166" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,18.8,2.4,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text62</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount19}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text62>
+        <Text63 Ref="167" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,19.6,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text63</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount20}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text63>
+        <Text64 Ref="168" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,20.4,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text64</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount21}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text64>
+        <Text65 Ref="169" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,21.2,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text65</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount22}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text65>
+        <Text66 Ref="170" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,22,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text66</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount23}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text66>
+        <Text169 Ref="171" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,22.8,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text169</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount24}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text169>
+        <Text170 Ref="172" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,23.6,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text170</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount25}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text170>
+        <Text171 Ref="173" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,24.4,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text171</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount26}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text171>
+        <Text172 Ref="174" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,25.2,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text172</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount27}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text172>
+        <Text173 Ref="175" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,26,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text173</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount28}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text173>
+        <Text174 Ref="176" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,26.8,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text174</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount29}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text174>
+        <Text197 Ref="177" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,27.6,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text197</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount30}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text197>
+        <Text68 Ref="178" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,6,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text68</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital3}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text68>
+        <Text69 Ref="179" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,5.2,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text69</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital2}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text69>
+        <Text70 Ref="180" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,6.8,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text70</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital4}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text70>
+        <Text71 Ref="181" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,7.6,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text71</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital5}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text71>
+        <Text72 Ref="182" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,8.4,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text72</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital6}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text72>
+        <Text73 Ref="183" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,9.2,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text73</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital7}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text73>
+        <Text74 Ref="184" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,10,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text74</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital8}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text74>
+        <Text75 Ref="185" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,10.8,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text75</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital9}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text75>
+        <Text76 Ref="186" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,11.6,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text76</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital10}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text76>
+        <Text77 Ref="187" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,12.4,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text77</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital11}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text77>
+        <Text78 Ref="188" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,14,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text78</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital13}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text78>
+        <Text79 Ref="189" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,13.2,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text79</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital12}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text79>
+        <Text80 Ref="190" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,14.8,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text80</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital14}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text80>
+        <Text81 Ref="191" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,15.6,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text81</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital15}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text81>
+        <Text82 Ref="192" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,16.4,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text82</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital16}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text82>
+        <Text83 Ref="193" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,17.2,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text83</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital17}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text83>
+        <Text84 Ref="194" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,18,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text84</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital18}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text84>
+        <Text85 Ref="195" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,18.8,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text85</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital19}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text85>
+        <Text86 Ref="196" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,19.6,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text86</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital20}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text86>
+        <Text87 Ref="197" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,20.4,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text87</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital21}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text87>
+        <Text88 Ref="198" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,21.2,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text88</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital22}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text88>
+        <Text89 Ref="199" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,22,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text89</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital23}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text89>
+        <Text90 Ref="200" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,22.8,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text90</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital24}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text90>
+        <Text91 Ref="201" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,23.6,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text91</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital25}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text91>
+        <Text92 Ref="202" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,24.4,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text92</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital26}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text92>
+        <Text93 Ref="203" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,25.2,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text93</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital27}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text93>
+        <Text94 Ref="204" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,26,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text94</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital28}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text94>
+        <Text95 Ref="205" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,26.8,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text95</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital29}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text95>
+        <Text96 Ref="206" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,27.6,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text96</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital30}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text96>
+        <Text98 Ref="207" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,6,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text98</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest3}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text98>
+        <Text99 Ref="208" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,5.2,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text99</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest2}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text99>
+        <Text100 Ref="209" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,6.8,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text100</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest4}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text100>
+        <Text101 Ref="210" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,7.6,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text101</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest5}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text101>
+        <Text102 Ref="211" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,8.4,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text102</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest6}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text102>
+        <Text103 Ref="212" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,9.2,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text103</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest7}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text103>
+        <Text104 Ref="213" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,10,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text104</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest8}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text104>
+        <Text105 Ref="214" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,10.8,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text105</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest9}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text105>
+        <Text106 Ref="215" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,11.6,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text106</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest10}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text106>
+        <Text107 Ref="216" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,12.4,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text107</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest11}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text107>
+        <Text108 Ref="217" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,14,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text108</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest13}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text108>
+        <Text109 Ref="218" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,13.2,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text109</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest12}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text109>
+        <Text110 Ref="219" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,14.8,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text110</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest14}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text110>
+        <Text121 Ref="220" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,15.6,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text121</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest15}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text121>
+        <Text122 Ref="221" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,16.4,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text122</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest16}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text122>
+        <Text123 Ref="222" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,17.2,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text123</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest17}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text123>
+        <Text124 Ref="223" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,18,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text124</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest18}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text124>
+        <Text125 Ref="224" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,18.8,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text125</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest19}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text125>
+        <Text126 Ref="225" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,19.6,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text126</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest20}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text126>
+        <Text127 Ref="226" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,20.4,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text127</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest21}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text127>
+        <Text128 Ref="227" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,21.2,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text128</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest22}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text128>
+        <Text129 Ref="228" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,22,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text129</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest23}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text129>
+        <Text130 Ref="229" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,22.8,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text130</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest24}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text130>
+        <Text131 Ref="230" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,23.6,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text131</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest25}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text131>
+        <Text132 Ref="231" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,24.4,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text132</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest26}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text132>
+        <Text157 Ref="232" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,25.2,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text157</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest27}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text157>
+        <Text158 Ref="233" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,26,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text158</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest28}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text158>
+        <Text159 Ref="234" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,26.8,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text159</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest29}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text159>
+        <Text160 Ref="235" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,27.6,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text160</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest30}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text160>
+        <Text162 Ref="236" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,6,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text162</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct3}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text162>
+        <Text163 Ref="237" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,5.2,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text163</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct2}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text163>
+        <Text164 Ref="238" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,6.8,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text164</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct4}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text164>
+        <Text175 Ref="239" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,7.6,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text175</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct5}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text175>
+        <Text176 Ref="240" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,8.4,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text176</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct6}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text176>
+        <Text177 Ref="241" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,9.2,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text177</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct7}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text177>
+        <Text178 Ref="242" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,10,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text178</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct8}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text178>
+        <Text179 Ref="243" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,10.8,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text179</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct9}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text179>
+        <Text180 Ref="244" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,11.6,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text180</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct10}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text180>
+        <Text181 Ref="245" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,12.4,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text181</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct11}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text181>
+        <Text182 Ref="246" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,14,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text182</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct13}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text182>
+        <Text187 Ref="247" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,13.2,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text187</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct12}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text187>
+        <Text188 Ref="248" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,14.8,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text188</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct14}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text188>
+        <Text189 Ref="249" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,15.65,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text189</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct15}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text189>
+        <Text190 Ref="250" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,16.4,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text190</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct16}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text190>
+        <Text191 Ref="251" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,17.2,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text191</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct17}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text191>
+        <Text192 Ref="252" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,18,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text192</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct18}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text192>
+        <Text198 Ref="253" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,18.8,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text198</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct19}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text198>
+        <Text199 Ref="254" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,19.6,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text199</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct20}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text199>
+        <Text200 Ref="255" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,20.4,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text200</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct21}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text200>
+        <Text205 Ref="256" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,21.2,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text205</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct22}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text205>
+        <Text206 Ref="257" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,22,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text206</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct23}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text206>
+        <Text207 Ref="258" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,22.8,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text207</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct24}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text207>
+        <Text208 Ref="259" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,23.6,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text208</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct25}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text208>
+        <Text209 Ref="260" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,24.4,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text209</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct26}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text209>
+        <Text210 Ref="261" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,25.2,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text210</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct27}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text210>
+        <Text211 Ref="262" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,26,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text211</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct28}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text211>
+        <Text212 Ref="263" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,26.8,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text212</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct29}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text212>
+        <Text215 Ref="264" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,27.6,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text215</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct30}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text215>
+        <Text232 Ref="265" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,6,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text232</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain3}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text232>
+        <Text233 Ref="266" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,5.2,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text233</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain2}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text233>
+        <Text234 Ref="267" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,6.8,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text234</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain4}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text234>
+        <Text235 Ref="268" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,7.6,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text235</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain5}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text235>
+        <Text236 Ref="269" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,8.4,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text236</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain6}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text236>
+        <Text237 Ref="270" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,9.2,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text237</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain7}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text237>
+        <Text238 Ref="271" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,10,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text238</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain8}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text238>
+        <Text239 Ref="272" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,10.8,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text239</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain9}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text239>
+        <Text240 Ref="273" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,11.6,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text240</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain10}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text240>
+        <Text241 Ref="274" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,12.4,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text241</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain11}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text241>
+        <Text242 Ref="275" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,14,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text242</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain13}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text242>
+        <Text243 Ref="276" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,13.2,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text243</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain12}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text243>
+        <Text244 Ref="277" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,14.8,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text244</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain14}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text244>
+        <Text245 Ref="278" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,15.65,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text245</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain15}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text245>
+        <Text246 Ref="279" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,16.4,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text246</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain16}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text246>
+        <Text247 Ref="280" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,17.2,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text247</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain17}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text247>
+        <Text248 Ref="281" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,18,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text248</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain18}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text248>
+        <Text249 Ref="282" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,18.8,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text249</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain19}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text249>
+        <Text250 Ref="283" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,19.6,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text250</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain20}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text250>
+        <Text251 Ref="284" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,20.4,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text251</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain21}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text251>
+        <Text252 Ref="285" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,21.2,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text252</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain22}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text252>
+        <Text253 Ref="286" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,22,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text253</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain23}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text253>
+        <Text254 Ref="287" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,22.8,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text254</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain24}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text254>
+        <Text255 Ref="288" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,23.6,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text255</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain25}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text255>
+        <Text256 Ref="289" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,24.4,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text256</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain26}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text256>
+        <Text257 Ref="290" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,25.2,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text257</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain27}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text257>
+        <Text258 Ref="291" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,26,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text258</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain28}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text258>
+        <Text259 Ref="292" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,26.8,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text259</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain29}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text259>
+        <Text260 Ref="293" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,27.6,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text260</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain30}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text260>
+        <Text230 Ref="294" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.8,4.49,0.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Center</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text230</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{IIF((MovementDate1 == ""),"", ItemNo1 ) }</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text230>
+        <Text194 Ref="295" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>3.2,4.49,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text194</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{MovementDate1}</Text>
+          <TextBrush>Black</TextBrush>
+        </Text194>
+        <Text196 Ref="296" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5,4.49,1.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text196</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Code1}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text196>
+        <Text231 Ref="297" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.4,4.49,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text231</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount1}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text231>
+        <Text216 Ref="298" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>14.6,4.49,2.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text216</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Remain1}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text216>
+        <Text67 Ref="299" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.4,4.49,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text67</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Capital1}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text67>
+        <Text97 Ref="300" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>6.6,4.49,1.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text97</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{LoanInterest1}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text97>
+        <Text161 Ref="301" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>10.4,4.49,2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>AngsanaUPC,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text161</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Mulct1}</Text>
+          <TextBrush>Black</TextBrush>
+          <Type>Expression</Type>
+        </Text161>
+        <VerticalLine1 Ref="302" type="VerticalLinePrimitive" isKey="true">
+          <ClientRectangle>1.6,3.8,0.0254,24.8</ClientRectangle>
+          <Color>Black</Color>
+          <EndCap Ref="303" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </EndCap>
+          <Guid>f07fdabdc7e3436187fcbd6905a8a1bd</Guid>
+          <Name>VerticalLine1</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <StartCap Ref="304" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </StartCap>
+        </VerticalLine1>
+        <EndPointPrimitive1 Ref="305" type="Stimulsoft.Report.Components.StiEndPointPrimitive" isKey="true">
+          <ClientRectangle>1.6,28.6,0,0</ClientRectangle>
+          <Name>EndPointPrimitive1</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <ReferenceToGuid>f07fdabdc7e3436187fcbd6905a8a1bd</ReferenceToGuid>
+        </EndPointPrimitive1>
+        <VerticalLine2 Ref="306" type="VerticalLinePrimitive" isKey="true">
+          <ClientRectangle>3.2,3.8,0.0254,24.8</ClientRectangle>
+          <Color>Black</Color>
+          <EndCap Ref="307" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </EndCap>
+          <Guid>98cb92f8fd904742a9b8d7db4bc84345</Guid>
+          <Name>VerticalLine2</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <StartCap Ref="308" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </StartCap>
+        </VerticalLine2>
+        <EndPointPrimitive2 Ref="309" type="Stimulsoft.Report.Components.StiEndPointPrimitive" isKey="true">
+          <ClientRectangle>3.2,28.6,0,0</ClientRectangle>
+          <Name>EndPointPrimitive2</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <ReferenceToGuid>98cb92f8fd904742a9b8d7db4bc84345</ReferenceToGuid>
+        </EndPointPrimitive2>
+        <VerticalLine3 Ref="310" type="VerticalLinePrimitive" isKey="true">
+          <ClientRectangle>4.8,3.8,0.0254,24.8</ClientRectangle>
+          <Color>Black</Color>
+          <EndCap Ref="311" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </EndCap>
+          <Guid>66b86168b1af4fcf8e40ecb582f57ec6</Guid>
+          <Name>VerticalLine3</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <StartCap Ref="312" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </StartCap>
+        </VerticalLine3>
+        <EndPointPrimitive3 Ref="313" type="Stimulsoft.Report.Components.StiEndPointPrimitive" isKey="true">
+          <ClientRectangle>4.8,28.6,0,0</ClientRectangle>
+          <Name>EndPointPrimitive3</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <ReferenceToGuid>66b86168b1af4fcf8e40ecb582f57ec6</ReferenceToGuid>
+        </EndPointPrimitive3>
+        <VerticalLine4 Ref="314" type="VerticalLinePrimitive" isKey="true">
+          <ClientRectangle>6.6,3.8,0.0254,24.8</ClientRectangle>
+          <Color>Black</Color>
+          <EndCap Ref="315" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </EndCap>
+          <Guid>803f7220de234e6ba103d8f409272fa7</Guid>
+          <Name>VerticalLine4</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <StartCap Ref="316" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </StartCap>
+        </VerticalLine4>
+        <EndPointPrimitive4 Ref="317" type="Stimulsoft.Report.Components.StiEndPointPrimitive" isKey="true">
+          <ClientRectangle>6.6,28.6,0,0</ClientRectangle>
+          <Name>EndPointPrimitive4</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <ReferenceToGuid>803f7220de234e6ba103d8f409272fa7</ReferenceToGuid>
+        </EndPointPrimitive4>
+        <VerticalLine5 Ref="318" type="VerticalLinePrimitive" isKey="true">
+          <ClientRectangle>8.4,3.8,0.0254,24.8</ClientRectangle>
+          <Color>Black</Color>
+          <EndCap Ref="319" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </EndCap>
+          <Guid>ac87be4bc62e400ab24440181b8f819a</Guid>
+          <Name>VerticalLine5</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <StartCap Ref="320" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </StartCap>
+        </VerticalLine5>
+        <EndPointPrimitive5 Ref="321" type="Stimulsoft.Report.Components.StiEndPointPrimitive" isKey="true">
+          <ClientRectangle>8.4,28.6,0,0</ClientRectangle>
+          <Name>EndPointPrimitive5</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <ReferenceToGuid>ac87be4bc62e400ab24440181b8f819a</ReferenceToGuid>
+        </EndPointPrimitive5>
+        <VerticalLine6 Ref="322" type="VerticalLinePrimitive" isKey="true">
+          <ClientRectangle>10.4,3.8,0.0254,24.8</ClientRectangle>
+          <Color>Black</Color>
+          <EndCap Ref="323" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </EndCap>
+          <Guid>c8ef4d24b5194936a22e6afe940278dc</Guid>
+          <Name>VerticalLine6</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <StartCap Ref="324" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </StartCap>
+        </VerticalLine6>
+        <EndPointPrimitive6 Ref="325" type="Stimulsoft.Report.Components.StiEndPointPrimitive" isKey="true">
+          <ClientRectangle>10.4,28.6,0,0</ClientRectangle>
+          <Name>EndPointPrimitive6</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <ReferenceToGuid>c8ef4d24b5194936a22e6afe940278dc</ReferenceToGuid>
+        </EndPointPrimitive6>
+        <VerticalLine7 Ref="326" type="VerticalLinePrimitive" isKey="true">
+          <ClientRectangle>12.4,3.8,0.0254,24.8</ClientRectangle>
+          <Color>Black</Color>
+          <EndCap Ref="327" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </EndCap>
+          <Guid>4f72c6e0864b4cf491d6d16d2e40d5e7</Guid>
+          <Name>VerticalLine7</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <StartCap Ref="328" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </StartCap>
+        </VerticalLine7>
+        <EndPointPrimitive7 Ref="329" type="Stimulsoft.Report.Components.StiEndPointPrimitive" isKey="true">
+          <ClientRectangle>12.4,28.6,0,0</ClientRectangle>
+          <Name>EndPointPrimitive7</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <ReferenceToGuid>4f72c6e0864b4cf491d6d16d2e40d5e7</ReferenceToGuid>
+        </EndPointPrimitive7>
+        <VerticalLine8 Ref="330" type="VerticalLinePrimitive" isKey="true">
+          <ClientRectangle>14.6,3.8,0.0254,24.8</ClientRectangle>
+          <Color>Black</Color>
+          <EndCap Ref="331" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </EndCap>
+          <Guid>cac646440da44639ba882a8799b642ca</Guid>
+          <Name>VerticalLine8</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <StartCap Ref="332" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </StartCap>
+        </VerticalLine8>
+        <EndPointPrimitive8 Ref="333" type="Stimulsoft.Report.Components.StiEndPointPrimitive" isKey="true">
+          <ClientRectangle>14.6,28.6,0,0</ClientRectangle>
+          <Name>EndPointPrimitive8</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <ReferenceToGuid>cac646440da44639ba882a8799b642ca</ReferenceToGuid>
+        </EndPointPrimitive8>
+        <VerticalLine9 Ref="334" type="VerticalLinePrimitive" isKey="true">
+          <ClientRectangle>16.8,3.8,0.0254,24.8</ClientRectangle>
+          <Color>Black</Color>
+          <EndCap Ref="335" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </EndCap>
+          <Guid>5bd976eaf16d4b34acca07c71efa756b</Guid>
+          <Name>VerticalLine9</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <StartCap Ref="336" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </StartCap>
+        </VerticalLine9>
+        <EndPointPrimitive9 Ref="337" type="Stimulsoft.Report.Components.StiEndPointPrimitive" isKey="true">
+          <ClientRectangle>16.8,28.6,0,0</ClientRectangle>
+          <Name>EndPointPrimitive9</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <ReferenceToGuid>5bd976eaf16d4b34acca07c71efa756b</ReferenceToGuid>
+        </EndPointPrimitive9>
+        <VerticalLine10 Ref="338" type="VerticalLinePrimitive" isKey="true">
+          <ClientRectangle>18,3.8,0.0254,24.8</ClientRectangle>
+          <Color>Black</Color>
+          <EndCap Ref="339" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </EndCap>
+          <Guid>41610ffa8a264063a7835580e886d083</Guid>
+          <Name>VerticalLine10</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <StartCap Ref="340" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </StartCap>
+        </VerticalLine10>
+        <EndPointPrimitive10 Ref="341" type="Stimulsoft.Report.Components.StiEndPointPrimitive" isKey="true">
+          <ClientRectangle>18,28.6,0,0</ClientRectangle>
+          <Name>EndPointPrimitive10</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <ReferenceToGuid>41610ffa8a264063a7835580e886d083</ReferenceToGuid>
+        </EndPointPrimitive10>
+        <VerticalLine11 Ref="342" type="VerticalLinePrimitive" isKey="true">
+          <ClientRectangle>19.6,3.8,0.0254,24.8</ClientRectangle>
+          <Color>Black</Color>
+          <EndCap Ref="343" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </EndCap>
+          <Guid>751094da0b4741e486f0f93f2f3ce936</Guid>
+          <Name>VerticalLine11</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <StartCap Ref="344" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </StartCap>
+        </VerticalLine11>
+        <EndPointPrimitive11 Ref="345" type="Stimulsoft.Report.Components.StiEndPointPrimitive" isKey="true">
+          <ClientRectangle>19.6,28.6,0,0</ClientRectangle>
+          <Name>EndPointPrimitive11</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <ReferenceToGuid>751094da0b4741e486f0f93f2f3ce936</ReferenceToGuid>
+        </EndPointPrimitive11>
+        <VerticalLine12 Ref="346" type="VerticalLinePrimitive" isKey="true">
+          <ClientRectangle>0.8,3.8,0.0254,24.8</ClientRectangle>
+          <Color>Black</Color>
+          <EndCap Ref="347" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </EndCap>
+          <Guid>83ff894c6bb8411ba491aa73170a3922</Guid>
+          <Name>VerticalLine12</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <StartCap Ref="348" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </StartCap>
+        </VerticalLine12>
+        <EndPointPrimitive12 Ref="349" type="Stimulsoft.Report.Components.StiEndPointPrimitive" isKey="true">
+          <ClientRectangle>0.8,28.6,0,0</ClientRectangle>
+          <Name>EndPointPrimitive12</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <ReferenceToGuid>83ff894c6bb8411ba491aa73170a3922</ReferenceToGuid>
+        </EndPointPrimitive12>
+        <HorizontalLine3 Ref="350" type="HorizontalLinePrimitive" isKey="true">
+          <ClientRectangle>0.8,28.6,18.8,0.0254</ClientRectangle>
+          <Color>Black</Color>
+          <EndCap Ref="351" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </EndCap>
+          <Name>HorizontalLine3</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <StartCap Ref="352" type="Cap" isKey="true">
+            <Color>Black</Color>
+          </StartCap>
+        </HorizontalLine3>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>0ea3e93495304ca2bdc2103c2ebdda16</Guid>
+      <Margins>0.5,0.2,0.6,0.5</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <PaperSize>A4</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="353" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="354" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>3/25/2016 6:07:23 PM</ReportChanged>
+  <ReportCreated>9/6/2009 12:22:40 PM</ReportCreated>
+  <ReportFile>\\MIXPRO-SERVER\Mixpro\Mixpro_MBSNano\MBS\Form\LoanCard.mrt</ReportFile>
+  <ReportGuid>7ad24db3fbde40fa82c0a76cf61a9e7a</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2011.3.1200</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        
+        public Report()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

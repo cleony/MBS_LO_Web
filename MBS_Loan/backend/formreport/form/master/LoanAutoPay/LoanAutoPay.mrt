@@ -1,0 +1,616 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.0" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="0" />
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Variables isList="true" count="26">
+      <value>,CFDate,CFDate,System.DateTime,_x0038__x002F_31_x002F_2010,False,False</value>
+      <value>,PersonName,PersonName,System.String,,False,False</value>
+      <value>,Age,Age,System.String,,False,False</value>
+      <value>,Buiding,Buiding,System.String,,False,False</value>
+      <value>,Addr,Addr,System.String,,False,False</value>
+      <value>,moo,moo,System.String,,False,False</value>
+      <value>,Road,Road,System.String,,False,False</value>
+      <value>,soi,soi,System.String,,False,False</value>
+      <value>,Locality,Locality,System.String,,False,False</value>
+      <value>,District,District,System.String,,False,False</value>
+      <value>,IDCard,IDCard,System.String,,False,False</value>
+      <value>,Province,Province,System.String,,False,False</value>
+      <value>,ZipCode,ZipCode,System.String,,False,False</value>
+      <value>,Phone,Phone,System.String,,False,False</value>
+      <value>,DateIssue,DateIssue,System.DateTime,_x0038__x002F_31_x002F_2010,False,False</value>
+      <value>,DateExpiry,DateExpiry,System.DateTime,_x0038__x002F_31_x002F_2010,False,False</value>
+      <value>,VillageFund,VillageFund,System.String,,False,False</value>
+      <value>,FundMoo,FundMoo,System.String,,False,False</value>
+      <value>,TotalAmount,TotalAmount,System.Double,,False,False</value>
+      <value>,TotalAmountBath,TotalAmountBath,System.String,,False,False</value>
+      <value>,EndPayDate,EndPayDate,System.DateTime,_x0038__x002F_31_x002F_2010,False,False</value>
+      <value>,GTName,GTName,System.String,,False,False</value>
+      <value>,RefundName,RefundName,System.String,,False,False</value>
+      <value>,AccountNo,AccountNo,System.String,,False,False</value>
+      <value>,BookBankNo,BookBankNo,System.String,,False,False</value>
+      <value>,BookBankName,BookBankName,System.String,,False,False</value>
+    </Variables>
+  </Dictionary>
+  <GlobalizationStrings isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="2" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="38">
+        <Text3 Ref="3" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,1.2,20.4,1</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,22,Bold</Font>
+          <HorAlignment>Center</HorAlignment>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text3</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>หนังสือยินยอมให้ตัดบัญชีอัตโนมัติ</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="4" type="GeneralFormat" isKey="true" />
+          <Type>Expression</Type>
+        </Text3>
+        <Text10 Ref="5" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>9.2,9.2,11,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14</Font>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text10</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>ลงชื่อ …………….....………………………… เจ้าของบัญชี / ผู้ให้ความยินยอม</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="6" type="GeneralFormat" isKey="true" />
+          <Type>Expression</Type>
+        </Text10>
+        <Text12 Ref="7" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>9.6,10,6.8,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14</Font>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text12</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>(……………………............…………………..)</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="8" type="GeneralFormat" isKey="true" />
+        </Text12>
+        <Text17 Ref="9" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>11.8,2.8,6.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14</Font>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text17</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>เขียนที่ </Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="10" type="GeneralFormat" isKey="true" />
+          <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+          <Type>Expression</Type>
+        </Text17>
+        <Text16 Ref="11" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>11.4,3.8,1.4,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text16</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>วันที่</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="12" type="GeneralFormat" isKey="true" />
+          <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+          <Type>Expression</Type>
+        </Text16>
+        <Text47 Ref="13" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>17,6.8,3,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14,Bold</Font>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text47</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{CFDate}</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="14" type="DateFormat" isKey="true">
+            <StringFormat>D</StringFormat>
+          </TextFormat>
+          <Type>Expression</Type>
+        </Text47>
+        <Text55 Ref="15" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>2.8,0.2,17.6,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,16,Bold</Font>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text55</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{RefundName}</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="16" type="GeneralFormat" isKey="true" />
+        </Text55>
+        <Text2 Ref="17" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>1.4,4.8,1.4,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14</Font>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text2</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>ข้าพเจ้า</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="18" type="GeneralFormat" isKey="true" />
+          <Type>Expression</Type>
+        </Text2>
+        <Text4 Ref="19" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <CanGrow>True</CanGrow>
+          <ClientRectangle>13,2.8,7.4,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14,Bold</Font>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text4</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{RefundName}</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="20" type="GeneralFormat" isKey="true" />
+          <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+        </Text4>
+        <Text6 Ref="21" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>9.6,9.8,6.4,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14,Bold</Font>
+          <HorAlignment>Center</HorAlignment>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text6</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{PersonName}</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="22" type="GeneralFormat" isKey="true" />
+        </Text6>
+        <Text7 Ref="23" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>1.4,5.8,4,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14</Font>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text7</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>เจ้าของบัญชีเงินฝากเลขที่</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="24" type="GeneralFormat" isKey="true" />
+          <Type>Expression</Type>
+        </Text7>
+        <Text8 Ref="25" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>5.2,5.8,3.8,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14,Bold</Font>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text8</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{BookBankNo}</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="26" type="DateFormat" isKey="true">
+            <StringFormat>D</StringFormat>
+          </TextFormat>
+          <Type>Expression</Type>
+        </Text8>
+        <Text15 Ref="27" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>1.4,6.8,12,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14</Font>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text15</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>มีความประสงค์ให้เรียกเก็บเงินจากบัญชีเงินฝาก  เพื่อชำระหนี้เงินกู้ตามสัญญากู้เลขที่</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="28" type="GeneralFormat" isKey="true" />
+          <Type>Expression</Type>
+        </Text15>
+        <Text19 Ref="29" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.8,6.8,2.6,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14,Bold</Font>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text19</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{AccountNo}</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="30" type="DateFormat" isKey="true">
+            <StringFormat>D</StringFormat>
+          </TextFormat>
+          <Type>Expression</Type>
+        </Text19>
+        <Text20 Ref="31" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>1.4,7.8,4,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14</Font>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text20</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>เป็นจำนวนเงิน งวดละ</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="32" type="GeneralFormat" isKey="true" />
+          <Type>Expression</Type>
+        </Text20>
+        <Text21 Ref="33" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>7.2,7.8,1,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14</Font>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text21</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>บาท</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="34" type="GeneralFormat" isKey="true" />
+          <Type>Expression</Type>
+        </Text21>
+        <Text1 Ref="35" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>4.6,7.8,2.4,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14,Bold</Font>
+          <HorAlignment>Right</HorAlignment>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text1</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{TotalAmount}</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="36" type="NumberFormat" isKey="true">
+            <GroupSeparator>,</GroupSeparator>
+            <NegativePattern>1</NegativePattern>
+          </TextFormat>
+          <Type>Expression</Type>
+        </Text1>
+        <Text5 Ref="37" type="Text" isKey="true">
+          <AutoWidth>True</AutoWidth>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>2.8,4.8,8.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14,Bold</Font>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text5</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{PersonName}</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="38" type="GeneralFormat" isKey="true" />
+        </Text5>
+        <Text9 Ref="39" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>9.2,5.8,1.6,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14</Font>
+          <HorAlignment>Right</HorAlignment>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text9</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>ชื่อบัญชี</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="40" type="GeneralFormat" isKey="true" />
+          <Type>Expression</Type>
+        </Text9>
+        <Text11 Ref="41" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <CanGrow>True</CanGrow>
+          <ClientRectangle>11.2,5.8,9.2,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14,Bold</Font>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text11</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{BookBankName}</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="42" type="DateFormat" isKey="true">
+            <StringFormat>D</StringFormat>
+          </TextFormat>
+          <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+          <Type>Expression</Type>
+        </Text11>
+        <Text13 Ref="43" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>9.2,11.8,10.8,0.8</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14</Font>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text13</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>ลงชื่อ ……………..………...………………… ผู้รับเรื่อง / ผู้ดำเนินการ</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="44" type="GeneralFormat" isKey="true" />
+          <Type>Expression</Type>
+        </Text13>
+        <Text14 Ref="45" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>9.6,12.6,6.8,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14</Font>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text14</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>(…………………............……………………..)</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="46" type="GeneralFormat" isKey="true" />
+        </Text14>
+        <Text18 Ref="47" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>15.6,6.8,1.2,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14</Font>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text18</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>ลงวันที่</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="48" type="GeneralFormat" isKey="true" />
+          <Type>Expression</Type>
+        </Text18>
+        <Text23 Ref="49" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>13,3.8,5.4,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14,Bold</Font>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text23</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>{Today}</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="50" type="DateFormat" isKey="true">
+            <StringFormat>D</StringFormat>
+          </TextFormat>
+          <Type>Expression</Type>
+        </Text23>
+        <Text22 Ref="51" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>8.2,7.8,2.6,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14</Font>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text22</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>โดยให้หักจำนวน</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="52" type="GeneralFormat" isKey="true" />
+          <Type>Expression</Type>
+        </Text22>
+        <Text24 Ref="53" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>11.8,7.8,1,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14</Font>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text24</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>งวด</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="54" type="GeneralFormat" isKey="true" />
+          <Type>Expression</Type>
+        </Text24>
+        <Text26 Ref="55" type="Text" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>12.8,7.8,2.2,0.6</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <Font>Angsana New,14</Font>
+          <LinesOfUnderline>None</LinesOfUnderline>
+          <Margins>0,0,0,0</Margins>
+          <Name>Text26</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Text>เริ่มตั้งแต่วันที่</Text>
+          <TextBrush>Black</TextBrush>
+          <TextFormat Ref="56" type="GeneralFormat" isKey="true" />
+          <Type>Expression</Type>
+        </Text26>
+        <Image1 Ref="57" type="Image" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0.6,0,2,2</ClientRectangle>
+          <Conditions isList="true" count="0" />
+          <ImageURL>C:\GSB\MBS\Pictures\logo.jpg</ImageURL>
+          <Name>Image1</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Stretch>True</Stretch>
+        </Image1>
+        <HorizontalLine1 Ref="58" type="Stimulsoft.Report.Components.StiHorizontalLinePrimitive" isKey="true">
+          <ClientRectangle>2.8,5.4,6.2,0.0254</ClientRectangle>
+          <Color>Black</Color>
+          <Name>HorizontalLine1</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Style>Dot</Style>
+        </HorizontalLine1>
+        <HorizontalLine2 Ref="59" type="Stimulsoft.Report.Components.StiHorizontalLinePrimitive" isKey="true">
+          <ClientRectangle>5,6.4,4,0.0254</ClientRectangle>
+          <Color>Black</Color>
+          <Name>HorizontalLine2</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Style>Dot</Style>
+        </HorizontalLine2>
+        <HorizontalLine3 Ref="60" type="Stimulsoft.Report.Components.StiHorizontalLinePrimitive" isKey="true">
+          <ClientRectangle>11,6.4,8.8,0.0254</ClientRectangle>
+          <Color>Black</Color>
+          <Name>HorizontalLine3</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Style>Dot</Style>
+        </HorizontalLine3>
+        <HorizontalLine4 Ref="61" type="Stimulsoft.Report.Components.StiHorizontalLinePrimitive" isKey="true">
+          <ClientRectangle>13,3.4,6.8,0.0254</ClientRectangle>
+          <Color>Black</Color>
+          <Name>HorizontalLine4</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Style>Dot</Style>
+        </HorizontalLine4>
+        <HorizontalLine5 Ref="62" type="Stimulsoft.Report.Components.StiHorizontalLinePrimitive" isKey="true">
+          <ClientRectangle>12.6,7.4,2.8,0.0254</ClientRectangle>
+          <Color>Black</Color>
+          <Name>HorizontalLine5</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Style>Dot</Style>
+        </HorizontalLine5>
+        <HorizontalLine6 Ref="63" type="Stimulsoft.Report.Components.StiHorizontalLinePrimitive" isKey="true">
+          <ClientRectangle>17,7.4,2.8,0.0254</ClientRectangle>
+          <Color>Black</Color>
+          <Name>HorizontalLine6</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Style>Dot</Style>
+        </HorizontalLine6>
+        <HorizontalLine7 Ref="64" type="Stimulsoft.Report.Components.StiHorizontalLinePrimitive" isKey="true">
+          <ClientRectangle>4.6,8.4,2.4,0.0254</ClientRectangle>
+          <Color>Black</Color>
+          <Name>HorizontalLine7</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Style>Dot</Style>
+        </HorizontalLine7>
+        <HorizontalLine8 Ref="65" type="Stimulsoft.Report.Components.StiHorizontalLinePrimitive" isKey="true">
+          <ClientRectangle>13,4.4,2.4,0.0254</ClientRectangle>
+          <Color>Black</Color>
+          <Name>HorizontalLine8</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Style>Dot</Style>
+        </HorizontalLine8>
+        <HorizontalLine9 Ref="66" type="Stimulsoft.Report.Components.StiHorizontalLinePrimitive" isKey="true">
+          <ClientRectangle>10.8,8.4,1,0.0254</ClientRectangle>
+          <Color>Black</Color>
+          <Name>HorizontalLine9</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Style>Dot</Style>
+        </HorizontalLine9>
+        <HorizontalLine10 Ref="67" type="Stimulsoft.Report.Components.StiHorizontalLinePrimitive" isKey="true">
+          <ClientRectangle>15,8.4,2.6,0.0254</ClientRectangle>
+          <Color>Black</Color>
+          <Name>HorizontalLine10</Name>
+          <Page isRef="2" />
+          <Parent isRef="2" />
+          <Style>Dot</Style>
+        </HorizontalLine10>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>0ea3e93495304ca2bdc2103c2ebdda16</Guid>
+      <Margins>0.3,0.3,0.5,0.5</Margins>
+      <Name>Page1</Name>
+      <Page isRef="2" />
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <PaperSize>A4</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="68" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="69" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>3/29/2012 2:08:43 PM</ReportChanged>
+  <ReportCreated>9/6/2009 12:22:40 PM</ReportCreated>
+  <ReportGuid>733cfe72ed0f423b92d7a6e7ff0235bf</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2008.1.129</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        
+        public Report()
+        {
+            this.InitializeComponent();
+        }
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
+    }
+}</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

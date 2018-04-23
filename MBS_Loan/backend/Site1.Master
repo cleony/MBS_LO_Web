@@ -1,0 +1,767 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site1.Master.vb" Inherits="MBS_Loan.Site1" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <style>
+        .li-disabled {
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .modalprogress {
+            position: fixed;
+            z-index: 999;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            background-color: Black;
+            filter: alpha(opacity=60);
+            opacity: 0.6;
+            -moz-opacity: 0.8;
+        }
+
+        .centermodalprogress {
+            z-index: 1000;
+            margin: 300px auto;
+            padding: 10px;
+            width: 130px;
+            /*background-color: White;*/
+            border-radius: 10px;
+            filter: alpha(opacity=100);
+            opacity: 1;
+            -moz-opacity: 1;
+        }
+
+            .centermodalprogress img {
+                height: 128px;
+                width: 128px;
+            }
+
+
+        /* Loading Spinner */
+        .spinner {
+            margin: 0;
+            width: 70px;
+            height: 18px;
+            margin: -35px 0 0 -9px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+        }
+
+            .spinner > div {
+                width: 18px;
+                height: 18px;
+                background-color: #333;
+                border-radius: 100%;
+                display: inline-block;
+                -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+                animation: bouncedelay 1.4s infinite ease-in-out;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+
+            .spinner .bounce1 {
+                -webkit-animation-delay: -.32s;
+                animation-delay: -.32s;
+            }
+
+            .spinner .bounce2 {
+                -webkit-animation-delay: -.16s;
+                animation-delay: -.16s;
+            }
+
+        @-webkit-keyframes bouncedelay {
+            0%,80%,100% {
+                -webkit-transform: scale(0.0);
+            }
+
+            40% {
+                -webkit-transform: scale(1.0);
+            }
+        }
+
+        @keyframes bouncedelay {
+            0%,80%,100% {
+                transform: scale(0.0);
+                -webkit-transform: scale(0.0);
+            }
+
+            40% {
+                transform: scale(1.0);
+                -webkit-transform: scale(1.0);
+            }
+        }
+    </style>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>PTL Loan | ระบบเงินกู้</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        .modalprogress {
+            position: fixed;
+            z-index: 999;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            background-color: Black;
+            filter: alpha(opacity=60);
+            opacity: 0.6;
+            -moz-opacity: 0.8;
+        }
+
+        .centermodalprogress {
+            z-index: 1000;
+            margin: 300px auto;
+            padding: 10px;
+            width: 130px;
+            /*background-color: White;*/
+            border-radius: 10px;
+            filter: alpha(opacity=100);
+            opacity: 1;
+            -moz-opacity: 1;
+        }
+
+            .centermodalprogress img {
+                height: 128px;
+                width: 128px;
+            }
+
+
+        /* Loading Spinner */
+        .spinner {
+            margin: 0;
+            width: 70px;
+            height: 18px;
+            margin: -35px 0 0 -9px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+        }
+
+            .spinner > div {
+                width: 18px;
+                height: 18px;
+                background-color: #333;
+                border-radius: 100%;
+                display: inline-block;
+                -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+                animation: bouncedelay 1.4s infinite ease-in-out;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+
+            .spinner .bounce1 {
+                -webkit-animation-delay: -.32s;
+                animation-delay: -.32s;
+            }
+
+            .spinner .bounce2 {
+                -webkit-animation-delay: -.16s;
+                animation-delay: -.16s;
+            }
+
+        @-webkit-keyframes bouncedelay {
+            0%,80%,100% {
+                -webkit-transform: scale(0.0);
+            }
+
+            40% {
+                -webkit-transform: scale(1.0);
+            }
+        }
+
+        @keyframes bouncedelay {
+            0%,80%,100% {
+                transform: scale(0.0);
+                -webkit-transform: scale(0.0);
+            }
+
+            40% {
+                transform: scale(1.0);
+                -webkit-transform: scale(1.0);
+            }
+        }
+    </style>
+    <!-- shortcut icon -->
+    <link rel="shortcut icon" href="../dist/img/favicon.ico" />
+
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css" />
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="../bower_components/Ionicons/css/ionicons.min.css" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/AdminLTE.css" />
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../dist/css/skins/_all-skins.css" />
+
+    <link href="../bower_components/jquery-ui/themes/base/jquery-ui.min.css" rel="stylesheet" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" />
+
+    <!-- jQuery 3 -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- SlimScroll -->
+    <script src="../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="../bower_components/fastclick/lib/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../dist/js/demo.js"></script>
+    <script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.sidebar-menu').tree()
+        })
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("load", function () {
+            setTimeout(function () {
+                $('#loading').fadeOut(400, "linear");
+            }, 300);
+        });
+    </script>
+</head>
+<body class="hold-transition skin-blue fixed sidebar-mini">
+    <!-- Site wrapper -->
+    <div class="wrapper">
+
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="index.aspx" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>PTL</b></span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>PTL</b> Loan</span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown messages-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="glyphicon glyphicon-th-large"></i>
+                                <span class="label label-success"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">Pueantae leasing</li>
+                                <li>
+                                    <!-- inner menu: contains the actual data -->
+                                    <ul class="menu">
+                                        <li>
+                                            <!-- start message -->
+                                            <a href="http://ptleasing.mcloudcenter.com/lo/backend/index.aspx">
+                                                <div class="pull-left">
+                                                    <img src="../dist/img/lo.png" class="img-circle" alt="User Image" />
+                                                </div>
+                                                <h4>ระบบเงินกู้</h4>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <!-- start message -->
+                                            <a href="http://ptleasing.mcloudcenter.com/gl/backend/index.aspx">
+                                                <div class="pull-left">
+                                                    <img src="../dist/img/gl.png" class="img-circle" alt="User Image" />
+                                                </div>
+                                                <h4>ระบบบัญชี</h4>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <!-- start message -->
+                                            <a href="http://ptleasing.mcloudcenter.com/cd/backend/index.aspx">
+                                                <div class="pull-left">
+                                                    <img src="../dist/img/cd.png" class="img-circle" alt="User Image" />
+                                                </div>
+                                                <h4>ระบบข้อมูลส่วนกลาง</h4>
+                                            </a>
+                                        </li>
+                                        <!-- end message -->
+                                    </ul>
+                                </li>
+                                <li class="footer"><a href="#"></a></li>
+                            </ul>
+                        </li>
+
+                        <!-- User Account: style can be found in dropdown.less -->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img id="imgProfile" runat="server" src="../dist/img/avatar5.png" class="user-image" alt="User Image" />
+                                <span class="hidden-xs" id="UserName3" runat="server"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- User image -->
+                                <li class="user-header">
+                                    <img id="imgProfile2" runat="server" src="../dist/img/avatar5.png" class="img-circle" alt="User Image" />
+
+                                    <p id="lblusername" runat="server"></p>
+                                    <p id="lblBranchName" runat="server"></p>
+                                    <%--<input id="lblBranchId" name="lblBranchId" type="text" runat="server" visible="false" /> 
+                                    <input id="updateBranch00" type="button" runat="server" value="สาขา00" onserverclick="updateBranch00_ServerClick"/>
+                                      <input id="updateBranch01" type="button" runat="server" value="สาขา01" onserverclick="updateBranch01_ServerClick"/>--%>
+                                    <%--<asp:Button ID="Button1" runat="server" Text="Button" />--%>
+                                    <%-- <form runat="server">
+                                        <asp:DropDownList ID="ddlBranch" runat="server" class="form-control" Visible="false" AutoPostBack="true" OnSelectedIndexChanged="ddlBranch_SelectedIndexChanged"></asp:DropDownList>
+                                    </form>--%>
+
+                                </li>
+                                <!-- Menu Body -->
+                                <li class="user-body">
+                                    <div class="row">
+                                        <%-- <div class="col-xs-4 text-center">
+                                            <a href="#">Followers</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Sales</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Friends</a>
+                                        </div>--%>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                    <%--  <div class="pull-left">
+                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    </div>--%>
+                                    <div class="pull-right">
+
+                                        <a href="login.aspx" class="btn btn-default btn-flat">Sign out</a>
+
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Control Sidebar Toggle Button -->
+                        <li>
+                            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- =============================================== -->
+
+        <!-- Left side column. contains the sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- Sidebar user panel -->
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img runat="server" src="../dist/img/LOGO_MCloud.png" class="img-circle" alt="User Image" />
+                    </div>
+                    <div class="pull-left info">
+                        <p id="lblUserName2" runat="server"></p>
+                        <p id="lblBranchName2" runat="server"></p>
+
+                        <%--<a href="#"><i class="fa fa-circle text-success"></i>Online</a>--%>
+                    </div>
+                </div>
+
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li class="header">ระบบเเงินกู้</li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="glyphicon glyphicon-th"></i><span>Dashboard</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="index.aspx"><i class="fa fa-circle-o"></i>Admin dashboard</a></li>
+                            <li><a href="http://www.pueantaeleasing.com"><i class="fa fa-circle-o"></i>Frontend</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview active">
+                        <a href="#">
+                            <i class="fa fa-pencil-square" id="WLO1000" runat="server"></i><span>สัญญากู้เงิน</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li id="WLO1500" runat="server"><a href="RequestLoan.aspx"><i class="fa fa-circle-o text-yellow"></i>คำขอกู้จากหน้าเว็บ</a></li>
+                            <li id="WLO1100" runat="server"><a href="loanview.aspx"><i class="fa fa-circle-o text-yellow"></i>สัญญากู้เงิน</a></li>
+                            <li id="WLO1200" runat="server"><a href="loannew.aspx"><i class="fa fa-circle-o text-yellow"></i>เพิ่มสัญญากู้เงิน</a></li>
+                            <li id="WLO1300" runat="server"><a href="loancf.aspx"><i class="fa fa-circle-o text-yellow"></i>อนุมัติสัญญากู้</a></li>
+                            <li id="WLO1400" runat="server"><a href="loancfpay.aspx"><i class="fa fa-circle-o text-yellow"></i>อนุมัติโอนเงิน</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="treeview active">
+                        <a href="#">
+                            <i class="fa fa-database" id="WLO2000" runat="server"></i><span>แจ้งหนี้/รับชำระหนี้</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li id="WLO2100" runat="server"><a href="loaninvoice.aspx"><i class="fa fa-circle-o text-yellow"></i>ออกใบแจ้งหนี้</a></li>
+                            <li id="WLO2200" runat="server"><a href="loanpay.aspx"><i class="fa fa-circle-o text-yellow"></i>รับชำระหนี้</a></li>
+                            <li id="WLO2300" runat="server"><a href="loanpayview.aspx"><i class="fa fa-circle-o text-yellow"></i>ข้อมูลการรับชำระหนี้</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview active">
+                        <a href="#">
+                            <i class="fa fa-share-square-o" id="WLO3000" runat="server"></i><span>ต่อสัญญา/ตัดหนี้สูญ</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li id="WLO3100" runat="server"><a href="loanrenew.aspx"><i class="fa fa-circle-o text-yellow"></i>ต่อสัญญาเงินกู้</a></li>
+                            <li id="WLO3200" runat="server"><a href="loanbaddebt.aspx"><i class="fa fa-circle-o text-yellow"></i>ตัดหนี้สูญ</a></li>
+                            <li id="WLO3300" runat="server"><a href="accruedinterest.aspx"><i class="fa fa-circle-o text-yellow"></i>ดอกเบี้ยเงินกู้ค้างรับ</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="glyphicon glyphicon-file" id="WLO4000" runat="server"></i>
+                            <span>รายงาน</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li id="WLO4100" runat="server"><a class="bs-label label-success">1. รายงานการกู้เงิน</a></li>
+                            <li id="WLO4110" runat="server"><a href="rptlo1_1.aspx"><i class="fa fa-circle-o text-yellow"></i>1.รายละเอียดตามสัญญากู้เงิน</a></li>
+                            <li id="WLO4120" runat="server"><a href="rptlo1_2.aspx"><i class="fa fa-circle-o text-yellow"></i>2.สัญญากู้เงิน</a></li>
+                            <li id="WLO4130" runat="server"><a href="rptlo1_3.aspx"><i class="fa fa-circle-o text-yellow"></i>3.ยอดสรุปตามสัญญากู้เงิน</a></li>
+                            <li id="WLO4140" runat="server"><a href="rptlo1_4.aspx"><i class="fa fa-circle-o text-yellow"></i>4.ลูกค้า/สมาชิกค้ำประกัน</a></li>
+                            <li id="WLO4150" runat="server"><a href="rptlo1_5.aspx"><i class="fa fa-circle-o text-yellow"></i>5.สัญญากู้เงินที่รอการอนุมัติ</a></li>
+                            <li id="WLO4160" runat="server"><a href="rptlo1_6.aspx"><i class="fa fa-circle-o text-yellow"></i>6.สัญญากู้เงินที่อนุมัติแล้ว</a></li>
+                            <li id="WLO4170" runat="server"><a href="rptlo1_7.aspx"><i class="fa fa-circle-o text-yellow"></i>7.การต่อสัญญาเงินกู้</a></li>
+                            <li id="WLO4180" runat="server"><a href="rptlo1_8.aspx"><i class="fa fa-circle-o text-yellow"></i>8.การตัดหนี้สูญ</a></li>
+
+                            <li id="WLO4200" runat="server"><a class="bs-label label-success">2. รายงานการชำระเงินกู้</a></li>
+                            <li id="WLO4210" runat="server"><a href="rptlo2_1.aspx"><i class="fa fa-circle-o text-yellow"></i>1.การชำระเงินกู้</a></li>
+                            <li id="WLO4220" runat="server"><a href="rptlo2_2.aspx"><i class="fa fa-circle-o text-yellow"></i>2.สรุปการชำระเงินกู้ตามสัญญากู้</a></li>
+                            <li id="WLO4230" runat="server"><a href="rptlo2_3.aspx"><i class="fa fa-circle-o text-yellow"></i>3.การชำระเงินกู้ประจำเดือน</a></li>
+                            <li id="WLO4240" runat="server"><a href="rptlo2_4.aspx"><i class="fa fa-circle-o text-yellow"></i>4.การปิดสัญญากู้เงิน</a></li>
+                            <li id="WLO4250" runat="server"><a href="rptlo2_5.aspx"><i class="fa fa-circle-o text-yellow"></i>5.สรุปการชำระเงินกู้ตามลูกค้า/สมาชิก</a></li>
+                            <li id="WLO4260" runat="server"><a href="rptlo2_6.aspx"><i class="fa fa-circle-o text-yellow"></i>6.เฉลี่ยคืนดอกเบี้ยเงินกู้</a></li>
+
+                            <li id="WLO4300" runat="server"><a class="bs-label label-success">3. รายงานลูกหนี้เงินกูู้</a></li>
+                            <li id="WLO4310" runat="server"><a href="rptlo3_1.aspx"><i class="fa fa-circle-o text-yellow"></i>1.ลูกหนี้ค้างชำระเงิน</a></li>
+                            <li id="WLO4320" runat="server"><a href="rptlo3_2.aspx"><i class="fa fa-circle-o text-yellow"></i>2.ลูกหนี้คงเหลือ</a></li>
+                            <li id="WLO4330" runat="server"><a href="rptlo3_3.aspx"><i class="fa fa-circle-o text-yellow"></i>3.สรุปยอดเงินกู้</a></li>
+                            <li id="WLO4340" runat="server"><a href="rptlo3_4.aspx"><i class="fa fa-circle-o text-yellow"></i>4.ใบแจ้งกำหนดชำระหนี้</a></li>
+                            <li id="WLO4350" runat="server"><a href="rptlo3_5.aspx"><i class="fa fa-circle-o text-yellow"></i>5.เงินกู้ครบกำหนดสัญญา</a></li>
+                            <li id="WLO4360" runat="server"><a href="rptlo3_6.aspx"><i class="fa fa-circle-o text-yellow"></i>6.ดอกเบี้ยหยุดรับรู้</a></li>
+                            <li id="WLO4370" runat="server"><a href="rptlo3_7.aspx"><i class="fa fa-circle-o text-yellow"></i>7.ประเมินหนี้สูญ</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-table" id="WLO5000" runat="server"></i>
+                            <span>ทะเบียน</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li id="WLO5100" runat="server"><a href="typeloan.aspx"><i class="fa fa-circle-o text-yellow"></i>ประเภทสัญญากู้</a></li>
+                            <li id="WLO5200" runat="server"><a href="person.aspx"><i class="fa fa-circle-o text-yellow"></i>ลูกค้า/สมาชิก</a></li>
+                            <li id="WLO5300" runat="server"><a href="personsub.aspx"><i class="fa fa-circle-o text-yellow"></i>เพิ่มลูกค้า/สมาชิก
+                            <span class="bs-label label-danger">NEW</span>
+                            </a></li>
+
+                            <li id="WLO9999" runat="server" visible="false"><a href="mixproadmin.aspx"><i class="fa fa-circle-o text-yellow"></i>mixproadmin</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- =============================================== -->
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+
+                <b>Version</b> 1.0.0
+   
+            </div>
+            <%--<strong id="lblIP" runat="server"></strong>--%>
+            <strong>Copyright &copy; 2018 <a href="www.mixproadvance.com">Mixpro Advance</a>.</strong> All rights
+    reserved.
+         
+        </footer>
+
+        <!-- Control Sidebar -->
+        <%--<aside class="control-sidebar control-sidebar-dark">
+            <!-- Create the tabs -->
+            <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+                <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+
+                <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <!-- Home tab content -->
+                <div class="tab-pane" id="control-sidebar-home-tab">
+                    <h3 class="control-sidebar-heading">Recent Activity</h3>
+                    <ul class="control-sidebar-menu">
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                                    <p>Will be 23 on April 24th</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="menu-icon fa fa-user bg-yellow"></i>
+
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+
+                                    <p>New phone +1(800)555-1234</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+
+                                    <p>nora@example.com</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="menu-icon fa fa-file-code-o bg-green"></i>
+
+                                <div class="menu-info">
+                                    <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+
+                                    <p>Execution time 5 seconds</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.control-sidebar-menu -->
+
+                    <h3 class="control-sidebar-heading">Tasks Progress</h3>
+                    <ul class="control-sidebar-menu">
+                        <li>
+                            <a href="javascript:void(0)">
+                                <h4 class="control-sidebar-subheading">Custom Template Design
+               
+                                    <span class="label label-danger pull-right">70%</span>
+                                </h4>
+
+                                <div class="progress progress-xxs">
+                                    <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <h4 class="control-sidebar-subheading">Update Resume
+               
+                                    <span class="label label-success pull-right">95%</span>
+                                </h4>
+
+                                <div class="progress progress-xxs">
+                                    <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <h4 class="control-sidebar-subheading">Laravel Integration
+               
+                                    <span class="label label-warning pull-right">50%</span>
+                                </h4>
+
+                                <div class="progress progress-xxs">
+                                    <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <h4 class="control-sidebar-subheading">Back End Framework
+               
+                                    <span class="label label-primary pull-right">68%</span>
+                                </h4>
+
+                                <div class="progress progress-xxs">
+                                    <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.control-sidebar-menu -->
+
+                </div>
+                <!-- /.tab-pane -->
+                <!-- Stats tab content -->
+                <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+                <!-- /.tab-pane -->
+                <!-- Settings tab content -->
+                <div class="tab-pane" id="control-sidebar-settings-tab">
+                    <form method="post">
+                        <h3 class="control-sidebar-heading">General Settings</h3>
+
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Report panel usage
+             
+                                <input type="checkbox" class="pull-right" checked>
+                            </label>
+
+                            <p>
+                                Some information about this general settings option
+           
+                            </p>
+                        </div>
+                        <!-- /.form-group -->
+
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Allow mail redirect
+             
+                                <input type="checkbox" class="pull-right" checked>
+                            </label>
+
+                            <p>
+                                Other sets of options are available
+           
+                            </p>
+                        </div>
+                        <!-- /.form-group -->
+
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Expose author name in posts
+             
+                                <input type="checkbox" class="pull-right" checked>
+                            </label>
+
+                            <p>
+                                Allow the user to show his name in blog posts
+           
+                            </p>
+                        </div>
+                        <!-- /.form-group -->
+
+                        <h3 class="control-sidebar-heading">Chat Settings</h3>
+
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Show me as online
+             
+                                <input type="checkbox" class="pull-right" checked>
+                            </label>
+                        </div>
+                        <!-- /.form-group -->
+
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Turn off notifications
+             
+                                <input type="checkbox" class="pull-right">
+                            </label>
+                        </div>
+                        <!-- /.form-group -->
+
+                        <div class="form-group">
+                            <label class="control-sidebar-subheading">
+                                Delete chat history
+             
+                                <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+                            </label>
+                        </div>
+                        <!-- /.form-group -->
+                    </form>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+        </aside>--%>
+        <!-- /.control-sidebar -->
+        <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+        <div class="control-sidebar-bg"></div>
+    </div>
+    <!-- ./wrapper -->
+    <script type="text/javascript">
+        var nav = window.Event ? true : false;
+        if (nav) {
+            window.captureEvents(Event.KEYDOWN);
+            window.onkeydown = NetscapeEventHandler_KeyDown;
+        } else {
+            document.onkeydown = MicrosoftEventHandler_KeyDown;
+        }
+
+        function NetscapeEventHandler_KeyDown(e) {
+            if (e.which == 13 && e.target.type != 'textarea' && e.target.type != 'submit') {
+                return false;
+            }
+            return true;
+        }
+
+        function MicrosoftEventHandler_KeyDown() {
+            if (event.keyCode == 13 && event.srcElement.type != 'textarea' &&
+                event.srcElement.type != 'submit')
+                return false;
+            return true;
+        }
+
+        function customOpen(url) {
+            var w = window.open(url, '', 'width=1300,height=660,toolbar=0,status=0,left=0,top=0,menubar=0,directories=0,resizable=1,scrollbars=1');
+            w.focus();
+        }
+    </script>
+</body>
+
+</html>

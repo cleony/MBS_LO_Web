@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ED4879D4-8ABB-45A5-A06D-2EAEF169EC5D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Mixpro.MBSLibary</RootNamespace>
+    <AssemblyName>Mixpro.MBSLibary</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Mixpro.MBSLibary.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Mixpro.MBSLibary.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EncryptLibrary">
+      <HintPath>..\RefData\EncryptLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\clsSetting.vb" />
+    <Compile Include="Class\EncryptManager.vb" />
+    <Compile Include="Libary\BaseLibary\AlterDatabase.vb" />
+    <Compile Include="Libary\BaseLibary\GenLoanSchedule.vb" />
+    <Compile Include="Libary\BaseLibary\CalInterest.vb" />
+    <Compile Include="Libary\BaseLibary\Constant.vb" />
+    <Compile Include="Libary\BaseLibary\DBBackup.vb" />
+    <Compile Include="Libary\BaseLibary\DBCommand.vb" />
+    <Compile Include="Libary\BaseLibary\DBConnection.vb" />
+    <Compile Include="Libary\BaseLibary\Share.vb" />
+    <Compile Include="Libary\BaseLibary\SqlDBCommand.vb" />
+    <Compile Include="Libary\BaseLibary\SqlDBConnection.vb" />
+    <Compile Include="Libary\Bussiness\BC_Barcode.vb" />
+    <Compile Include="Libary\Bussiness\BK_AccountBook.vb" />
+    <Compile Include="Libary\Bussiness\BK_AutoDebit.vb" />
+    <Compile Include="Libary\Bussiness\BK_CashInOut.vb" />
+    <Compile Include="Libary\Bussiness\BK_EndYearProcess.vb" />
+    <Compile Include="Libary\Bussiness\BK_FirstLoanSchedule.vb" />
+    <Compile Include="Libary\Bussiness\BK_IncExp.vb" />
+    <Compile Include="Libary\Bussiness\BK_Loan.vb" />
+    <Compile Include="Libary\Bussiness\BK_LoanMovement.vb" />
+    <Compile Include="Libary\Bussiness\BK_LoanSchedule.vb" />
+    <Compile Include="Libary\Bussiness\BK_LoanTransaction.vb" />
+    <Compile Include="Libary\Bussiness\BK_Movement.vb" />
+    <Compile Include="Libary\Bussiness\BK_OpenAccount.vb" />
+    <Compile Include="Libary\Bussiness\BK_ReceiveMoney.vb" />
+    <Compile Include="Libary\Bussiness\BK_RequestLoan.vb" />
+    <Compile Include="Libary\Bussiness\BK_Trading.vb" />
+    <Compile Include="Libary\Bussiness\BK_Transaction.vb" />
+    <Compile Include="Libary\Bussiness\BK_TransOD.vb" />
+    <Compile Include="Libary\Bussiness\BK_TypeAccount.vb" />
+    <Compile Include="Libary\Bussiness\BK_TypeCollateral.vb" />
+    <Compile Include="Libary\Bussiness\BK_TypeLoan.vb" />
+    <Compile Include="Libary\Bussiness\BK_TypeShare.vb" />
+    <Compile Include="Libary\Bussiness\CalInterest.vb" />
+    <Compile Include="Libary\Bussiness\CD_Bank.vb" />
+    <Compile Include="Libary\Bussiness\CD_BankBranch.vb" />
+    <Compile Include="Libary\Bussiness\CD_Company.vb" />
+    <Compile Include="Libary\Bussiness\CD_Constant.vb" />
+    <Compile Include="Libary\Bussiness\CD_Employee.vb" />
+    <Compile Include="Libary\Bussiness\CD_IncExp.vb" />
+    <Compile Include="Libary\Bussiness\CD_ODMember.vb" />
+    <Compile Include="Libary\Bussiness\CD_Person.vb" />
+    <Compile Include="Libary\Bussiness\CD_PersonCancel.vb" />
+    <Compile Include="Libary\Bussiness\CD_Prefix.vb" />
+    <Compile Include="Libary\Bussiness\GL_AccountChart.vb" />
+    <Compile Include="Libary\Bussiness\GL_Book.vb" />
+    <Compile Include="Libary\Bussiness\CD_Branch.vb" />
+    <Compile Include="Libary\Bussiness\GL_Pattern.vb" />
+    <Compile Include="Libary\Bussiness\GL_Tax.vb" />
+    <Compile Include="Libary\Bussiness\GL_Trans.vb" />
+    <Compile Include="Libary\Bussiness\OverviewReports.vb" />
+    <Compile Include="Libary\Bussiness\Reports.vb" />
+    <Compile Include="Libary\Bussiness\Running.vb" />
+    <Compile Include="Libary\Bussiness\CD_LoginWeb.vb" />
+    <Compile Include="Libary\Entity\BK_AccountBook.vb" />
+    <Compile Include="Libary\Entity\BK_AutoDebit.vb" />
+    <Compile Include="Libary\Entity\BK_CashInOut.vb" />
+    <Compile Include="Libary\Entity\BK_Collateral.vb" />
+    <Compile Include="Libary\Entity\BK_FirstLoanSchedule.vb" />
+    <Compile Include="Libary\Entity\BK_IncExp.vb" />
+    <Compile Include="Libary\Entity\BK_IncExpDetail.vb" />
+    <Compile Include="Libary\Entity\BK_Loan.vb" />
+    <Compile Include="Libary\Entity\BK_LoanMovement.vb" />
+    <Compile Include="Libary\Entity\BK_LoanSchedule.vb" />
+    <Compile Include="Libary\Entity\BK_LoanTransaction.vb" />
+    <Compile Include="Libary\Entity\BK_LostOpportunity.vb" />
+    <Compile Include="Libary\Entity\BK_Movement.vb" />
+    <Compile Include="Libary\Entity\BK_ODExtend.vb" />
+    <Compile Include="Libary\Entity\BK_ODLoan.vb" />
+    <Compile Include="Libary\Entity\BK_OpenAccount.vb" />
+    <Compile Include="Libary\Entity\BK_ReceiveMoney.vb" />
+    <Compile Include="Libary\Entity\BK_RequestLoan.vb" />
+    <Compile Include="Libary\Entity\BK_Trading.vb" />
+    <Compile Include="Libary\Entity\BK_TradingDetail.vb" />
+    <Compile Include="Libary\Entity\BK_Transaction.vb" />
+    <Compile Include="Libary\Entity\BK_TransOD.vb" />
+    <Compile Include="Libary\Entity\BK_TypeAccount.vb" />
+    <Compile Include="Libary\Entity\BK_TypeAccountSub.vb" />
+    <Compile Include="Libary\Entity\BK_TypeCollateral.vb" />
+    <Compile Include="Libary\Entity\BK_TypeLoan.vb" />
+    <Compile Include="Libary\Entity\BK_TypeShare.vb" />
+    <Compile Include="Libary\Entity\CD_Bank.vb" />
+    <Compile Include="Libary\Entity\CD_BankBranch.vb" />
+    <Compile Include="Libary\Entity\CD_Company.vb" />
+    <Compile Include="Libary\Entity\CD_Constant.vb" />
+    <Compile Include="Libary\Entity\CD_Employee.vb" />
+    <Compile Include="Libary\Entity\CD_IncExp.vb" />
+    <Compile Include="Libary\Entity\CD_LoginWeb.vb" />
+    <Compile Include="Libary\Entity\CD_ODMember.vb" />
+    <Compile Include="Libary\Entity\CD_Person.vb" />
+    <Compile Include="Libary\Entity\CD_PersonCancel.vb" />
+    <Compile Include="Libary\Entity\CD_Prefix.vb" />
+    <Compile Include="Libary\Entity\CD_SubLogin.vb" />
+    <Compile Include="Libary\Entity\GL_AccountChart.vb" />
+    <Compile Include="Libary\Entity\gl_bookInfo.vb" />
+    <Compile Include="Libary\Entity\CD_Branch.vb" />
+    <Compile Include="Libary\Entity\gl_departmentInfo.vb" />
+    <Compile Include="Libary\Entity\GL_DetailPattern.vb" />
+    <Compile Include="Libary\Entity\gl_detailtemplateInfo.vb" />
+    <Compile Include="Libary\Entity\GL_Pattern.vb" />
+    <Compile Include="Libary\Entity\gl_PeriodInfo.vb" />
+    <Compile Include="Libary\Entity\gl_taxinfo.vb" />
+    <Compile Include="Libary\Entity\gl_transInfo.vb" />
+    <Compile Include="Libary\Entity\gl_transsub.vb" />
+    <Compile Include="Libary\Entity\PasswordInfo.vb" />
+    <Compile Include="Libary\Entity\Running.vb" />
+    <Compile Include="Libary\Entity\RunningInfo.vb" />
+    <Compile Include="Libary\Entity\SettingInfo.vb" />
+    <Compile Include="Libary\Entity\Typeinfo.vb" />
+    <Compile Include="Libary\Entity\UserActiveHistory.vb" />
+    <Compile Include="Libary\SQLData\BC_Barcode.vb" />
+    <Compile Include="Libary\SQLData\BK_Accountbook.vb" />
+    <Compile Include="Libary\SQLData\BK_AutoDebit.vb" />
+    <Compile Include="Libary\SQLData\BK_CashInOut.vb" />
+    <Compile Include="Libary\SQLData\BK_EndYearProcess.vb" />
+    <Compile Include="Libary\SQLData\BK_FirstLoanSchedule.vb" />
+    <Compile Include="Libary\SQLData\BK_IncExp.vb" />
+    <Compile Include="Libary\SQLData\BK_Loan.vb" />
+    <Compile Include="Libary\SQLData\BK_LoanMovement.vb" />
+    <Compile Include="Libary\SQLData\BK_LoanSchedule.vb" />
+    <Compile Include="Libary\SQLData\BK_LoanTransaction.vb" />
+    <Compile Include="Libary\SQLData\BK_Movement.vb" />
+    <Compile Include="Libary\SQLData\BK_OpenAccount.vb" />
+    <Compile Include="Libary\SQLData\BK_ReceiveMoney.vb" />
+    <Compile Include="Libary\SQLData\BK_RequestLoan.vb" />
+    <Compile Include="Libary\SQLData\BK_Trading.vb" />
+    <Compile Include="Libary\SQLData\BK_Transaction.vb" />
+    <Compile Include="Libary\SQLData\BK_TransOD.vb" />
+    <Compile Include="Libary\SQLData\BK_TypeAccount.vb" />
+    <Compile Include="Libary\SQLData\BK_TypeCollateral.vb" />
+    <Compile Include="Libary\SQLData\BK_TypeLoan.vb" />
+    <Compile Include="Libary\SQLData\BK_TypeShare.vb" />
+    <Compile Include="Libary\SQLData\CalInterest.vb" />
+    <Compile Include="Libary\SQLData\CD_Bank.vb" />
+    <Compile Include="Libary\SQLData\CD_BankBranch.vb" />
+    <Compile Include="Libary\SQLData\CD_Company.vb" />
+    <Compile Include="Libary\SQLData\CD_Constant.vb" />
+    <Compile Include="Libary\SQLData\CD_Employee.vb" />
+    <Compile Include="Libary\SQLData\CD_IncExp.vb" />
+    <Compile Include="Libary\SQLData\CD_LoginWeb.vb" />
+    <Compile Include="Libary\SQLData\CD_ODMember.vb" />
+    <Compile Include="Libary\SQLData\CD_Person.vb" />
+    <Compile Include="Libary\SQLData\CD_PersonCancel.vb" />
+    <Compile Include="Libary\SQLData\CD_Prefix.vb" />
+    <Compile Include="Libary\SQLData\CheckError.vb" />
+    <Compile Include="Libary\SQLData\GL_Accountchart.vb" />
+    <Compile Include="Libary\SQLData\GL_Book.vb" />
+    <Compile Include="Libary\SQLData\CD_Branch.vb" />
+    <Compile Include="Libary\SQLData\GL_Department.vb" />
+    <Compile Include="Libary\SQLData\GL_Pattern.vb" />
+    <Compile Include="Libary\SQLData\GL_Tax.vb" />
+    <Compile Include="Libary\SQLData\GL_Trans.vb" />
+    <Compile Include="Libary\SQLData\OverviewReports.vb" />
+    <Compile Include="Libary\SQLData\Reports.vb" />
+    <Compile Include="Libary\SQLData\Running.vb" />
+    <Compile Include="Libary\SQLData\Table.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
