@@ -155,7 +155,72 @@
                                                                                 <div class="form-group">
                                                                                     <label class="col-sm-3 control-label"></label>
                                                                                     <div class="col-sm-4">
-                                                                                        <asp:Button ID="btnIdCard" runat="server" Text="อ่านบัตรประชน" OnClick="ReadIdCard" class=" col-sm-8 btn btn-alt btn-hover btn-info" Style="width: 220px;" />
+                                                                                        <%--<asp:Button ID="Button1" runat="server" Text="อ่านบัตรประชน" OnClick="ReadIdCard" class=" col-sm-8 btn btn-alt btn-hover btn-info" Style="width: 220px;" />--%>
+                                                                                        <asp:Button ID="btnIdCard" runat="server" Text="อ่านบัตรประชน" data-toggle="modal" data-target="#myModal" class=" col-sm-8 btn btn-alt btn-hover btn-info" Style="width: 220px;" />
+                                                                                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                                                                            <div class="modal-dialog ">
+                                                                                                <div class="modal-content">
+                                                                                                    <div class="modal-header">
+                                                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                                            <span aria-hidden="true">&times;</span></button>
+                                                                                                        <h4 class="modal-title">ข้อมูลบัตรประชาชน</h4>
+                                                                                                    </div>
+                                                                                                    <div class="modal-body">
+                                                                                                        <div class="row">
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-sm-4 control-label">เลขบัตรประชาชน</label>
+                                                                                                                <div class="col-sm-6">
+                                                                                                                    <input type="text" runat="server" id="Text1" class="form-control" />
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-sm-4 control-label">คำนำหน้า</label>
+                                                                                                                <div class="col-sm-6">
+                                                                                                                    <asp:DropDownList ID="DropDownList1" runat="server" class="form-control select2"></asp:DropDownList>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-sm-4 control-label">ชื่อ</label>
+                                                                                                                <div class="col-sm-6">
+                                                                                                                    <input type="text" runat="server" id="Text2" class="form-control" />
+                                                                                                                </div>
+                                                                                                            </div>
+
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-sm-4 control-label">นามสกุล</label>
+                                                                                                                <div class="col-sm-6">
+                                                                                                                    <input type="text" runat="server" id="Text3" class="form-control" />
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-sm-4 control-label">วันเดือนปีเกิด</label>
+                                                                                                                <div class="col-sm-6">
+                                                                                                                    <div class="input-group date">
+                                                                                                                        <div class="input-group-addon">
+                                                                                                                            <i class="fa fa-calendar"></i>
+                                                                                                                        </div>
+                                                                                                                        <input type="text" runat="server" id="Text4" class="form-control thai-datepicker" />
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="form-group">
+                                                                                                                <label class="col-sm-4 control-label">อายุ</label>
+                                                                                                                <div class="col-sm-6">
+                                                                                                                    <input type="text" runat="server" id="Text5" class="form-control" />
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+
+                                                                                                    <div class="modal-footer">
+                                                                                                        <asp:Button ID="btnClose" class="btn btn-outline  pull-right text-red" runat="server" data-dismiss="modal" Text="ยกเลิก" />
+                                                                                                        <div class=" text-center">
+                                                                                                            <asp:Button ID="btnAddDataIDCard" class="btn btn-primary" runat="server" Text="ตกลง" Width="150px" OnClick="ReadIdCard" />
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
