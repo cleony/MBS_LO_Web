@@ -575,7 +575,7 @@ Namespace SQLData
             Try
 
                 sql = "select BK_LoanSchedule.TermDate,BK_LoanSchedule.AccountNo,BK_LoanSchedule.TotalAmount,BK_Loan.PersonName "
-                sql &= ",BK_LoanSchedule.Orders as term,BK_LoanSchedule.Remain,BK_LoanSchedule.PayRemain "
+                sql &= ",BK_LoanSchedule.Orders as term,BK_LoanSchedule.Remain,BK_LoanSchedule.PayRemain,(BK_LoanSchedule.PayCapital + BK_LoanSchedule.PayInterest) as RecieveAmount  "
                 sql &= " ,(select (case when (BK_LoanSchedule.Capital - BK_LoanSchedule.PayCapital) > 0 then (BK_LoanSchedule.Capital - BK_LoanSchedule.PayCapital)  else 0 end )) as LateCapital "
                 sql &= " ,(select ( (case when (BK_LoanSchedule.Interest - BK_LoanSchedule.PayInterest) > 0 then (BK_LoanSchedule.Interest - BK_LoanSchedule.PayInterest) else 0 end) "
                 sql &= " + (case when (BK_LoanSchedule.Fee_1 - BK_LoanSchedule.FeePay_1) > 0 then (BK_LoanSchedule.Fee_1 - BK_LoanSchedule.FeePay_1) else 0 end) "

@@ -552,8 +552,8 @@
                                                                                     <div class="form-group">
                                                                                         <label class="col-sm-3 control-label">จังหวัด</label>
                                                                                         <div class="col-sm-6">
-                                                                                               <input type="text" runat="server" id="txtProvince2" class="form-control" />
-                                                                                            
+                                                                                            <input type="text" runat="server" id="txtProvince2" class="form-control" />
+
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="form-group">
@@ -584,7 +584,6 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -715,7 +714,6 @@
                                                 </div>
                                                 <div class="tab-pane fade" id="tab-example-5">
                                                     <div class="box box-default">
-
                                                         <div class="box-body">
                                                             <div class="panel-body">
                                                                 <h3 class="title-hero"></h3>

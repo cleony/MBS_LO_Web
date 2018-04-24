@@ -201,8 +201,9 @@ Public Class loaninvoice
                         If ckMulct.Checked AndAlso LoanInfo.OverDueRate > 0 Then
                             '========== ค่าปรับ คิดจาก ยอดเงินปรับรวม * อัตราปรับ * วันที่ค้าง/365
                             '==== unpaid คิดค่าปรับจ้างวันที่ ณ วันที่
+                            Dim StLateTermDate As Date = DtLoan.AsEnumerable().Where(Function(row) row.Field(Of String)("AccountNo") = Share.FormatString(Dr.Item("AccountNo")) AndAlso row.Field(Of Decimal)("RecieveAmount") = 0).Select(Function(row) row.Field(Of Date)("TermDate")).FirstOrDefault
                             If rdUnpaidInvoice.Checked Then
-                                If DateAdd(DateInterval.Day, LoanInfo.OverDueDay, FirstTermDate) < Share.FormatDate(dtRptDate.Value).Date Then
+                                If DateAdd(DateInterval.Day, LoanInfo.OverDueDay, StLateTermDate) < Share.FormatDate(dtRptDate.Value).Date Then
                                     Dim DelayDay As Integer = 0
                                     Dim CalAmount As Double = 0
 
@@ -220,7 +221,7 @@ Public Class loaninvoice
                                         End If
                                         DelayDay = Share.FormatInteger(DateDiff(DateInterval.Day, PrevTermDate, Share.FormatDate(dtRptDate.Value).Date))
                                     Else
-                                        DelayDay = Share.FormatInteger(DateDiff(DateInterval.Day, Share.FormatDate(FirstTermDate), Share.FormatDate(dtRptDate.Value).Date))
+                                        DelayDay = Share.FormatInteger(DateDiff(DateInterval.Day, Share.FormatDate(StLateTermDate), Share.FormatDate(dtRptDate.Value).Date))
                                     End If
 
 
@@ -242,7 +243,7 @@ Public Class loaninvoice
                             Else
 
                                 '====== คิดค่าปรับจากวันที่ในงวดสุดท้ายที่ค้างชำระ
-                                If DateAdd(DateInterval.Day, LoanInfo.OverDueDay, FirstTermDate) < LastTermDate.Date Then
+                                If DateAdd(DateInterval.Day, LoanInfo.OverDueDay, StLateTermDate) < LastTermDate.Date Then
                                     Dim DelayDay As Integer = 0
                                     Dim CalAmount As Double = 0
 
@@ -260,7 +261,7 @@ Public Class loaninvoice
                                         End If
                                         DelayDay = Share.FormatInteger(DateDiff(DateInterval.Day, PrevTermDate, LastTermDate.Date))
                                     Else
-                                        DelayDay = Share.FormatInteger(DateDiff(DateInterval.Day, Share.FormatDate(FirstTermDate), LastTermDate.Date))
+                                        DelayDay = Share.FormatInteger(DateDiff(DateInterval.Day, Share.FormatDate(StLateTermDate), LastTermDate.Date))
                                     End If
 
 
