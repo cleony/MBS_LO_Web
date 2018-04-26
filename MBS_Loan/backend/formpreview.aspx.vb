@@ -329,65 +329,65 @@ Public Class formpreview
 
         '================ เพิ่มที่อยู่บัตรประชาชน
         Try
-            Report("Buiding1_2") = Share.FormatString(PersonInfo.Buiding2)
+            Report("Buiding1_2") = Share.FormatString(PersonInfo.Buiding1)
         Catch ex As Exception
 
         End Try
 
         Try
-            Report("Addr1_2") = Share.FormatString(PersonInfo.AddrNo2)
+            Report("Addr1_2") = Share.FormatString(PersonInfo.AddrNo1)
         Catch ex As Exception
 
         End Try
 
         Try
-            Report("moo1_2") = Share.FormatString(PersonInfo.Moo2)
+            Report("moo1_2") = Share.FormatString(PersonInfo.Moo1)
         Catch ex As Exception
 
         End Try
 
         Try
-            Report("Road1_2") = Share.FormatString(PersonInfo.Road2)
+            Report("Road1_2") = Share.FormatString(PersonInfo.Road1)
         Catch ex As Exception
 
         End Try
 
         Try
-            Report("soi1_2") = Share.FormatString(PersonInfo.Soi2)
+            Report("soi1_2") = Share.FormatString(PersonInfo.Soi1)
         Catch ex As Exception
 
         End Try
 
         Try
-            Report("Locality1_2") = Share.FormatString(PersonInfo.Locality2)
+            Report("Locality1_2") = Share.FormatString(PersonInfo.Locality1)
         Catch ex As Exception
 
         End Try
 
         Try
-            Report("District1_2") = Share.FormatString(PersonInfo.District2)
+            Report("District1_2") = Share.FormatString(PersonInfo.District1)
         Catch ex As Exception
 
         End Try
 
         Try
-            Report("Province1_2") = Share.FormatString(PersonInfo.Province2)
+            Report("Province1_2") = Share.FormatString(PersonInfo.Province1)
         Catch ex As Exception
 
         End Try
 
         Try
-            Report("ZipCode1_2") = Share.FormatString(PersonInfo.ZipCode2)
+            Report("ZipCode1_2") = Share.FormatString(PersonInfo.ZipCode1)
         Catch ex As Exception
 
         End Try
         Try
-            Report("Phone1_2") = Share.FormatString(PersonInfo.Phone2)
+            Report("Phone1_2") = Share.FormatString(PersonInfo.Phone1)
         Catch ex As Exception
 
         End Try
         Try
-            Report("Email1_2") = Share.FormatString(PersonInfo.Email2)
+            Report("Email1_2") = Share.FormatString(PersonInfo.Email1)
         Catch ex As Exception
 
         End Try
@@ -485,65 +485,65 @@ Public Class formpreview
 
             '================ เพิ่มที่อยู่บัตรประชาชน
             Try
-                Report("Buiding2_2") = Share.FormatString(PersonInfo2.Buiding2)
+                Report("Buiding2_2") = Share.FormatString(PersonInfo2.Buiding1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("Addr2_2") = Share.FormatString(PersonInfo2.AddrNo2)
+                Report("Addr2_2") = Share.FormatString(PersonInfo2.AddrNo1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("moo2_2") = Share.FormatString(PersonInfo2.Moo2)
+                Report("moo2_2") = Share.FormatString(PersonInfo2.Moo1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("Road2_2") = Share.FormatString(PersonInfo2.Road2)
+                Report("Road2_2") = Share.FormatString(PersonInfo2.Road1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("soi2_2") = Share.FormatString(PersonInfo2.Soi2)
+                Report("soi2_2") = Share.FormatString(PersonInfo2.Soi1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("Locality2_2") = Share.FormatString(PersonInfo2.Locality2)
+                Report("Locality2_2") = Share.FormatString(PersonInfo2.Locality1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("District2_2") = Share.FormatString(PersonInfo2.District2)
+                Report("District2_2") = Share.FormatString(PersonInfo2.District1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("Province2_2") = Share.FormatString(PersonInfo2.Province2)
+                Report("Province2_2") = Share.FormatString(PersonInfo2.Province1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("ZipCode2_2") = Share.FormatString(PersonInfo2.ZipCode2)
+                Report("ZipCode2_2") = Share.FormatString(PersonInfo2.ZipCode1)
             Catch ex As Exception
 
             End Try
             Try
-                Report("Phone2_2") = Share.FormatString(PersonInfo2.Phone2)
+                Report("Phone2_2") = Share.FormatString(PersonInfo2.Phone1)
             Catch ex As Exception
 
             End Try
             Try
-                Report("Email2_2") = Share.FormatString(PersonInfo2.Email2)
+                Report("Email2_2") = Share.FormatString(PersonInfo2.Email1)
             Catch ex As Exception
 
             End Try
@@ -642,65 +642,65 @@ Public Class formpreview
 
             '================ เพิ่มที่อยู่บัตรประชาชน
             Try
-                Report("Buiding3_2") = Share.FormatString(PersonInfo2.Buiding2)
+                Report("Buiding3_2") = Share.FormatString(PersonInfo2.Buiding1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("Addr3_2") = Share.FormatString(PersonInfo2.AddrNo2)
+                Report("Addr3_2") = Share.FormatString(PersonInfo2.AddrNo1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("moo3_2") = Share.FormatString(PersonInfo2.Moo2)
+                Report("moo3_2") = Share.FormatString(PersonInfo2.Moo1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("Road3_2") = Share.FormatString(PersonInfo2.Road2)
+                Report("Road3_2") = Share.FormatString(PersonInfo2.Road1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("soi3_2") = Share.FormatString(PersonInfo2.Soi2)
+                Report("soi3_2") = Share.FormatString(PersonInfo2.Soi1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("Locality3_2") = Share.FormatString(PersonInfo2.Locality2)
+                Report("Locality3_2") = Share.FormatString(PersonInfo2.Locality1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("District3_2") = Share.FormatString(PersonInfo2.District2)
+                Report("District3_2") = Share.FormatString(PersonInfo2.District1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("Province3_2") = Share.FormatString(PersonInfo2.Province2)
+                Report("Province3_2") = Share.FormatString(PersonInfo2.Province1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("ZipCode3_2") = Share.FormatString(PersonInfo2.ZipCode2)
+                Report("ZipCode3_2") = Share.FormatString(PersonInfo2.ZipCode1)
             Catch ex As Exception
 
             End Try
             Try
-                Report("Phone3_2") = Share.FormatString(PersonInfo2.Phone2)
+                Report("Phone3_2") = Share.FormatString(PersonInfo2.Phone1)
             Catch ex As Exception
 
             End Try
             Try
-                Report("Email3_2") = Share.FormatString(PersonInfo2.Email2)
+                Report("Email3_2") = Share.FormatString(PersonInfo2.Email1)
             Catch ex As Exception
 
             End Try
@@ -798,65 +798,65 @@ Public Class formpreview
 
             '================ เพิ่มที่อยู่บัตรประชาชน
             Try
-                Report("Buiding4_2") = Share.FormatString(PersonInfo2.Buiding2)
+                Report("Buiding4_2") = Share.FormatString(PersonInfo2.Buiding1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("Addr4_2") = Share.FormatString(PersonInfo2.AddrNo2)
+                Report("Addr4_2") = Share.FormatString(PersonInfo2.AddrNo1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("moo4_2") = Share.FormatString(PersonInfo2.Moo2)
+                Report("moo4_2") = Share.FormatString(PersonInfo2.Moo1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("Road4_2") = Share.FormatString(PersonInfo2.Road2)
+                Report("Road4_2") = Share.FormatString(PersonInfo2.Road1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("soi4_2") = Share.FormatString(PersonInfo2.Soi2)
+                Report("soi4_2") = Share.FormatString(PersonInfo2.Soi1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("Locality4_2") = Share.FormatString(PersonInfo2.Locality2)
+                Report("Locality4_2") = Share.FormatString(PersonInfo2.Locality1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("District4_2") = Share.FormatString(PersonInfo2.District2)
+                Report("District4_2") = Share.FormatString(PersonInfo2.District1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("Province4_2") = Share.FormatString(PersonInfo2.Province2)
+                Report("Province4_2") = Share.FormatString(PersonInfo2.Province1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("ZipCode4_2") = Share.FormatString(PersonInfo2.ZipCode2)
+                Report("ZipCode4_2") = Share.FormatString(PersonInfo2.ZipCode1)
             Catch ex As Exception
 
             End Try
             Try
-                Report("Phone4_2") = Share.FormatString(PersonInfo2.Phone2)
+                Report("Phone4_2") = Share.FormatString(PersonInfo2.Phone1)
             Catch ex As Exception
 
             End Try
             Try
-                Report("Email4_2") = Share.FormatString(PersonInfo2.Email2)
+                Report("Email4_2") = Share.FormatString(PersonInfo2.Email1)
             Catch ex As Exception
 
             End Try
@@ -954,65 +954,65 @@ Public Class formpreview
 
             '================ เพิ่มที่อยู่บัตรประชาชน
             Try
-                Report("Buiding5_2") = Share.FormatString(PersonInfo2.Buiding2)
+                Report("Buiding5_2") = Share.FormatString(PersonInfo2.Buiding1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("Addr5_2") = Share.FormatString(PersonInfo2.AddrNo2)
+                Report("Addr5_2") = Share.FormatString(PersonInfo2.AddrNo1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("moo5_2") = Share.FormatString(PersonInfo2.Moo2)
+                Report("moo5_2") = Share.FormatString(PersonInfo2.Moo1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("Road5_2") = Share.FormatString(PersonInfo2.Road2)
+                Report("Road5_2") = Share.FormatString(PersonInfo2.Road1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("soi5_2") = Share.FormatString(PersonInfo2.Soi2)
+                Report("soi5_2") = Share.FormatString(PersonInfo2.Soi1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("Locality5_2") = Share.FormatString(PersonInfo2.Locality2)
+                Report("Locality5_2") = Share.FormatString(PersonInfo2.Locality1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("District5_2") = Share.FormatString(PersonInfo2.District2)
+                Report("District5_2") = Share.FormatString(PersonInfo2.District1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("Province5_2") = Share.FormatString(PersonInfo2.Province2)
+                Report("Province5_2") = Share.FormatString(PersonInfo2.Province1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("ZipCode5_2") = Share.FormatString(PersonInfo2.ZipCode2)
+                Report("ZipCode5_2") = Share.FormatString(PersonInfo2.ZipCode1)
             Catch ex As Exception
 
             End Try
             Try
-                Report("Phone5_2") = Share.FormatString(PersonInfo2.Phone2)
+                Report("Phone5_2") = Share.FormatString(PersonInfo2.Phone1)
             Catch ex As Exception
 
             End Try
             Try
-                Report("Email5_2") = Share.FormatString(PersonInfo2.Email2)
+                Report("Email5_2") = Share.FormatString(PersonInfo2.Email1)
             Catch ex As Exception
 
             End Try
@@ -1110,65 +1110,65 @@ Public Class formpreview
 
             '================ เพิ่มที่อยู่บัตรประชาชน
             Try
-                Report("Buiding6_2") = Share.FormatString(PersonInfo2.Buiding2)
+                Report("Buiding6_2") = Share.FormatString(PersonInfo2.Buiding1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("Addr6_2") = Share.FormatString(PersonInfo2.AddrNo2)
+                Report("Addr6_2") = Share.FormatString(PersonInfo2.AddrNo1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("moo6_2") = Share.FormatString(PersonInfo2.Moo2)
+                Report("moo6_2") = Share.FormatString(PersonInfo2.Moo1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("Road6_2") = Share.FormatString(PersonInfo2.Road2)
+                Report("Road6_2") = Share.FormatString(PersonInfo2.Road1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("soi6_2") = Share.FormatString(PersonInfo2.Soi2)
+                Report("soi6_2") = Share.FormatString(PersonInfo2.Soi1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("Locality6_2") = Share.FormatString(PersonInfo2.Locality2)
+                Report("Locality6_2") = Share.FormatString(PersonInfo2.Locality1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("District6_2") = Share.FormatString(PersonInfo2.District2)
+                Report("District6_2") = Share.FormatString(PersonInfo2.District1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("Province6_2") = Share.FormatString(PersonInfo2.Province2)
+                Report("Province6_2") = Share.FormatString(PersonInfo2.Province1)
             Catch ex As Exception
 
             End Try
 
             Try
-                Report("ZipCode6_2") = Share.FormatString(PersonInfo2.ZipCode2)
+                Report("ZipCode6_2") = Share.FormatString(PersonInfo2.ZipCode1)
             Catch ex As Exception
 
             End Try
             Try
-                Report("Phone6_2") = Share.FormatString(PersonInfo2.Phone2)
+                Report("Phone6_2") = Share.FormatString(PersonInfo2.Phone1)
             Catch ex As Exception
 
             End Try
             Try
-                Report("Email6_2") = Share.FormatString(PersonInfo2.Email2)
+                Report("Email6_2") = Share.FormatString(PersonInfo2.Email1)
             Catch ex As Exception
 
             End Try
