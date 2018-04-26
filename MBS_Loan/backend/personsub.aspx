@@ -157,70 +157,7 @@
                                                                                     <div class="col-sm-4">
                                                                                         <%--<asp:Button ID="Button1" runat="server" Text="อ่านบัตรประชน" OnClick="ReadIdCard" class=" col-sm-8 btn btn-alt btn-hover btn-info" Style="width: 220px;" />--%>
                                                                                         <asp:Button ID="btnIdCard" runat="server" Text="อ่านบัตรประชน" data-toggle="modal" data-target="#myModal" class=" col-sm-8 btn btn-alt btn-hover btn-info" Style="width: 220px;" />
-                                                                                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                                                                                            <div class="modal-dialog ">
-                                                                                                <div class="modal-content">
-                                                                                                    <div class="modal-header">
-                                                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                                                            <span aria-hidden="true">&times;</span></button>
-                                                                                                        <h4 class="modal-title">ข้อมูลบัตรประชาชน</h4>
-                                                                                                    </div>
-                                                                                                    <div class="modal-body">
-                                                                                                        <div class="row">
-                                                                                                            <div class="form-group">
-                                                                                                                <label class="col-sm-4 control-label">เลขบัตรประชาชน</label>
-                                                                                                                <div class="col-sm-6">
-                                                                                                                    <input type="text" runat="server" id="Text1" class="form-control" />
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div class="form-group">
-                                                                                                                <label class="col-sm-4 control-label">คำนำหน้า</label>
-                                                                                                                <div class="col-sm-6">
-                                                                                                                    <asp:DropDownList ID="DropDownList1" runat="server" class="form-control select2"></asp:DropDownList>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div class="form-group">
-                                                                                                                <label class="col-sm-4 control-label">ชื่อ</label>
-                                                                                                                <div class="col-sm-6">
-                                                                                                                    <input type="text" runat="server" id="Text2" class="form-control" />
-                                                                                                                </div>
-                                                                                                            </div>
 
-                                                                                                            <div class="form-group">
-                                                                                                                <label class="col-sm-4 control-label">นามสกุล</label>
-                                                                                                                <div class="col-sm-6">
-                                                                                                                    <input type="text" runat="server" id="Text3" class="form-control" />
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div class="form-group">
-                                                                                                                <label class="col-sm-4 control-label">วันเดือนปีเกิด</label>
-                                                                                                                <div class="col-sm-6">
-                                                                                                                    <div class="input-group date">
-                                                                                                                        <div class="input-group-addon">
-                                                                                                                            <i class="fa fa-calendar"></i>
-                                                                                                                        </div>
-                                                                                                                        <input type="text" runat="server" id="Text4" class="form-control thai-datepicker" />
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div class="form-group">
-                                                                                                                <label class="col-sm-4 control-label">อายุ</label>
-                                                                                                                <div class="col-sm-6">
-                                                                                                                    <input type="text" runat="server" id="Text5" class="form-control" />
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-
-                                                                                                    <div class="modal-footer">
-                                                                                                        <asp:Button ID="btnClose" class="btn btn-outline  pull-right text-red" runat="server" data-dismiss="modal" Text="ยกเลิก" />
-                                                                                                        <div class=" text-center">
-                                                                                                            <asp:Button ID="btnAddDataIDCard" class="btn btn-primary" runat="server" Text="ตกลง" Width="150px" OnClick="ReadIdCard" />
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -405,13 +342,13 @@
                                                                             <div class="form-group">
                                                                                 <label class="col-sm-3 control-label">หมู่ที่</label>
                                                                                 <div class="col-sm-6">
-                                                                                    <input type="text" runat="server" id="txtmoo" class="form-control" />
+                                                                                    <input type="text" runat="server" id="txtMoo" class="form-control" />
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label class="col-sm-3 control-label">ซอย</label>
                                                                                 <div class="col-sm-6">
-                                                                                    <input type="text" runat="server" id="txtsoi" class="form-control" />
+                                                                                    <input type="text" runat="server" id="txtSoi" class="form-control" />
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group">
@@ -950,7 +887,6 @@
                                         </ContentTemplate>
                                         <Triggers>
                                             <asp:AsyncPostBackTrigger ControlID="txtBarcodeId" />
-
                                         </Triggers>
 
                                     </asp:UpdatePanel>
@@ -968,28 +904,122 @@
                     <asp:Button Text="ลบข้อมูล" ID="btnDelete" runat="server" Visible="false" class="btn btn-danger" OnClick="DeleteData" OnClientClick="return confirm('ท่านต้องการลบข้อมูลใช่หรือไม่ ?')" />
                 </div>
             </div>
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog ">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-labelledby="mySmallModal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">ข้อมูลบัตรประชาชน</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">เลขบัตรประชาชน</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" runat="server" id="txtIDCardID" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">ชื่อ</label>
+                                    <div class="col-sm-2">
+                                        <input type="text" runat="server" id="txtIDCardTitle" class="form-control" />
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input type="text" runat="server" id="txtIDCardFirstName" class="form-control" />
+                                    </div>
+                                </div>
 
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">นามสกุล</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" runat="server" id="txtIDCardLastName" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">วันเดือนปีเกิด</label>
+                                    <div class="col-sm-4">
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" runat="server" id="txtIDCardBirthDate" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input type="text" runat="server" id="txtIdCardSex" class="form-control" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">เลขที่บ้าน</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" runat="server" id="txtIDCardAddr" class="form-control" />
+                                    </div>
+                                    <%--<a>หมู่ที่</a>--%>
+                                    <%--  <label class="col-sm-2 ">หมู่ที่</label>--%>
+                                    <div class="col-sm-3">
+                                        <input type="text" runat="server" id="txtIDCardMoo" class="form-control" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">ซอย</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" runat="server" id="txtIDCardSoi" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">ถนน</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" runat="server" id="txtIDCardRoad" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">ตำบล/แขวง</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" runat="server" id="txtIDCardLocality" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">อำเภอ/เขต</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" runat="server" id="txtIDCardDistrict" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">จังหวัด</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" runat="server" id="txtIDCardProvince" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label">Image</label>
+                                <div class="col-sm-6">
+                                    <input type="text" runat="server" id="txtIDCardPicture" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <asp:Button ID="btnClose" class="btn btn-outline  pull-right text-red" runat="server" data-dismiss="modal" Text="ยกเลิก" />
+                            <div class=" text-center">
+                                <%--  <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                    <ContentTemplate>--%>
+                                <label class="col-sm-2 control-label"></label>
+                                <asp:Button ID="btnAddDataIDCard" class="btn btn-primary" runat="server" Text="ยืนยันข้อมูล" Width="150px" OnClick="ReadIdCard" />
+                                <%-- </ContentTemplate>
+                                </asp:UpdatePanel>--%>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </form>
 
-    <form id="demo1" class="demo" style="display: none;" autocomplete="off">
-        <div class="uk-width-1-2@m">
-            <label class="h2">ตำบล / แขวง</label>
-            <input name="district" class="uk-input uk-width-1-1" type="text" />
-        </div>
-        <div class="uk-width-1-2@m">
-            <label class="h2">อำเภอ / เขต</label>
-            <input name="amphoe" class="uk-input uk-width-1-1" type="text" />
-        </div>
-        <div class="uk-width-1-2@m">
-            <label class="h2">จังหวัด</label>
-            <input name="province" class="uk-input uk-width-1-1" type="text" />
-        </div>
-        <div class="uk-width-1-2@m">
-            <label class="h2">รหัสไปรษณีย์</label>
-            <input name="zipcode" class="uk-input uk-width-1-1" type="text" />
-        </div>
-    </form>
+     
 
     <!-- DataTables -->
     <script type="text/javascript" src="../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>

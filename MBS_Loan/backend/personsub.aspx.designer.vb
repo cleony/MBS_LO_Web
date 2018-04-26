@@ -158,78 +158,6 @@ Partial Public Class personsub
     Protected WithEvents btnIdCard As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
-    '''Text1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Text1 As Global.System.Web.UI.HtmlControls.HtmlInputText
-    
-    '''<summary>
-    '''DropDownList1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents DropDownList1 As Global.System.Web.UI.WebControls.DropDownList
-    
-    '''<summary>
-    '''Text2 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Text2 As Global.System.Web.UI.HtmlControls.HtmlInputText
-    
-    '''<summary>
-    '''Text3 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Text3 As Global.System.Web.UI.HtmlControls.HtmlInputText
-    
-    '''<summary>
-    '''Text4 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Text4 As Global.System.Web.UI.HtmlControls.HtmlInputText
-    
-    '''<summary>
-    '''Text5 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Text5 As Global.System.Web.UI.HtmlControls.HtmlInputText
-    
-    '''<summary>
-    '''btnClose control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnClose As Global.System.Web.UI.WebControls.Button
-    
-    '''<summary>
-    '''btnAddDataIDCard control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnAddDataIDCard As Global.System.Web.UI.WebControls.Button
-    
-    '''<summary>
     '''txtNationallity control.
     '''</summary>
     '''<remarks>
@@ -338,22 +266,22 @@ Partial Public Class personsub
     Protected WithEvents txtAddr As Global.System.Web.UI.HtmlControls.HtmlInputText
     
     '''<summary>
-    '''txtmoo control.
+    '''txtMoo control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtmoo As Global.System.Web.UI.HtmlControls.HtmlInputText
+    Protected WithEvents txtMoo As Global.System.Web.UI.HtmlControls.HtmlInputText
     
     '''<summary>
-    '''txtsoi control.
+    '''txtSoi control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtsoi As Global.System.Web.UI.HtmlControls.HtmlInputText
+    Protected WithEvents txtSoi As Global.System.Web.UI.HtmlControls.HtmlInputText
     
     '''<summary>
     '''txtRoad control.
@@ -867,4 +795,148 @@ Partial Public Class personsub
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnDelete As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''txtIDCardID control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtIDCardID As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''txtIDCardTitle control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtIDCardTitle As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''txtIDCardFirstName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtIDCardFirstName As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''txtIDCardLastName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtIDCardLastName As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''txtIDCardBirthDate control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtIDCardBirthDate As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''txtIdCardSex control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtIdCardSex As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''txtIDCardAddr control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtIDCardAddr As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''txtIDCardMoo control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtIDCardMoo As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''txtIDCardSoi control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtIDCardSoi As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''txtIDCardRoad control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtIDCardRoad As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''txtIDCardLocality control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtIDCardLocality As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''txtIDCardDistrict control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtIDCardDistrict As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''txtIDCardProvince control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtIDCardProvince As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''txtIDCardPicture control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtIDCardPicture As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''btnClose control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnClose As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''btnAddDataIDCard control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnAddDataIDCard As Global.System.Web.UI.WebControls.Button
 End Class

@@ -1,6 +1,5 @@
 ﻿Imports Mixpro.MBSLibary
-Imports ThaiNationalIDCard
-Imports System.Drawing
+
 Imports System.IO
 
 Public Class employeesub
@@ -26,6 +25,7 @@ Public Class employeesub
                     Else
                         btnsave.Visible = False
                         Mode = "view"
+                        btnIdCard.Visible = False
                     End If
                     txtEmpID.Disabled = True
                 Else
@@ -286,177 +286,177 @@ Public Class employeesub
     End Sub
 
     Protected Sub ReadIdCard(sender As Object, e As EventArgs)
-        Try
-            Dim idcard As New ThaiIDCard()
-            'Dim readers As String() = idcard.GetReaders()
-            'txtidcard.Value = idcard.readCitizenid.Citizenid
-            Dim Searchpersonal As Personal = idcard.readCitizenid
-            If Request.QueryString("mode") = "edit" Then
-                '  If SQLData.Table.IsDuplicateID("CD_Employee", "IdCard", Searchpersonal.Citizenid) Then
-                '    Dim message As String = "มีเลขที่บัตรประชาชน " & Searchpersonal.Citizenid & " นี้แล้ว"
-                '    ScriptManager.RegisterClientScriptBlock(TryCast(sender, Control), Me.GetType(), "alert", message, True)
-                '    Exit Sub
-                'End If
-            Else
-                If SQLData.Table.IsDuplicateID("CD_Employee", "IdCard", Searchpersonal.Citizenid) Then
-                    Dim message As String = "alert('มีเลขที่บัตรประชาชน " & Searchpersonal.Citizenid & " นี้แล้ว')"
-                    ScriptManager.RegisterClientScriptBlock(TryCast(sender, Control), Me.GetType(), "alert", message, True)
-                    Exit Sub
-                End If
-            End If
+        'Try
+        '    Dim idcard As New ThaiIDCard()
+        '    'Dim readers As String() = idcard.GetReaders()
+        '    'txtidcard.Value = idcard.readCitizenid.Citizenid
+        '    Dim Searchpersonal As Personal = idcard.readCitizenid
+        '    If Request.QueryString("mode") = "edit" Then
+        '        '  If SQLData.Table.IsDuplicateID("CD_Employee", "IdCard", Searchpersonal.Citizenid) Then
+        '        '    Dim message As String = "มีเลขที่บัตรประชาชน " & Searchpersonal.Citizenid & " นี้แล้ว"
+        '        '    ScriptManager.RegisterClientScriptBlock(TryCast(sender, Control), Me.GetType(), "alert", message, True)
+        '        '    Exit Sub
+        '        'End If
+        '    Else
+        '        If SQLData.Table.IsDuplicateID("CD_Employee", "IdCard", Searchpersonal.Citizenid) Then
+        '            Dim message As String = "alert('มีเลขที่บัตรประชาชน " & Searchpersonal.Citizenid & " นี้แล้ว')"
+        '            ScriptManager.RegisterClientScriptBlock(TryCast(sender, Control), Me.GetType(), "alert", message, True)
+        '            Exit Sub
+        '        End If
+        '    End If
 
-            Dim personal As Personal = idcard.readAll()
-            If personal IsNot Nothing Then
-                txtIdCard.Value = personal.Citizenid
+        '    Dim personal As Personal = idcard.readAll()
+        '    If personal IsNot Nothing Then
+        '        txtIdCard.Value = personal.Citizenid
 
-                If personal.Th_Prefix = "น.ส." Then
-                    cboTitle.SelectedItem.Text = "นางสาว"
-                Else
-                    cboTitle.SelectedItem.Text = personal.Th_Prefix
-                End If
+        '        If personal.Th_Prefix = "น.ส." Then
+        '            cboTitle.SelectedItem.Text = "นางสาว"
+        '        Else
+        '            cboTitle.SelectedItem.Text = personal.Th_Prefix
+        '        End If
 
-                txtFirstName.Value = personal.Th_Firstname
-                txtLastName.Value = personal.Th_Lastname
-                'DateIssue.Value = Share.FormatDate(personal.Issue)
-                'DateExpiry.Value = Share.FormatDate(personal.Expire)
-                txtAddr.Value = personal.addrHouseNo
-                If personal.addrVillageNo <> "" Then
-                    If personal.addrVillageNo.Contains("หมู่ที่") Then
-                        Dim str() As String
-                        str = Split(personal.addrVillageNo, "หมู่ที่")
-                        If str.Length >= 2 Then
-                            txtmoo.Value = str(1)
-                        Else
-                            txtmoo.Value = str(0)
-                        End If
-                    Else
-                        txtmoo.Value = personal.addrVillageNo
-                    End If
-                End If
-
-
-                If personal.addrSoi <> "" Then
-                    If personal.addrSoi.Contains("ซอย") Then
-                        Dim str() As String
-                        str = Split(personal.addrSoi, "ซอย")
-                        If str.Length >= 2 Then
-                            txtsoi.Value = str(1)
-                        Else
-                            txtsoi.Value = str(0)
-                        End If
-                    Else
-                        txtsoi.Value = personal.addrSoi
-                    End If
-
-                End If
-
-                If personal.addrRoad <> "" Then
-                    If personal.addrRoad.Contains("ถนน") Then
-                        Dim str() As String
-                        str = Split(personal.addrRoad, "ถนน")
-                        If str.Length >= 2 Then
-                            txtRoad.Value = str(1)
-                        Else
-                            txtRoad.Value = str(0)
-                        End If
-                    Else
-                        txtRoad.Value = personal.addrRoad
-                    End If
-
-                End If
-
-                If personal.addrTambol <> "" Then
-                    If personal.addrTambol.Contains("ตำบล") Then
-                        Dim str() As String
-                        str = Split(personal.addrTambol, "ตำบล")
-                        If str.Length >= 2 Then
-                            txtLocality.Value = str(1)
-                        Else
-                            txtLocality.Value = str(0)
-                        End If
-                    ElseIf personal.addrTambol.Contains("แขวง") Then
-                        Dim str() As String
-                        str = Split(personal.addrTambol, "แขวง")
-                        If str.Length >= 2 Then
-                            txtLocality.Value = str(1)
-                        Else
-                            txtLocality.Value = str(0)
-                        End If
-                    End If
-
-                End If
+        '        txtFirstName.Value = personal.Th_Firstname
+        '        txtLastName.Value = personal.Th_Lastname
+        '        'DateIssue.Value = Share.FormatDate(personal.Issue)
+        '        'DateExpiry.Value = Share.FormatDate(personal.Expire)
+        '        txtAddr.Value = personal.addrHouseNo
+        '        If personal.addrVillageNo <> "" Then
+        '            If personal.addrVillageNo.Contains("หมู่ที่") Then
+        '                Dim str() As String
+        '                str = Split(personal.addrVillageNo, "หมู่ที่")
+        '                If str.Length >= 2 Then
+        '                    txtmoo.Value = str(1)
+        '                Else
+        '                    txtmoo.Value = str(0)
+        '                End If
+        '            Else
+        '                txtmoo.Value = personal.addrVillageNo
+        '            End If
+        '        End If
 
 
-                If personal.addrAmphur <> "" Then
-                    If personal.addrAmphur.Contains("อำเภอ") Then
-                        Dim str() As String
-                        str = Split(personal.addrAmphur, "อำเภอ")
-                        If str.Length >= 2 Then
-                            txtDistrict.Value = str(1)
-                        Else
-                            txtDistrict.Value = str(0)
-                        End If
-                    ElseIf personal.addrAmphur.Contains("เขต") Then
-                        Dim str() As String
-                        str = Split(personal.addrAmphur, "เขต")
-                        If str.Length >= 2 Then
-                            txtDistrict.Value = str(1)
-                        Else
-                            txtDistrict.Value = str(0)
-                        End If
-                    Else
-                        txtDistrict.Value = personal.addrAmphur
-                    End If
+        '        If personal.addrSoi <> "" Then
+        '            If personal.addrSoi.Contains("ซอย") Then
+        '                Dim str() As String
+        '                str = Split(personal.addrSoi, "ซอย")
+        '                If str.Length >= 2 Then
+        '                    txtsoi.Value = str(1)
+        '                Else
+        '                    txtsoi.Value = str(0)
+        '                End If
+        '            Else
+        '                txtsoi.Value = personal.addrSoi
+        '            End If
 
-                End If
+        '        End If
 
-                If personal.addrProvince <> "" Then
-                    If personal.addrProvince.Contains("จังหวัด") Then
-                        Dim str() As String
-                        str = Split(personal.addrProvince, "จังหวัด")
-                        If str.Length >= 2 Then
-                            CboProvince.Value = str(1)
-                        Else
-                            CboProvince.Value = str(0)
-                        End If
-                    Else
-                        CboProvince.Value = personal.addrProvince
-                    End If
+        '        If personal.addrRoad <> "" Then
+        '            If personal.addrRoad.Contains("ถนน") Then
+        '                Dim str() As String
+        '                str = Split(personal.addrRoad, "ถนน")
+        '                If str.Length >= 2 Then
+        '                    txtRoad.Value = str(1)
+        '                Else
+        '                    txtRoad.Value = str(0)
+        '                End If
+        '            Else
+        '                txtRoad.Value = personal.addrRoad
+        '            End If
 
-                End If
+        '        End If
 
+        '        If personal.addrTambol <> "" Then
+        '            If personal.addrTambol.Contains("ตำบล") Then
+        '                Dim str() As String
+        '                str = Split(personal.addrTambol, "ตำบล")
+        '                If str.Length >= 2 Then
+        '                    txtLocality.Value = str(1)
+        '                Else
+        '                    txtLocality.Value = str(0)
+        '                End If
+        '            ElseIf personal.addrTambol.Contains("แขวง") Then
+        '                Dim str() As String
+        '                str = Split(personal.addrTambol, "แขวง")
+        '                If str.Length >= 2 Then
+        '                    txtLocality.Value = str(1)
+        '                Else
+        '                    txtLocality.Value = str(0)
+        '                End If
+        '            End If
 
-                If txtPicPath.Value.Trim = "" Then
-                    Try
-                        Dim personalPhoto As Personal = idcard.readPhoto()
-                        Dim stream As New System.IO.MemoryStream
-                        Dim Bmp1 As Bitmap = personalPhoto.PhotoBitmap
-                        Dim safeImage As New Bitmap(Bmp1)
-                        Bmp1.Dispose()
-
-                        If (Not System.IO.Directory.Exists(Server.MapPath(UploadFolderPath))) Then
-                            System.IO.Directory.CreateDirectory(Server.MapPath(UploadFolderPath))
-                        End If
-
-                        safeImage.Save(Server.MapPath(UploadFolderPath) + txtEmpID.Value + ".jpg", System.Drawing.Imaging.ImageFormat.Jpeg)
-
-                        txtUpload.Value = txtEmpID.Value + ".jpg"
-                        txtPicPath.Value = txtEmpID.Value + ".jpg"
-                        safeImage.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg)
-                        Dim base64String As String = Convert.ToBase64String(stream.ToArray)
-                        imgUpload.Src = Convert.ToString("data:image/png;base64,") & base64String
-                    Catch ex As Exception
-
-                    End Try
-                End If
-            End If
+        '        End If
 
 
+        '        If personal.addrAmphur <> "" Then
+        '            If personal.addrAmphur.Contains("อำเภอ") Then
+        '                Dim str() As String
+        '                str = Split(personal.addrAmphur, "อำเภอ")
+        '                If str.Length >= 2 Then
+        '                    txtDistrict.Value = str(1)
+        '                Else
+        '                    txtDistrict.Value = str(0)
+        '                End If
+        '            ElseIf personal.addrAmphur.Contains("เขต") Then
+        '                Dim str() As String
+        '                str = Split(personal.addrAmphur, "เขต")
+        '                If str.Length >= 2 Then
+        '                    txtDistrict.Value = str(1)
+        '                Else
+        '                    txtDistrict.Value = str(0)
+        '                End If
+        '            Else
+        '                txtDistrict.Value = personal.addrAmphur
+        '            End If
+
+        '        End If
+
+        '        If personal.addrProvince <> "" Then
+        '            If personal.addrProvince.Contains("จังหวัด") Then
+        '                Dim str() As String
+        '                str = Split(personal.addrProvince, "จังหวัด")
+        '                If str.Length >= 2 Then
+        '                    CboProvince.Value = str(1)
+        '                Else
+        '                    CboProvince.Value = str(0)
+        '                End If
+        '            Else
+        '                CboProvince.Value = personal.addrProvince
+        '            End If
+
+        '        End If
 
 
-        Catch ex As Exception
+        '        If txtPicPath.Value.Trim = "" Then
+        '            Try
+        '                Dim personalPhoto As Personal = idcard.readPhoto()
+        '                Dim stream As New System.IO.MemoryStream
+        '                Dim Bmp1 As Bitmap = personalPhoto.PhotoBitmap
+        '                Dim safeImage As New Bitmap(Bmp1)
+        '                Bmp1.Dispose()
 
-        End Try
+        '                If (Not System.IO.Directory.Exists(Server.MapPath(UploadFolderPath))) Then
+        '                    System.IO.Directory.CreateDirectory(Server.MapPath(UploadFolderPath))
+        '                End If
+
+        '                safeImage.Save(Server.MapPath(UploadFolderPath) + txtEmpID.Value + ".jpg", System.Drawing.Imaging.ImageFormat.Jpeg)
+
+        '                txtUpload.Value = txtEmpID.Value + ".jpg"
+        '                txtPicPath.Value = txtEmpID.Value + ".jpg"
+        '                safeImage.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg)
+        '                Dim base64String As String = Convert.ToBase64String(stream.ToArray)
+        '                imgUpload.Src = Convert.ToString("data:image/png;base64,") & base64String
+        '            Catch ex As Exception
+
+        '            End Try
+        '        End If
+        '    End If
+
+
+
+
+        'Catch ex As Exception
+
+        'End Try
 
     End Sub
 
