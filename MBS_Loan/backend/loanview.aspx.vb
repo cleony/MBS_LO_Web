@@ -97,7 +97,12 @@ Public Class loanview
                 html.Append("<td class='" & column.ColumnName & "")
                 If column.ColumnName = "TotalAmount" Then
                     html.Append(" text-right")
+
                 End If
+                If column.ColumnName = "CFDate" Then
+                    html.Append(" data-order= '" & Share.FormatDate(row(column.ColumnName)).ToString("yyyyMMdd") & "")
+                End If
+
                 html.Append("'>")
                 If column.ColumnName = "CFDate" Then
                     html.Append(Share.FormatDate(row(column.ColumnName)).ToString("dd/MM/yyyy"))

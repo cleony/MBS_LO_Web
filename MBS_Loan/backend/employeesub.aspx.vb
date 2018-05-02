@@ -177,12 +177,12 @@ Public Class employeesub
                     End If
                     If Obj.InsertEmployee(Info) Then
                         '============= copy file รูปไปที่ picture path
-                        If txtUpload.Value <> "" Then
-                            If (Not System.IO.Directory.Exists(Server.MapPath(CopyToPath))) Then
-                                System.IO.Directory.CreateDirectory(Server.MapPath(CopyToPath))
-                            End If
-                            File.Copy(Server.MapPath(UploadFolderPath) + txtUpload.Value, Server.MapPath(CopyToPath) & txtEmpID.Value & ".jpg", True)
-                        End If
+                        'If txtUpload.Value <> "" Then
+                        '    If (Not System.IO.Directory.Exists(Server.MapPath(CopyToPath))) Then
+                        '        System.IO.Directory.CreateDirectory(Server.MapPath(CopyToPath))
+                        '    End If
+                        '    File.Copy(Server.MapPath(UploadFolderPath) + txtUpload.Value, Server.MapPath(CopyToPath) & txtEmpID.Value & ".jpg", True)
+                        'End If
                         Page.ClientScript.RegisterStartupScript(Me.GetType(), "Window", "alert('บันทึกข้อมูลเรียบร้อยแล้ว');window.location='employee.aspx';", True)
 
                         '=====เก็บประวัติการใช้งาน===================
@@ -215,12 +215,12 @@ Public Class employeesub
 
                     If Obj.UpdateEmployee(OldInfo.ID, Info) Then
                         '============= copy file รูปไปที่ picture path
-                        If txtUpload.Value <> "" Then
-                            If (Not System.IO.Directory.Exists(Server.MapPath(CopyToPath))) Then
-                                System.IO.Directory.CreateDirectory(Server.MapPath(CopyToPath))
-                            End If
-                            File.Copy(Server.MapPath(UploadFolderPath) + txtUpload.Value, Server.MapPath(CopyToPath) & txtEmpID.Value & ".jpg", True)
-                        End If
+                        'If txtUpload.Value <> "" Then
+                        '    If (Not System.IO.Directory.Exists(Server.MapPath(CopyToPath))) Then
+                        '        System.IO.Directory.CreateDirectory(Server.MapPath(CopyToPath))
+                        '    End If
+                        '    File.Copy(Server.MapPath(UploadFolderPath) + txtUpload.Value, Server.MapPath(CopyToPath) & txtEmpID.Value & ".jpg", True)
+                        'End If
                         Page.ClientScript.RegisterStartupScript(Me.GetType(), "Window", "alert('บันทึกข้อมูลเรียบร้อยแล้ว');window.location='employee.aspx';", True)
                         '=====เก็บประวัติการใช้งาน===================
                         Dim HisInfo As New Entity.UserActiveHistory

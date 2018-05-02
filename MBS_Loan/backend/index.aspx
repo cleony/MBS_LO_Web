@@ -12,66 +12,66 @@
             <asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
 
             <!-- Small boxes (Stat box) -->
-                <div class="row">
-                    <div class="col-lg-3 col-xs-6">
-                        <!-- small box -->
-                        <div class="small-box bg-aqua">
-                            <div class="inner">
-                                <h4  id="dbNewLoan" runat="server">100,000</h4>
-                                <p>บาท</p>
-                            </div>
-                            <div class="icon">
-                                <i class="fa fa-money"></i>
-                            </div>
-                            <a href="#" class="small-box-footer">จำนวนเงินสัญญาใหม่ <i class="fa fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- ./col -->
-                    <div class="col-lg-3 col-xs-6">
-                        <!-- small box -->
-                        <div class="small-box bg-yellow">
-                            <div class="inner">
-                                <h4 id="dbCfLoan" runat="server">141,256</h4>
-                                <p>บาท</p>
-                            </div>
-                            <div class="icon">
-                                 <i class="fa fa-money"></i>
-                            </div>
-                            <a href="#" class="small-box-footer">จำนวนเงินสัญญาที่อนุมัติ <i class="fa fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- ./col -->
-                    <div class="col-lg-3 col-xs-6">
-                        <!-- small box -->
-                        <div class="small-box bg-green">
-                            <div class="inner">
-                                <h4 id="dbLoanPayment" runat="server">1,493</h4>
-                                <p>บาท</p>
-                            </div>
-                            <div class="icon">
-                                <i class="fa fa-money"></i>
-                            </div>
-                            <a href="#" class="small-box-footer">จำนวนเงินรับชำระเงินกู้ <i class="fa fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- ./col -->
-                    <div class="col-lg-3 col-xs-6">
-                        <!-- small box -->
-                        <div class="small-box bg-maroon">
-                            <div class="inner">
-                                <h4 id="dbLoanPaymentDifBranch" runat="server">201,021</h4>
-                                <p>บาท</p>
-                            </div>
-                            <div class="icon">
-                                <i class="fa fa-money"></i>
-                            </div>
-                            <a href="#" class="small-box-footer">จำนวนเงินรับชำระเงินกู้ของสาขาอื่น <i class="fa fa-arrow-circle-right"></i></a>
-                        </div>
-                    </div>
-                    <!-- ./col -->
-                </div>
             <div class="row">
-                 <div class="col-md-12">
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="small-box bg-aqua">
+                        <div class="inner">
+                            <h4 id="dbNewLoan" runat="server">100,000</h4>
+                            <p>บาท</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-money"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">จำนวนเงินสัญญาใหม่ <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="small-box bg-yellow">
+                        <div class="inner">
+                            <h4 id="dbCfLoan" runat="server">141,256</h4>
+                            <p>บาท</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-money"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">จำนวนเงินสัญญาที่อนุมัติ <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="small-box bg-green">
+                        <div class="inner">
+                            <h4 id="dbLoanPayment" runat="server">1,493</h4>
+                            <p>บาท</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-money"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">จำนวนเงินรับชำระเงินกู้ <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="small-box bg-maroon">
+                        <div class="inner">
+                            <h4 id="dbLoanPaymentDifBranch" runat="server">201,021</h4>
+                            <p>บาท</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-money"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">จำนวนเงินรับชำระเงินกู้ของสาขาอื่น <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <!-- ./col -->
+            </div>
+            <div class="row">
+                <div class="col-md-12">
                     <!-- BAR CHART -->
                     <div class="box box-primary">
                         <div class="box-header with-border">
@@ -159,7 +159,7 @@
                     <!-- /.box -->
 
                 </div>
-               
+
             </div>
 
         </section>

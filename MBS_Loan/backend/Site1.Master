@@ -495,9 +495,9 @@
                         <ul class="treeview-menu">
                             <li id="WLO5100" runat="server"><a href="typeloan.aspx"><i class="fa fa-circle-o text-yellow"></i>ประเภทสัญญากู้</a></li>
                             <li id="WLO5200" runat="server"><a href="person.aspx"><i class="fa fa-circle-o text-yellow"></i>ลูกค้า/สมาชิก</a></li>
-                            <li id="WLO5300" runat="server"><a href="personsub.aspx"><i class="fa fa-circle-o text-yellow"></i>เพิ่มลูกค้า/สมาชิก
+                      <%--      <li id="WLO5300" runat="server"><a href="personsub.aspx"><i class="fa fa-circle-o text-yellow"></i>เพิ่มลูกค้า/สมาชิก
                             <span class="bs-label label-danger">NEW</span>
-                            </a></li>
+                            </a></li>--%>
 
                             <li id="WLO9999" runat="server" visible="false"><a href="mixproadmin.aspx"><i class="fa fa-circle-o text-yellow"></i>mixproadmin</a></li>
                         </ul>

@@ -569,7 +569,7 @@ Partial Public Class loansub
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtReqTerm As Global.System.Web.UI.HtmlControls.HtmlInputText
+    Protected WithEvents txtReqTerm As Global.System.Web.UI.HtmlControls.HtmlInputGenericControl
     
     '''<summary>
     '''txtReqMonthTerm control.
@@ -578,7 +578,7 @@ Partial Public Class loansub
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtReqMonthTerm As Global.System.Web.UI.HtmlControls.HtmlInputText
+    Protected WithEvents txtReqMonthTerm As Global.System.Web.UI.HtmlControls.HtmlInputGenericControl
     
     '''<summary>
     '''txtMonthFinish control.
@@ -587,7 +587,7 @@ Partial Public Class loansub
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtMonthFinish As Global.System.Web.UI.HtmlControls.HtmlInputText
+    Protected WithEvents txtMonthFinish As Global.System.Web.UI.HtmlControls.HtmlInputGenericControl
     
     '''<summary>
     '''dtCFLoanDate control.
@@ -686,7 +686,7 @@ Partial Public Class loansub
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtInterestRate As Global.System.Web.UI.HtmlControls.HtmlInputText
+    Protected WithEvents txtInterestRate As Global.System.Web.UI.HtmlControls.HtmlInputGenericControl
     
     '''<summary>
     '''txtTotalInterest control.
@@ -704,7 +704,7 @@ Partial Public Class loansub
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtFeeRate_1 As Global.System.Web.UI.HtmlControls.HtmlInputText
+    Protected WithEvents txtFeeRate_1 As Global.System.Web.UI.HtmlControls.HtmlInputGenericControl
     
     '''<summary>
     '''txtTotalFeeAmount_1 control.
@@ -722,7 +722,7 @@ Partial Public Class loansub
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtFeeRate_2 As Global.System.Web.UI.HtmlControls.HtmlInputText
+    Protected WithEvents txtFeeRate_2 As Global.System.Web.UI.HtmlControls.HtmlInputGenericControl
     
     '''<summary>
     '''txtTotalFeeAmount_2 control.
@@ -740,7 +740,7 @@ Partial Public Class loansub
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtFeeRate_3 As Global.System.Web.UI.HtmlControls.HtmlInputText
+    Protected WithEvents txtFeeRate_3 As Global.System.Web.UI.HtmlControls.HtmlInputGenericControl
     
     '''<summary>
     '''txtTotalFeeAmount_3 control.
@@ -767,7 +767,7 @@ Partial Public Class loansub
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtOverdueRate As Global.System.Web.UI.HtmlControls.HtmlInputText
+    Protected WithEvents txtOverdueRate As Global.System.Web.UI.HtmlControls.HtmlInputGenericControl
     
     '''<summary>
     '''UpdatePanel1 control.
@@ -1029,6 +1029,15 @@ Partial Public Class loansub
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtTotalGTLoan5 As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''Text3 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Text3 As Global.System.Web.UI.HtmlControls.HtmlInputText
     
     '''<summary>
     '''RdOptPayCapital1 control.

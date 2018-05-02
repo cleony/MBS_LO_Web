@@ -6,10 +6,13 @@
             Dim ObjLoan As New Business.BK_Loan
             Dim LoanInfo As New Entity.BK_Loan
             Dim RetInterest As New Entity.CalInterest
-            LoanInfo = ObjLoan.GetLoanById(LoanNo)
+            Dim ObjTypeLoan As New Business.BK_TypeLoan
+            Dim TypeLoanInfo As New Entity.BK_TypeLoan
+            LoanInfo = ObjLoan.GetLoanById(LoanNo, "")
+            TypeLoanInfo = ObjTypeLoan.GetTypeLoanInfoById(LoanInfo.TypeLoanId)
 
             Try
-                If LoanInfo.CalculateType = "2" OrElse LoanInfo.CalculateType = "10" Then
+                If (LoanInfo.CalculateType = "2" AndAlso TypeLoanInfo.DelayType <> "1") OrElse LoanInfo.CalculateType = "10" Then
                     RetInterest = CalRealInterestByDate_Flat(LoanInfo, StDate, EndDate)
                 Else
                     RetInterest = CalRealInterestByDate_Fix(LoanInfo, StDate, EndDate)
@@ -67,7 +70,10 @@
                 If LoanInfo.CalculateType = "10" Then
                     TypeLoanInfo.DelayType = "3"
                 End If
-
+                '=========== delaytype วิธีที่ 2  ยุบให้เหลือ delaytype 3  เดียว
+                If TypeLoanInfo.DelayType = "2" Then
+                    TypeLoanInfo.DelayType = "3"
+                End If
                 If LoanInfo.InterestRate > 0 Then
                     '============= การคำนวณแบ่งเป็น 2 แบบ ยกเลิก xxxxxxxxxxxxxxxxxx
                     '=== 1. วิธีที่ 1 , 5(3) , 2 (เฉพาะแบบรายเดือน CalTypeTerm = 1) ใช้สูตร ดอกเบี้ยตามตาราง/31 วัน

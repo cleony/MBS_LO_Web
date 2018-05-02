@@ -199,17 +199,26 @@ Public Class loannew
             End If
             '=========== เช็คว่าต้องมีผู้ค้ำประกันหรือไม่
             Dim ObjType As New Business.BK_TypeLoan
-            Dim TypeInfo As New Entity.BK_TypeLoan
-            TypeInfo = ObjType.GetTypeLoanInfoById(Share.FormatString(ddlTypeLoan.SelectedValue))
-            If TypeInfo.FlagGuarantor = "1" Then
+            Dim TypeLoanInfo As New Entity.BK_TypeLoan
+            TypeLoanInfo = ObjType.GetTypeLoanInfoById(Share.FormatString(ddlTypeLoan.SelectedValue))
+            If TypeLoanInfo.FlagGuarantor = "1" Then
                 If txtGTIdCard1.Value.Trim = "" Then
                     Page.ClientScript.RegisterStartupScript(Me.GetType(), "Window", "alert('ประเภทสัญญานี้ต้องมีผู้ค้ำประกัน กรุณาตรวจสอบ!!!');", True)
                     Exit Sub
                 End If
             End If
-            If TypeInfo.FlagCollateral = "1" Then
+            If TypeLoanInfo.FlagCollateral = "1" Then
                 If hfCollateralId.Value.Trim = "" Then
                     Page.ClientScript.RegisterStartupScript(Me.GetType(), "Window", "alert('ประเภทสัญญานี้ต้องมีหลักทรัพย์ค้ำประกัน กรุณาตรวจสอบ!!!');", True)
+                    Exit Sub
+                End If
+            End If
+
+            If TypeLoanInfo.MaxRate > 0 Then
+                Dim TotalIntRate As Double = 0
+                TotalIntRate = Share.FormatDouble(txtInterestRate.Value) + Share.FormatDouble(txtFeeRate_1.Value) + Share.FormatDouble(txtFeeRate_2.Value) + Share.FormatDouble(txtOverdueRate.Value)
+                If TypeLoanInfo.MaxRate < TotalIntRate Then
+                    Page.ClientScript.RegisterStartupScript(Me.GetType(), "Window", "alert('ไม่สามารถบันทึกข้อมูลได้ เนื่องจากอัตราดอกเบี้ยรวมเกินกว่าที่กำหนด " & Share.Cnumber(TypeLoanInfo.MaxRate, 2) & "% กรุณาตรวจสอบ !!!');", True)
                     Exit Sub
                 End If
             End If
@@ -648,6 +657,21 @@ Public Class loannew
         Dim ObjGenLoanSchedule As New Loan.GenLoanSchedule
         Dim LoanInfo As New Entity.BK_Loan
         If Share.FormatDouble(txtTotalCapital.Value) > 0 Then
+
+            Dim TypeLoanInfo As New Entity.BK_TypeLoan
+            Dim ObjType As New Business.BK_TypeLoan
+            TypeLoanInfo = ObjType.GetTypeLoanInfoById(Share.FormatString(ddlTypeLoan.SelectedValue))
+            If TypeLoanInfo.MaxRate > 0 Then
+                Dim TotalIntRate As Double = 0
+                TotalIntRate = Share.FormatDouble(txtInterestRate.Value) + Share.FormatDouble(txtFeeRate_1.Value) + Share.FormatDouble(txtFeeRate_2.Value) + Share.FormatDouble(txtOverdueRate.Value)
+                If TypeLoanInfo.MaxRate < TotalIntRate Then
+                    ' Page.ClientScript.RegisterStartupScript(Me.GetType(), "Window", "alert('ไม่สามารถบันทึกข้อมูลได้ เนื่องจากอัตราดอกเบี้ยรวมเกินกว่าที่กำหนด " & Share.Cnumber(TypeLoanInfo.MaxRate, 2) & "% กรุณาตรวจสอบ !!!');", True)
+                    'Page.ClientScript.RegisterStartupScript(Me.GetType(), "Window", "alert('ไม่สามารถบันทึกข้อมูลได้ เนื่องจากอัตราดอกเบี้ยรวมเกินกว่าที่กำหนด');", True)
+                    ScriptManager.RegisterClientScriptBlock(Me, [GetType](), "Window", "alert('อัตราดอกเบี้ยรวมเกินกว่าที่กำหนด " & Share.Cnumber(TypeLoanInfo.MaxRate, 2) & "% กรุณาตรวจสอบ !!!');", True)
+                    Exit Sub
+                End If
+            End If
+
             With LoanInfo
                 .AccountNo = txtAccountNo.Value
                 .ReqDate = Share.FormatDate(dtReqDate.Text)

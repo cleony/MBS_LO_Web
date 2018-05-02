@@ -153,12 +153,13 @@
                                                                 <asp:TextBox runat="server" ID="txtPersonId" class="form-control pad-sm"></asp:TextBox>
                                                                 <%--<input type="text" runat="server" id="txtPersonId" class="form-control" />--%>
                                                             </div>
-                                                            <div class="col-sm-6">
-                                                                <input type="text" runat="server" id="txtPersonName" class="form-control pad-sm" />
+                                                            <div class="col-sm-7">
+                                                                <div class="input-group">
+                                                                    <input type="text" runat="server" id="txtPersonName" class="form-control pad-sm" />
+                                                                    <a id="linkPerson1" runat="server" target="_blank" class="input-group-addon"><i class="fa fa-search "></i></a>
+                                                                </div>
                                                             </div>
-                                                            <div class="col-sm-1 control-label">
-                                                                <a id="linkPerson1" runat="server" target="_blank"><i class="fa fa-search"></i></a>
-                                                            </div>
+
                                                         </div>
                                                         <%-- <div class="form-group" id="gbPerson2" style="display: none">--%>
                                                         <div class="form-group" id="gbPerson1" runat="server" style="display: none">
@@ -166,11 +167,11 @@
                                                             <div class="col-sm-3 no-padding">
                                                                 <input type="text" runat="server" id="txtPersonId2" class="form-control pad-sm" />
                                                             </div>
-                                                            <div class="col-sm-6">
-                                                                <input type="text" runat="server" id="txtPersonName2" class="form-control pad-sm" />
-                                                            </div>
-                                                            <div class="col-sm-1 control-label">
-                                                                <a id="linkPerson2" runat="server" target="_blank"><i class="fa fa-search"></i></a>
+                                                            <div class="col-sm-7">
+                                                                <div class="input-group">
+                                                                    <input type="text" runat="server" id="txtPersonName2" class="form-control pad-sm" />
+                                                                    <a id="linkPerson2" runat="server" target="_blank" class="input-group-addon"><i class="fa fa-search "></i></a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="form-group" id="gbPerson2" runat="server" style="display: none">
@@ -178,11 +179,11 @@
                                                             <div class="col-sm-3 no-padding">
                                                                 <input type="text" runat="server" id="txtPersonId3" class="form-control pad-sm" />
                                                             </div>
-                                                            <div class="col-sm-6">
-                                                                <input type="text" runat="server" id="txtPersonName3" class="form-control pad-sm" />
-                                                            </div>
-                                                            <div class="col-sm-1 control-label">
-                                                                <a id="linkPerson3" runat="server" target="_blank"><i class="fa fa-search"></i></a>
+                                                            <div class="col-sm-7">
+                                                                <div class="input-group">
+                                                                    <input type="text" runat="server" id="txtPersonName3" class="form-control pad-sm" />
+                                                                    <a id="linkPerson3" runat="server" target="_blank" class="input-group-addon"><i class="fa fa-search "></i></a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="form-group" id="gbPerson3" runat="server" style="display: none">
@@ -190,11 +191,11 @@
                                                             <div class="col-sm-3 no-padding">
                                                                 <input type="text" runat="server" id="txtPersonId4" class="form-control pad-sm" />
                                                             </div>
-                                                            <div class="col-sm-6">
-                                                                <input type="text" runat="server" id="txtPersonName4" class="form-control pad-sm" />
-                                                            </div>
-                                                            <div class="col-sm-1 control-label">
-                                                                <a id="linkPerson4" runat="server" target="_blank"><i class="fa fa-search"></i></a>
+                                                            <div class="col-sm-7">
+                                                                <div class="input-group">
+                                                                    <input type="text" runat="server" id="txtPersonName4" class="form-control pad-sm" />
+                                                                    <a id="linkPerson4" runat="server" target="_blank" class="input-group-addon"><i class="fa fa-search "></i></a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="form-group" id="gbPerson4" runat="server" style="display: none">
@@ -202,11 +203,11 @@
                                                             <div class="col-sm-3 no-padding">
                                                                 <input type="text" runat="server" id="txtPersonId5" class="form-control pad-sm" />
                                                             </div>
-                                                            <div class="col-sm-6">
-                                                                <input type="text" runat="server" id="txtPersonName5" class="form-control pad-sm" />
-                                                            </div>
-                                                            <div class="col-sm-1 control-label">
-                                                                <a id="linkPerson5" runat="server" target="_blank"><i class="fa fa-search"></i></a>
+                                                            <div class="col-sm-7">
+                                                                <div class="input-group">
+                                                                    <input type="text" runat="server" id="txtPersonName5" class="form-control pad-sm" />
+                                                                    <a id="linkPerson5" runat="server" target="_blank" class="input-group-addon"><i class="fa fa-search "></i></a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="form-group" id="gbPerson5" runat="server" style="display: none">
@@ -214,56 +215,68 @@
                                                             <div class="col-sm-3 no-padding">
                                                                 <input type="text" runat="server" id="txtPersonId6" class="form-control pad-sm" />
                                                             </div>
-                                                            <div class="col-sm-6">
-                                                                <input type="text" runat="server" id="txtPersonName6" class="form-control pad-sm" />
-                                                            </div>
-                                                            <div class="col-sm-1 control-label">
-                                                                <a id="linkPerson6" runat="server" target="_blank"><i class="fa fa-search"></i></a>
+                                                            <div class="col-sm-7">
+                                                                <div class="input-group">
+                                                                    <input type="text" runat="server" id="txtPersonName6" class="form-control pad-sm" />
+                                                                    <a id="linkPerson6" runat="server" target="_blank" class="input-group-addon"><i class="fa fa-search "></i></a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label class="col-sm-6 control-label">ภาระหนี้ผู้กู้หลัก</label>
-                                                            <div class="col-sm-5">
-                                                                <input type="text" runat="server" id="txtTotalPersonLoan" value="0.00" class="form-control text-right number" />
+                                                            <div class="col-sm-6">
+                                                                <div class="input-group">
+                                                                    <input type="text" runat="server" id="txtTotalPersonLoan" value="0.00" class="form-control text-right number" />
+                                                                    <span class="input-group-addon">฿</span>
+                                                                </div>
                                                             </div>
-                                                            <label class="col-sm-0 control-label">บาท</label>
                                                         </div>
                                                         <div class="form-group" id="gbPerson1_1" runat="server" style="display: none">
                                                             <label class="col-sm-6 control-label">ภาระหนี้ผู้กู้ร่วม 1</label>
-                                                            <div class="col-sm-5">
-                                                                <input type="text" runat="server" id="txtTotalPersonLoan2" value="0.00" class="form-control text-right number" />
+                                                            <div class="col-sm-6">
+                                                                <div class="input-group">
+                                                                    <input type="text" runat="server" id="txtTotalPersonLoan2" value="0.00" class="form-control text-right number" />
+                                                                    <span class="input-group-addon">฿</span>
+                                                                </div>
                                                             </div>
-                                                            <label class="col-sm-0 control-label">บาท</label>
                                                         </div>
                                                         <div class="form-group" id="gbPerson2_1" runat="server" style="display: none">
                                                             <label class="col-sm-6 control-label">ภาระหนี้ผู้กู้ร่วม 2</label>
-                                                            <div class="col-sm-5">
-                                                                <input type="text" runat="server" id="txtTotalPersonLoan3" value="0.00" class="form-control text-right number" />
+                                                            <div class="col-sm-6">
+                                                                <div class="input-group">
+                                                                    <input type="text" runat="server" id="txtTotalPersonLoan3" value="0.00" class="form-control text-right number" />
+                                                                    <span class="input-group-addon">฿</span>
+                                                                </div>
                                                             </div>
-                                                            <label class="col-sm-0 control-label">บาท</label>
                                                         </div>
                                                         <div class="form-group" id="gbPerson3_1" runat="server" style="display: none">
                                                             <label class="col-sm-6 control-label">ภาระหนี้ผู้กู้ร่วม 3</label>
-                                                            <div class="col-sm-5">
-                                                                <input type="text" runat="server" id="txtTotalPersonLoan4" value="0.00" class="form-control text-right number" />
+                                                            <div class="col-sm-6">
+                                                                <div class="input-group">
+                                                                    <input type="text" runat="server" id="txtTotalPersonLoan4" value="0.00" class="form-control text-right number" />
+                                                                    <span class="input-group-addon">฿</span>
+                                                                </div>
                                                             </div>
-                                                            <label class="col-sm-0 control-label">บาท</label>
                                                         </div>
                                                         <div class="form-group" id="gbPerson4_1" runat="server" style="display: none">
                                                             <label class="col-sm-6 control-label">ภาระหนี้ผู้กู้ร่วม 4</label>
-                                                            <div class="col-sm-5">
-                                                                <input type="text" runat="server" id="txtTotalPersonLoan5" value="0.00" class="form-control text-right number" />
+                                                            <div class="col-sm-6">
+                                                                <div class="input-group">
+                                                                    <input type="text" runat="server" id="txtTotalPersonLoan5" value="0.00" class="form-control text-right number" />
+                                                                    <span class="input-group-addon">฿</span>
+                                                                </div>
                                                             </div>
-                                                            <label class="col-sm-0 control-label">บาท</label>
                                                         </div>
                                                         <div class="form-group" id="gbPerson5_1" runat="server" style="display: none">
                                                             <label class="col-sm-6 control-label">ภาระหนี้ผู้กู้ร่วม 5</label>
-                                                            <div class="col-sm-5">
-                                                                <input type="text" runat="server" id="txtTotalPersonLoan6" value="0.00" class="form-control text-right number" />
+                                                            <div class="col-sm-6">
+                                                                <div class="input-group">
+                                                                    <input type="text" runat="server" id="txtTotalPersonLoan6" value="0.00" class="form-control text-right number" />
+                                                                    <span class="input-group-addon">฿</span>
+                                                                </div>
                                                             </div>
-                                                            <label class="col-sm-0 control-label">บาท</label>
                                                         </div>
 
                                                     </div>
@@ -292,64 +305,78 @@
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label class="col-sm-6 control-label">เงินออม</label>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" runat="server" id="txtSavingFound" value="0.00" class="form-control text-right number" />
+                                                                <div class="col-sm-6">
+                                                                    <div class="input-group">
+                                                                        <input type="text" runat="server" id="txtSavingFound" value="0.00" class="form-control text-right number" />
+                                                                        <span class="input-group-addon">฿</span>
+                                                                    </div>
                                                                 </div>
-                                                                <label class="col-sm-0 control-label">บาท</label>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label class="col-sm-6 control-label">รายได้จากกอาชีพ/เดือน</label>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" runat="server" id="txtRevenue" value="0.00" class="form-control text-right number" />
+                                                                <div class="col-sm-6">
+                                                                    <div class="input-group">
+                                                                        <input type="text" runat="server" id="txtRevenue" value="0.00" class="form-control text-right number" />
+                                                                        <span class="input-group-addon">฿</span>
+                                                                    </div>
                                                                 </div>
-                                                                <label class="col-sm-0 control-label">บาท</label>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label class="col-sm-6 control-label">รายได้อื่นๆ/เดือน</label>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" runat="server" id="txtOtherRevenue" value="0.00" class="form-control text-right number" />
+                                                                <div class="col-sm-6">
+                                                                    <div class="input-group">
+                                                                        <input type="text" runat="server" id="txtOtherRevenue" value="0.00" class="form-control text-right number" />
+                                                                        <span class="input-group-addon">฿</span>
+                                                                    </div>
                                                                 </div>
-                                                                <label class="col-sm-0 control-label">บาท</label>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label class="col-sm-6 control-label">เงินทุนสมทบ</label>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" runat="server" id="txtCapitalMoney" value="0.00" class="form-control text-right number" />
+                                                                <div class="col-sm-6">
+                                                                    <div class="input-group">
+                                                                        <input type="text" runat="server" id="txtCapitalMoney" value="0.00" class="form-control text-right number" />
+                                                                        <span class="input-group-addon">฿</span>
+                                                                    </div>
                                                                 </div>
-                                                                <label class="col-sm-0 control-label">บาท</label>
                                                             </div>
-
                                                         </div>
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label class="col-sm-6 control-label">หนี้สินปัจจุบัน</label>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" runat="server" id="txtDebtAmount" value="0.00" class="form-control text-right number" />
+                                                                <div class="col-sm-6">
+                                                                    <div class="input-group">
+                                                                        <input type="text" runat="server" id="txtDebtAmount" value="0.00" class="form-control text-right number" />
+                                                                        <span class="input-group-addon">฿</span>
+                                                                    </div>
                                                                 </div>
-                                                                <label class="col-sm-0 control-label">บาท</label>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label class="col-sm-6 control-label">รายจ่าย/เดือน</label>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" runat="server" id="txtExpense" value="0.00" class="form-control text-right number" />
+                                                                <div class="col-sm-6">
+                                                                    <div class="input-group">
+                                                                        <input type="text" runat="server" id="txtExpense" value="0.00" class="form-control text-right number" />
+                                                                        <span class="input-group-addon">฿</span>
+                                                                    </div>
                                                                 </div>
-                                                                <label class="col-sm-0 control-label">บาท</label>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label class="col-sm-6 control-label">รายจ่ายในครัวเรือน</label>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" runat="server" id="txtFamilyExpense" value="0.00" class="form-control text-right number" />
+                                                                <div class="col-sm-6">
+                                                                    <div class="input-group">
+                                                                        <input type="text" runat="server" id="txtFamilyExpense" value="0.00" class="form-control text-right number" />
+                                                                        <span class="input-group-addon">฿</span>
+                                                                    </div>
                                                                 </div>
-                                                                <label class="col-sm-0 control-label">บาท</label>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label class="col-sm-6 control-label">รายจ่ายเพื่อชำระหนี้</label>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" runat="server" id="txtExpenseDebt" value="0.00" class="form-control text-right number" />
+                                                                <div class="col-sm-6">
+                                                                    <div class="input-group">
+                                                                        <input type="text" runat="server" id="txtExpenseDebt" value="0.00" class="form-control text-right number" />
+                                                                        <span class="input-group-addon">฿</span>
+                                                                    </div>
                                                                 </div>
-                                                                <label class="col-sm-0 control-label">บาท</label>
                                                             </div>
-
                                                         </div>
                                                     </div>
                                                     <div class=" row">
@@ -389,10 +416,12 @@
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label class="col-sm-6 control-label">วงเงินที่กู้ได้</label>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" runat="server" id="txtCreditLoanAmount" class="form-control text-right number" disabled="disabled" />
+                                                                <div class="col-sm-6">
+                                                                    <div class="input-group">
+                                                                        <input type="text" runat="server" id="txtCreditLoanAmount" class="form-control text-right number" disabled="disabled" />
+                                                                        <span class="input-group-addon">฿</span>
+                                                                    </div>
                                                                 </div>
-                                                                <label class="col-sm-0 control-label">บาท</label>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -429,10 +458,11 @@
                                                         <div class="form-group">
                                                             <label class="col-sm-6 control-label">จำนวนเงินที่ขอกู้</label>
                                                             <div class="col-sm-5">
-                                                                <input type="text" id="txtReqTotalAmount" runat="server" value="0.00" class="form-control text-right number" />
-
+                                                                <div class="input-group">
+                                                                    <input type="text" id="txtReqTotalAmount" runat="server" value="0.00" class="form-control text-right number" />
+                                                                    <span class="input-group-addon">฿</span>
+                                                                </div>
                                                             </div>
-                                                            <label class="col-sm-0 control-label">บาท</label>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="col-sm-6 control-label">จำนวนงวดที่ต้องการผ่อนชำระ</label>
@@ -446,7 +476,7 @@
                                                             <div class="col-sm-5">
                                                                 <input type="text" runat="server" id="txtReqMonthTerm" value="1" class="form-control integer  text-right" />
                                                             </div>
-                                                            <label class="col-sm-0 control-label">/เดือน</label>
+                                                            <label class="col-sm-0 control-label">เดือน</label>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="col-sm-6 control-label">ชำระเสร็จสิ้นภายใน</label>
@@ -580,37 +610,49 @@
                                                                 <div class="col-md-6">
                                                                     <div class="form-group">
                                                                         <label class="col-sm-4 control-label">ดอกเบี้ย/ปี</label>
-                                                                        <div class="col-sm-3">
-                                                                            <input type="text" runat="server" id="txtInterestRate" value="0.00" class="form-control text-right number" />
+                                                                        <div class="col-sm-4">
+                                                                            <div class="input-group">
+                                                                                <input type="text" runat="server" id="txtInterestRate" value="0.00" class="form-control text-right number" />
+                                                                                <span class="input-group-addon">%</span>
+                                                                            </div>
                                                                         </div>
-                                                                        <div class="col-sm-5">
+                                                                        <div class="col-sm-4">
                                                                             <input type="text" runat="server" id="txtTotalInterest" value="0.00" class="form-control text-right number" />
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-group">
                                                                         <label class="col-sm-4 control-label">ค่าธรรมเนียม 1</label>
-                                                                        <div class="col-sm-3">
-                                                                            <input type="text" runat="server" id="txtFeeRate_1" value="0.00" class="form-control text-right number" />
+                                                                        <div class="col-sm-4">
+                                                                            <div class="input-group">
+                                                                                <input type="text" runat="server" id="txtFeeRate_1" value="0.00" class="form-control text-right number" />
+                                                                                <span class="input-group-addon">%</span>
+                                                                            </div>
                                                                         </div>
-                                                                        <div class="col-sm-5">
+                                                                        <div class="col-sm-4">
                                                                             <input type="text" runat="server" id="txtTotalFeeAmount_1" value="0.00" class="form-control text-right number" />
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-group">
                                                                         <label class="col-sm-4 control-label">ค่าธรรมเนียม 2</label>
-                                                                        <div class="col-sm-3">
-                                                                            <input type="text" runat="server" id="txtFeeRate_2" value="0.00" class="form-control text-right number" />
+                                                                        <div class="col-sm-4">
+                                                                            <div class="input-group">
+                                                                                <input type="text" runat="server" id="txtFeeRate_2" value="0.00" class="form-control text-right number" />
+                                                                                <span class="input-group-addon">%</span>
+                                                                            </div>
                                                                         </div>
-                                                                        <div class="col-sm-5">
+                                                                        <div class="col-sm-4">
                                                                             <input type="text" runat="server" id="txtTotalFeeAmount_2" value="0.00" class="form-control text-right number" />
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-group">
                                                                         <label class="col-sm-4 control-label">ค่าธรรมเนียม 3</label>
-                                                                        <div class="col-sm-3">
-                                                                            <input type="text" runat="server" id="txtFeeRate_3" value="0.00" class="form-control text-right number" />
+                                                                        <div class="col-sm-4">
+                                                                            <div class="input-group">
+                                                                                <input type="text" runat="server" id="txtFeeRate_3" value="0.00" class="form-control text-right number" />
+                                                                                <span class="input-group-addon">%</span>
+                                                                            </div>
                                                                         </div>
-                                                                        <div class="col-sm-5">
+                                                                        <div class="col-sm-4">
                                                                             <input type="text" runat="server" id="txtTotalFeeAmount_3" value="0.00" class="form-control text-right number" />
                                                                         </div>
                                                                     </div>
@@ -630,7 +672,7 @@
                                                             <div class="row">
                                                                 <div class="col-md-6">
                                                                     <div class="form-group">
-                                                                        <label class="col-sm-6 control-label">ปลอดดอกเบี้ย (วัน)</label>
+                                                                        <label class="col-sm-6 control-label">ผิดนัดชำระมากกว่า (วัน)</label>
                                                                         <div class="col-sm-6">
                                                                             <select id="txtOverdueDay" runat="server" class="form-control">
                                                                                 <option selected="selected">0</option>
@@ -650,9 +692,12 @@
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <div class="form-group">
-                                                                        <label class="col-sm-4 control-label">ดอกเบี้ยผิดนัดชำระ %</label>
-                                                                        <div class="col-sm-3">
-                                                                            <input type="text" runat="server" id="txtOverdueRate" value="0.00" class="form-control text-right" />
+                                                                        <label class="col-sm-4 control-label">ดอกเบี้ยผิดนัดชำระ</label>
+                                                                        <div class="col-sm-4">
+                                                                            <div class="input-group">
+                                                                                <input type="text" runat="server" id="txtOverdueRate" value="0.00" class="form-control text-right" />
+                                                                                <span class="input-group-addon">%</span>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -791,38 +836,52 @@
                                                         <div class="col-md-5">
                                                             <div class="form-group">
                                                                 <label class="col-sm-6 control-label">ภาระหนี้ที่ 1</label>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" runat="server" id="txtTotalGTLoan1" value="0.00" class="form-control text-right number" />
+                                                                <div class="col-sm-6">
+                                                                    <div class="input-group">
+                                                                        <input type="text" runat="server" id="txtTotalGTLoan1" value="0.00" class="form-control text-right number" />
+                                                                        <span class="input-group-addon">฿</span>
+                                                                    </div>
                                                                 </div>
-                                                                <label class="col-sm-0 control-label">บาท</label>
                                                             </div>
                                                             <div class="form-group" id="gbGT2_1" runat="server" style="display: none">
                                                                 <label class="col-sm-6 control-label">ภาระหนี้ที่ 2</label>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" runat="server" id="txtTotalGTLoan2" value="0.00" class="form-control text-right number" />
+                                                                <div class="col-sm-6">
+
+                                                                    <div class="input-group">
+                                                                        <input type="text" runat="server" id="txtTotalGTLoan2" value="0.00" class="form-control text-right number" />
+                                                                        <span class="input-group-addon">฿</span>
+                                                                    </div>
                                                                 </div>
-                                                                <label class="col-sm-0 control-label">บาท</label>
                                                             </div>
                                                             <div class="form-group" id="gbGT3_1" runat="server" style="display: none">
                                                                 <label class="col-sm-6 control-label">ภาระหนี้ที่ 3</label>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" runat="server" id="txtTotalGTLoan3" value="0.00" class="form-control text-right number" />
+                                                                <div class="col-sm-6">
+
+                                                                    <div class="input-group">
+                                                                        <input type="text" runat="server" id="txtTotalGTLoan3" value="0.00" class="form-control text-right number" />
+                                                                        <span class="input-group-addon">฿</span>
+                                                                    </div>
                                                                 </div>
-                                                                <label class="col-sm-0 control-label">บาท</label>
                                                             </div>
                                                             <div class="form-group" id="gbGT4_1" runat="server" style="display: none">
                                                                 <label class="col-sm-6 control-label">ภาระหนี้ที่ 4</label>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" runat="server" id="txtTotalGTLoan4" value="0.00" class="form-control text-right number" />
+                                                                <div class="col-sm-6">
+
+                                                                    <div class="input-group">
+                                                                        <input type="text" runat="server" id="txtTotalGTLoan4" value="0.00" class="form-control text-right number" />
+                                                                        <span class="input-group-addon">฿</span>
+                                                                    </div>
                                                                 </div>
-                                                                <label class="col-sm-0 control-label">บาท</label>
                                                             </div>
                                                             <div class="form-group" id="gbGT5_1" runat="server" style="display: none">
                                                                 <label class="col-sm-6 control-label">ภาระหนี้ที่ 5</label>
-                                                                <div class="col-sm-5">
-                                                                    <input type="text" runat="server" id="txtTotalGTLoan5" value="0.00" class="form-control text-right number" />
+                                                                <div class="col-sm-6">
+
+                                                                    <div class="input-group">
+                                                                        <input type="text" runat="server" id="txtTotalGTLoan5" value="0.00" class="form-control text-right number" />
+                                                                        <span class="input-group-addon">฿</span>
+                                                                    </div>
                                                                 </div>
-                                                                <label class="col-sm-0 control-label">บาท</label>
                                                             </div>
 
                                                         </div>
@@ -1019,8 +1078,11 @@
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label class="col-sm-6 control-label">ค่าธรรมเนียมการกู้เงิน</label>
-                                                                <div class="col-sm-6">
-                                                                    <input type="text" runat="server" id="txtLoanFee" value="0.00" class="form-control text-right number" />
+                                                                <div class="col-sm-5">
+                                                                    <div class="input-group">
+                                                                        <input type="text" runat="server" id="txtLoanFee" value="0.00" class="form-control text-right number" />
+                                                                        <span class="input-group-addon">฿</span>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form- group">
@@ -1267,7 +1329,7 @@
                             document.getElementById('<%= gbPerson2_1.ClientID%>').style.display = '';
                             var PersonId = document.getElementById('<%= txtPersonId2.ClientID%>').value
                             var a = document.getElementById('<%= linkPerson2.ClientID%>');
-                              a.href = "personsub.aspx?id=" + PersonId + "&mode=view";
+                            a.href = "personsub.aspx?id=" + PersonId + "&mode=view";
                         }
                     }
                 }
@@ -1341,7 +1403,7 @@
 
                             var PersonId = document.getElementById('<%= txtPersonId3.ClientID%>').value
                             var a = document.getElementById('<%= linkPerson3.ClientID%>');
-                              a.href = "personsub.aspx?id=" + PersonId + "&mode=view";
+                            a.href = "personsub.aspx?id=" + PersonId + "&mode=view";
                         }
                     }
 
@@ -1416,7 +1478,7 @@
                             document.getElementById('<%= gbPerson4_1.ClientID%>').style.display = '';
                             var PersonId = document.getElementById('<%= txtPersonId4.ClientID%>').value
                             var a = document.getElementById('<%= linkPerson4.ClientID%>');
-                              a.href = "personsub.aspx?id=" + PersonId + "&mode=view";
+                            a.href = "personsub.aspx?id=" + PersonId + "&mode=view";
                         }
 
                     }
@@ -1488,7 +1550,7 @@
                             document.getElementById('<%= gbPerson5_1.ClientID%>').style.display = '';
                             var PersonId = document.getElementById('<%= txtPersonId5.ClientID%>').value
                             var a = document.getElementById('<%= linkPerson5.ClientID%>');
-                              a.href = "personsub.aspx?id=" + PersonId + "&mode=view";
+                            a.href = "personsub.aspx?id=" + PersonId + "&mode=view";
                         }
                     }
 
@@ -1559,7 +1621,7 @@
                             $("[id$=txtTotalPersonLoan6]").val(personinfo.toString());
                             var PersonId = document.getElementById('<%= txtPersonId6.ClientID%>').value
                             var a = document.getElementById('<%= linkPerson6.ClientID%>');
-                              a.href = "personsub.aspx?id=" + PersonId + "&mode=view";
+                            a.href = "personsub.aspx?id=" + PersonId + "&mode=view";
 
                         }
                     }

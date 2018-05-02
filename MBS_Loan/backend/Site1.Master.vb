@@ -252,12 +252,12 @@ Public Class Site1
                 WLO5000.Attributes.Add("class", "li-disabled")
                 WLO5100.Attributes.Add("class", "li-disabled")
                 WLO5200.Attributes.Add("class", "li-disabled")
-                WLO5300.Attributes.Add("class", "li-disabled")
+                'WLO5300.Attributes.Add("class", "li-disabled")
             Else
                 WLO5000.Attributes.Add("class", "") '...ประเภทหุ้น
                 If Mid(Pass_Menu(39), 1, 1) = "0" Then WLO5100.Attributes.Add("class", "li-disabled") Else WLO5100.Attributes.Add("class", "") '...รายงาน
                 If Mid(Pass_Menu(40), 1, 1) = "0" Then WLO5200.Attributes.Add("class", "li-disabled") Else WLO5200.Attributes.Add("class", "") '...รายงาน
-                If Mid(Pass_Menu(41), 1, 1) = "0" Then WLO5300.Attributes.Add("class", "li-disabled") Else WLO5300.Attributes.Add("class", "") '...รายงาน
+                'If Mid(Pass_Menu(41), 1, 1) = "0" Then WLO5300.Attributes.Add("class", "li-disabled") Else WLO5300.Attributes.Add("class", "") '...รายงาน
             End If
 
         Catch ex As Exception

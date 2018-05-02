@@ -464,15 +464,6 @@ Partial Public Class Site1
     Protected WithEvents WLO5200 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
     
     '''<summary>
-    '''WLO5300 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents WLO5300 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-    
-    '''<summary>
     '''WLO9999 control.
     '''</summary>
     '''<remarks>

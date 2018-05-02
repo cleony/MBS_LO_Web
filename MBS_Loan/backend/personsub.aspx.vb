@@ -104,7 +104,8 @@ Public Class personsub
             PersonId = Request.QueryString("id")
             OldInfo = Obj.GetPersonById(PersonId)
             txtPersonId.Value = OldInfo.PersonId
-            cboTitle.Text = Share.FormatString(OldInfo.Title)
+            'cboTitle.Text = Share.FormatString(OldInfo.Title)
+            cboTitle.SelectedValue = cboTitle.Items.FindByText(OldInfo.Title).Value
             txtFirstName.Value = OldInfo.FirstName
             txtLastName.Value = OldInfo.LastName
             txtidcard.Value = OldInfo.IDCard
@@ -630,13 +631,13 @@ Public Class personsub
                     End If
 
                     If Obj.UpdatePerson(OldInfo, Info) Then
-                        '============= copy file รูปไปที่ picture path
-                        If txtUpload.Value <> "" Then
-                            If (Not System.IO.Directory.Exists(Server.MapPath(CopyToPath))) Then
-                                System.IO.Directory.CreateDirectory(Server.MapPath(CopyToPath))
-                            End If
-                            File.Copy(Server.MapPath(UploadFolderPath) + txtUpload.Value, Server.MapPath(CopyToPath) & txtPicPath.Value, True)
-                        End If
+                        ''============= copy file รูปไปที่ picture path
+                        'If txtUpload.Value <> "" Then
+                        '    If (Not System.IO.Directory.Exists(Server.MapPath(CopyToPath))) Then
+                        '        System.IO.Directory.CreateDirectory(Server.MapPath(CopyToPath))
+                        '    End If
+                        '    File.Copy(Server.MapPath(UploadFolderPath) + txtUpload.Value, Server.MapPath(CopyToPath) & txtPicPath.Value, True)
+                        'End If
 
                         Dim message As String = "alert('บันทึกข้อมูลเรียบร้อยแล้ว');window.location='personsub.aspx';"
                         ScriptManager.RegisterClientScriptBlock(Me, Me.GetType(), "alert", message, True)

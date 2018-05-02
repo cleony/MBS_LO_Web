@@ -80,11 +80,11 @@
                                                     Text='<%# Eval("CFDate", "{0:dd/MM/yyyy}")%>'></asp:Label>
                                             </ItemTemplate>
                                         </asp:TemplateField>--%>
-                                        <asp:BoundField HeaderText="วันที่" HeaderStyle-CssClass="text-center" DataField="CFDate" DataFormatString="{0:dd/MM/yyyy}" />
+                                        <asp:BoundField HeaderText="วันที่" HeaderStyle-CssClass="text-center" DataField="CFDate"  DataFormatString="{0:dd/MM/yyyy}"   />
 
                                         <asp:TemplateField HeaderText="ประเภทเงินกู้" HeaderStyle-CssClass="text-center">
                                             <ItemTemplate>
-                                                <asp:Label ID="lblTypeLoanName" runat="server"
+                                                <asp:Label ID="lblTypeLoanName" runat="server" 
                                                     Text='<%# Eval("TypeLoanName")%>'></asp:Label>
                                             </ItemTemplate>
                                         </asp:TemplateField>

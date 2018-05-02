@@ -197,7 +197,7 @@
                                                                         <div class="col-sm-6">
                                                                             <select runat="server" id="cboDeley" class="form-control">
                                                                                 <option>1.คิดดอกเบี้ยตามตาราง</option>
-                                                                                <option>2.คิดดอกเบี้ยตามวันที่ค้างไม่ทบงวดค้าง</option>
+                                                                                <option>2.คิดดอกเบี้ยตามวันที่ค้าง</option>
                                                                             </select>
                                                                         </div>
                                                                     </div>

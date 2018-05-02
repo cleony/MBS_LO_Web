@@ -176,15 +176,6 @@ Partial Public Class loanpaysub
     Protected WithEvents gbCloseFee As Global.System.Web.UI.HtmlControls.HtmlGenericControl
     
     '''<summary>
-    '''txtCloseFeeRate control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtCloseFeeRate As Global.System.Web.UI.HtmlControls.HtmlInputText
-    
-    '''<summary>
     '''txtCloseFee control.
     '''</summary>
     '''<remarks>
@@ -239,6 +230,15 @@ Partial Public Class loanpaysub
     Protected WithEvents lblRealInterest As Global.System.Web.UI.HtmlControls.HtmlGenericControl
     
     '''<summary>
+    '''gblCloseLoan control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents gblCloseLoan As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    
+    '''<summary>
     '''gbDiscountInterest control.
     '''</summary>
     '''<remarks>
@@ -255,15 +255,6 @@ Partial Public Class loanpaysub
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtLossInterest As Global.System.Web.UI.HtmlControls.HtmlInputText
-    
-    '''<summary>
-    '''txtDiscountIntRate control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtDiscountIntRate As Global.System.Web.UI.HtmlControls.HtmlInputText
     
     '''<summary>
     '''txtDiscountInterest control.
@@ -500,6 +491,15 @@ Partial Public Class loanpaysub
     Protected WithEvents txtOldTotalPayAmount As Global.System.Web.UI.HtmlControls.HtmlInputText
     
     '''<summary>
+    '''gvLoanPay control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents gvLoanPay As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
     '''lblbranchId control.
     '''</summary>
     '''<remarks>
@@ -543,4 +543,247 @@ Partial Public Class loanpaysub
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblEmpName As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    
+    '''<summary>
+    '''UpdatePanel2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents UpdatePanel2 As Global.System.Web.UI.UpdatePanel
+    
+    '''<summary>
+    '''txtClMaxInterest control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtClMaxInterest As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''txtClLoanFee control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtClLoanFee As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''txtClTermInterest control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtClTermInterest As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''txtClLossInterest control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtClLossInterest As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''txtClDiscountIntRate control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtClDiscountIntRate As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''txtClDiscountInterest control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtClDiscountInterest As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''txtClMulct control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtClMulct As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''txtClRemainInterest control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtClRemainInterest As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''txtClTrackFee control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtClTrackFee As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''txtClRemainCapital control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtClRemainCapital As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''txtClCloseFeeRate control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtClCloseFeeRate As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''txtClCloseFee control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtClCloseFee As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''txtClTotalAmount control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtClTotalAmount As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''btnCalCloseLoan control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnCalCloseLoan As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''MaxInterestClose control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents MaxInterestClose As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
+    '''CapitalBalance control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents CapitalBalance As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
+    '''CurrentPayTerm control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents CurrentPayTerm As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
+    '''LossInterest control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents LossInterest As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
+    '''IntsDayAmount control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents IntsDayAmount As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
+    '''AccruedInterest control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents AccruedInterest As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
+    '''AccruedFee1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents AccruedFee1 As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
+    '''AccruedFee2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents AccruedFee2 As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
+    '''dtDateLastPay control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents dtDateLastPay As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
+    '''NextAccrueInterest control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents NextAccrueInterest As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
+    '''NextAccrueFee1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents NextAccrueFee1 As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
+    '''NextAccrueFee2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents NextAccrueFee2 As Global.System.Web.UI.WebControls.HiddenField
 End Class

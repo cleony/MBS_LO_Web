@@ -81,6 +81,10 @@ Namespace SQLData
                 Sp = New SqlClient.SqlParameter("FlagGuarantor", Share.FormatString(Info.FlagGuarantor))
                 ListSp.Add(Sp)
 
+                Sp = New SqlClient.SqlParameter("CloseFineCalType", Share.FormatString(Info.CloseFineCalType))
+                ListSp.Add(Sp)
+                Sp = New SqlClient.SqlParameter("Delay1Close", Share.FormatString(Info.Delay1Close))
+                ListSp.Add(Sp)
 
                 sql = Table.InsertSPname("BK_TypeLoan", ListSp.ToArray)
                 cmd = New SQLData.DBCommand(sqlCon, sql, CommandType.Text, ListSp.ToArray)
@@ -197,6 +201,10 @@ Namespace SQLData
                 Sp = New SqlClient.SqlParameter("FlagCollateral", Share.FormatString(Info.FlagCollateral))
                 ListSp.Add(Sp)
                 Sp = New SqlClient.SqlParameter("FlagGuarantor", Share.FormatString(Info.FlagGuarantor))
+                ListSp.Add(Sp)
+                Sp = New SqlClient.SqlParameter("CloseFineCalType", Share.FormatString(Info.CloseFineCalType))
+                ListSp.Add(Sp)
+                Sp = New SqlClient.SqlParameter("Delay1Close", Share.FormatString(Info.Delay1Close))
                 ListSp.Add(Sp)
 
                 hWhere.Add("TypeLoanId", OldInfo.TypeLoanId)
@@ -315,7 +323,8 @@ Namespace SQLData
                             .StActive = Share.FormatString(rowInfo("StActive"))
                             .FlagCollateral = Share.FormatString(rowInfo("FlagCollateral"))
                             .FlagGuarantor = Share.FormatString(rowInfo("FlagGuarantor"))
-
+                            .CloseFineCalType = Share.FormatString(rowInfo("CloseFineCalType"))
+                            .Delay1Close = Share.FormatString(rowInfo("Delay1Close"))
                         End With
                         ListInfo.Add(Info)
                     Next
@@ -369,7 +378,8 @@ Namespace SQLData
                         .StActive = Share.FormatString(ds.Tables(0).Rows(0).Item("StActive"))
                         .FlagCollateral = Share.FormatString(ds.Tables(0).Rows(0).Item("FlagCollateral"))
                         .FlagGuarantor = Share.FormatString(ds.Tables(0).Rows(0).Item("FlagGuarantor"))
-
+                        .CloseFineCalType = Share.FormatString(ds.Tables(0).Rows(0).Item("CloseFineCalType"))
+                        .Delay1Close = Share.FormatString(ds.Tables(0).Rows(0).Item("Delay1Close"))
                     End With
                 End If
             Catch ex As Exception

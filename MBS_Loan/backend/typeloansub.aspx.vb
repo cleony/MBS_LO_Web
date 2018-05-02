@@ -177,6 +177,7 @@ Public Class typeloansub
                 ddlTypeLoan.SelectedValue = "1"
             ElseIf OldInfo.CalculateType = "2" Then
                 ddlTypeLoan.SelectedValue = "2"
+                gbDeley.Visible = True
                 'gbDeley.Visible = True
             ElseIf OldInfo.CalculateType = "5" Then
                 ddlTypeLoan.SelectedValue = "3"
@@ -199,7 +200,8 @@ Public Class typeloansub
                 'ElseIf OldInfo.DelayType = "2" Then
                 '    cboDeley.Value = "2. คิดดอกเบี้ยตามวันที่ค้างทบงวดค้าง"
             ElseIf OldInfo.DelayType = "3" Then
-                cboDeley.Value = "2.คิดดอกเบี้ยตามวันที่ค้างไม่ทบงวดค้าง"
+                cboDeley.Value = "2.คิดดอกเบี้ยตามวันที่ค้าง"
+
             End If
             If OldInfo.TypeGroup > 0 Then
                 CboTypeGroup.SelectedIndex = OldInfo.TypeGroup - 1
@@ -322,7 +324,7 @@ Public Class typeloansub
                 End If
                 If cboDeley.Value = "1.คิดดอกเบี้ยตามตาราง" Then
                     .DelayType = "1"
-                ElseIf cboDeley.Value = "2.คิดดอกเบี้ยตามวันที่ค้างไม่ทบงวดค้าง" Then
+                ElseIf cboDeley.Value = "2.คิดดอกเบี้ยตามวันที่ค้าง" Then
                     .DelayType = "3"
 
                 End If

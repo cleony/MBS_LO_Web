@@ -131,11 +131,11 @@ Public Class loansub
         Try
             TypeInfo = objType.GetAllTypeLoanInfo
             ddlTypeLoan.DataSource = TypeInfo
-            Me.ddlTypeLoan.DataTextField = "TypeLoanName"
-            Me.ddlTypeLoan.DataValueField = "TypeLoanId"
+            ddlTypeLoan.DataTextField = "TypeLoanName"
+            ddlTypeLoan.DataValueField = "TypeLoanId"
             ddlTypeLoan.DataBind()
-            ddlTypeLoan.SelectedIndex = -1
-            ddlTypeLoan.Text = " - เลือกประเภทเงินกู้ - "
+            'ddlTypeLoan.SelectedIndex = -1
+            'ddlTypeLoan.Text = " - เลือกประเภทเงินกู้ - "
 
             '   End If
         Catch ex As Exception
@@ -152,17 +152,18 @@ Public Class loansub
             ddlBranch.DataTextField = "Name"
             ddlBranch.DataValueField = "Id"
             ddlBranch.DataBind()
-            ddlBranch.SelectedIndex = -1
-            'ddlTypeLoan. = " - เลือกประเภทเงินกู้ - "
-            '   End If
+            ddlBranch.Attributes.Add("disabled", "disabled")
+            'ddlBranch.SelectedIndex = -1
+            ''ddlTypeLoan. = " - เลือกประเภทเงินกู้ - "
+            ''   End If
 
-            If Session("statusadmin") = "0" AndAlso Share.FormatString(Session("branchid")) <> "" Then
-                ddlBranch.SelectedValue = Share.FormatString(Session("branchid"))
-                ddlBranch.Attributes.Add("disabled", "disabled")
-            Else
-                ddlBranch.Attributes.Remove("disabled")
+            'If Session("statusadmin") = "0" AndAlso Share.FormatString(Session("branchid")) <> "" Then
+            '    ddlBranch.SelectedValue = Share.FormatString(Session("branchid"))
+            '    ddlBranch.Attributes.Add("disabled", "disabled")
+            'Else
+            '    ddlBranch.Attributes.Remove("disabled")
 
-            End If
+            'End If
         Catch ex As Exception
 
         End Try
@@ -2084,7 +2085,7 @@ Public Class loansub
 
     Protected Sub gvLoanPay_RowDataBound(sender As Object, e As GridViewRowEventArgs)
         If e.Row.RowType = DataControlRowType.DataRow Then
-            Dim StCancel As String = DirectCast(e.Row.FindControl("lblStCancel"), Label).text
+            Dim StCancel As String = DirectCast(e.Row.FindControl("lblStCancel"), Label).Text
             For Each cell As TableCell In e.Row.Cells
                 If StCancel = "1" Then
                     cell.ForeColor = Color.Red

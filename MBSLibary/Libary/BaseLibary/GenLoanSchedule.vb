@@ -405,15 +405,11 @@
                 Dim Interest As Double = 0 'Share.FormatDouble(TotalInterest / Term)
                 Dim RemainAmount As Double = 0 'TotalAmount + TotalInterest
                 Dim Amount As Double = 0 'Share.FormatDouble(RemainAmount / Term)
-
-                Dim TotalInterest1 As Double = 0
-                Dim TotalFeeInterest1 As Double = 0
-                Dim TotalFeeInterest2 As Double = 0
-                Dim TotalFeeInterest3 As Double = 0
                 Dim Interest1 As Double = 0
                 Dim FeeInterest1 As Double = 0
                 Dim FeeInterest2 As Double = 0
                 Dim FeeInterest3 As Double = 0
+                Dim TotalFeeInterest3 As Double = 0
                 Dim ChqLMonth As Boolean = False
                 Term = Share.FormatInteger(LoanInfo.Term)
 
@@ -636,10 +632,10 @@
                     End If
                 Next
 
-                LoanInfo.TotalInterest = TotalInterest1
-                LoanInfo.TotalFeeAmount_1 = TotalFeeInterest1
-                LoanInfo.TotalFeeAmount_2 = TotalFeeInterest2
-                LoanInfo.TotalFeeAmount_3 = TotalFeeInterest3
+                LoanInfo.TotalInterest = SumInterest1
+                LoanInfo.TotalFeeAmount_1 = SumFeeInterest1
+                LoanInfo.TotalFeeAmount_2 = SumFeeInterest2
+                LoanInfo.TotalFeeAmount_3 = SumFeeInterest3
                 '===============================================================================================
             Catch ex As Exception
 

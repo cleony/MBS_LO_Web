@@ -299,6 +299,25 @@ Namespace Entity
             End Set
         End Property
 
+        Private _CloseFineCalType As String
+        Public Property CloseFineCalType() As String
+            Get
+                Return _CloseFineCalType
+            End Get
+            Set(ByVal value As String)
+                _CloseFineCalType = value
+            End Set
+        End Property
+
+        Private _Delay1Close As String
+        Public Property Delay1Close() As String
+            Get
+                Return _Delay1Close
+            End Get
+            Set(ByVal value As String)
+                _Delay1Close = value
+            End Set
+        End Property
     End Class
 End Namespace
 

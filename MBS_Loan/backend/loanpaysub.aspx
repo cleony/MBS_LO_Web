@@ -11,10 +11,14 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" runat="server" role="form">
+        <script type="text/javascript">
+            function ShowPopup() {
+                $("#btnShowPopup").click();
+            }
+        </script>
+
         <asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
-        <%--  <section class="content-header">
-            <h1>รับชำระเงินกู้</h1>
-        </section>--%>
+
         <section class="content">
             <div class="row">
                 <div class="col-md-3">
@@ -82,6 +86,7 @@
                         <ul class="nav nav-tabs">
                             <li class="active"><a href="#tab1" data-toggle="tab">รับชำระเงิน</a></li>
                             <li><a href="#tab2" data-toggle="tab">ประวัติการรับชำระ(งวดล่าสุด)</a></li>
+                            <li><a href="#tab3" data-toggle="tab">ประวัติการรับชำระ</a></li>
                         </ul>
                         <div class="tab-content">
                             <div class="active tab-pane" id="tab1">
@@ -102,29 +107,29 @@
                                                     <div class="col-md-7 border-right">
 
                                                         <div class=" form-group">
-                                                            <label class="col-sm-4 control-label font-light">ค่าปรับ</label>
+                                                            <label class="col-sm-4 control-label font-light">ค่าปรับจ่ายล่าช้า</label>
                                                             <div class="col-sm-7">
                                                                 <input type="text" class="form-control number text-right text-bold" value="0.00" id="txtMulct" runat="server" disabled="" />
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label class="col-sm-4 control-label font-light">ค่าติดตามทวงถาม</label>
+                                                            <label class="col-sm-4 control-label font-light">ค่าติดตาม/ทวงถาม</label>
                                                             <div class="col-sm-7">
                                                                 <input type="text" class="form-control number text-right text-bold" value="0.00" id="txtTrackFee" runat="server" disabled="" />
                                                             </div>
                                                         </div>
 
                                                         <div style="display: none" id="gbCloseFee" runat="server">
-                                                            <div class="form-group">
+                                                            <%--      <div class="form-group">
                                                                 <label class="col-sm-4 control-label font-light">ค่าปรับปิดบัญชีก่อน(%)</label>
                                                                 <div class="col-sm-7">
                                                                     <input type="text" class="form-control number text-right text-bold" id="txtCloseFeeRate" runat="server" disabled="" />
                                                                 </div>
-                                                            </div>
+                                                            </div>--%>
                                                             <div class="form-group">
-                                                                <label class="col-sm-4 control-label font-light">ค่าปรับปิดบัญชีก่อน</label>
+                                                                <label class="col-sm-4 control-label font-light">ค่าเสียโอกาสปิดก่อน</label>
                                                                 <div class="col-sm-7">
-                                                                    <input type="text" class="form-control number text-right" id="txtCloseFee" runat="server" disabled="" />
+                                                                    <input type="text" class="form-control number text-right" id="txtCloseFee" value="0.00" runat="server" disabled="" />
                                                                 </div>
                                                             </div>
 
@@ -159,25 +164,30 @@
                                                             <div class="col-sm-6">
                                                                 <label class=" form-control text-right" id="lblRealInterest" runat="server">0.00</label>
                                                             </div>
+                                                            <div style="display: none" id="gblCloseLoan" runat="server">
+                                                                <label class=" col-sm-12 control-label"></label>
+                                                                <label class=" col-sm-12 control-label"></label>
+                                                                <label class=" col-sm-12 control-label"></label>
+                                                                <label class=" col-sm-12 control-label"></label>
+                                                                <label class=" col-sm-3 control-label"></label>
+                                                                <div class="col-sm-6">
+                                                                    <button type="button" class="btn btn-info" id="btnShowPopup" data-toggle="modal" data-target="#ModalCloseLoan" hidden="hidden">ตรวจสอบยอดปิดบัญชี</button>
+                                                                </div>
+                                                            </div>
                                                             <div style="display: none" id="gbDiscountInterest" runat="server">
+                                                                <%-- ไม่ต้องแสดง--%>
                                                                 <label class="col-sm-6 control-label font-light">ดอกเบี้ยที่ต้องได้รับ</label>
                                                                 <div class="col-sm-6">
-                                                                    <input type="text" class="form-control number text-right" id="txtLossInterest" runat="server" />
-                                                                </div>
-                                                                <label class="col-sm-6 control-label font-light">ส่วนลดดอกเบี้ย %</label>
-                                                                <div class="col-sm-6">
-                                                                    <input type="text" class="form-control number text-right" id="txtDiscountIntRate" runat="server" />
+                                                                    <input type="text" class="form-control number text-right" id="txtLossInterest" value="0.00" runat="server" />
                                                                 </div>
                                                                 <label class="col-sm-6 control-label font-light">ส่วนลดดอกเบี้ย</label>
                                                                 <div class="col-sm-6">
-                                                                    <input type="text" class="form-control number text-right" id="txtDiscountInterest" runat="server" />
+                                                                    <input type="text" class="form-control number text-right" id="txtDiscountInterest" value="0.00" runat="server" />
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <!-- /.col -->
-
-
                                                 </div>
                                                 <!-- /.row -->
                                                 <hr />
@@ -270,7 +280,7 @@
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label"></label>
                                             <div class="col-sm-6">
-                                                  <asp:Button Text="บันทึกข้อมูล" ID="btnsave" runat="server" CssClass="btn btn-alt btn-hover btn-info"  
+                                                <asp:Button Text="บันทึกข้อมูล" ID="btnsave" runat="server" CssClass="btn btn-alt btn-hover btn-info"
                                                     OnClick="savedata" OnClientClick="return confirm('ท่านต้องการบันทีกข้อมูลใช่หรือไม่ ?')"></asp:Button>
                                                 <button runat="server" id="btnprint" class="btn btn-alt btn-hover btn-info"
                                                     onserverclick="btnprint_Click">
@@ -282,15 +292,13 @@
                                                     <i class="fa fa-print"></i>
                                                     <span>พิมพ์สลิป</span>
                                                 </button>
-                                              
+
                                             </div>
                                         </div>
                                         <br />
 
                                         <div class="form-group">
                                             <div class=" col-sm-offset-4 col-sm-6">
-
-
                                                 <button class="btn btn-alt btn-hover btn-danger" id="btncancel" runat="server" width="150px" data-toggle="modal" data-target="#myModal">
                                                     ยกเลิกใบรับชำระ                                        
                                                 </button>
@@ -344,21 +352,21 @@
                                         <div class="form-group">
                                             <label class="col-sm-4 control-label">ยอดเงินคงเหลือ</label>
                                             <div class="col-sm-3">
-                                                <input type="text" class="form-control text-right" id="txtOldBalance" runat="server" disabled="disabled" />
+                                                <input type="text" class="form-control text-right" id="txtOldBalance" value="0.00" runat="server" disabled="disabled" />
                                             </div>
                                             <label class="col-sm-0 control-label">บาท</label>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-4 control-label">ยอดเงินต้นคงเหลือ</label>
                                             <div class="col-sm-3">
-                                                <input type="text" class="form-control text-right" id="txtOldCapital" runat="server" disabled="disabled" />
+                                                <input type="text" class="form-control text-right" id="txtOldCapital" value="0.00" runat="server" disabled="disabled" />
                                             </div>
                                             <label class="col-sm-0 control-label">บาท</label>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-4 control-label">ยอดดอกเบี้ยคงเหลือ</label>
                                             <div class="col-sm-3">
-                                                <input type="text" class="form-control text-right" id="txtOldInterest" runat="server" disabled="disabled" />
+                                                <input type="text" class="form-control text-right" id="txtOldInterest" value="0.00" runat="server" disabled="disabled" />
                                             </div>
                                             <label class="col-sm-0 control-label">บาท</label>
                                         </div>
@@ -385,7 +393,76 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="tab-pane" id="tab3">
+                                <div class="box box-primary">
+                                    <div class="box-body form-horizontal">
+                                        <div class="panel-body">
+                                            <asp:GridView ID="gvLoanPay" runat="server" CssClass="gvSchedule table table-bordered table-striped"
+                                                AutoGenerateColumns="false" OnRowDataBound="gvLoanPay_RowDataBound">
+                                                <Columns>
+                                                    <asp:TemplateField HeaderText="ลำดับ">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblOrders" runat="server"
+                                                                Text='<%# Eval("Orders")%>'></asp:Label>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="วันที่รับชำระ" ItemStyle-CssClass="text-center">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblMovementDate" runat="server"
+                                                                Text='<%# Eval("MovementDate", "{0:dd/MM/yyyy}")%>'></asp:Label>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="เลขที่ชำระ">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblDocNo" runat="server"
+                                                                Text='<%# Eval("DocNo")%>'></asp:Label>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="ชำระงวด">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblRefDocNo" runat="server"
+                                                                Text='<%# Eval("RefDocNo", "{0:#,0.00}")%>'>' </asp:Label>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <%--  <asp:TemplateField HeaderText="ยอดชำระรวม" ItemStyle-CssClass="text-right">
+                                                                        <ItemTemplate>
+                                                                            <asp:Label ID="lblTotalPay" runat="server"
+                                                                                Text='<%# Eval("TotalPay", "{0:#,0.00}")%>'></asp:Label>
+                                                                        </ItemTemplate>
+                                                                    </asp:TemplateField>--%>
+                                                    <asp:TemplateField HeaderText="เงินกู้ที่ชำระ" ItemStyle-CssClass="text-right">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblTotalAmount" runat="server"
+                                                                Text='<%# Eval("TotalAmount", "{0:#,0.00}")%>'></asp:Label>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="ชำระเงินต้น" ItemStyle-CssClass="text-right">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblCapital" runat="server"
+                                                                Text='<%# Eval("Capital", "{0:#,0.00}")%>'></asp:Label>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="ชำระดอกเบี้ย" ItemStyle-CssClass="text-right">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblLoanInterest" runat="server"
+                                                                Text='<%# Eval("LoanInterest", "{0:#,0.00}")%>'></asp:Label>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
 
+                                                    <asp:TemplateField HeaderText="สถานะ" Visible="false">
+                                                        <ItemTemplate>
+                                                            <asp:Label ID="lblStCancel" runat="server"
+                                                                Text='<%# Eval("StCancel")%>'>' </asp:Label>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                </Columns>
+
+                                            </asp:GridView>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="box-tools font-light">
 
                                 <asp:HiddenField ID="lblbranchId" runat="server"></asp:HiddenField>
@@ -397,9 +474,6 @@
                                     ผู้บันทึก : <span id="lblEmpName" runat="server"></span>
                                 </div>
                             </div>
-
-
-
                         </div>
                     </div>
                     <!-- /.tab-pane -->
@@ -407,8 +481,137 @@
                 <!-- /.tab-content -->
             </div>
             <!-- /.nav-tabs-custom -->
+            <!-- Use this to open the modal -->
+
+            <div class="modal fade" id="ModalCloseLoan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog ">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">×</span>
+                                <span class="sr-only">Close</span>
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">ปิดสัญญากู้เงิน
+                            </h4>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body">
+                            <div class="form-horizontal">
+                                <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                                    <ContentTemplate>
+                                        <div class="form-group">
+                                            <div class="col-sm-6">
+                                                <span class="label label-info">ดอกเบี้ยที่สามารถเก็บเพิ่มได้</span>
+                                                <input type="text" class="form-control" id="txtClMaxInterest" runat="server" value="0.00" disabled="disabled" />
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <span class="label label-info">ค่าธรรมเนียมทำสัญญาที่เก็บเพิ่มได้</span>
+                                                <input type="text" class="form-control" id="txtClLoanFee" runat="server" value="0.00" disabled="disabled" />
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="form-group">
+                                            <div class="col-sm-6">
+                                                <span class="label label-info">ดอกเบี้ยคงค้าง</span>
+                                                <input type="text" class="form-control" id="txtClTermInterest" value="0.00" runat="server" />
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <span class="label label-info">ดอกเบี้ยคงเหลือตามสัญญา</span>
+                                                <input type="text" class="form-control" id="txtClLossInterest" value="0.00" runat="server" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-6">
+                                                <span class="label label-info">ส่วนลดดอกเบี้ย</span>
+                                                <div class="input-group">
+                                                    <%--  <input type="number" class="form-control" id="txtClDiscountIntRate" value="0.00" runat="server" />--%>
+                                                    <asp:TextBox ID="txtClDiscountIntRate" Text="0.00" runat="server" AutoPostBack="true" OnTextChanged="txtClDiscountIntRate_TextChanged" CssClass="form-control "></asp:TextBox>
+                                                    <span class="input-group-addon">%</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <span class="label label-info">ส่วนลดดอกเบี้ย</span>
+                                                <asp:TextBox ID="txtClDiscountInterest" Text="0.00" runat="server" AutoPostBack="true" OnTextChanged="txtClDiscountInterest_TextChanged" CssClass="form-control "></asp:TextBox>
+                                                <%--    <input type="text" class="form-control" id="txtClDiscountInterest" value="0.00" runat="server" />--%>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="form-group">
+                                            <div class="col-sm-6">
+                                                <span class="label label-info">ค่าปรับจ่ายล่าช้า</span>
+                                                <asp:TextBox ID="txtClMulct" Text="0.00" runat="server" AutoPostBack="true" OnTextChanged="txtClMulct_TextChanged" CssClass="form-control "></asp:TextBox>
+                                                <%--<input type="text" class="form-control" id="txtClMulct" value="0.00" runat="server" />--%>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <span class="label label-info">ดอกเบี้ยที่ต้องชำระ</span>
+                                                <asp:TextBox ID="txtClRemainInterest" Text="0.00" runat="server" AutoPostBack="true" OnTextChanged="txtClRemainInterest_TextChanged" CssClass="form-control "></asp:TextBox>
+                                                <%--<input type="text" class="form-control" id="txtClRemainInterest" value="0.00" runat="server" />--%>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-6">
+                                                <span class="label label-info">ค่าติดตามทวงถาม</span>
+                                                <asp:TextBox ID="txtClTrackFee" Text="0.00" runat="server" AutoPostBack="true" OnTextChanged="txtClTrackFee_TextChanged" CssClass="form-control "></asp:TextBox>
+                                                <%--<input type="text" class="form-control" id="txtClTrackFee" value="0.00" runat="server" />--%>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <span class="label label-info">เงินต้นคงเหลือ</span>
+                                                <input type="text" class="form-control" id="txtClRemainCapital" value="0.00" runat="server" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-3">
+                                                <span class="label label-info">อัตราค่าเสียโอกาส</span>
+                                                <div class="input-group">
+                                                    <asp:TextBox ID="txtClCloseFeeRate" Text="0.00" runat="server" AutoPostBack="true" OnTextChanged="txtClCloseFeeRate_TextChanged" CssClass="form-control "></asp:TextBox>
+                                                    <%--<input type="number" class="form-control" id="txtClCloseFeeRate" value="0.00" runat="server" />--%>
+                                                    <span class="input-group-addon">%</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <span class="label label-info">ค่าเสียโอกาส</span>
+                                                <asp:TextBox ID="txtClCloseFee" Text="0.00" runat="server" AutoPostBack="true" OnTextChanged="txtClCloseFee_TextChanged" CssClass="form-control "></asp:TextBox>
+                                                <%--<input type="text" class="form-control" id="txtClCloseFee" value="0.00" runat="server" />--%>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <span class="label label-success">ยอดเงินที่ปิดสัญญา</span>
+                                                <input type="text" class="form-control input-lg" id="txtClTotalAmount" value="0.00" runat="server" />
+                                            </div>
+                                        </div>
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
+                            </div>
+                        </div>
+
+                        <!-- End modal body div -->
+                        <!-- Modal Footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <asp:Button Text="ยืนยันยอด" ID="btnCalCloseLoan" runat="server" CssClass="btn btn-primary"
+                                OnClick="btnCalCloseLoan_Click"></asp:Button>
+                        </div>
+                    </div>
+                    <!-- End modal content div -->
+                </div>
+                <!-- End modal dialog div -->
+            </div>
+            <!-- End modal div -->
 
 
+            <asp:HiddenField ID="MaxInterestClose" runat="server" />
+            <asp:HiddenField ID="CapitalBalance" runat="server" />
+            <asp:HiddenField ID="CurrentPayTerm" runat="server" />
+            <asp:HiddenField ID="LossInterest" runat="server" />
+            <asp:HiddenField ID="IntsDayAmount" runat="server" />
+            <asp:HiddenField ID="AccruedInterest" runat="server" />
+            <asp:HiddenField ID="AccruedFee1" runat="server" />
+            <asp:HiddenField ID="AccruedFee2" runat="server" />
+            <asp:HiddenField ID="dtDateLastPay" runat="server" />
+            <asp:HiddenField ID="NextAccrueInterest" runat="server" />
+            <asp:HiddenField ID="NextAccrueFee1" runat="server" />
+            <asp:HiddenField ID="NextAccrueFee2" runat="server" />
         </section>
     </form>
 
