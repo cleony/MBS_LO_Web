@@ -1214,7 +1214,6 @@ Public Class formpreview
     End Sub
     Private Sub LoanRequest()
         Try
-
             Dim Report As New StiReport()
             Dim PathRpt As String = ""
             Dim RptName As String = ""

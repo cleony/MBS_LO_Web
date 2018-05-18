@@ -18,24 +18,27 @@ Namespace Business
                 Conn = Nothing
             End Try
             Return dt
-            'Else
-            'Dim Conn As Data.DBConnection
-            'Dim obj As Data.CD_Bank
-            'Dim dt As DataTable
-            'Try
-            '    Conn = New Data.DBConnection(UseDB)
-            '    Conn.OpenConnection()
-            '    obj = New Data.CD_Bank(Conn)
-            '    dt = obj.GetAllBank()
-            'Catch ex As Exception
-            '    Throw ex
-            'Finally
-            '    Conn.CloseConnection()
-            '    Conn.Dispose()
-            '    Conn = Nothing
-            'End Try
-            'Return dt
-            'End If
+
+        End Function
+        Public Function GetAllBankByBranch(BranchId As String, Optional ByVal UseDB As Constant.Database = Constant.Database.Connection1) As DataTable
+
+            Dim Conn As SQLData.DBConnection = Nothing
+            Dim obj As SQLData.CD_Bank
+            Dim dt As DataTable
+            Try
+                Conn = New SQLData.DBConnection(UseDB)
+                Conn.OpenConnection()
+                obj = New SQLData.CD_Bank(Conn)
+                dt = obj.GetAllBankByBranch(BranchId)
+            Catch ex As Exception
+                Throw ex
+            Finally
+                Conn.CloseConnection()
+                Conn.Dispose()
+                Conn = Nothing
+            End Try
+            Return dt
+
 
         End Function
         Public Function GetAllCompanyAccount(Optional ByVal UseDB As Constant.Database = Constant.Database.Connection1) As DataTable

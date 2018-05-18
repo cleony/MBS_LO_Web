@@ -108,7 +108,7 @@ Public Class loancfpay
         Dim DtAccount2 As New DataTable
         Try
 
-            DtAccount2 = objBank.GetAllCompanyAccount
+            DtAccount2 = objBank.GetAllBankByBranch(Share.FormatString(Session("branchid")))
             If DtAccount2.Rows.Count > 0 Then
                 CboAccNoPayCapital.DataSource = DtAccount2
                 CboAccNoPayCapital.DataTextField = "AccountBank"

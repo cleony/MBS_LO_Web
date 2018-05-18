@@ -6191,6 +6191,7 @@
     <Content Include="dist\js\pages\dashboard2.js" />
     <Content Include="dist\img\spinner\loader-dark.gif" />
     <Content Include="dist\img\spinner\loader-light.gif" />
+    <Content Include="dist\font\thaisarabun\thsarabunnew.css" />
     <Content Include="Global.asax" />
     <Content Include="backend\accruedinterest.aspx" />
     <Content Include="backend\authority.aspx" />
@@ -6409,6 +6410,18 @@
     <Content Include="bower_components\jquery.Thailand.js\database\db.json" />
     <Content Include="bower_components\jquery.Thailand.js\database\geodb.json" />
     <Content Include="bower_components\jquery.Thailand.js\src\jquery.Thailand.less" />
+    <Content Include="dist\font\thaisarabun\thsarabunnew-webfont.eot" />
+    <Content Include="dist\font\thaisarabun\thsarabunnew-webfont.ttf" />
+    <Content Include="dist\font\thaisarabun\thsarabunnew-webfont.woff" />
+    <Content Include="dist\font\thaisarabun\thsarabunnew_bold-webfont.eot" />
+    <Content Include="dist\font\thaisarabun\thsarabunnew_bold-webfont.ttf" />
+    <Content Include="dist\font\thaisarabun\thsarabunnew_bold-webfont.woff" />
+    <Content Include="dist\font\thaisarabun\thsarabunnew_bolditalic-webfont.eot" />
+    <Content Include="dist\font\thaisarabun\thsarabunnew_bolditalic-webfont.ttf" />
+    <Content Include="dist\font\thaisarabun\thsarabunnew_bolditalic-webfont.woff" />
+    <Content Include="dist\font\thaisarabun\thsarabunnew_italic-webfont.eot" />
+    <Content Include="dist\font\thaisarabun\thsarabunnew_italic-webfont.ttf" />
+    <Content Include="dist\font\thaisarabun\thsarabunnew_italic-webfont.woff" />
     <None Include="My Project\PublishProfiles\CustomProfile.pubxml" />
     <None Include="My Project\PublishProfiles\FolderProfile1.pubxml" />
     <None Include="My Project\PublishProfiles\FolderProfile2.pubxml" />

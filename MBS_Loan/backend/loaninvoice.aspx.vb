@@ -202,6 +202,9 @@ Public Class loaninvoice
                             '========== ค่าปรับ คิดจาก ยอดเงินปรับรวม * อัตราปรับ * วันที่ค้าง/365
                             '==== unpaid คิดค่าปรับจ้างวันที่ ณ วันที่
                             Dim StLateTermDate As Date = DtLoan.AsEnumerable().Where(Function(row) row.Field(Of String)("AccountNo") = Share.FormatString(Dr.Item("AccountNo")) AndAlso row.Field(Of Decimal)("RecieveAmount") = 0).Select(Function(row) row.Field(Of Date)("TermDate")).FirstOrDefault
+                            If StLateTermDate < New Date(2000, 1, 1) Then
+                                StLateTermDate = LastTermDate.Date
+                            End If
                             If rdUnpaidInvoice.Checked Then
                                 If DateAdd(DateInterval.Day, LoanInfo.OverDueDay, StLateTermDate) < Share.FormatDate(dtRptDate.Value).Date Then
                                     Dim DelayDay As Integer = 0

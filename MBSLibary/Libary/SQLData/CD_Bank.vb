@@ -27,6 +27,29 @@ Namespace SQLData
 
             Return dt
         End Function
+        Public Function GetAllBankByBranch(BranchId As String) As DataTable
+            Dim dt As New DataTable
+            Dim ds As New DataSet
+            Try
+                sql = " Select  AccountNo , Id + '-' + AccountNo   as   AccountBank  "
+                sql &= " From CD_Bank "
+                If BranchId <> "" Then
+                    sql &= " where BranchId = '" & BranchId & "'"
+                End If
+
+                sql &= " Order by Id "
+
+                cmd = New SQLData.DBCommand(sqlCon, sql, CommandType.Text)
+                cmd.Fill(ds)
+                If Not Share.IsNullOrEmptyObject(ds.Tables(0)) AndAlso ds.Tables(0).Rows.Count > 0 Then
+                    dt = ds.Tables(0)
+                End If
+            Catch ex As Exception
+                Throw ex
+            End Try
+
+            Return dt
+        End Function
 
         Public Function GetAllCompanyAccount() As DataTable
             Dim dt As New DataTable
@@ -48,6 +71,7 @@ Namespace SQLData
             Return dt
         End Function
 
+
         Public Function GetBankById(ByVal Id As String) As Entity.CD_Bank
             Dim ds As New DataSet
             Dim Info As New Entity.CD_Bank
@@ -67,6 +91,7 @@ Namespace SQLData
                         .AccountCode = Share.FormatString(ds.Tables(0).Rows(0)("AccountCode"))
                         .BankAccountNo = Share.FormatString(ds.Tables(0).Rows(0)("BankAccountNo"))
                         .BankBranchNo = Share.FormatString(ds.Tables(0).Rows(0)("BankBranchNo"))
+                        .BranchId = Share.FormatString(ds.Tables(0).Rows(0)("BranchId"))
                     End With
                 End If
             Catch ex As Exception
@@ -94,6 +119,7 @@ Namespace SQLData
                         .AccountCode = Share.FormatString(ds.Tables(0).Rows(0)("AccountCode"))
                         .BankAccountNo = Share.FormatString(ds.Tables(0).Rows(0)("BankAccountNo"))
                         .BankBranchNo = Share.FormatString(ds.Tables(0).Rows(0)("BankBranchNo"))
+                        .BranchId = Share.FormatString(ds.Tables(0).Rows(0)("BranchId"))
                     End With
                 End If
             Catch ex As Exception
@@ -121,6 +147,8 @@ Namespace SQLData
                 Sp = New SqlClient.SqlParameter("BankAccountNo", Share.FormatString(Info.BankAccountNo))
                 ListSp.Add(Sp)
                 Sp = New SqlClient.SqlParameter("BankBranchNo", Share.FormatString(Info.BankBranchNo))
+                ListSp.Add(Sp)
+                Sp = New SqlClient.SqlParameter("BranchId", Share.FormatString(Info.BranchId))
                 ListSp.Add(Sp)
                 sql = Table.InsertSPname("CD_Bank", ListSp.ToArray)
                 cmd = New SQLData.DBCommand(sqlCon, sql, CommandType.Text, ListSp.ToArray)
@@ -157,6 +185,8 @@ Namespace SQLData
                 Sp = New SqlClient.SqlParameter("BankAccountNo", Share.FormatString(Info.BankAccountNo))
                 ListSp.Add(Sp)
                 Sp = New SqlClient.SqlParameter("BankBranchNo", Share.FormatString(Info.BankBranchNo))
+                ListSp.Add(Sp)
+                Sp = New SqlClient.SqlParameter("BranchId", Share.FormatString(Info.BranchId))
                 ListSp.Add(Sp)
                 hWhere.Add("Id", oldId)
                 sql = Table.UpdateSPTable("CD_Bank", ListSp.ToArray, hWhere)

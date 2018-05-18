@@ -80,7 +80,8 @@ Public Class loannew
         Dim DtAccount As New DataTable
 
         Try
-            DtAccount = objBank.GetAllCompanyAccount
+
+            DtAccount = objBank.GetAllBankByBranch(Share.FormatString(Session("branchid")))
             If DtAccount.Rows.Count > 0 Then
                 ddlAccNoCompany.DataSource = DtAccount
                 ddlAccNoCompany.DataTextField = "AccountBank"

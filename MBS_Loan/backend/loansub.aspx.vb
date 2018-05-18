@@ -173,7 +173,7 @@ Public Class loansub
         Dim DtAccount As New DataTable
 
         Try
-            DtAccount = objBank.GetAllCompanyAccount
+            DtAccount = objBank.GetAllBankByBranch(Share.FormatString(Session("branchid")))
             If DtAccount.Rows.Count > 0 Then
                 ddlAccNoCompany.DataSource = DtAccount
                 ddlAccNoCompany.DataTextField = "AccountBank"
@@ -924,8 +924,6 @@ Public Class loansub
                     Case "ตัดหนี้สูญ"
                         .Status = "8"
                 End Select
-
-
                 .TotalAmount = Share.FormatDouble(txtTotalCapital.Value)
                 .Term = Share.FormatInteger(txtTerm.Value)
                 .InterestRate = Share.FormatDouble(txtInterestRate.Value)
@@ -965,7 +963,6 @@ Public Class loansub
                     .CalTypeTerm = 3
                 End If
 
-
                 '	GTIDCard1	GTName1	GTIDCard2	GTName2	GTIDCard3
                 .GTIDCard1 = txtGTIdCard1.Value
                 .GTName1 = txtGTName1.Value
@@ -998,9 +995,9 @@ Public Class loansub
                 'GTName3 GTIDCard4	GTName4	GTIDCard5	GTName5	
                 'UserId
                 .UserId = lblUserId.Value
-                .BranchId = ddlBranch.SelectedValue
+                .BranchId = OldInfo.BranchId  ' ให้ใช้จากของเดิมเนื่องจากห้ามแก้ไขddlBranch.SelectedValue
                 .AccBookNo = txtAccBookNo.Value
-                .TypeLoanId = Share.FormatString(ddlTypeLoan.SelectedValue)
+                .TypeLoanId = OldInfo.TypeLoanId  ' ให้ใช้จากของเดิมเนื่องจากห้ามแก้ไข Share.FormatString(ddlTypeLoan.SelectedValue) 
                 .TypeLoanName = ddlTypeLoan.SelectedItem.Text
 
                 .LenderIDCard1 = "" ' txtLenderIDCard1.Text
