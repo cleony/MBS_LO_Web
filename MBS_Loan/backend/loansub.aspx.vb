@@ -85,7 +85,7 @@ Public Class loansub
                 ' log.Info("loansub()-load data")
 
 
-                ddlTypeLoan.Attributes.Add("disabled", "disabled")
+
                 ddlBranch.Attributes.Add("disabled", "disabled")
 
             End If
@@ -236,6 +236,7 @@ Public Class loansub
                     selStatus.Items(8).Attributes.Add("disabled", "disabled")
                     btnPayLoan.Visible = False
                     btnCloseLoan.Visible = False
+                    ddlTypeLoan.Attributes.Add("disabled", "disabled")
                 ElseIf .Status = "1" Then
                     selStatus.Value = "อนุมัติโอนเงิน" '2
                     selStatus.Items(0).Attributes.Add("disabled", "disabled")
@@ -247,6 +248,7 @@ Public Class loansub
                     selStatus.Items(6).Attributes.Add("disabled", "disabled")
                     selStatus.Items(7).Attributes.Remove("disabled")
                     selStatus.Items(8).Attributes.Add("disabled", "disabled")
+                    ddlTypeLoan.Attributes.Add("disabled", "disabled")
                 ElseIf .Status = "2" Then
                     selStatus.Value = "ระหว่างชำระ" ' 3
                     selStatus.Items(0).Attributes.Add("disabled", "disabled")
@@ -258,6 +260,7 @@ Public Class loansub
                     selStatus.Items(6).Attributes.Add("disabled", "disabled")
                     selStatus.Items(7).Attributes.Add("disabled", "disabled")
                     selStatus.Items(8).Attributes.Add("disabled", "disabled")
+                    ddlTypeLoan.Attributes.Add("disabled", "disabled")
                 ElseIf .Status = "3" Then
                     selStatus.Value = "ปิดสัญญา" '4
                     selStatus.Items(0).Attributes.Add("disabled", "disabled")
@@ -271,6 +274,7 @@ Public Class loansub
                     selStatus.Items(8).Attributes.Add("disabled", "disabled")
                     btnPayLoan.Visible = False
                     btnCloseLoan.Visible = False
+                    ddlTypeLoan.Attributes.Add("disabled", "disabled")
                 ElseIf .Status = "4" Then
                     selStatus.Value = "ติดตามหนี้" ' 5
                     selStatus.Items(0).Attributes.Add("disabled", "disabled")
@@ -282,6 +286,7 @@ Public Class loansub
                     selStatus.Items(6).Attributes.Add("disabled", "disabled")
                     selStatus.Items(7).Attributes.Add("disabled", "disabled")
                     selStatus.Items(8).Attributes.Add("disabled", "disabled")
+                    ddlTypeLoan.Attributes.Add("disabled", "disabled")
                 ElseIf .Status = "5" Then
                     selStatus.Value = "ต่อสัญญาใหม่-ปิดสัญญาเดิม" ' 6
                     selStatus.Items(0).Attributes.Add("disabled", "disabled")
@@ -295,6 +300,7 @@ Public Class loansub
                     selStatus.Items(8).Attributes.Add("disabled", "disabled")
                     btnPayLoan.Visible = False
                     btnCloseLoan.Visible = False
+                    ddlTypeLoan.Attributes.Add("disabled", "disabled")
                 ElseIf .Status = "6" Then
                     selStatus.Value = "ยกเลิก" '7
                     selStatus.Items(0).Attributes.Add("disabled", "disabled")
@@ -308,7 +314,7 @@ Public Class loansub
                     selStatus.Items(8).Attributes.Add("disabled", "disabled")
                     btnPayLoan.Visible = False
                     btnCloseLoan.Visible = False
-
+                    ddlTypeLoan.Attributes.Add("disabled", "disabled")
                 ElseIf .Status = "8" Then ' ตัดชำระหนี้สูญ
                     selStatus.Value = "ตัดหนี้สูญ" '8
                     selStatus.Items(0).Attributes.Add("disabled", "disabled")
@@ -322,6 +328,7 @@ Public Class loansub
                     selStatus.Items(8).Attributes.Remove("disabled")
                     btnPayLoan.Visible = False
                     btnCloseLoan.Visible = False
+                    ddlTypeLoan.Attributes.Add("disabled", "disabled")
                 End If
 
                 txtPersonId.Value = .PersonId
@@ -997,7 +1004,12 @@ Public Class loansub
                 .UserId = lblUserId.Value
                 .BranchId = OldInfo.BranchId  ' ให้ใช้จากของเดิมเนื่องจากห้ามแก้ไขddlBranch.SelectedValue
                 .AccBookNo = txtAccBookNo.Value
-                .TypeLoanId = OldInfo.TypeLoanId  ' ให้ใช้จากของเดิมเนื่องจากห้ามแก้ไข Share.FormatString(ddlTypeLoan.SelectedValue) 
+                If .Status = "0" Then
+                    .TypeLoanId = Share.FormatString(ddlTypeLoan.SelectedValue) '===== กรณีที่เปิดค่อยแก้ไขประเภทได้
+                Else
+                    .TypeLoanId = OldInfo.TypeLoanId  ' ให้ใช้จากของเดิมเนื่องจากห้ามแก้ไข Share.FormatString(ddlTypeLoan.SelectedValue) 
+                End If
+
                 .TypeLoanName = ddlTypeLoan.SelectedItem.Text
 
                 .LenderIDCard1 = "" ' txtLenderIDCard1.Text
