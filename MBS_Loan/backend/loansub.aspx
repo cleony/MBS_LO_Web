@@ -64,7 +64,7 @@
                                                     <div class="form-group">
                                                         <label class="col-sm-3 control-label">ประเภท</label>
                                                         <div class="col-sm-8 disabled">
-                                                            <asp:DropDownList ID="ddlTypeLoan" runat="server" class="form-control" Style="width: 100%;"></asp:DropDownList>
+                                                            <asp:DropDownList ID="ddlTypeLoan" runat="server" class="form-control select2" Style="width: 100%;"></asp:DropDownList>
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
