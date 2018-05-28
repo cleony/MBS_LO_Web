@@ -6115,6 +6115,9 @@
     <Content Include="bower_components\select2\tests\vendor\qunit-1.23.1.css" />
     <Content Include="bower_components\select2\tests\vendor\qunit-1.23.1.js" />
     <Content Include="bower_components\select2\vendor\jquery-2.1.0.js" />
+    <Content Include="bower_components\Webcam_Plugin\jquery.webcam.js" />
+    <Content Include="bower_components\Webcam_Plugin\jscam.swf" />
+    <Content Include="bower_components\Webcam_Plugin\jscam_canvas_only.swf" />
     <Content Include="bower_components\wizard\wizard-demo.js" />
     <Content Include="bower_components\wizard\wizard.css" />
     <Content Include="bower_components\wizard\wizard.js" />
@@ -6422,6 +6425,7 @@
     <Content Include="dist\font\thaisarabun\thsarabunnew_italic-webfont.eot" />
     <Content Include="dist\font\thaisarabun\thsarabunnew_italic-webfont.ttf" />
     <Content Include="dist\font\thaisarabun\thsarabunnew_italic-webfont.woff" />
+    <Content Include="webcam.aspx" />
     <None Include="My Project\PublishProfiles\CustomProfile.pubxml" />
     <None Include="My Project\PublishProfiles\FolderProfile1.pubxml" />
     <None Include="My Project\PublishProfiles\FolderProfile2.pubxml" />
@@ -6935,6 +6939,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="webcam.aspx.designer.vb">
+      <DependentUpon>webcam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="webcam.aspx.vb">
+      <DependentUpon>webcam.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -7370,7 +7381,9 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Captures\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MBSLibary\MBSLibary.vbproj">
       <Project>{ed4879d4-8abb-45a5-a06d-2eaef169ec5d}</Project>
