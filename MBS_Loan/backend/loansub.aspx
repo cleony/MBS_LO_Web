@@ -1235,20 +1235,20 @@
                                                                         <table class="content-box-wrapper">
                                                                             <tr>
                                                                                 <td style="text-align: center">
-                                                                                    <asp:Image ID="Image2" runat="server" CssClass="img" ImageUrl='<%#Eval("Value")%>' Height="100"
+                                                                                    <asp:Image ID="Image2" runat="server" CssClass="img" ImageUrl='<%#Eval("FilePathPic")%>' Height="100"
                                                                                         Width="100" />
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <td>
-                                                                                    <asp:Label ID="Label1" runat="server" Text='<%#Eval("Text")%>'></asp:Label>
+                                                                                    <asp:Label ID="Label1" runat="server" Text='<%#Eval("FileName")%>'></asp:Label>
                                                                                 </td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <td>
-                                                                                    <asp:LinkButton ID="lnkDownload" runat="server" CommandArgument='<%#Eval("Value")%>' OnClick="DownloadFile">Download</asp:LinkButton>
+                                                                                    <asp:LinkButton ID="lnkDownload" runat="server" CommandArgument='<%#Eval("FilePathValue")%>' OnClick="DownloadFile">Download</asp:LinkButton>
                                                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <asp:LinkButton ID="lnkDelete" runat="server" CommandArgument='<%#Eval("Value")%>' OnClick="DeleteFile">Delete</asp:LinkButton>
+                                <asp:LinkButton ID="lnkDelete" runat="server" CommandArgument='<%#Eval("FilePathValue")%>' OnClick="DeleteFile">Delete</asp:LinkButton>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>

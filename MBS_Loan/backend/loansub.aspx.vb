@@ -697,26 +697,48 @@ Public Class loansub
     Protected Sub loadFileUpload()
         Dim LoanNo As String = AccountNo
         Dim filePaths() As String = Directory.GetFiles(Server.MapPath(UploadFolderPath + LoanNo + "/"))
-        Dim files As List(Of ListItem) = New List(Of ListItem)
+        'Dim files As List(Of ListItem) = New List(Of ListItem)
         Dim fileName As String = ""
+        Dim dt As New DataTable
+        dt.Columns.AddRange(New DataColumn() {New DataColumn("FileName", GetType(String)),
+                                                   New DataColumn("FilePathValue", GetType(String)),
+                                                   New DataColumn("FilePathPic", GetType(String))
+                                                })
+
         For Each filePath As String In filePaths
             fileName = Path.GetFileName(filePath)
+            'files.Add(New ListItem(Path.GetFileName(filePath), UploadFolderPath + LoanNo + "/" + fileName))
             Select Case True
                 Case fileName.Contains(".xlsx"), fileName.Contains(".xls")
-                    files.Add(New ListItem(Path.GetFileName(filePath), "images/Excel-icon.png"))
+                    'files.Add(New ListItem(Path.GetFileName(filePath), "images/Excel-icon.png"))
+                    'files.Add(New ListItem(Path.GetFileName(filePath), UploadFolderPath + LoanNo + "/" + fileName))
+                    Dim objRow() As Object = {Path.GetFileName(filePath), UploadFolderPath + LoanNo + "/" + fileName, "images/Excel-icon.png"}
+                    dt.Rows.Add(objRow)
+
                 Case fileName.Contains(".pdf")
-                    files.Add(New ListItem(Path.GetFileName(filePath), "images/Pdf-icon.png"))
+                    'files.Add(New ListItem(Path.GetFileName(filePath), "images/Pdf-icon.png"))
+                    'files.Add(New ListItem(Path.GetFileName(filePath), UploadFolderPath + LoanNo + "/" + fileName))
+                    Dim objRow() As Object = {Path.GetFileName(filePath), UploadFolderPath + LoanNo + "/" + fileName, "images/Pdf-icon.png"}
+                    dt.Rows.Add(objRow)
                 Case fileName.Contains(".doc"), fileName.Contains(".docx")
-                    files.Add(New ListItem(Path.GetFileName(filePath), "images/Word-icon.png"))
+                    'files.Add(New ListItem(Path.GetFileName(filePath), "images/Word-icon.png"))
+                    'files.Add(New ListItem(Path.GetFileName(filePath), UploadFolderPath + LoanNo + "/" + fileName))
+                    Dim objRow() As Object = {Path.GetFileName(filePath), UploadFolderPath + LoanNo + "/" + fileName, "images/Word-icon.png"}
+                    dt.Rows.Add(objRow)
                 Case fileName.Contains(".jpg"), fileName.Contains(".jpeg"), fileName.Contains(".png"), fileName.Contains(".gif") _
                     , fileName.Contains(".bmp")
-                    files.Add(New ListItem(Path.GetFileName(filePath), UploadFolderPath + LoanNo + "/" + fileName))
+                    'files.Add(New ListItem(Path.GetFileName(filePath), UploadFolderPath + LoanNo + "/" + fileName))
+                    Dim objRow() As Object = {Path.GetFileName(filePath), UploadFolderPath + LoanNo + "/" + fileName, UploadFolderPath + LoanNo + "/" + fileName}
+                    dt.Rows.Add(objRow)
                 Case Else
-                    files.Add(New ListItem(Path.GetFileName(filePath), "images/Other-icon.png"))
+                    'files.Add(New ListItem(Path.GetFileName(filePath), "images/Other-icon.png"))
+                    'files.Add(New ListItem(Path.GetFileName(filePath), UploadFolderPath + LoanNo + "/" + fileName))
+                    Dim objRow() As Object = {Path.GetFileName(filePath), UploadFolderPath + LoanNo + "/" + fileName, "images/Other-icon.png"}
+                    dt.Rows.Add(objRow)
             End Select
 
         Next
-        DataList1.DataSource = files
+        DataList1.DataSource = dt
         DataList1.DataBind()
     End Sub
 
