@@ -610,7 +610,9 @@ Public Class personsub
                         SQLData.Table.InsertHistory(HisInfo, Constant.Database.Connection1)
                         '======================================
                     Else
-                        Page.ClientScript.RegisterStartupScript(Me.GetType(), "Window", "alert('ไม่สามารถบันทึกข้อมูลได้');", True)
+                        'Page.ClientScript.RegisterStartupScript(Me.GetType(), "Window", "alert('ไม่สามารถบันทึกข้อมูลได้');", True)
+                        Dim message As String = "alert('ไม่สามารถบันทึกข้อมูลได้');"
+                        ScriptManager.RegisterClientScriptBlock(Me, Me.GetType(), "alert", message, True)
                     End If
 
                 Case "edit"
@@ -659,9 +661,10 @@ Public Class personsub
 
             End Select
 
-
         Catch ex As Exception
-
+            Dim message As String = "alert('ไม่สามารถบันทึกข้อมูลได้  !!!')"
+            'Dim message As String = "alert('ไม่สามารถบันทึกข้อมูลได้ เนื่องจาก " & ex.Message & "   !!!')"
+            ScriptManager.RegisterClientScriptBlock(Me, Me.GetType(), "alert", message, True)
         End Try
 
 
@@ -733,7 +736,8 @@ Public Class personsub
         Dim RunLength As Integer = 0
 
         Try
-            RunningInfo = SQLData.Table.GetIdRuning("Person", Constant.Database.Connection1)
+            Dim BranchId As String = Session("branchid")
+            RunningInfo = SQLData.Table.GetIdRuning("Person", BranchId, Constant.Database.Connection1)
             If Not (Share.IsNullOrEmptyObject(RunningInfo)) Then
                 If RunningInfo.AutoRun = "1" Then
                     With RunningInfo

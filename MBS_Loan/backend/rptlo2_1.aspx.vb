@@ -102,19 +102,19 @@ Public Class rptlo2_1
             ddlUser2.DataValueField = "UserId"
             ddlUser2.DataBind()
 
-            If Share.FormatString(Session("userid")) <> "" Then
-                ddlUser.SelectedValue = Share.FormatString(Session("userid"))
-                ddlUser2.SelectedValue = Share.FormatString(Session("userid"))
-                If Session("statusadmin") = "0" AndAlso UserInfo.STBranchAdmin <> "1" AndAlso Share.FormatString(Session("userid")) <> "" Then
-                    ddlUser.SelectedValue = Share.FormatString(Session("userid"))
-                    ddlUser.Attributes.Add("disabled", "disabled")
-                    ddlUser2.SelectedValue = Share.FormatString(Session("userid"))
-                    ddlUser2.Attributes.Add("disabled", "disabled")
-                Else
-                    ddlUser.Attributes.Remove("disabled")
-                    ddlUser2.Attributes.Remove("disabled")
-                End If
-            End If
+            'If Share.FormatString(Session("userid")) <> "" Then
+            '    ddlUser.SelectedValue = Share.FormatString(Session("userid"))
+            '    ddlUser2.SelectedValue = Share.FormatString(Session("userid"))
+            '    If Session("statusadmin") = "0" AndAlso UserInfo.STBranchAdmin <> "1" AndAlso Share.FormatString(Session("userid")) <> "" Then
+            '        ddlUser.SelectedValue = Share.FormatString(Session("userid"))
+            '        ddlUser.Attributes.Add("disabled", "disabled")
+            '        ddlUser2.SelectedValue = Share.FormatString(Session("userid"))
+            '        ddlUser2.Attributes.Add("disabled", "disabled")
+            '    Else
+            '        ddlUser.Attributes.Remove("disabled")
+            '        ddlUser2.Attributes.Remove("disabled")
+            '    End If
+            'End If
         Catch ex As Exception
 
         End Try

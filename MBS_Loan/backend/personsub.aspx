@@ -1066,6 +1066,93 @@
                     $('.number').number(true, 2);
                     $('.integer').number(true);
                 });
+
+                  $.Thailand({
+            database: '../bower_components/jquery.Thailand.js/database/db.json',
+
+            $district: $("[id$=txtLocality]"),
+            $amphoe: $("[id$=txtDistrict]"),
+            $province: $("[id$=txtProvince]"),
+            $zipcode: $("[id$=txtZipCode]"),
+
+            onDataFill: function (data) {
+                console.info('Data Filled', data);
+            },
+
+        });
+
+        // watch on change
+
+        $("[id$=txtLocality]").change(function () {
+            console.log('ตำบล', this.value);
+        });
+        $("[id$=txtDistrict]").change(function () {
+            console.log('อำเภอ', this.value);
+        });
+        $("[id$=txtProvince]").change(function () {
+            console.log('จังหวัด', this.value);
+        });
+        $("[id$=txtZipCode]").change(function () {
+            console.log('รหัสไปรษณีย์', this.value);
+        });
+
+        $.Thailand({
+            database: '../bower_components/jquery.Thailand.js/database/db.json',
+
+            $district: $("[id$=txtLocality1]"),
+            $amphoe: $("[id$=txtDistrict1]"),
+            $province: $("[id$=txtProvince1]"),
+            $zipcode: $("[id$=txtZipCode1]"),
+
+            onDataFill: function (data) {
+                console.info('Data Filled', data);
+            },
+
+        });
+
+        // watch on change
+
+        $("[id$=txtLocality1]").change(function () {
+            console.log('ตำบล', this.value);
+        });
+        $("[id$=txtDistrict1]").change(function () {
+            console.log('อำเภอ', this.value);
+        });
+        $("[id$=txtProvince1]").change(function () {
+            console.log('จังหวัด', this.value);
+        });
+        $("[id$=txtZipCode1]").change(function () {
+            console.log('รหัสไปรษณีย์', this.value);
+        });
+
+        $.Thailand({
+            database: '../bower_components/jquery.Thailand.js/database/db.json',
+
+            $district: $("[id$=txtLocality2]"),
+            $amphoe: $("[id$=txtDistrict2]"),
+            $province: $("[id$=txtProvince2]"),
+            $zipcode: $("[id$=txtZipCode2]"),
+
+            onDataFill: function (data) {
+                console.info('Data Filled', data);
+            },
+
+        });
+
+        // watch on change
+
+        $("[id$=txtLocality2]").change(function () {
+            console.log('ตำบล', this.value);
+        });
+        $("[id$=txtDistrict2]").change(function () {
+            console.log('อำเภอ', this.value);
+        });
+        $("[id$=txtProvince2]").change(function () {
+            console.log('จังหวัด', this.value);
+        });
+        $("[id$=txtZipCode2]").change(function () {
+            console.log('รหัสไปรษณีย์', this.value);
+        });
             }
         });
 
