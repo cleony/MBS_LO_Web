@@ -54,17 +54,13 @@ Public Class Site1
                 WLO9999.Visible = False
             End If
 
-            ' ใส่ url ให้ระบบอื่นๆ
-            Dim url As String = HttpContext.Current.Request.Url.AbsoluteUri
-            Dim path As String = HttpContext.Current.Request.Url.AbsolutePath
-            Dim host As String = HttpContext.Current.Request.Url.Host
 
-            Dim urls As String = ""
-            Dim str() As String = Split(url.ToLower(), "/lo/")
-            urls = str(0)
-            linkLO.HRef = urls & "/lo/backend/index.aspx"
-            linkCD.HRef = urls & "/cd/backend/index.aspx"
-            linkGL.HRef = urls & "/gl/backend/index.aspx"
+            Dim urlpath As String = ""
+            Dim str() As String = Split(HttpContext.Current.Request.Url.AbsoluteUri.ToLower(), "/lo/")
+            urlpath = str(0)
+            linkLO.HRef = urlpath & "/lo/backend/index.aspx"
+            linkCD.HRef = urlpath & "/cd/backend/index.aspx"
+            linkGL.HRef = urlpath & "/gl/backend/index.aspx"
 
         End If
 
