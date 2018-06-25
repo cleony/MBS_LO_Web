@@ -346,7 +346,7 @@ Public Class loannew
                 'GTName3 GTIDCard4	GTName4	GTIDCard5	GTName5	
                 'UserId
                 .UserId = Session("userid")
-                .BranchId = ddlBranch.SelectedValue
+                .BranchId = Session("branchid") ' ddlBranch.SelectedValue 
                 .AccBookNo = txtAccBookNo.Value
                 .TypeLoanId = Share.FormatString(ddlTypeLoan.SelectedValue)
                 .TypeLoanName = ddlTypeLoan.SelectedItem.Text

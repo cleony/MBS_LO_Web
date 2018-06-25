@@ -280,7 +280,7 @@
                                     <ul class="menu">
                                         <li>
                                             <!-- start message -->
-                                            <a href="http://ptleasing.mcloudcenter.com/lo/backend/index.aspx">
+                                            <a href="http://ptleasing.mcloudcenter.com/lo/backend/index.aspx" id="linkLO" runat="server">
                                                 <div class="pull-left">
                                                     <img src="../dist/img/lo.png" class="img-circle" alt="User Image" />
                                                 </div>
@@ -289,7 +289,7 @@
                                         </li>
                                         <li>
                                             <!-- start message -->
-                                            <a href="http://ptleasing.mcloudcenter.com/gl/backend/index.aspx">
+                                            <a href="http://ptleasing.mcloudcenter.com/gl/backend/index.aspx" id="linkGL" runat="server">
                                                 <div class="pull-left">
                                                     <img src="../dist/img/gl.png" class="img-circle" alt="User Image" />
                                                 </div>
@@ -298,7 +298,7 @@
                                         </li>
                                         <li>
                                             <!-- start message -->
-                                            <a href="http://ptleasing.mcloudcenter.com/cd/backend/index.aspx">
+                                            <a href="http://ptleasing.mcloudcenter.com/cd/backend/index.aspx" id="linkCD" runat="server">
                                                 <div class="pull-left">
                                                     <img src="../dist/img/cd.png" class="img-circle" alt="User Image" />
                                                 </div>

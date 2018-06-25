@@ -5302,7 +5302,7 @@ Public Class loanpaysub
             If Request.QueryString("mode") = "save" Then
                 If Session("statusadmin") <> "1" Then
                     Dim msg As String = ""
-                    If CheckAu(8, 2, Edit_Menu(8), msg) = False Then
+                    If CheckAu(8, 2, Add_Menu(8), msg) = False Then
                         msg = "ไม่มีสิทธิ์ชำระหนี้"
                         Page.ClientScript.RegisterStartupScript(Me.GetType(), "Window", "alert('" & msg & "');", True)
                         Exit Sub

@@ -39,7 +39,9 @@ Public Class Site1
                 Call AddMenuProgram()
                 LoadMenu()
 
+
             End If
+
             'If Not (IsPostBack) Then
             '    lblBranchId.Value = Session("branchid")
             '    lblBranchId.Visible = True
@@ -51,6 +53,19 @@ Public Class Site1
             Else
                 WLO9999.Visible = False
             End If
+
+            ' ใส่ url ให้ระบบอื่นๆ
+            Dim url As String = HttpContext.Current.Request.Url.AbsoluteUri
+            Dim path As String = HttpContext.Current.Request.Url.AbsolutePath
+            Dim host As String = HttpContext.Current.Request.Url.Host
+
+            Dim urls As String = ""
+            Dim str() As String = Split(url.ToLower(), "/lo/")
+            urls = str(0)
+            linkLO.HRef = urls & "/lo/backend/index.aspx"
+            linkCD.HRef = urls & "/cd/backend/index.aspx"
+            linkGL.HRef = urls & "/gl/backend/index.aspx"
+
         End If
 
     End Sub

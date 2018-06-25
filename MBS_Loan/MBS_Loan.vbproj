@@ -118,6 +118,7 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="backend\formpreview2.aspx" />
     <Content Include="backend\mixproadmin.aspx" />
     <Content Include="backend\reportdesign.aspx" />
     <Content Include="backend\loanpaysub.aspx" />
@@ -6463,6 +6464,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="backend\formpreview2.aspx.designer.vb">
+      <DependentUpon>formpreview2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backend\formpreview2.aspx.vb">
+      <DependentUpon>formpreview2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="backend\mixproadmin.aspx.designer.vb">
       <DependentUpon>mixproadmin.aspx</DependentUpon>
     </Compile>

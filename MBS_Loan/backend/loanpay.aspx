@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/backend/Site1.Master" CodeBehind="loanpay.aspx.vb" Inherits="MBS_Loan.loanpay" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
-       <link rel="stylesheet"  href="../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css"/>
+    <link rel="stylesheet" href="../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" />
 </asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -54,9 +54,7 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
-
                                     <div class="table-responsive">
                                         <asp:GridView ID="GridView1" runat="server" CssClass="GridView1 table table-hover table-striped table-bordered"
                                             AutoGenerateColumns="false" HeaderStyle-HorizontalAlign="Center" HeaderStyle-CssClass="text-center font-size-12"
@@ -159,7 +157,7 @@
                 'responsive': true,
                 'iDisplayLength': 50
             });
-           
+
         });
 
         $(document).ready(function () {

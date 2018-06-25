@@ -23,6 +23,33 @@ Partial Public Class Site1
     Protected WithEvents head As Global.System.Web.UI.WebControls.ContentPlaceHolder
     
     '''<summary>
+    '''linkLO control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents linkLO As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    
+    '''<summary>
+    '''linkGL control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents linkGL As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    
+    '''<summary>
+    '''linkCD control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents linkCD As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    
+    '''<summary>
     '''imgProfile control.
     '''</summary>
     '''<remarks>
