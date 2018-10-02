@@ -1310,6 +1310,24 @@ Partial Public Class loansub
     Protected WithEvents AjaxFileUpload1 As Global.AjaxControlToolkit.AjaxFileUpload
     
     '''<summary>
+    '''btnCapture control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnCapture As Global.System.Web.UI.WebControls.ImageButton
+    
+    '''<summary>
+    '''imgCapture control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents imgCapture As Global.System.Web.UI.HtmlControls.HtmlImage
+    
+    '''<summary>
     '''UpdatePanel2 control.
     '''</summary>
     '''<remarks>

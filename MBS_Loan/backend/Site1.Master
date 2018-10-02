@@ -274,13 +274,13 @@
                                 <span class="label label-success"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li class="header">Pueantae leasing</li>
+                                <li class="header"  id="SystemName"  runat="server">MBS Finance</li>
                                 <li>
                                     <!-- inner menu: contains the actual data -->
                                     <ul class="menu">
                                         <li>
                                             <!-- start message -->
-                                            <a href="http://ptleasing.mcloudcenter.com/lo/backend/index.aspx" id="linkLO" runat="server">
+                                            <a href="#" id="linkLO" runat="server">
                                                 <div class="pull-left">
                                                     <img src="../dist/img/lo.png" class="img-circle" alt="User Image" />
                                                 </div>
@@ -289,7 +289,7 @@
                                         </li>
                                         <li>
                                             <!-- start message -->
-                                            <a href="http://ptleasing.mcloudcenter.com/gl/backend/index.aspx" id="linkGL" runat="server">
+                                            <a href="#" id="linkGL" runat="server">
                                                 <div class="pull-left">
                                                     <img src="../dist/img/gl.png" class="img-circle" alt="User Image" />
                                                 </div>
@@ -298,7 +298,7 @@
                                         </li>
                                         <li>
                                             <!-- start message -->
-                                            <a href="http://ptleasing.mcloudcenter.com/cd/backend/index.aspx" id="linkCD" runat="server">
+                                            <a href="#" id="linkCD" runat="server">
                                                 <div class="pull-left">
                                                     <img src="../dist/img/cd.png" class="img-circle" alt="User Image" />
                                                 </div>
@@ -402,7 +402,7 @@
                         </a>
                         <ul class="treeview-menu">
                             <li><a href="index.aspx"><i class="fa fa-circle-o"></i>Admin dashboard</a></li>
-                            <li><a href="http://www.pueantaeleasing.com"><i class="fa fa-circle-o"></i>Frontend</a></li>
+                             <li><a href="#" id="LinkFrontend"  runat="server"><i class="fa fa-circle-o"></i>Frontend</a></li>
                         </ul>
                     </li>
                     <li class="treeview active">

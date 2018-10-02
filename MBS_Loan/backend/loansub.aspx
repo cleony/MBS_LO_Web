@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/backend/Site1.Master" CodeBehind="loansub.aspx.vb" Inherits="MBS_Loan.loansub" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
 
     <link href="../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet" />
@@ -1219,6 +1220,10 @@
 
                                 </div>
                                 <div class="tab-pane" id="tab7">
+
+                                    
+
+
                                     <div class="box">
                                         <div class="box-header with-border">
                                             <h3 class="box-title">เอกสารแนบ</h3>
@@ -1226,6 +1231,9 @@
                                         <div class="box-body">
                                             <div class="panel-body">
                                                 <div>
+                                                    <div class="col-sm-6">
+
+                                                
                                                     <div class="panel-body">
                                                         <h3 class="title-hero"></h3>
                                                         <div>
@@ -1262,10 +1270,59 @@
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                    <div class="col-sm-3">
+                                                        <div id="webcam" >
+                                                        </div>
+                                                        <div class="text-center">
+                                                               <asp:ImageButton ID="btnCapture" ImageUrl="~/dist/img/webcam.png"  Width="30" Height="30" runat="server" OnClientClick="return Capture();" AlternateText="คลิกถ่ายรูป"  />  
+                                                        </div>
+
+                                                     
+
+                                                        <%--<span id="camStatus"></span>--%>
+                                                    </div>
+
+                                                    <div class="col-sm-3">
+                                                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                            <div  ALIGN="right">
+
+                                                                <img src="#" id="imgCapture"  name="imgCapture" alt="" runat="server" class="fileinput-preview thumbnail " style="width: 220px; height: 220px;"  />
+                                                                    <div class="text-center">
+                                                              <label>รูปถ่าย</label>
+                                                        </div>
+                                                            </div>
+
+                                                        </div>
+
+
+                                                    </div>
+
                                             </div>
+                                                </div>
+
+
+
+                                            
+
+
+
+
                                         </div>
+
+
+
                                     </div>
+
+                                
+
+
                                 </div>
+             
+
+                                           
+                      
+                                   
                                 <div class="tab-pane" id="tab8">
                                     <div class="box">
                                         <div class="box-header with-border">
@@ -1414,9 +1471,10 @@
                                         </div>
                                     </div>
 
-                                </div>
-                            </div>
-                        </div>
+                                
+                           
+                        
+
                         <div class="box-tools pull-right font-light">
 
                             <asp:HiddenField ID="lblUserId" runat="server"></asp:HiddenField>
@@ -1431,11 +1489,29 @@
                         <asp:Button Text="ลบข้อมูล" ID="btnDelete" runat="server" Visible="false" class="btn btn-danger" OnClick="DeleteData" OnClientClick="return confirm('ท่านต้องการลบข้อมูลใช่หรือไม่ ?')" />
 
                     </div>
+
+                      
+    
+
+
+
+
+
+</div>
+                            </div>
+
+                        </div>
+
+
+
+
                 </form>
+
+                
             </div>
         </div>
 
-
+        
     </section>
     <script type="text/javascript" src="dataperson.js"></script>
 
@@ -1922,6 +1998,51 @@
             '<%Session["temp"] = "' + myvar +'"; %>' ;
 
             alert('<%=Session["temp"] %>');--%>
+        }
+    </script>
+
+
+
+
+     <%--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>--%>
+    <script src="../bower_components/Webcam_Plugin/jquery.webcam.js"  type="text/javascript"></script>
+     
+    <script type="text/javascript">
+        var pageUrl = '<%=ResolveUrl("~/backend/loansub.aspx") %>';
+        $(function () {
+            jQuery("#webcam").webcam({
+                width: 250,
+                height: 220,
+                mode: "save",
+                swffile: '<%=ResolveUrl("~/bower_components/Webcam_Plugin/jscam.swf") %>',
+                debug: function (type, status) {
+                    $('#camStatus').append(type + ": " + status + '<br /><br />');
+                },
+                onSave: function (data) {
+                    $.ajax({
+                        type: "POST",
+                        url: pageUrl + "/GetCapturedImage",
+                        data: '',
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (r) {
+                            $("[id*=imgCapture]").css("visibility", "visible");
+                            $("[id*=imgCapture]").attr("src", r.d);
+                        },
+                        failure: function (response) {
+                            alert(response.d);
+                        }
+                    });
+                },
+                onCapture: function () {
+                    webcam.save(pageUrl);
+                      location.reload();
+                }
+            });
+        });
+        function Capture() {
+            webcam.capture();
+            return false;
         }
     </script>
 

@@ -146,8 +146,6 @@ Public Class loancf
 
                             'If LoanInfo.CFDate.Date <> CFDate.Date OrElse LoanInfo.STCalDate.Date <> STCalDate.Date OrElse LoanInfo.StPayDate.Date <> STPayDate.Date Then
 
-
-
                             If LoanInfo.CalTypeTerm = 3 Then
                                 '======== รายวัน ==================
                                 'FrmLoan.STPayDate.Value = DateAdd(DateInterval.Day, Share.FormatInteger(FrmLoan.CbReqMonthTerm.Text), FrmLoan.STCalDate.Value)
@@ -205,7 +203,6 @@ Public Class loancf
 
             If Success > 0 Then
                 Page.ClientScript.RegisterStartupScript(Me.GetType(), "Window", "alert('เปลี่ยนสถานะสัญญาเป็นอนุมัติเงินกู้เสร็จเรียบร้อยแล้ว');window.location='loancf.aspx';", True)
-
                 '=====เก็บประวัติการใช้งาน===================
                 Dim HisInfo As New Entity.UserActiveHistory
                 HisInfo.DateActive = Date.Today

@@ -95,6 +95,15 @@ Partial Public Class personsub
     Protected WithEvents txtAge As Global.System.Web.UI.HtmlControls.HtmlInputText
     
     '''<summary>
+    '''btnCapture control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnCapture As Global.System.Web.UI.WebControls.ImageButton
+    
+    '''<summary>
     '''ToolkitScriptManager1 control.
     '''</summary>
     '''<remarks>
@@ -777,6 +786,24 @@ Partial Public Class personsub
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents GridView2 As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
+    '''GridView3 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents GridView3 As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
+    '''GridView4 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents GridView4 As Global.System.Web.UI.WebControls.GridView
     
     '''<summary>
     '''btnsave control.

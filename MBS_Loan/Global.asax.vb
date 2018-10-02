@@ -97,4 +97,14 @@ Public Class Global_asax
         Return IpAddress
     End Function
 
+    'Protected Sub Application_PreRequestHandlerExecute(ByVal sender As Object, ByVal e As EventArgs)
+    '    If TypeOf Context.Handler Is IRequiresSessionState OrElse TypeOf Context.Handler Is IReadOnlySessionState Then
+
+    '        If Request.Cookies("ASP.NET_SessionId") IsNot Nothing AndAlso Session IsNot Nothing AndAlso Session.SessionID IsNot Nothing Then
+    '            Response.Cookies("ASP.NET_SessionId").Value = Session.SessionID
+    '            Response.Cookies("ASP.NET_SessionId").Domain = app
+    '            Response.Cookies("ASP.NET_SessionId").Path = "/"
+    '        End If
+    '    End If
+    'End Sub
 End Class

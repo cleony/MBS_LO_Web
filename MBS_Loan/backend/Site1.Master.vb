@@ -54,13 +54,23 @@ Public Class Site1
                 WLO9999.Visible = False
             End If
 
+            Try
+                Dim urlpath As String = ""
+                Dim str() As String = Split(HttpContext.Current.Request.Url.AbsoluteUri.ToLower(), "/lo/")
+                urlpath = str(0)
+                linkLO.HRef = urlpath & "/lo/backend/index.aspx"
+                linkCD.HRef = urlpath & "/cd/backend/index.aspx"
+                linkGL.HRef = urlpath & "/gl/backend/index.aspx"
 
-            Dim urlpath As String = ""
-            Dim str() As String = Split(HttpContext.Current.Request.Url.AbsoluteUri.ToLower(), "/lo/")
-            urlpath = str(0)
-            linkLO.HRef = urlpath & "/lo/backend/index.aspx"
-            linkCD.HRef = urlpath & "/cd/backend/index.aspx"
-            linkGL.HRef = urlpath & "/gl/backend/index.aspx"
+                '============ link progrm ตามลูกค้า
+                Dim getSystemName As String = Share.FormatString(ConfigurationManager.AppSettings("SystemName"))
+                Dim getLinkFrontend As String = Share.FormatString(ConfigurationManager.AppSettings("LinkFrontend"))
+                SystemName.InnerText = getSystemName
+                LinkFrontend.HRef = getLinkFrontend
+            Catch ex As Exception
+
+            End Try
+
 
         End If
 

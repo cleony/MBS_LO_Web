@@ -23,6 +23,15 @@ Partial Public Class Site1
     Protected WithEvents head As Global.System.Web.UI.WebControls.ContentPlaceHolder
     
     '''<summary>
+    '''SystemName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents SystemName As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    
+    '''<summary>
     '''linkLO control.
     '''</summary>
     '''<remarks>
@@ -111,6 +120,15 @@ Partial Public Class Site1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblBranchName2 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    
+    '''<summary>
+    '''LinkFrontend control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents LinkFrontend As Global.System.Web.UI.HtmlControls.HtmlAnchor
     
     '''<summary>
     '''WLO1000 control.

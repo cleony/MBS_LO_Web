@@ -9,7 +9,7 @@ Public Class webcam
             If Request.InputStream.Length > 0 Then
                 Using reader As New StreamReader(Request.InputStream)
                     Dim hexString As String = Server.UrlEncode(reader.ReadToEnd())
-                    Dim imageName As String = DateTime.Now.ToString("dd-MM-yy hh-mm-ss")
+                    Dim imageName As String = "ภาพ1"
                     Dim imagePath As String = String.Format("~/Captures/{0}.png", imageName)
                     File.WriteAllBytes(Server.MapPath(imagePath), ConvertHexToBytes(hexString))
                     Session("CapturedImage") = ResolveUrl(imagePath)

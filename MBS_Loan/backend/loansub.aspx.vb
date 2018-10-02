@@ -2,6 +2,7 @@
 Imports System.IO
 Imports AjaxControlToolkit
 Imports System.Drawing
+Imports System.Web.Services
 
 Public Class loansub
     Inherits System.Web.UI.Page
@@ -13,22 +14,32 @@ Public Class loansub
     Protected FormPath As String = "formreport/form/master/"
     Protected UploadFolderPath As String = "Documents/" + Share.Company.RefundNo + "/Loan/"
 
+
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
+
+
         Try
+
             If Not (IsPostBack) Then
                 SetAttributes()
                 loadTypeLoan()
                 loadBranch()
                 loadCompanyAccount()
 
+
                 If Request.QueryString("id") <> "" Then
                     AccountNo = Request.QueryString("id")
                     LoadData()
+                    loadFilePic()
                     If Request.QueryString("mode") = "edit" Then
                         Mode = "edit"
                         btnsave.Visible = True
                         btnDelete.Visible = True
+                        btnCapture.Visible = True
                     Else
+                        btnCapture.Visible = False
                         btnsave.Visible = False
                         btnDelete.Visible = False
                         Mode = "view"
@@ -90,10 +101,42 @@ Public Class loansub
 
             End If
 
+
+
+            If Request.InputStream.Length > 0 Then
+
+
+                Using reader As New StreamReader(Request.InputStream)
+                    Dim hexString As String = Server.UrlEncode(reader.ReadToEnd())
+                    Dim imageName As String = AccountNo
+                    Dim imagePath As String = String.Format("Camera/Loan/{0}.png", imageName)
+                    File.WriteAllBytes(Server.MapPath(imagePath), ConvertHexToBytes(hexString))
+                    Session("CapturedImage") = ResolveUrl(imagePath)
+                End Using
+            End If
+
+
         Catch ex As Exception
 
         End Try
+        '~/backend/camara/Loan/{0}.png"
     End Sub
+
+    Private Shared Function ConvertHexToBytes(hex As String) As Byte()
+        Dim bytes As Byte() = New Byte(hex.Length / 2 - 1) {}
+        For i As Integer = 0 To hex.Length - 1 Step 2
+            bytes(i / 2) = Convert.ToByte(hex.Substring(i, 2), 16)
+        Next
+        Return bytes
+    End Function
+
+    <WebMethod(EnableSession:=True)>
+    Public Shared Function GetCapturedImage() As String
+        Dim url As String = HttpContext.Current.Session("CapturedImage").ToString()
+        HttpContext.Current.Session("CapturedImage") = Nothing
+        Return url
+    End Function
+
     Private Sub SetAttributes()
         txtPersonId.Attributes.Add("onblur", "txtPersonIdChange()")
         txtPersonName.Attributes.Add("onblur", "txtPersonIdChange()")
@@ -196,7 +239,10 @@ Public Class loansub
     End Sub
 
     Protected Sub LoadData()
+
+
         Try
+
             AccountNo = Request.QueryString("id")
             OldInfo = Obj.GetLoanById(AccountNo)
 
@@ -682,7 +728,9 @@ Public Class loansub
             gvLoanPay.DataBind()
 
             ' If System.IO.File.Exists(Server.MapPath(UploadFolderPath + txtAccountNo.Value + "/")) Then
+
             loadFileUpload()
+
             '  End If
 
             'Html = ""
@@ -696,7 +744,9 @@ Public Class loansub
 
     Protected Sub loadFileUpload()
         Dim LoanNo As String = AccountNo
+        'Dim filePaths() As String = Directory.GetFiles(Server.MapPath(UploadFolderPath + LoanNo + "/"))
         Dim filePaths() As String = Directory.GetFiles(Server.MapPath(UploadFolderPath + LoanNo + "/"))
+
         'Dim files As List(Of ListItem) = New List(Of ListItem)
         Dim fileName As String = ""
         Dim dt As New DataTable
@@ -740,6 +790,16 @@ Public Class loansub
         Next
         DataList1.DataSource = dt
         DataList1.DataBind()
+
+
+    End Sub
+
+    Protected Sub loadFilePic()
+        Dim LoanNo As String = AccountNo
+
+        imgCapture.Src = Convert.ToString("Camera/Loan/" + LoanNo + ".png")
+
+
     End Sub
 
 

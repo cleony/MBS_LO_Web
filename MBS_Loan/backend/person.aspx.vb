@@ -141,7 +141,9 @@ Public Class person
 
     End Function
     Protected Sub NewPerson(sender As Object, e As EventArgs)
+        Session("newpic") = "0"
         Response.Redirect("personsub.aspx")
+
     End Sub
     <WebMethod> _
     Public Function GetQueryInfo() As String

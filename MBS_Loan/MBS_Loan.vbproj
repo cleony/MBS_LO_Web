@@ -124,6 +124,9 @@
     <Content Include="backend\loanpaysub.aspx" />
     <Content Include="backend\requestloan.aspx" />
     <Content Include="backend\rptlo3_7.aspx" />
+    <Content Include="backend\Webcam_Plugin\jquery.webcam.js" />
+    <Content Include="backend\Webcam_Plugin\jscam.swf" />
+    <Content Include="backend\Webcam_Plugin\jscam_canvas_only.swf" />
     <Content Include="backend\WebForm1.aspx" />
     <Content Include="bower_components\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.css" />
     <Content Include="bower_components\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.min.css" />
@@ -6188,6 +6191,7 @@
     <Content Include="dist\img\lo.png" />
     <Content Include="dist\img\loan.png" />
     <Content Include="dist\img\LOGO_MCloud.png" />
+    <Content Include="dist\img\webcam.png" />
     <Content Include="dist\js\adminlte.js" />
     <Content Include="dist\js\adminlte.min.js" />
     <Content Include="dist\js\demo.js" />
@@ -6446,6 +6450,7 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
+    <None Include="My Project\PublishProfiles\FolderProfile3.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -7390,6 +7395,7 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="backend\Camera\Loan\" />
     <Folder Include="Captures\" />
   </ItemGroup>
   <ItemGroup>

@@ -8,7 +8,7 @@
             Dim RetInterest As New Entity.CalInterest
             Dim ObjTypeLoan As New Business.BK_TypeLoan
             Dim TypeLoanInfo As New Entity.BK_TypeLoan
-            LoanInfo = ObjLoan.GetLoanById(LoanNo, "")
+            LoanInfo = ObjLoan.GetLoanById(LoanNo)
             TypeLoanInfo = ObjTypeLoan.GetTypeLoanInfoById(LoanInfo.TypeLoanId)
 
             Try

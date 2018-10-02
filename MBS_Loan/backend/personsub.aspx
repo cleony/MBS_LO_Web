@@ -129,8 +129,19 @@
                                                                             <div class="col-md-6">
 
                                                                                 <div class="form-group">
-                                                                                    <label class="col-sm-3 control-label"></label>
-                                                                                    <div class="col-sm-4">
+                                                                                   <%-- <label class="col-sm-3 control-label"></label>--%>
+                                                                                     <div class="col-sm-3 " >
+                                                        <div id="webcam"  >
+                                                        </div>
+                                                        <div >
+  <asp:ImageButton ID="btnCapture" ImageUrl="~/dist/img/webcam.png"  Width="30" Height="30" runat="server" OnClientClick="return Capture();" AlternateText="คลิกถ่ายรูป"  />  
+                                                        </div>
+
+                                                     
+
+                                                        <%--<span id="camStatus"></span>--%>
+                                                    </div>
+                                                                                    <div class="col-sm-3 col-sm-offset-3"  >
                                                                                         <div class="fileinput fileinput-new" data-provides="fileinput">
                                                                                             <div>
                                                                                                 <asp:ScriptManager ID="ToolkitScriptManager1" runat="server"></asp:ScriptManager>
@@ -146,7 +157,7 @@
 
                                                                                 <div class="form-group" hidden="hidden">
                                                                                     <label class="col-sm-3 control-label">Path</label>
-                                                                                    <div class="col-sm-4">
+                                                                                    <div class="col-sm-3">
                                                                                         <input type="text" runat="server" id="txtPicPath" class="form-control" />
                                                                                         <input type="text" runat="server" id="txtUpload" class="form-control" />
                                                                                     </div>
@@ -812,12 +823,138 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="tab-pane fade" id="tab-example-6">
+                                                 <div class="tab-pane fade" id="tab-example-6">
                                                     <div class="box box-default">
 
                                                         <div class="box-body">
                                                             <div class="panel-body">
+                                                                <h4><u> สถานะ : ผู้กู้</u> </h5> 
                                                                 <asp:GridView ID="GridView2" runat="server" class="table table-bordered table-hover"
+                                                                    ShowHeaderWhenEmpty="true" AutoGenerateColumns="false">
+                                                                    <%--RowStyle-CssClass="font-black">--%>
+                                                                    <Columns>
+                                                                        <asp:TemplateField HeaderText="" HeaderStyle-CssClass="text-center font-size-12">
+                                                                            <ItemTemplate>
+                                                                                <asp:Label ID="lblOrders" runat="server"
+                                                                                    Text='<%# Eval("Orders")%>' CssClass="font-size-12"></asp:Label>
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+                                                                        <asp:TemplateField HeaderText="เลขที่สัญญา" HeaderStyle-CssClass="text-center font-size-12">
+                                                                            <ItemTemplate>
+                                                                                <asp:Label ID="lblAccountNo" runat="server"
+                                                                                    Text='<%# Eval("AccountNo")%>' CssClass="font-size-12"></asp:Label>
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+                                                                        <asp:TemplateField HeaderText="ประเภทสัญญา" HeaderStyle-CssClass="text-center font-size-12">
+                                                                            <ItemTemplate>
+                                                                                <asp:Label ID="lblTypeLoan" runat="server"
+                                                                                    Text='<%# Eval("TypeLoanName")%>' CssClass="font-size-12"></asp:Label>
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+                                                                        <asp:TemplateField HeaderText="อนุมัติสัญญา" HeaderStyle-CssClass="text-center font-size-12">
+                                                                            <ItemTemplate>
+                                                                                <asp:Label ID="lblCFDate" runat="server"
+                                                                                    Text='<%# Eval("CFDate", "{0:dd/MM/yyyy}")%>' CssClass="font-size-12"></asp:Label>
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+                                                                        <asp:TemplateField HeaderText="สิ้นสุดสัญญา" HeaderStyle-CssClass="text-center font-size-12">
+                                                                            <ItemTemplate>
+                                                                                <asp:Label ID="lblEndPayDate" runat="server"
+                                                                                    Text='<%# Eval("EndPayDate", "{0:dd/MM/yyyy}")%>' CssClass="font-size-12"></asp:Label>
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+
+                                                                        <asp:TemplateField HeaderText="ยอดเงินที่กู้" HeaderStyle-CssClass="text-center font-size-12" ItemStyle-CssClass="text-right">
+                                                                            <ItemTemplate>
+                                                                                <asp:Label ID="lblTotalAmount" runat="server"
+                                                                                    Text='<%# Eval("TotalAmount", "{0:#,0.00}")%>' CssClass="font-size-12"></asp:Label>
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+                                                                        <asp:TemplateField HeaderText="อัตรา" HeaderStyle-CssClass="text-center font-size-12" HeaderStyle-Width="50px">
+                                                                            <ItemTemplate>
+                                                                                <asp:Label ID="txtInterestRate" runat="server"
+                                                                                    Text='<%# Eval("InterestRate", "{0:#,0.00}")%>' Style="width: 100%" CssClass="text-right font-size-12"></asp:Label>
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+                                                                        <asp:TemplateField HeaderText="สถานะ" HeaderStyle-CssClass="text-center font-size-12">
+                                                                            <ItemTemplate>
+                                                                                <asp:Label ID="lblStatus" runat="server" CssClass="font-size-12"
+                                                                                    Text='<%# Eval("Status")%>'></asp:Label>
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+
+                                                                        <%--<asp:HyperLink runat="server" Text="ดูข้อมูล" DataNavigateUrlFields="AccountNo" DataNavigateUrlFormatString="~/loansub.aspx?id={0}&mode=view" ></asp:HyperLink>--%>
+                                                                        <asp:HyperLinkField Text="ดูข้อมูล" DataNavigateUrlFields="AccountNo" DataNavigateUrlFormatString="loansub.aspx?id={0}&mode=view"
+                                                                            HeaderText="" ItemStyle-CssClass="font-size-12" Target="_blank" />
+                                                                    </Columns>
+
+                                                                </asp:GridView>
+
+                                                                <hr />
+                                                              <h4><u>สถานะ : ผู้กู้ร่วม</u> </h5> 
+                                                                <asp:GridView ID="GridView3" runat="server" class="table table-bordered table-hover"
+                                                                    ShowHeaderWhenEmpty="true" AutoGenerateColumns="false">
+                                                                    <%--RowStyle-CssClass="font-black">--%>
+                                                                    <Columns>
+                                                                        <asp:TemplateField HeaderText="" HeaderStyle-CssClass="text-center font-size-12">
+                                                                            <ItemTemplate>
+                                                                                <asp:Label ID="lblOrders" runat="server"
+                                                                                    Text='<%# Eval("Orders")%>' CssClass="font-size-12"></asp:Label>
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+                                                                        <asp:TemplateField HeaderText="เลขที่สัญญา" HeaderStyle-CssClass="text-center font-size-12">
+                                                                            <ItemTemplate>
+                                                                                <asp:Label ID="lblAccountNo" runat="server"
+                                                                                    Text='<%# Eval("AccountNo")%>' CssClass="font-size-12"></asp:Label>
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+                                                                        <asp:TemplateField HeaderText="ประเภทสัญญา" HeaderStyle-CssClass="text-center font-size-12">
+                                                                            <ItemTemplate>
+                                                                                <asp:Label ID="lblTypeLoan" runat="server"
+                                                                                    Text='<%# Eval("TypeLoanName")%>' CssClass="font-size-12"></asp:Label>
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+                                                                        <asp:TemplateField HeaderText="อนุมัติสัญญา" HeaderStyle-CssClass="text-center font-size-12">
+                                                                            <ItemTemplate>
+                                                                                <asp:Label ID="lblCFDate" runat="server"
+                                                                                    Text='<%# Eval("CFDate", "{0:dd/MM/yyyy}")%>' CssClass="font-size-12"></asp:Label>
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+                                                                        <asp:TemplateField HeaderText="สิ้นสุดสัญญา" HeaderStyle-CssClass="text-center font-size-12">
+                                                                            <ItemTemplate>
+                                                                                <asp:Label ID="lblEndPayDate" runat="server"
+                                                                                    Text='<%# Eval("EndPayDate", "{0:dd/MM/yyyy}")%>' CssClass="font-size-12"></asp:Label>
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+
+                                                                        <asp:TemplateField HeaderText="ยอดเงินที่กู้" HeaderStyle-CssClass="text-center font-size-12" ItemStyle-CssClass="text-right">
+                                                                            <ItemTemplate>
+                                                                                <asp:Label ID="lblTotalAmount" runat="server"
+                                                                                    Text='<%# Eval("TotalAmount", "{0:#,0.00}")%>' CssClass="font-size-12"></asp:Label>
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+                                                                        <asp:TemplateField HeaderText="อัตรา" HeaderStyle-CssClass="text-center font-size-12" HeaderStyle-Width="50px">
+                                                                            <ItemTemplate>
+                                                                                <asp:Label ID="txtInterestRate" runat="server"
+                                                                                    Text='<%# Eval("InterestRate", "{0:#,0.00}")%>' Style="width: 100%" CssClass="text-right font-size-12"></asp:Label>
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+                                                                        <asp:TemplateField HeaderText="สถานะ" HeaderStyle-CssClass="text-center font-size-12">
+                                                                            <ItemTemplate>
+                                                                                <asp:Label ID="lblStatus" runat="server" CssClass="font-size-12"
+                                                                                    Text='<%# Eval("Status")%>'></asp:Label>
+                                                                            </ItemTemplate>
+                                                                        </asp:TemplateField>
+
+                                                                        <%--<asp:HyperLink runat="server" Text="ดูข้อมูล" DataNavigateUrlFields="AccountNo" DataNavigateUrlFormatString="~/loansub.aspx?id={0}&mode=view" ></asp:HyperLink>--%>
+                                                                        <asp:HyperLinkField Text="ดูข้อมูล" DataNavigateUrlFields="AccountNo" DataNavigateUrlFormatString="loansub.aspx?id={0}&mode=view"
+                                                                            HeaderText="" ItemStyle-CssClass="font-size-12" Target="_blank" />
+                                                                    </Columns>
+
+                                                                </asp:GridView>
+                                                                <hr />
+                                                                 <h4><u>สถานะ : ผู้ค้ำประกัน</u> </h5> 
+                                                                <asp:GridView ID="GridView4" runat="server" class="table table-bordered table-hover"
                                                                     ShowHeaderWhenEmpty="true" AutoGenerateColumns="false">
                                                                     <%--RowStyle-CssClass="font-black">--%>
                                                                     <Columns>
@@ -917,7 +1054,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-4 control-label">เลขบัตรประชาชน</label>
                                     <div class="col-sm-6">
-                                        <input type="text" runat="server" id="txtIDCardID" class="form-control" />
+                                        <input type="text" runat="server" id="txtIDCardID" class="form-control" autofocus/>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -1319,5 +1456,48 @@
         });
 
     </script>
+    
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="../bower_components/Webcam_Plugin/jquery.webcam.js"  type="text/javascript"></script>
+     
+    <script type="text/javascript">
+        var pageUrl = '<%=ResolveUrl("~/backend/personsub.aspx") %>';
+        $(function  () {
+            jQuery("#webcam").webcam({
+                width: 220,
+                height: 250,
+                mode: "save",
+                swffile: '<%=ResolveUrl("~/backend/Webcam_Plugin/jscam.swf") %>',
+                debug: function (type, status) {
+                    $('#camStatus').append(type + ": " + status );
+                },
+                onSave: function (data) {
+                    $.ajax({
+                        type: "POST",
+                        url: pageUrl + "/GetCapturedImage",
+                        data: '{picname:"' + document.getElementById('<%= txtPersonId.ClientID%>').value +  '"}',
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (r) {
+                            $("[id*=imgUpload]").css("visibility", "visible");
+                            $("[id*=imgUpload]").attr("src", r.d);
+                        },
+                        failure: function (response) {
+                            alert(response.d);
+                        }
+                    });
+                },
+                onCapture: function () {
+                    webcam.save(pageUrl);
+                               
+                }
+            });
+        });
 
+        function Capture() {
+            webcam.capture();
+            return false;
+
+        }
+    </script>
 </asp:Content>

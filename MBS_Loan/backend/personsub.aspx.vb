@@ -1,5 +1,6 @@
 ﻿Imports Mixpro.MBSLibary
 Imports System.IO
+Imports System.Web.Services
 
 Public Class personsub
     Inherits System.Web.UI.Page
@@ -8,44 +9,104 @@ Public Class personsub
     Dim OldInfo As New Entity.CD_Person
     Dim PersonId As String = ""
     Dim Mode As String = "save"
-
+    Public Shared Property PersonIdPic As String
+    Public Shared Property modepic As String
+    Dim namepic As String
+    'Dim modepic As String = ""
     Protected CopyToPath As String = "Documents/" + Share.Company.RefundNo + "/Picture/Person/"
     Protected UploadFolderPath As String = "Documents/" + Share.Company.RefundNo + "/Uploads/"
+
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Try
             If Not (IsPostBack) Then
                 SetAttributes()
                 loadTitle()
                 LoadHisLoanData()
+                LoadHisLoanGTData()
+                LoadHisLoanJointData()
                 LoadcolletData()
+
+
                 If Request.QueryString("id") <> "" Then
 
+
                     loaddata()
+
+
+
                     If Request.QueryString("mode") = "edit" Then
                         Mode = "edit"
                         btnsave.Text = "แก้ไขข้อมูล"
                         btnsave.Visible = True
                         btnDelete.Visible = True
+                        btnCapture.Visible = True
+                        Session.Remove("newpic")
+                        modepic = Request.QueryString("mode")
+                        PersonIdPic = txtPersonId.Value
                     Else
+                        btnCapture.Visible = False
                         btnsave.Visible = False
                         btnIdCard.Visible = False
                         BtnAddRow.Visible = False
                         Mode = "view"
+
                     End If
                     txtPersonId.Disabled = True
+
+
                 Else
                     Mode = "save"
                     btnsave.Text = "บันทึกข้อมูล"
                     btnsave.Visible = True
 
                     GetRunning()
+
                 End If
+
+
+
+                If Request.InputStream.Length > 0 Then
+
+                    If Session("newpic") = "0" Then
+                        Using reader As New StreamReader(Request.InputStream)
+
+                            Dim hexString As String = Server.UrlEncode(reader.ReadToEnd())
+                            Dim imageName As String = txtPersonId.Value
+                            Dim imagePath As String = String.Format("Camera/Loan/{0}.png", imageName)
+                            File.WriteAllBytes(Server.MapPath(imagePath), ConvertHexToBytes(hexString))
+                            Session("CapturedImage") = ResolveUrl(imagePath)
+                        End Using
+
+
+                    Else
+
+                        If modepic = "edit" Then
+                            Using reader As New StreamReader(Request.InputStream)
+
+                                Dim hexString As String = Server.UrlEncode(reader.ReadToEnd())
+                                Dim imageName As String = PersonIdPic
+                                Dim imagePath As String = String.Format("Camera/Loan/{0}.png", imageName)
+                                File.WriteAllBytes(Server.MapPath(imagePath), ConvertHexToBytes(hexString))
+                                Session("CapturedImage") = ResolveUrl(imagePath)
+                            End Using
+
+                        End If
+
+                    End If
+                End If
+
             End If
+
+            'loadFilePic()
+
 
         Catch ex As Exception
 
         End Try
+
     End Sub
+
     Private Sub SetAttributes()
         dtBirthDate.Attributes.Add("onblur", "BirthDateChange()")
     End Sub
@@ -64,6 +125,44 @@ Public Class personsub
             GridView2.DataSource = Dt
             GridView2.DataBind()
             ViewState("LoanHisTable") = Dt
+        Catch ex As Exception
+
+        End Try
+    End Sub
+    Private Sub LoadHisLoanJointData() 'ByVal worker As BackgroundWorker, ByVal e As DoWorkEventArgs)
+        Try
+            Dim Dt As New DataTable()
+            Dt.Columns.AddRange(New DataColumn() {New DataColumn("Orders", GetType(Integer)),
+                                                   New DataColumn("AccountNo", GetType(String)),
+                                                   New DataColumn("TypeLoanName", GetType(String)),
+                                                   New DataColumn("CFDate", GetType(Date)),
+                                                   New DataColumn("EndPayDate", GetType(Date)),
+                                                   New DataColumn("TotalAmount", GetType(Double)),
+                                                   New DataColumn("InterestRate", GetType(Double)),
+                                                   New DataColumn("Status", GetType(String))})
+
+            GridView3.DataSource = Dt
+            GridView3.DataBind()
+            ViewState("LoanHisJointTable") = Dt
+        Catch ex As Exception
+
+        End Try
+    End Sub
+    Private Sub LoadHisLoanGTData() 'ByVal worker As BackgroundWorker, ByVal e As DoWorkEventArgs)
+        Try
+            Dim Dt As New DataTable()
+            Dt.Columns.AddRange(New DataColumn() {New DataColumn("Orders", GetType(Integer)),
+                                                   New DataColumn("AccountNo", GetType(String)),
+                                                   New DataColumn("TypeLoanName", GetType(String)),
+                                                   New DataColumn("CFDate", GetType(Date)),
+                                                   New DataColumn("EndPayDate", GetType(Date)),
+                                                   New DataColumn("TotalAmount", GetType(Double)),
+                                                   New DataColumn("InterestRate", GetType(Double)),
+                                                   New DataColumn("Status", GetType(String))})
+
+            GridView4.DataSource = Dt
+            GridView4.DataBind()
+            ViewState("LoanHisGTTable") = Dt
         Catch ex As Exception
 
         End Try
@@ -101,6 +200,7 @@ Public Class personsub
     End Sub
     Private Sub loaddata()
         Try
+
             PersonId = Request.QueryString("id")
             OldInfo = Obj.GetPersonById(PersonId)
             txtPersonId.Value = OldInfo.PersonId
@@ -290,53 +390,187 @@ Public Class personsub
                 GridView1.DataSource = dt
                 GridView1.DataBind()
 
+                'Dim dtLoan As DataTable = DirectCast(ViewState("LoanHisTable"), DataTable)
+                'dtLoan.Rows.Clear()
+                'Dim i As Integer = 1
+                'Dim ObjLoan As New Business.BK_Loan
+                'Dim LoanInfos() As Entity.BK_Loan = Nothing
+                'LoanInfos = ObjLoan.GetLoanByPersonId(.PersonId)
+                'If LoanInfos.Length > 0 Then
+                '    For Each AccItem As Entity.BK_Loan In LoanInfos
+                '        Dim StatusName As String = ""
+
+                '        If AccItem.Status = "0" Then
+                '            StatusName = "รออนุมัติ"
+                '        ElseIf AccItem.Status = "7" Then
+                '            StatusName = "อนุมัติสัญญา"
+                '        ElseIf AccItem.Status = "1" Then
+                '            StatusName = "อนุมัติโอนเงิน"
+                '        ElseIf AccItem.Status = "2" Then
+                '            StatusName = "ระหว่างชำระ"
+                '        ElseIf AccItem.Status = "3" Then
+                '            StatusName = "ปิดบัญชี"
+                '        ElseIf AccItem.Status = "4" Then
+                '            StatusName = "ติดตามหนี้"
+                '        ElseIf AccItem.Status = "5" Then
+                '            StatusName = "ปิดบัญชี(ต่อสัญญา)"
+                '        ElseIf AccItem.Status = "6" Then
+                '            StatusName = "ยกเลิก"
+                '        ElseIf AccItem.Status = "8" Then
+                '            StatusName = "ตัดหนี้สูญ"
+                '        End If
+
+                '        '  If AccItem.Status = "0" OrElse AccItem.Status = "7" OrElse AccItem.Status = "1" OrElse AccItem.Status = "2" OrElse AccItem.Status = "4" Then
+                '        Dim objRow() As Object = {i, AccItem.AccountNo, AccItem.TypeLoanName _
+                '            , Share.FormatDate(AccItem.CFDate), Share.FormatDate(AccItem.EndPayDate), AccItem.TotalAmount, AccItem.InterestRate, StatusName}
+                '        dtLoan.Rows.Add(objRow)
+                '        i += 1
+                '        ' End If
+                '    Next
+                'End If
+                'GridView2.DataSource = dtLoan
+                'GridView2.DataBind()
+                'ViewState("LoanHisTable") = dtLoan
+
+                Dim ObjLoan As New Business.BK_Loan
                 Dim dtLoan As DataTable = DirectCast(ViewState("LoanHisTable"), DataTable)
                 dtLoan.Rows.Clear()
-                Dim i As Integer = 1
-                Dim ObjLoan As New Business.BK_Loan
-                Dim LoanInfos() As Entity.BK_Loan = Nothing
-                LoanInfos = ObjLoan.GetLoanByPersonId(.PersonId)
-                If LoanInfos.Length > 0 Then
-                    For Each AccItem As Entity.BK_Loan In LoanInfos
+                Dim i As Integer = 0
+
+
+                Dim dtGTLoan As DataTable = DirectCast(ViewState("LoanHisGTTable"), DataTable)
+                dtGTLoan.Rows.Clear()
+                Dim GTi As Integer = 0
+
+                Dim dtJointLoan As DataTable = DirectCast(ViewState("LoanHisJointTable"), DataTable)
+                dtJointLoan.Rows.Clear()
+                Dim Jointi As Integer = 0
+
+                Dim retGtData As New DataTable
+                retGtData = ObjLoan.GetAllLoanGTLoanByPersonId(.PersonId)
+                If retGtData.Rows.Count > 0 Then
+                    For Each dr As DataRow In retGtData.Rows
                         Dim StatusName As String = ""
 
-                        If AccItem.Status = "0" Then
+                        If Share.FormatString(dr.Item("Status")) = "0" Then
                             StatusName = "รออนุมัติ"
-                        ElseIf AccItem.Status = "7" Then
+                        ElseIf Share.FormatString(dr.Item("Status")) = "7" Then
                             StatusName = "อนุมัติสัญญา"
-                        ElseIf AccItem.Status = "1" Then
+                        ElseIf Share.FormatString(dr.Item("Status")) = "1" Then
                             StatusName = "อนุมัติโอนเงิน"
-                        ElseIf AccItem.Status = "2" Then
+                        ElseIf Share.FormatString(dr.Item("Status")) = "2" Then
                             StatusName = "ระหว่างชำระ"
-                        ElseIf AccItem.Status = "3" Then
+                        ElseIf Share.FormatString(dr.Item("Status")) = "3" Then
                             StatusName = "ปิดบัญชี"
-                        ElseIf AccItem.Status = "4" Then
+                        ElseIf Share.FormatString(dr.Item("Status")) = "4" Then
                             StatusName = "ติดตามหนี้"
-                        ElseIf AccItem.Status = "5" Then
+                        ElseIf Share.FormatString(dr.Item("Status")) = "5" Then
                             StatusName = "ปิดบัญชี(ต่อสัญญา)"
-                        ElseIf AccItem.Status = "6" Then
+                        ElseIf Share.FormatString(dr.Item("Status")) = "6" Then
                             StatusName = "ยกเลิก"
-                        ElseIf AccItem.Status = "8" Then
+                        ElseIf Share.FormatString(dr.Item("Status")) = "8" Then
                             StatusName = "ตัดหนี้สูญ"
                         End If
 
                         '  If AccItem.Status = "0" OrElse AccItem.Status = "7" OrElse AccItem.Status = "1" OrElse AccItem.Status = "2" OrElse AccItem.Status = "4" Then
-                        Dim objRow() As Object = {i, AccItem.AccountNo, AccItem.TypeLoanName _
-                            , Share.FormatDate(AccItem.CFDate), Share.FormatDate(AccItem.EndPayDate), AccItem.TotalAmount, AccItem.InterestRate, StatusName}
-                        dtLoan.Rows.Add(objRow)
-                        i += 1
+                        Dim c1 As Int16 = 1
+
+                        If Share.FormatString(dr.Item("StatusLoan")) = "ผู้กู้เงิน" Then
+                            i += 1
+                            c1 = i
+                        ElseIf Share.FormatString(dr.Item("StatusLoan")) = "ผู้กู้ร่วม" Then
+                            Jointi += 1
+                            c1 = Jointi
+                        Else
+                            GTi += 1
+                            c1 = GTi
+                        End If
+
+                        Dim objRow() As Object = {c1, Share.FormatString(dr.Item("AccountNo")), Share.FormatString(dr.Item("TypeLoanName")) _
+                            , Share.FormatDate(dr.Item("CFDate")), Share.FormatDate(dr.Item("EndPayDate")), Share.FormatDouble(dr.Item("TotalAmount")), Share.FormatDouble(dr.Item("InterestRate")), StatusName}
+
+                        If Share.FormatString(dr.Item("StatusLoan")) = "ผู้กู้เงิน" Then
+                            dtLoan.Rows.Add(objRow)
+                        ElseIf Share.FormatString(dr.Item("StatusLoan")) = "ผู้กู้ร่วม" Then
+                            dtJointLoan.Rows.Add(objRow)
+                        Else
+                            dtGTLoan.Rows.Add(objRow)
+                        End If
+
+
                         ' End If
                     Next
                 End If
                 GridView2.DataSource = dtLoan
                 GridView2.DataBind()
                 ViewState("LoanHisTable") = dtLoan
+
+                GridView3.DataSource = dtJointLoan
+                GridView3.DataBind()
+                ViewState("LoanHisJointTable") = dtJointLoan
+
+                GridView4.DataSource = dtGTLoan
+                GridView4.DataBind()
+                ViewState("LoanHisGTTable") = dtGTLoan
+
+
             End With
+
 
         Catch ex As Exception
 
         End Try
     End Sub
+
+    Private Shared Function ConvertHexToBytes(hex As String) As Byte()
+        Dim bytes As Byte() = New Byte(hex.Length / 2 - 1) {}
+        For i As Integer = 0 To hex.Length - 1 Step 2
+            bytes(i / 2) = Convert.ToByte(hex.Substring(i, 2), 16)
+        Next
+        Return bytes
+    End Function
+
+    <WebMethod(EnableSession:=True)>
+    Public Shared Function GetCapturedImage() As String
+        Dim url As String = HttpContext.Current.Session("CapturedImage").ToString()
+        HttpContext.Current.Session("CapturedImage") = Nothing
+        Return url
+    End Function
+
+    Public Sub loadFilePic()
+
+
+
+        If Session("newpic") = "0" Then
+
+            imgUpload.Src = Convert.ToString("Camera/Loan/" + txtPersonId.Value + ".png")
+
+        Else
+
+            If modepic = "edit" Then
+
+                imgUpload.Src = Convert.ToString("Camera/Loan/" + PersonIdPic + ".png")
+            Else
+                imgUpload.Src = Convert.ToString("Camera/Loan/" + txtPersonId.Value + ".png")
+            End If
+
+        End If
+
+
+
+
+
+
+
+
+
+
+    End Sub
+
+
+
+
+
 
     Protected Sub savedata(sender As Object, e As EventArgs)
         savedata()

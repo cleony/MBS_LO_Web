@@ -15,10 +15,10 @@
 </head>
 <body>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="bower_components/Webcam_Plugin/jquery.webcam.js"  type="text/javascript"></script>
+    <script src="../bower_components/Webcam_Plugin/jquery.webcam.js"  type="text/javascript"></script>
      
     <script type="text/javascript">
-        var pageUrl = '<%=ResolveUrl("bower_components/webcam.aspx") %>';
+        var pageUrl = '<%=ResolveUrl("~/webcam.aspx") %>';
         $(function () {
             jQuery("#webcam").webcam({
                 width: 320,
@@ -26,7 +26,7 @@
                 mode: "save",
                 swffile: '<%=ResolveUrl("bower_components/Webcam_Plugin/jscam.swf") %>',
                 debug: function (type, status) {
-                    $('#camStatus').append(type + ": " + status + '<br /><br />');
+                    $('#camStatus').append(type + ": " + status );
                 },
                 onSave: function (data) {
                     $.ajax({
@@ -54,6 +54,8 @@
             return false;
         }
     </script>
+
+  
     <form id="form1" runat="server">
     <table border="0" cellpadding="0" cellspacing="0">
         <tr>
@@ -84,6 +86,15 @@
     <asp:Button ID="btnCapture" Text="Capture" runat="server" OnClientClick="return Capture();" />
     <br />
     <span id="camStatus"></span>
+
+
+
+
+
+
+
+
+
     </form>
 </body>
 </html>

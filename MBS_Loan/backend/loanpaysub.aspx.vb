@@ -6239,7 +6239,7 @@ Public Class loanpaysub
                     Dim ObjEmp As New Business.CD_Employee
                     Dim EmpInfo As New Entity.CD_Employee
                     EmpInfo = ObjEmp.GetEmployeeById(UserInfo.EmpId)
-                    If Share.FormatString(EmpInfo.BranchId) <> lblbranchId.Value Then
+                    If Share.FormatString(EmpInfo.BranchId) <> lblbranchId.Value AndAlso UserInfo.Status <> "1" Then
                         Page.ClientScript.RegisterStartupScript(Me.GetType(), "Window", "alert('คุณไม่มีสิทธิ์ในการการทำรายการ !!!');", True)
                         status = False
                         Return status
