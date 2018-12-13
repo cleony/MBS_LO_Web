@@ -239,8 +239,6 @@ Public Class loansub
     End Sub
 
     Protected Sub LoadData()
-
-
         Try
 
             AccountNo = Request.QueryString("id")
@@ -727,15 +725,18 @@ Public Class loansub
             gvLoanPay.DataSource = MovementInfos
             gvLoanPay.DataBind()
 
-            ' If System.IO.File.Exists(Server.MapPath(UploadFolderPath + txtAccountNo.Value + "/")) Then
+            Dim dtFollowDebtTel As New DataTable
+            dtFollowDebtTel = Obj.GetFollowDebtTel(AccountNo)
+            GVFollowTel.DataSource = dtFollowDebtTel
+            GVFollowTel.DataBind()
+
+            Dim dtFollowDebtHome As New DataTable
+            dtFollowDebtHome = Obj.GetFollowDebtHome(AccountNo)
+            GVFollowHome.DataSource = dtFollowDebtHome
+            GVFollowHome.DataBind()
 
             loadFileUpload()
 
-            '  End If
-
-            'Html = ""
-            'Html = ConvertToHTMLLoanPay(MovementInfos)
-            'PlaceHolder2.Controls.Add(New Literal() With {.Text = Html.ToString()})
 
         Catch ex As Exception
 

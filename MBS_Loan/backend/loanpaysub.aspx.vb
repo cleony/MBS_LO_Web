@@ -414,6 +414,11 @@ Public Class loanpaysub
             If IntsDayAmount.Value = 1461 Then IntsDayAmount.Value = 1460 '4ปี
 
 
+            'ดึงข่้อมูลจำนวนเงินการติดตามหนี้
+            Dim TrackFee As Double = 0
+            TrackFee = Share.FormatDouble(objLoan.GetTrackFee(AccountNo))
+            txtTrackFee.Value = Share.Cnumber(TrackFee, 2)
+
             CalculatePay(lblAccountNo.InnerText, Share.FormatDate(dtPayDate.Text).Date)
 
             txtMulct.Disabled = False
@@ -5477,6 +5482,7 @@ Public Class loanpaysub
                             TranferGL(Info)
                         End If
 
+
                         If (Info.NewBalance <= 0) OrElse Request.QueryString("typepay") = "2" Then
                             Dim RefAccNo As String = ""
                             '============= กรณีสัญญากู้ที่มีการค้ำประกันผูกบัญชีอยู่ ต้องไปเปลี่ยนสถานะบัญชีเงินฝากเป็นเปิดบัญชีและเคลียร์เลขที่สัญญาอ้างอิง
@@ -5485,6 +5491,10 @@ Public Class loanpaysub
                                 ObjAcc.UpdateAccountStatus(RefAccNo, "1", "")
                             End If
                         End If
+
+                        ' update ข้อมลค่าธรรมเนียมการติดตามหนี้ 
+                        Dim objLoan As New Business.BK_Loan
+                        objLoan.UpdateFllowDebtHome(Info.AccountNo)
 
                         Session("formname") = "lof011"
                         Session("lof011_loanno") = Info.AccountNo

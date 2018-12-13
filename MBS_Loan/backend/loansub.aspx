@@ -35,6 +35,8 @@
                                 <li><a href="#tab6" data-toggle="tab">ข้อมูลการโอนเงิน/อื่นๆ</a></li>
                                 <li><a href="#tab7" data-toggle="tab">เอกสารแนบ</a></li>
                                 <li><a href="#tab8" data-toggle="tab">พิมพ์สัญญา</a></li>
+                                <li><a href="#tab9" data-toggle="tab">ประวัติโทรติดตามหนี้</a></li>
+                                <li><a href="#tab10" data-toggle="tab">ประวัติติดตามหนี้ที่บ้าน</a></li>
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane active" id="tab1">
@@ -1221,7 +1223,7 @@
                                 </div>
                                 <div class="tab-pane" id="tab7">
 
-                                    
+
 
 
                                     <div class="box">
@@ -1233,96 +1235,72 @@
                                                 <div>
                                                     <div class="col-sm-6">
 
-                                                
-                                                    <div class="panel-body">
-                                                        <h3 class="title-hero"></h3>
-                                                        <div>
-                                                            <div class="row" id="dropzone-example">
-                                                                <asp:DataList ID="DataList1" runat="server" Width="100%" RepeatColumns="4" RepeatDirection="Horizontal">
-                                                                    <ItemTemplate>
-                                                                        <table class="content-box-wrapper">
-                                                                            <tr>
-                                                                                <td style="text-align: center">
-                                                                                    <asp:Image ID="Image2" runat="server" CssClass="img" ImageUrl='<%#Eval("FilePathPic")%>' Height="100"
-                                                                                        Width="100" />
-                                                                                </td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td>
-                                                                                    <asp:Label ID="Label1" runat="server" Text='<%#Eval("FileName")%>'></asp:Label>
-                                                                                </td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td>
-                                                                                    <asp:LinkButton ID="lnkDownload" runat="server" CommandArgument='<%#Eval("FilePathValue")%>' OnClick="DownloadFile">Download</asp:LinkButton>
-                                                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <asp:LinkButton ID="lnkDelete" runat="server" CommandArgument='<%#Eval("FilePathValue")%>' OnClick="DeleteFile">Delete</asp:LinkButton>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </table>
-                                                                    </ItemTemplate>
-                                                                </asp:DataList>
 
+                                                        <div class="panel-body">
+                                                            <h3 class="title-hero"></h3>
+                                                            <div>
+                                                                <div class="row" id="dropzone-example">
+                                                                    <asp:DataList ID="DataList1" runat="server" Width="100%" RepeatColumns="4" RepeatDirection="Horizontal">
+                                                                        <ItemTemplate>
+                                                                            <table class="content-box-wrapper">
+                                                                                <tr>
+                                                                                    <td style="text-align: center">
+                                                                                        <asp:Image ID="Image2" runat="server" CssClass="img" ImageUrl='<%#Eval("FilePathPic")%>' Height="100"
+                                                                                            Width="100" />
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <asp:Label ID="Label1" runat="server" Text='<%#Eval("FileName")%>'></asp:Label>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <asp:LinkButton ID="lnkDownload" runat="server" CommandArgument='<%#Eval("FilePathValue")%>' OnClick="DownloadFile">Download</asp:LinkButton>
+                                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <asp:LinkButton ID="lnkDelete" runat="server" CommandArgument='<%#Eval("FilePathValue")%>' OnClick="DeleteFile">Delete</asp:LinkButton>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </ItemTemplate>
+                                                                    </asp:DataList>
+
+                                                                </div>
+                                                                <cc1:AjaxFileUpload ID="AjaxFileUpload1" runat="server" MaximumNumberOfFiles="10"
+                                                                    OnUploadComplete="OnUploadComplete" ThrobberID="myThrobber" ClearFileListAfterUpload="false"
+                                                                    ClientIDMode="Static" />
                                                             </div>
-                                                            <cc1:AjaxFileUpload ID="AjaxFileUpload1" runat="server" MaximumNumberOfFiles="10"
-                                                                OnUploadComplete="OnUploadComplete" ThrobberID="myThrobber" ClearFileListAfterUpload="false"
-                                                                ClientIDMode="Static" />
                                                         </div>
                                                     </div>
-                                                </div>
 
                                                     <div class="col-sm-3">
-                                                        <div id="webcam" >
+                                                        <div id="webcam">
                                                         </div>
                                                         <div class="text-center">
-                                                               <asp:ImageButton ID="btnCapture" ImageUrl="~/dist/img/webcam.png"  Width="30" Height="30" runat="server" OnClientClick="return Capture();" AlternateText="คลิกถ่ายรูป"  />  
+                                                            <asp:ImageButton ID="btnCapture" ImageUrl="~/dist/img/webcam.png" Width="30" Height="30" runat="server" OnClientClick="return Capture();" AlternateText="คลิกถ่ายรูป" />
                                                         </div>
 
-                                                     
+
 
                                                         <%--<span id="camStatus"></span>--%>
                                                     </div>
 
                                                     <div class="col-sm-3">
                                                         <div class="fileinput fileinput-new" data-provides="fileinput">
-                                                            <div  ALIGN="right">
+                                                            <div align="right">
 
-                                                                <img src="#" id="imgCapture"  name="imgCapture" alt="" runat="server" class="fileinput-preview thumbnail " style="width: 220px; height: 220px;"  />
-                                                                    <div class="text-center">
-                                                              <label>รูปถ่าย</label>
-                                                        </div>
+                                                                <img src="#" id="imgCapture" name="imgCapture" alt="" runat="server" class="fileinput-preview thumbnail " style="width: 220px; height: 220px;" />
+                                                                <div class="text-center">
+                                                                    <label>รูปถ่าย</label>
+                                                                </div>
                                                             </div>
-
                                                         </div>
-
-
                                                     </div>
-
-                                            </div>
                                                 </div>
-
-
-
-                                            
-
-
-
-
+                                            </div>
                                         </div>
-
-
-
                                     </div>
-
-                                
-
-
                                 </div>
-             
-
-                                           
-                      
-                                   
                                 <div class="tab-pane" id="tab8">
                                     <div class="box">
                                         <div class="box-header with-border">
@@ -1471,47 +1449,129 @@
                                         </div>
                                     </div>
 
-                                
-                           
-                        
-
-                        <div class="box-tools pull-right font-light">
-
-                            <asp:HiddenField ID="lblUserId" runat="server"></asp:HiddenField>
-                            <asp:HiddenField ID="lblUserName" runat="server"></asp:HiddenField>
-                            ผู้บันทึก : <span id="lblEmpName" runat="server"></span>
-                        </div>
-                    </div>
-                    <div class="box-footer text-center">
-
-                        <asp:Button Text="แก้ไขข้อมูล" ID="btnsave" runat="server" Visible="false" class="btn btn-success" OnClick="savedata" OnClientClick="return confirm('ท่านต้องการแก้ไขข้อมูลใช่หรือไม่ ?')" />
-                        <%--<asp:Button Text="กลับ" ID="btnback" runat="server" class="col-sm-3 btn btn-border btn-alt border-blue-alt btn-link font-blue-alt" OnClick="backpage" />--%>
-                        <asp:Button Text="ลบข้อมูล" ID="btnDelete" runat="server" Visible="false" class="btn btn-danger" OnClick="DeleteData" OnClientClick="return confirm('ท่านต้องการลบข้อมูลใช่หรือไม่ ?')" />
-
-                    </div>
-
-                      
-    
 
 
 
 
+                                    <div class="box-tools pull-right font-light">
 
-</div>
+                                        <asp:HiddenField ID="lblUserId" runat="server"></asp:HiddenField>
+                                        <asp:HiddenField ID="lblUserName" runat="server"></asp:HiddenField>
+                                        ผู้บันทึก : <span id="lblEmpName" runat="server"></span>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="tab9">
+                                    <div class="box">
+                                        <div class="box-header with-border">
+                                            <h3 class="box-title">ประวัติโทรติดตามหนี้</h3>
+                                        </div>
+                                        <div class="box-body">
+                                            <div class="panel-body">
+                                                <asp:GridView ID="GVFollowTel" runat="server" class="table table-bordered table-hover"
+                                                    ShowHeaderWhenEmpty="true" AutoGenerateColumns="false"  HeaderStyle-CssClass="bg-aqua">
+                                                    <%--RowStyle-CssClass="font-black">--%>
+                                                    <Columns>
+                                                        <asp:TemplateField HeaderText="ครั้งที่" HeaderStyle-CssClass="text-center font-size-12">
+                                                            <ItemTemplate>
+                                                                <asp:Label ID="lblTimeFollowDebt" runat="server"
+                                                                    Text='<%# Eval("TimeFollowDebt")%>' CssClass="font-size-12"></asp:Label>
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                        <asp:TemplateField HeaderText="วันที่" HeaderStyle-CssClass="text-center font-size-12">
+                                                            <ItemTemplate>
+                                                                <asp:Label ID="lblDateFollowDebt" runat="server"
+                                                                    Text='<%# Eval("DateFollowDebt", "{0:dd/MM/yyyy}")%>' CssClass="font-size-12"></asp:Label>
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                        <asp:TemplateField HeaderText="รายละเอียด" HeaderStyle-CssClass="text-center font-size-12">
+                                                            <ItemTemplate>
+                                                                <asp:Label ID="lblTextMessage" runat="server" CssClass="font-size-12"
+                                                                    Text='<%# Eval("TextMessage")%>'></asp:Label>
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                        <asp:TemplateField HeaderText="สถานะติดตาม" HeaderStyle-CssClass="text-center font-size-12">
+                                                            <ItemTemplate>
+                                                                <asp:Label ID="lblStatusFollowDebt" runat="server" CssClass="font-size-12"
+                                                                    Text='<%# Eval("StatusFollowDebt")%>'></asp:Label>
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+
+                                                    </Columns>
+
+                                                </asp:GridView>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="tab10">
+                                    <div class="box">
+                                        <div class="box-header with-border">
+                                            <h3 class="box-title">ประวัติติดตามหนี้ที่บ้าน</h3>
+                                        </div>
+                                        <div class="box-body">
+                                            <div class="panel-body">
+                                                <asp:GridView ID="GVFollowHome" runat="server" class="table table-bordered table-hover"
+                                                    ShowHeaderWhenEmpty="true" AutoGenerateColumns="false"  HeaderStyle-CssClass="bg-aqua">
+                                                    <%--RowStyle-CssClass="font-black">--%>
+                                                    <Columns>
+                                                        <asp:TemplateField HeaderText="ครั้งที่" HeaderStyle-CssClass="text-center font-size-12">
+                                                            <ItemTemplate>
+                                                                <asp:Label ID="lblTimeFollowDebt" runat="server"
+                                                                    Text='<%# Eval("TimeFollowDebt")%>' CssClass="font-size-12"></asp:Label>
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                        <asp:TemplateField HeaderText="วันที่" HeaderStyle-CssClass="text-center font-size-12">
+                                                            <ItemTemplate>
+                                                                <asp:Label ID="lblDateFollowDebt" runat="server"
+                                                                    Text='<%# Eval("DateFollowDebt", "{0:dd/MM/yyyy}")%>' CssClass="font-size-12"></asp:Label>
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                        <asp:TemplateField HeaderText="รายละเอียด" HeaderStyle-CssClass="text-center font-size-12">
+                                                            <ItemTemplate>
+                                                                <asp:Label ID="lblTextMessage" runat="server" CssClass="font-size-12"
+                                                                    Text='<%# Eval("TextMessage")%>'></asp:Label>
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                         <asp:TemplateField HeaderText="ค่าติดตาม" ItemStyle-CssClass="text-right">
+                                                            <ItemTemplate>
+                                                                <asp:Label ID="lblMoneyDebt" runat="server"
+                                                                    Text='<%# Eval("MoneyDebt", "{0:#,0.00}")%>'></asp:Label>
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                        <asp:TemplateField HeaderText="สถานะติดตาม" HeaderStyle-CssClass="text-center font-size-12">
+                                                            <ItemTemplate>
+                                                                <asp:Label ID="lblStatusFollowDebt" runat="server" CssClass="font-size-12"
+                                                                    Text='<%# Eval("StatusFollowDebt")%>'></asp:Label>
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                          <asp:TemplateField HeaderText="การจ่าย" HeaderStyle-CssClass="text-center font-size-12">
+                                                            <ItemTemplate>
+                                                                <asp:Label ID="lblStPaid" runat="server" CssClass="font-size-12"
+                                                                    Text='<%# Eval("StPaid")%>'></asp:Label>
+                                                            </ItemTemplate>
+                                                        </asp:TemplateField>
+                                                    </Columns>
+
+                                                </asp:GridView>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box-footer text-center">
+
+                                    <asp:Button Text="แก้ไขข้อมูล" ID="btnsave" runat="server" Visible="false" class="btn btn-success" OnClick="savedata" OnClientClick="return confirm('ท่านต้องการแก้ไขข้อมูลใช่หรือไม่ ?')" />
+                                    <%--<asp:Button Text="กลับ" ID="btnback" runat="server" class="col-sm-3 btn btn-border btn-alt border-blue-alt btn-link font-blue-alt" OnClick="backpage" />--%>
+                                    <asp:Button Text="ลบข้อมูล" ID="btnDelete" runat="server" Visible="false" class="btn btn-danger" OnClick="DeleteData" OnClientClick="return confirm('ท่านต้องการลบข้อมูลใช่หรือไม่ ?')" />
+
+                                </div>
                             </div>
-
                         </div>
-
-
-
-
+                    </div>
                 </form>
-
-                
             </div>
         </div>
 
-        
+
     </section>
     <script type="text/javascript" src="dataperson.js"></script>
 
@@ -2004,9 +2064,9 @@
 
 
 
-     <%--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>--%>
-    <script src="../bower_components/Webcam_Plugin/jquery.webcam.js"  type="text/javascript"></script>
-     
+    <%--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>--%>
+    <script src="../bower_components/Webcam_Plugin/jquery.webcam.js" type="text/javascript"></script>
+
     <script type="text/javascript">
         var pageUrl = '<%=ResolveUrl("~/backend/loansub.aspx") %>';
         $(function () {
@@ -2036,7 +2096,7 @@
                 },
                 onCapture: function () {
                     webcam.save(pageUrl);
-                      location.reload();
+                    location.reload();
                 }
             });
         });

@@ -869,6 +869,92 @@ Namespace SQLData
             Return Result
 
         End Function
+
+        Public Function GetFollowDebtTel(ByVal AccountNo As String) As DataTable
+            Dim dt As New DataTable
+
+            Dim Ds As New DataSet
+            Dim Where As String = ""
+            Try
+                sql = " Select *   "
+                sql &= " from BK_FollowDebt  "
+                If AccountNo <> "" Then
+                    If Where <> "" Then Where &= " AND "
+                    Where &= " AccountNo  = '" & AccountNo & "' "
+                End If
+                If Where <> "" Then sql &= " WHERE " & Where
+                sql &= " order by TimeFollowDebt desc , DateFollowDebt desc"
+
+                cmd = New SQLData.DBCommand(sqlCon, sql, CommandType.Text)
+                Ds = New DataSet
+                cmd.Fill(Ds)
+                If Not Share.IsNullOrEmptyObject(Ds.Tables(0)) AndAlso Ds.Tables(0).Rows.Count > 0 Then
+                    dt = Ds.Tables(0)
+                End If
+            Catch ex As Exception
+                Throw ex
+            End Try
+            Return dt
+        End Function
+        Public Function GetFollowDebtHome(ByVal AccountNo As String) As DataTable
+            Dim dt As New DataTable
+
+            Dim Ds As New DataSet
+            Dim Where As String = ""
+            Try
+                sql = " Select *    "
+                sql &= " , case when  MoneyDebtSt = '1' then  N'จ่ายแล้ว' "
+                sql &= " else   N'ยังไม่จ่าย' end as StPaid "
+                sql &= " from BK_FollowDebtHome  "
+                If AccountNo <> "" Then
+                    If Where <> "" Then Where &= " AND "
+                    Where &= " AccountNo  = '" & AccountNo & "' "
+                End If
+                If Where <> "" Then sql &= " WHERE " & Where
+                sql &= " order by TimeFollowDebt desc , DateFollowDebt desc"
+
+                cmd = New SQLData.DBCommand(sqlCon, sql, CommandType.Text)
+                Ds = New DataSet
+                cmd.Fill(Ds)
+                If Not Share.IsNullOrEmptyObject(Ds.Tables(0)) AndAlso Ds.Tables(0).Rows.Count > 0 Then
+                    dt = Ds.Tables(0)
+                End If
+            Catch ex As Exception
+                Throw ex
+            End Try
+            Return dt
+        End Function
+
+        Public Function GetTrackFee(ByVal AccountNo As String) As Double
+            Dim dt As New DataTable
+            Dim Ds As New DataSet
+            Dim Where As String = ""
+            Dim TrackFee As Double = 0
+            Try
+                sql = " Select sum(MoneyDebt) as TrackFee "
+                sql &= " from BK_FollowDebtHome  "
+                If AccountNo <> "" Then
+                    If Where <> "" Then Where &= " AND "
+                    Where &= " AccountNo  = '" & AccountNo & "' "
+                End If
+
+                If Where <> "" Then Where &= " AND "
+                Where &= "( MoneyDebtSt = '0' or MoneyDebtSt is null )"
+
+                If Where <> "" Then sql &= " WHERE " & Where
+
+                cmd = New SQLData.DBCommand(sqlCon, sql, CommandType.Text)
+                Ds = New DataSet
+                cmd.Fill(Ds)
+                If Not Share.IsNullOrEmptyObject(Ds.Tables(0)) AndAlso Ds.Tables(0).Rows.Count > 0 Then
+                    TrackFee = Share.FormatDouble(Ds.Tables(0).Rows(0).Item(0))
+                End If
+            Catch ex As Exception
+                Throw ex
+            End Try
+            Return TrackFee
+        End Function
+
         Public Function GetLoanById(ByVal LoanNo As String) As Entity.BK_Loan
             Dim ds As New DataSet
             Dim Info As New Entity.BK_Loan
@@ -2490,7 +2576,6 @@ Namespace SQLData
                 cmd = New SQLData.DBCommand(sqlCon, sql, CommandType.Text)
                 cmd.ExecuteNonQuery()
 
-
                 ' Update วันที่ชำระ เงินกู้
                 sql = " Update  BK_LoanTransaction  "
                 sql &= " set Amount = " & Share.FormatDouble(NewTotalAmount) & ""
@@ -2666,7 +2751,28 @@ Namespace SQLData
 
             Return dt
         End Function
+        Public Function UpdateFllowDebtHome(ByVal AccountNo As String) As Boolean
+            Dim status As Boolean
 
+            Try
+                sql = "Update  BK_FollowDebtHome "
+                sql &= " set MoneyDebtSt = '1' "
+                sql &= " where AccountNo = '" & AccountNo & "'"
+                sql &= " and ( MoneyDebtSt = '0' or MoneyDebtSt is null )"
+                cmd = New SQLData.DBCommand(sqlCon, sql, CommandType.Text)
+
+                If cmd.ExecuteNonQuery > 0 Then
+                    status = True
+                Else
+                    status = False
+                End If
+
+            Catch ex As Exception
+                Throw ex
+            End Try
+
+            Return status
+        End Function
     End Class
 
 

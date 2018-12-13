@@ -1598,6 +1598,24 @@ Partial Public Class loansub
     Protected WithEvents lblEmpName As Global.System.Web.UI.HtmlControls.HtmlGenericControl
     
     '''<summary>
+    '''GVFollowTel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents GVFollowTel As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
+    '''GVFollowHome control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents GVFollowHome As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
     '''btnsave control.
     '''</summary>
     '''<remarks>

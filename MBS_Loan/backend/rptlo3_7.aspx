@@ -45,6 +45,8 @@
                                         <label class="col-sm-1 control-label">NPL</label>
                                         <div class="col-sm-1">
                                             <select id="ddlNPL" runat="server" class="custom-select form-control" style="width: 100%;">
+                                                <option>1</option>
+                                                <option>2</option>
                                                 <option selected="selected">3</option>
                                                 <option>4</option>
                                                 <option>5</option>

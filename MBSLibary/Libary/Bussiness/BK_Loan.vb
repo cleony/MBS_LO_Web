@@ -446,8 +446,8 @@ Namespace Business
 
         Public Function GetRemainAmountByLoanNo(ByVal AccountNo As String, Optional ByVal UseDB As Constant.Database = Constant.Database.Connection1) As DataTable
 
-            If Share.DbConnect = Constant.DBConnection.SqlServer Then
-                Dim Conn As SQLData.DBConnection = Nothing
+
+            Dim Conn As SQLData.DBConnection = Nothing
                 Dim obj As SQLData.BK_Loan
                 Dim dt As DataTable
                 Try
@@ -464,10 +464,75 @@ Namespace Business
                 End Try
                 Return dt
 
-            End If
 
 
         End Function
+
+        Public Function GetFollowDebtTel(ByVal AccountNo As String, Optional ByVal UseDB As Constant.Database = Constant.Database.Connection1) As DataTable
+
+            Dim Conn As SQLData.DBConnection = Nothing
+            Dim obj As SQLData.BK_Loan
+            Dim dt As DataTable
+            Try
+                Conn = New SQLData.DBConnection(UseDB)
+                Conn.OpenConnection()
+                obj = New SQLData.BK_Loan(Conn)
+                dt = obj.GetFollowDebtTel(AccountNo)
+            Catch ex As Exception
+                Throw ex
+            Finally
+                Conn.CloseConnection()
+                Conn.Dispose()
+                Conn = Nothing
+            End Try
+            Return dt
+
+
+        End Function
+        Public Function GetFollowDebtHome(ByVal AccountNo As String, Optional ByVal UseDB As Constant.Database = Constant.Database.Connection1) As DataTable
+
+            Dim Conn As SQLData.DBConnection = Nothing
+            Dim obj As SQLData.BK_Loan
+            Dim dt As DataTable
+            Try
+                Conn = New SQLData.DBConnection(UseDB)
+                Conn.OpenConnection()
+                obj = New SQLData.BK_Loan(Conn)
+                dt = obj.GetFollowDebtHome(AccountNo)
+            Catch ex As Exception
+                Throw ex
+            Finally
+                Conn.CloseConnection()
+                Conn.Dispose()
+                Conn = Nothing
+            End Try
+            Return dt
+
+
+        End Function
+
+        Public Function GetTrackFee(ByVal AccountNo As String, Optional ByVal UseDB As Constant.Database = Constant.Database.Connection1) As Double
+
+            Dim Conn As SQLData.DBConnection = Nothing
+            Dim obj As SQLData.BK_Loan
+            Dim trackFee As Double = 0
+            Try
+                Conn = New SQLData.DBConnection(UseDB)
+                Conn.OpenConnection()
+                obj = New SQLData.BK_Loan(Conn)
+                trackFee = obj.GetTrackFee(AccountNo)
+            Catch ex As Exception
+                Throw ex
+            Finally
+                Conn.CloseConnection()
+                Conn.Dispose()
+                Conn = Nothing
+            End Try
+            Return trackFee
+
+
+        End Function
+
 
         Function GetLoanById(ByVal Id As String, Optional ByVal UseDB As Constant.Database = Constant.Database.Connection1) As Entity.BK_Loan
 
@@ -1389,6 +1454,35 @@ Namespace Business
                 Conn = Nothing
             End Try
             Return dt
+
+        End Function
+
+        Public Function UpdateFllowDebtHome(ByVal AccountNo As String _
+                                     , Optional ByVal UseDB As Constant.Database = Constant.Database.Connection1) As Boolean
+
+            Dim Conn As SQLData.DBConnection = Nothing
+            Dim status As Boolean
+            Dim objData As SQLData.BK_Loan
+
+            Try
+                Conn = New SQLData.DBConnection(UseDB)
+                Conn.OpenConnection()
+                Conn.BeginTransaction()
+
+                objData = New SQLData.BK_Loan(Conn)
+                status = objData.UpdateFllowDebtHome(AccountNo)
+
+                Conn.CommitTransaction()
+            Catch ex As Exception
+                Conn.RollbackTransaction()
+                Throw ex
+            Finally
+                Conn.CloseConnection()
+                Conn.Dispose()
+                Conn = Nothing
+            End Try
+
+            Return status
 
         End Function
 
