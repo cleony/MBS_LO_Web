@@ -75,13 +75,13 @@ Public Class rptlo3_7
 
         If ddlTypeLoan.SelectedIndex > 0 Then
             Session("lorpt037_TypeLoanId1") = ddlTypeLoan.SelectedValue.ToString
-            Session("lorpt036_TypeLoanName1") = ddlTypeLoan.SelectedItem.Text
+            Session("lorpt037_TypeLoanName1") = ddlTypeLoan.SelectedItem.Text
         Else
             Session("lorpt037_TypeLoanId1") = ""
             Session("lorpt037_TypeLoanName1") = "ทั้งหมด"
         End If
 
-        If ddlNPL.SelectedIndex > 0 Then
+        If ddlNPL.SelectedIndex >= 0 Then
             Session("lorpt037_NPL") = ddlNPL.Value
         Else
             Session("lorpt037_NPL") = 3
@@ -103,8 +103,8 @@ Public Class rptlo3_7
             BranchId = ddlBranch.SelectedValue.ToString
         End If
         Dim BranchId2 As String = ""
-        If ddlBranch.SelectedIndex > 0 Then
-            BranchId2 = ddlBranch.SelectedValue.ToString
+        If ddlBranch2.SelectedIndex > 0 Then
+            BranchId2 = ddlBranch2.SelectedValue.ToString
         End If
 
         Session("lorpt037_branchid") = BranchId

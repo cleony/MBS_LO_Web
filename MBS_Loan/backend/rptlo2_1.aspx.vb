@@ -143,7 +143,7 @@ Public Class rptlo2_1
 
         If optDate.Value = "สรุปทั้งหมด" Then
             Session("lorpt021_optDate") = "1"
-        ElseIf optDate.Value = "สรุปช่วงวันที่อนุมัติ" Then
+        ElseIf optDate.Value = "สรุปช่วงวันที่รับชำระ" Then
             Session("lorpt021_optDate") = "2"
         End If
         If ddlTypeLoan.SelectedIndex > 0 Then
@@ -183,8 +183,8 @@ Public Class rptlo2_1
             BranchId = ddlBranch.SelectedValue.ToString
         End If
         Dim BranchId2 As String = ""
-        If ddlBranch.SelectedIndex > 0 Then
-            BranchId2 = ddlBranch.SelectedValue.ToString
+        If ddlBranch2.SelectedIndex > 0 Then
+            BranchId2 = ddlBranch2.SelectedValue.ToString
         End If
 
         Session("lorpt021_branchid") = BranchId

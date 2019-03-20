@@ -766,16 +766,7 @@ Namespace Entity
                 _DisableLoanReason = value
             End Set
         End Property
-
-        Private _ProfileImage As Byte()
         Public Property ProfileImage() As Byte()
-            Get
-                Return _ProfileImage
-            End Get
-            Set(ByVal value As Byte())
-                _ProfileImage = value
-            End Set
-        End Property
 
         Private _Collateral As Entity.BK_Collateral()
         Public Property Collateral() As Entity.BK_Collateral()

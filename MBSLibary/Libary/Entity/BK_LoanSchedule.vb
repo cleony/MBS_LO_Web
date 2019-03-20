@@ -242,16 +242,7 @@ Namespace Entity
                 _FeePay_2 = value
             End Set
         End Property
-
-        Private _FeePay_3 As Double
         Public Property FeePay_3() As Double
-            Get
-                Return _FeePay_3
-            End Get
-            Set(ByVal value As Double)
-                _FeePay_3 = value
-            End Set
-        End Property
         '' เพิ่มเข้ามาสำหรับเก็บข้อมูลการกู้เงินครั้งล่าสุด
         'Private _OldAmount As Double
         'Public Property OldAmount() As Double
@@ -280,6 +271,9 @@ Namespace Entity
         '        _OldInterest = value
         '    End Set
         'End Property
+        Public Property CheckSms() As Integer
+
+        Public Property DateSms() As Date
 
     End Class
 End Namespace

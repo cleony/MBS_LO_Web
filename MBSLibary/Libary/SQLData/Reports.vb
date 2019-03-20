@@ -893,7 +893,13 @@ Namespace SQLData
                 sql &= " )) as RemainInterest"
                 sql &= ", convert(decimal(18,2),0) as RemainMultc "
                 sql &= ", BK_Loan.TotalAmount as TotalCapital, BK_Loan.STCalDate, BK_Loan.CalculateType,Bk_Loan.MinPayment,BK_LoanSchedule.PayCapital,BK_LoanSchedule.PayInterest"
-                sql &= ",(Select Top 1 StatusFollowDebt from  BK_FollowDebt where BK_FollowDebt.AccountNo = BK_Loan.AccountNo and DateFollowDebt <= " & Share.ConvertFieldDateSearch2(Dt1) & "  ) as StatusFollowDebt "
+                sql &= ",(Select Top 1 StatusFollowDebt from  BK_FollowDebt where BK_FollowDebt.AccountNo = BK_Loan.AccountNo and DateFollowDebt <= " & Share.ConvertFieldDateSearch2(Dt1) & "  order by  DateFollowDebt desc , TimeFollowDebt desc ) as StatusFollowDebt "
+                sql &= ",(Select Top 1 TextMessage from  BK_FollowDebt where BK_FollowDebt.AccountNo = BK_Loan.AccountNo and DateFollowDebt <= " & Share.ConvertFieldDateSearch2(Dt1) & "  order by  DateFollowDebt desc , TimeFollowDebt desc ) as FollowText "
+                sql &= ",(Select Top 1 StatusFollowDebt from  BK_FollowDebtHome where BK_FollowDebtHome.AccountNo = BK_Loan.AccountNo and DateFollowDebt <= " & Share.ConvertFieldDateSearch2(Dt1) & "  order by  DateFollowDebt desc , TimeFollowDebt desc ) as StatusFollowHome "
+                sql &= ",(Select Top 1 TextMessage from  BK_FollowDebtHome where BK_FollowDebtHome.AccountNo = BK_Loan.AccountNo and DateFollowDebt <= " & Share.ConvertFieldDateSearch2(Dt1) & "  order by  DateFollowDebt desc , TimeFollowDebt desc ) as FollowTextHome "
+
+
+
                 sql &= " from BK_LoanSchedule "
                 sql &= " Inner join BK_Loan on BK_LoanSchedule.AccountNo = BK_Loan.AccountNo and BK_LoanSchedule.BranchId = BK_Loan.BranchId "
 

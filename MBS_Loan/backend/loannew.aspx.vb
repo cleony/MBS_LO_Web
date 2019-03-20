@@ -108,7 +108,8 @@ Public Class loannew
         Dim TypeInfos() As Entity.BK_TypeLoan
         Try
             TypeInfos = objType.GetAllTypeLoanInfo
-            ddlTypeLoan.DataSource = TypeInfos
+
+            ddlTypeLoan.DataSource = From p As Entity.BK_TypeLoan In TypeInfos Where p.StActive = "1" Select p
             Me.ddlTypeLoan.DataTextField = "TypeLoanName"
             Me.ddlTypeLoan.DataValueField = "TypeLoanId"
             ddlTypeLoan.DataBind()

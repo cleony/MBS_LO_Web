@@ -226,20 +226,20 @@
                                                     </asp:TemplateField>
                                                     <asp:TemplateField HeaderText="ดอกเบี้ยคงค้าง" HeaderStyle-CssClass="text-center " ItemStyle-CssClass="text-right">
                                                         <ItemTemplate>
-                                                            <asp:Label ID="lblRemainInterest" runat="server"
-                                                                Text='<%# Eval("RemainInterest", "{0:#,0.00}")%>' CssClass=" "></asp:Label>
+                                                            <asp:TextBox ID="txtRemainInterest" runat="server"
+                                                                Text='<%# Eval("RemainInterest", "{0:#,0.00}")%>' Style="width: 100%" CssClass="text-right form-control pad-sm number "></asp:TextBox>
                                                         </ItemTemplate>
                                                     </asp:TemplateField>
                                                     <asp:TemplateField HeaderText="ยอดเงินกู้ใหม่" HeaderStyle-CssClass="text-center " HeaderStyle-Width="100px">
                                                         <ItemTemplate>
                                                             <asp:TextBox ID="txtRenewCapital" runat="server"
-                                                                Text='<%# Eval("RenewCapital", "{0:#,0.00}")%>' Style="width: 100%" CssClass="text-right form-control pad-sm number "></asp:TextBox>
+                                                                Text='<%# Eval("RenewCapital", "{0:#,0.00}")%>' Style="width: 100%" OnTextChanged="recalculate" AutoPostBack="true" CssClass="text-right form-control pad-sm number "></asp:TextBox>
                                                         </ItemTemplate>
                                                     </asp:TemplateField>
-                                                    <asp:TemplateField HeaderText="อัตรา" HeaderStyle-CssClass="text-center" HeaderStyle-Width="60px">
+                                                    <asp:TemplateField HeaderText="อัตรา" HeaderStyle-CssClass="text-center"  HeaderStyle-Width="60px">
                                                         <ItemTemplate>
                                                             <asp:TextBox ID="txtInterestRate" runat="server"
-                                                                Text='<%# Eval("InterestRate", "{0:#,0.00}")%>' Style="width: 100%" CssClass="text-right form-control pad-sm number"></asp:TextBox>
+                                                                Text='<%# Eval("InterestRate", "{0:#,0.00}")%>' OnTextChanged="recalculate" AutoPostBack="true" Style="width: 100%" CssClass="text-right form-control pad-sm number"></asp:TextBox>
                                                         </ItemTemplate>
                                                     </asp:TemplateField>
                                                     <asp:TemplateField HeaderText="ดอกเบี้ย" HeaderStyle-CssClass="text-center  " HeaderStyle-Width="100px">

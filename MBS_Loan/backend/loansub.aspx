@@ -123,6 +123,7 @@
                                                                 <div class="input-group">
                                                                     <input type="text" runat="server" id="txtPersonName" class="form-control" />
                                                                     <a id="linkPerson1" runat="server" class="input-group-addon"><i class="fa fa-search "></i></a>
+                                                                    <a id="linkEditPerson1" runat="server" class="input-group-addon"><i class="fa fa-pencil-square-o"></i></a>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -136,6 +137,8 @@
                                                                 <div class="input-group">
                                                                     <input type="text" runat="server" id="txtPersonName2" class="form-control" />
                                                                     <a id="linkPerson2" runat="server" class="input-group-addon"><i class="fa fa-search "></i></a>
+                                                                    <a id="linkEditPerson2" runat="server" class="input-group-addon"><i class="fa fa-pencil-square-o"></i></a>
+
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -148,6 +151,8 @@
                                                                 <div class="input-group">
                                                                     <input type="text" runat="server" id="txtPersonName3" class="form-control pad-sm" />
                                                                     <a id="linkPerson3" runat="server" class="input-group-addon"><i class="fa fa-search "></i></a>
+                                                                    <a id="linkEditPerson3" runat="server" class="input-group-addon"><i class="fa fa-pencil-square-o"></i></a>
+
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -160,6 +165,8 @@
                                                                 <div class="input-group">
                                                                     <input type="text" runat="server" id="txtPersonName4" class="form-control pad-sm" />
                                                                     <a id="linkPerson4" runat="server" class="input-group-addon"><i class="fa fa-search "></i></a>
+                                                                    <a id="linkEditPerson4" runat="server" class="input-group-addon"><i class="fa fa-pencil-square-o"></i></a>
+
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -172,6 +179,8 @@
                                                                 <div class="input-group">
                                                                     <input type="text" runat="server" id="txtPersonName5" class="form-control pad-sm" />
                                                                     <a id="linkPerson5" runat="server" class="input-group-addon"><i class="fa fa-search "></i></a>
+                                                                    <a id="linkEditPerson5" runat="server" class="input-group-addon"><i class="fa fa-pencil-square-o"></i></a>
+
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -184,6 +193,8 @@
                                                                 <div class="input-group">
                                                                     <input type="text" runat="server" id="txtPersonName6" class="form-control pad-sm" />
                                                                     <a id="linkPerson6" runat="server" class="input-group-addon"><i class="fa fa-search "></i></a>
+                                                                    <a id="linkEditPerson6" runat="server" class="input-group-addon"><i class="fa fa-pencil-square-o"></i></a>
+
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -426,7 +437,7 @@
                                                             <label class="col-sm-6 control-label">จำนวนงวดที่ต้องการผ่อนชำระ</label>
                                                             <div class="col-sm-5">
                                                                 <div class="input-group">
-                                                                    <input type="number" runat="server" id="txtReqTerm" value="0.00" class="form-control text-right number" />
+                                                                    <input type="text" runat="server" id="txtReqTerm" value="0.00" class="form-control text-right number" />
                                                                 </div>
                                                             </div>
                                                             <label class="col-sm-0 control-label">งวด</label>
@@ -435,7 +446,7 @@
                                                             <label class="col-sm-6 control-label">ชำระคืนห่าง งวดละ</label>
                                                             <div class="col-sm-5">
                                                                 <div class="input-group">
-                                                                    <input type="number" runat="server" id="txtReqMonthTerm" value="0.00" class="form-control text-right number" />
+                                                                    <input type="text" runat="server" id="txtReqMonthTerm" value="0.00" class="form-control text-right number" />
                                                                 </div>
                                                             </div>
                                                             <label class="col-sm-0 control-label">เดือน</label>
@@ -444,7 +455,7 @@
                                                             <label class="col-sm-6 control-label">ชำระเสร็จสิ้นภายใน</label>
                                                             <div class="col-sm-5">
                                                                 <div class="input-group">
-                                                                    <input type="number" runat="server" id="txtMonthFinish" value="0.00" class="form-control text-right number" />
+                                                                    <input type="text" runat="server" id="txtMonthFinish" value="0.00" class="form-control text-right number" />
                                                                 </div>
                                                             </div>
                                                             <label class="col-sm-0 control-label">เดือน</label>
@@ -457,16 +468,18 @@
                                 </div>
 
                                 <div class="tab-pane" id="tab2">
-                                    <div class="panel">
+
+                                    <asp:Panel ID="panelGroupCalculate" runat="server">
+
                                         <div class="panel-body">
                                             <div class="box">
                                                 <div class="box-header with-border">
                                                     <h3 class="box-title">วันที่ผ่อนชำระ</h3>
-
                                                 </div>
                                                 <div class="box-body">
 
                                                     <div class=" panel-body">
+
                                                         <div class="row">
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
@@ -504,30 +517,51 @@
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-6">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-6 control-label">วันที่เริ่มชำระ</label>
-                                                                    <div class="col-sm-6">
-                                                                        <div class="input-group date">
-                                                                            <div class="input-group-addon">
-                                                                                <i class="fa fa-calendar"></i>
+                                                                <asp:UpdatePanel ID="updatepanel3" runat="server">
+                                                                    <ContentTemplate>
+                                                                        <div class="form-group">
+                                                                            <label class="col-sm-6 control-label">วันที่เริ่มชำระ</label>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="input-group date">
+                                                                                    <div class="input-group-addon">
+                                                                                        <i class="fa fa-calendar"></i>
+                                                                                    </div>
+                                                                                    <asp:TextBox type="text" ID="dtSTPayDate" runat="server" 
+                                                                                        OnTextChanged="RecalDate" AutoPostBack="true" class="thai-datepicker form-control" 
+                                                                                        data-date-format="dd/mm/yyyy" />
+
+                                                                              
+
+                                                                                    <%--<input type="text" id="dtSTPayDate" runat="server" class="thai-datepicker form-control" data-date-format="dd/mm/yyyy"  OnTextChanged="Recalculate" AutoPostBack="true"/>--%>
+                                                                                </div>
                                                                             </div>
-                                                                            <input type="text" id="dtSTPayDate" runat="server" class="thai-datepicker form-control" data-date-format="dd/mm/yyyy" />
                                                                         </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-6 control-label">วันที่ชำระเสร็จสิ้น</label>
-                                                                    <div class="col-sm-6">
-                                                                        <div class="input-group date">
-                                                                            <div class="input-group-addon">
-                                                                                <i class="fa fa-calendar"></i>
+                                                                        <div class="form-group">
+                                                                            <label class="col-sm-6 control-label">วันที่ชำระเสร็จสิ้น</label>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="input-group date">
+                                                                                    <div class="input-group-addon">
+                                                                                        <i class="fa fa-calendar"></i>
+                                                                                    </div>
+                                                                                    <input type="text" id="dtEndPayDate" runat="server" class="thai-datepicker form-control" data-date-format="dd/mm/yyyy" />
+                                                                                </div>
                                                                             </div>
-                                                                            <input type="text" id="dtEndPayDate" runat="server" class="thai-datepicker form-control" data-date-format="dd/mm/yyyy" />
                                                                         </div>
+                                                                    </ContentTemplate>
+
+                                                                </asp:UpdatePanel>
+                                                                <div class="form-group">
+                                                                    <label class="col-sm-6 control-label"></label>
+                                                                    <div class="col-sm-6">
+                                                                        <asp:Button Text="เปลี่ยนวันที่รับชำระใหม่" ID="btnChangPayDate" runat="server" class=" btn btn-border btn-alt border-blue-alt btn-link font-blue-alt "
+                                                                            OnClientClick="javascript:EnabledtSTPayDate() ; return false;" />
+
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
+
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -540,6 +574,7 @@
                                                 <div class="panel-body">
 
                                                     <div class="row">
+
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label class="col-sm-6 control-label">จำนวนเงิน</label>
@@ -553,12 +588,17 @@
                                                                     <input type="text" runat="server" id="txtTerm" class="form-control integer text-right" />
                                                                 </div>
                                                             </div>
-                                                            <div class="form-group">
-                                                                <label class="col-sm-6 control-label">ผ่อนงวดละ</label>
-                                                                <div class="col-sm-6">
-                                                                    <input type="text" runat="server" id="txtMinPayment" value="0.00" class="form-control text-right number" />
-                                                                </div>
-                                                            </div>
+                                                            <asp:UpdatePanel ID="updatepanel4" runat="server">
+                                                                <ContentTemplate>
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-6 control-label">ผ่อนงวดละ</label>
+                                                                        <div class="col-sm-6">
+                                                                            <input type="text" runat="server" id="txtMinPayment" value="0.00" class="form-control text-right number" />
+                                                                        </div>
+                                                                    </div>
+                                                                </ContentTemplate>
+                                                            </asp:UpdatePanel>
+
 
                                                             <div class="form-group">
                                                                 <label class="col-sm-6 control-label">วิธีคำนวณดอกเบี้ย</label>
@@ -573,19 +613,23 @@
                                                                 <label class="col-sm-4 control-label">ดอกเบี้ย/ปี</label>
                                                                 <div class="col-sm-4">
                                                                     <div class="input-group">
-                                                                        <input type="number" class="form-control text-right" id="txtInterestRate" value="0.00" runat="server" />
+                                                                        <input type="text" class="form-control text-right number" id="txtInterestRate" value="0.00" runat="server" />
                                                                         <span class="input-group-addon">%</span>
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-sm-4">
-                                                                    <input type="text" runat="server" id="txtTotalInterest" value="0.00" class="form-control text-right number" />
-                                                                </div>
+                                                                <asp:UpdatePanel ID="updatepanel5" runat="server">
+                                                                    <ContentTemplate>
+                                                                        <div class="col-sm-4">
+                                                                            <input type="text" runat="server" id="txtTotalInterest" value="0.00" class="form-control text-right number" />
+                                                                        </div>
+                                                                    </ContentTemplate>
+                                                                </asp:UpdatePanel>
                                                             </div>
                                                             <div class="form-group">
                                                                 <label class="col-sm-4 control-label">ค่าธรรมเนียม 1</label>
                                                                 <div class="col-sm-4">
                                                                     <div class="input-group">
-                                                                        <input type="number" class="form-control text-right" id="txtFeeRate_1" value="0.00" runat="server" />
+                                                                        <input type="text" class="form-control text-right number" id="txtFeeRate_1" value="0.00" runat="server" />
                                                                         <span class="input-group-addon">%</span>
                                                                     </div>
                                                                 </div>
@@ -597,7 +641,7 @@
                                                                 <label class="col-sm-4 control-label">ค่าธรรมเนียม 2</label>
                                                                 <div class="col-sm-4">
                                                                     <div class="input-group">
-                                                                        <input type="number" class="form-control text-right" id="txtFeeRate_2" value="0.00" runat="server" />
+                                                                        <input type="text" class="form-control text-right number" id="txtFeeRate_2" value="0.00" runat="server" />
                                                                         <span class="input-group-addon">%</span>
                                                                     </div>
                                                                 </div>
@@ -609,7 +653,7 @@
                                                                 <label class="col-sm-4 control-label">ค่าธรรมเนียม 3</label>
                                                                 <div class="col-sm-4">
                                                                     <div class="input-group">
-                                                                        <input type="number" class="form-control text-right" id="txtFeeRate_3" value="0.00" runat="server" />
+                                                                        <input type="text" class="form-control text-right" id="txtFeeRate_3" value="0.00" runat="server" />
                                                                         <span class="input-group-addon">%</span>
                                                                     </div>
                                                                 </div>
@@ -618,6 +662,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+
                                                     </div>
 
                                                 </div>
@@ -658,7 +703,7 @@
                                                                 <label class="col-sm-4 control-label">ดอกเบี้ยผิดนัดชำระ</label>
                                                                 <div class="col-sm-4">
                                                                     <div class="input-group">
-                                                                        <input type="number" class="form-control text-right" id="txtOverdueRate" value="0.00" runat="server" />
+                                                                        <input type="text" class="form-control text-right" id="txtOverdueRate" value="0.00" runat="server" />
                                                                         <span class="input-group-addon">%</span>
                                                                     </div>
                                                                 </div>
@@ -672,8 +717,7 @@
                                             </div>
 
                                         </div>
-
-                                    </div>
+                                    </asp:Panel>
 
                                 </div>
                                 <div class="tab-pane" id="tab3">
@@ -687,7 +731,7 @@
                                                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                                                     <ContentTemplate>
                                                         <div>
-                                                            <asp:Button Text="คำนวณตารางวด" ID="btnCalculate" runat="server" class="col-sm-2 btn btn-border btn-alt border-blue-alt btn-link font-blue-alt " OnClick="btnGenTable" Visible="false" />
+                                                            <asp:Button Text="คำนวณตารางวดใหม่" ID="btnCalculate" runat="server" class="col-sm-2 btn btn-border btn-alt border-blue-alt btn-link font-blue-alt " OnClick="btnGenTable" Visible="false" />
 
                                                             <asp:GridView ID="gvSchedule" runat="server" CssClass="gvSchedule table table-bordered table-striped"
                                                                 AutoGenerateColumns="false" ShowFooter="true" HeaderStyle-CssClass="text-center font-size-12" OnRowCreated="GridView1_RowCreated">
@@ -714,14 +758,14 @@
                                                                         <ItemTemplate>
                                                                             <asp:TextBox ID="txtCapital" runat="server"
                                                                                 Text='<%# Eval("Capital", "{0:#,0.00}")%>' OnTextChanged="Recalculate" AutoPostBack="true"
-                                                                                Style="width: 100%" CssClass="text-right form-control number pad-sm" Enabled="false"> </asp:TextBox>
+                                                                                Style="width: 100%" CssClass="text-right form-control number pad-sm" Enabled="False"> </asp:TextBox>
                                                                         </ItemTemplate>
                                                                     </asp:TemplateField>
                                                                     <asp:TemplateField HeaderText="ดอกเบี้ย" HeaderStyle-Width="150px">
                                                                         <ItemTemplate>
                                                                             <asp:TextBox ID="txtInterest" runat="server"
                                                                                 Text='<%# Eval("Interest", "{0:#,0.00}")%>' OnTextChanged="Recalculate" AutoPostBack="true"
-                                                                                Style="width: 100%" CssClass="text-right form-control number pad-sm" Enabled="false"></asp:TextBox>
+                                                                                Style="width: 100%" CssClass="text-right form-control number pad-sm" Enabled="False"></asp:TextBox>
                                                                         </ItemTemplate>
                                                                     </asp:TemplateField>
                                                                     <asp:TemplateField HeaderText="ชำระเงินต้น">
@@ -760,6 +804,20 @@
                                                                                 Text='<%# Eval("InterestRate", "{0:#,0.00}")%>'></asp:Label>
                                                                         </ItemTemplate>
                                                                     </asp:TemplateField>
+                                                                    <asp:TemplateField HeaderText="ส่งSMS" Visible="False">
+                                                                        <ItemTemplate>
+                                                                            <asp:Label ID="lblCheckSms" runat="server"
+                                                                                Text='<%# Eval("CheckSms")%>'></asp:Label>
+                                                                        </ItemTemplate>
+                                                                    </asp:TemplateField>
+                                                                    <asp:TemplateField HeaderText="วันที่ส่ง" Visible="False">
+                                                                        <ItemTemplate>
+                                                                            <asp:Label ID="lblDateSms" runat="server" CssClass="form-control pad-sm"
+                                                                                Text='<%# Eval("DateSms", "{0:dd/MM/yyyy}")%>'></asp:Label>
+                                                                        </ItemTemplate>
+                                                                    </asp:TemplateField>
+
+
                                                                 </Columns>
 
                                                             </asp:GridView>
@@ -767,6 +825,7 @@
                                                     </ContentTemplate>
                                                     <Triggers>
                                                         <asp:AsyncPostBackTrigger ControlID="gvSchedule" />
+
                                                     </Triggers>
                                                 </asp:UpdatePanel>
                                             </div>
@@ -1468,7 +1527,7 @@
                                         <div class="box-body">
                                             <div class="panel-body">
                                                 <asp:GridView ID="GVFollowTel" runat="server" class="table table-bordered table-hover"
-                                                    ShowHeaderWhenEmpty="true" AutoGenerateColumns="false"  HeaderStyle-CssClass="bg-aqua">
+                                                    ShowHeaderWhenEmpty="true" AutoGenerateColumns="false" HeaderStyle-CssClass="bg-aqua">
                                                     <%--RowStyle-CssClass="font-black">--%>
                                                     <Columns>
                                                         <asp:TemplateField HeaderText="ครั้งที่" HeaderStyle-CssClass="text-center font-size-12">
@@ -1511,7 +1570,7 @@
                                         <div class="box-body">
                                             <div class="panel-body">
                                                 <asp:GridView ID="GVFollowHome" runat="server" class="table table-bordered table-hover"
-                                                    ShowHeaderWhenEmpty="true" AutoGenerateColumns="false"  HeaderStyle-CssClass="bg-aqua">
+                                                    ShowHeaderWhenEmpty="true" AutoGenerateColumns="false" HeaderStyle-CssClass="bg-aqua">
                                                     <%--RowStyle-CssClass="font-black">--%>
                                                     <Columns>
                                                         <asp:TemplateField HeaderText="ครั้งที่" HeaderStyle-CssClass="text-center font-size-12">
@@ -1532,7 +1591,7 @@
                                                                     Text='<%# Eval("TextMessage")%>'></asp:Label>
                                                             </ItemTemplate>
                                                         </asp:TemplateField>
-                                                         <asp:TemplateField HeaderText="ค่าติดตาม" ItemStyle-CssClass="text-right">
+                                                        <asp:TemplateField HeaderText="ค่าติดตาม" ItemStyle-CssClass="text-right">
                                                             <ItemTemplate>
                                                                 <asp:Label ID="lblMoneyDebt" runat="server"
                                                                     Text='<%# Eval("MoneyDebt", "{0:#,0.00}")%>'></asp:Label>
@@ -1544,7 +1603,7 @@
                                                                     Text='<%# Eval("StatusFollowDebt")%>'></asp:Label>
                                                             </ItemTemplate>
                                                         </asp:TemplateField>
-                                                          <asp:TemplateField HeaderText="การจ่าย" HeaderStyle-CssClass="text-center font-size-12">
+                                                        <asp:TemplateField HeaderText="การจ่าย" HeaderStyle-CssClass="text-center font-size-12">
                                                             <ItemTemplate>
                                                                 <asp:Label ID="lblStPaid" runat="server" CssClass="font-size-12"
                                                                     Text='<%# Eval("StPaid")%>'></asp:Label>
@@ -2014,7 +2073,6 @@
                         $("[id$=txtTotalGTLoan5]").val(personnameArr[1]);
                         document.getElementById('<%= gbPrintGT5.ClientID%>').style.display = '';
                     }
-
                 }
                 ,
                 failure: function (response) {
@@ -2028,24 +2086,30 @@
     </script>
 
     <script type="text/javascript">
-
         // จำนวนเงินที่ขอกู้ 
         function txtReqTotalAmountChange() {
             $("[id$=txtTotalCapital]").val(document.getElementById('<%= txtReqTotalAmount.ClientID%>').value);
         }
-
         // จำนวนงวดที่ผ่อนชำระ
         function txtReqTermChange() {
             $("[id$=txtTerm]").val(document.getElementById('<%= txtReqTerm.ClientID%>').value);
             var MonthFinish = document.getElementById('<%= txtReqTerm.ClientID%>').value * document.getElementById('<%= txtReqMonthTerm.ClientID%>').value;
             $("[id$=txtMonthFinish]").val(MonthFinish);
         }
-
         // ระยะห่างระหว่างงวด
         function txtReqMonthTermChange() {
             var MonthFinish = document.getElementById('<%= txtReqTerm.ClientID%>').value * document.getElementById('<%= txtReqMonthTerm.ClientID%>').value;
             $("[id$=txtMonthFinish]").val(MonthFinish);
         }
+
+        // กรณีที่จะเปลี่ยนวันที่ชำระใหม่
+        function EnabledtSTPayDate() {
+            //document.getElementById('<%= dtSTPayDate.ClientID%>').Enabled = true;
+            var textbox = document.getElementById('<%= dtSTPayDate.ClientID%>');
+
+            textbox.removeAttribute("disabled");
+        }
+
 
 
 

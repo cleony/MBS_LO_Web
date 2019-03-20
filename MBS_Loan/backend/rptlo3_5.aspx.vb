@@ -20,6 +20,9 @@ Public Class rptlo3_5
                 cboYear.Items.Add(Share.FormatInteger(Date.Today.Date.ToString("yyyy")) - 4)
                 cboYear.Items.Add(Share.FormatInteger(Date.Today.Date.ToString("yyyy")) - 5)
                 cboYear.SelectedIndex = 1
+
+                dtStDate.Value = Date.Today
+                dtEndDate.Value = Date.Today
             End If
 
         Catch ex As Exception
@@ -152,6 +155,10 @@ Public Class rptlo3_5
             Session("lorpt035_optDate") = "2"
         ElseIf optDate.Value = "ประจำเดือน" Then
             Session("lorpt035_optDate") = "3"
+        ElseIf optDate.Value = "ช่วงวันที่" Then
+            Session("lorpt035_optDate") = "4"
+            StDate = Share.FormatDate(Me.dtStDate.Value)
+            EndDate = Share.FormatDate(Me.dtEndDate.Value)
         End If
         If ddlTypeLoan.SelectedIndex > 0 Then
             Session("lorpt035_TypeLoanId1") = ddlTypeLoan.SelectedValue.ToString

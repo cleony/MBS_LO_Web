@@ -122,7 +122,8 @@ Namespace SQLData
                             .FeeRate_1 = Share.FormatDouble(rowInfo.Item("FeeRate_1"))
                             .FeeRate_2 = Share.FormatDouble(rowInfo.Item("FeeRate_2"))
                             .FeeRate_3 = Share.FormatDouble(rowInfo.Item("FeeRate_3"))
-
+                            .CheckSms = Share.FormatInteger(rowInfo.Item("CheckSms"))
+                            .DateSms = Share.FormatDate(rowInfo.Item("DateSms"))
                         End With
                         ListInfo.Add(Info)
                     Next
@@ -177,7 +178,8 @@ Namespace SQLData
                         .FeeRate_1 = Share.FormatDouble(Dt.Rows(0).Item("FeeRate_1"))
                         .FeeRate_2 = Share.FormatDouble(Dt.Rows(0).Item("FeeRate_2"))
                         .FeeRate_3 = Share.FormatDouble(Dt.Rows(0).Item("FeeRate_3"))
-
+                        .CheckSms = Share.FormatInteger(Dt.Rows(0).Item("CheckSms"))
+                        .DateSms = Share.FormatDate(Dt.Rows(0).Item("DateSms"))
                     End With
                 End If
             Catch ex As Exception
@@ -231,7 +233,8 @@ Namespace SQLData
                         .FeeRate_1 = Share.FormatDouble(Dt.Rows(0).Item("FeeRate_1"))
                         .FeeRate_2 = Share.FormatDouble(Dt.Rows(0).Item("FeeRate_2"))
                         .FeeRate_3 = Share.FormatDouble(Dt.Rows(0).Item("FeeRate_3"))
-
+                        .CheckSms = Share.FormatInteger(Dt.Rows(0).Item("CheckSms"))
+                        .DateSms = Share.FormatDate(Dt.Rows(0).Item("DateSms"))
                     End With
                 End If
             Catch ex As Exception
@@ -301,7 +304,8 @@ Namespace SQLData
                             .FeeRate_1 = Share.FormatDouble(rowInfo.Item("FeeRate_1"))
                             .FeeRate_2 = Share.FormatDouble(rowInfo.Item("FeeRate_2"))
                             .FeeRate_3 = Share.FormatDouble(rowInfo.Item("FeeRate_3"))
-
+                            .CheckSms = Share.FormatInteger(rowInfo.Item("CheckSms"))
+                            .DateSms = Share.FormatDate(rowInfo.Item("DateSms"))
                         End With
                         ListInfo.Add(Info)
                     Next
@@ -375,6 +379,16 @@ Namespace SQLData
                 ListSp.Add(Sp)
                 Sp = New SqlClient.SqlParameter("FeeRate_3", Share.FormatDouble(Info.FeeRate_3))
                 ListSp.Add(Sp)
+
+                Sp = New SqlClient.SqlParameter("CheckSms", Share.FormatInteger(Info.CheckSms))
+                ListSp.Add(Sp)
+
+                If Share.FormatDate(Info.DateSms) >= New Date(2018, 1, 1) Then
+                    Sp = New SqlClient.SqlParameter("DateSms", Share.FormatDate(Info.DateSms))
+                    ListSp.Add(Sp)
+                End If
+
+
                 '============ ลบข้อมูลเดิมก่อนแล้วค่อยใส่ไปใหม่กัน กรณีใส่เบิ้ล 
                 Try
                     sql = "delete from BK_LoanSchedule where AccountNo = '" & Info.AccountNo & "' " ' and BranchId = '" & BranchId & "'"
@@ -461,12 +475,14 @@ Namespace SQLData
                 ListSp.Add(Sp)
                 Sp = New SqlClient.SqlParameter("FeeRate_3", Share.FormatDouble(Info.FeeRate_3))
                 ListSp.Add(Sp)
-                'Sp = New SqlClient.SqlParameter("OldAmount", Share.FormatDouble(Info.OldAmount))
-                'ListSp.Add(Sp)
-                'Sp = New SqlClient.SqlParameter("OldCapital", Share.FormatDouble(Info.OldCapital))
-                'ListSp.Add(Sp)
-                'Sp = New SqlClient.SqlParameter("OldInterest", Share.FormatDouble(Info.OldInterest))
-                'ListSp.Add(Sp)
+
+                Sp = New SqlClient.SqlParameter("CheckSms", Share.FormatInteger(Info.CheckSms))
+                ListSp.Add(Sp)
+
+                If Share.FormatDate(Info.DateSms) >= New Date(2018, 1, 1) Then
+                    Sp = New SqlClient.SqlParameter("DateSms", Share.FormatDate(Info.DateSms))
+                    ListSp.Add(Sp)
+                End If
 
                 hWhere.Add("AccountNo", OldInfo.AccountNo)
                 hWhere.Add("BranchId", OldInfo.BranchId)

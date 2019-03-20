@@ -321,6 +321,10 @@ Public Class reportpreview
                 Report("Para1") = Share.FormatString(Report("Para1")) & " เลขที่สัญญา " & AccountNo
             End If
 
+
+            Report("UserName") = Share.FormatString(Session("username"))
+            Report("EmpName") = Share.FormatString(Session("empname"))
+
             Report.RegData(ds)
 
 
@@ -431,6 +435,8 @@ Public Class reportpreview
                     Report("Para1") = Share.FormatString(Report("Para1")) & " จากเลขที่สัญญา " & AccountNo1 & " ถึง " & AccountNo2
                 End If
             End If
+            Report("UserName") = Share.FormatString(Session("username"))
+            Report("EmpName") = Share.FormatString(Session("empname"))
 
             Report.RegData(ds)
             StiWebViewer1.RenderMode = StiRenderMode.AjaxWithCache
@@ -521,7 +527,8 @@ Public Class reportpreview
                     Report("Para1") = Share.FormatString(Report("Para1")) & " จากเลขที่สัญญา " & AccountNo1 & " ถึง " & AccountNo2
                 End If
             End If
-
+            Report("UserName") = Share.FormatString(Session("username"))
+            Report("EmpName") = Share.FormatString(Session("empname"))
             Report.RegData(ds)
             StiWebViewer1.RenderMode = StiRenderMode.AjaxWithCache
             StiWebViewer1.Report = Report
@@ -572,7 +579,8 @@ Public Class reportpreview
                 Report("Para1") = Share.FormatString(Report("Para1")) & " จากรหัสลูกค้า/สมาชิก " & PersonId1 & " ถึง " & PersonId2
             End If
 
-
+            Report("UserName") = Share.FormatString(Session("username"))
+            Report("EmpName") = Share.FormatString(Session("empname"))
 
             Report.RegData(ds)
             StiWebViewer1.RenderMode = StiRenderMode.AjaxWithCache
@@ -643,6 +651,8 @@ Public Class reportpreview
                 Report("Para2") = "จากวันที่ " & StDate.ToString("dd/MM/yyyy") & " ถึง " & EndDate.ToString("dd/MM/yyyy")
                 Report("Para1") = Share.FormatString(Report("Para1")) & " จากประเภท " & TypeLoanName1 & " ถึง " & TypeLoanName2
             End If
+            Report("UserName") = Share.FormatString(Session("username"))
+            Report("EmpName") = Share.FormatString(Session("empname"))
             Report.RegData(ds)
             StiWebViewer1.RenderMode = StiRenderMode.AjaxWithCache
             StiWebViewer1.Report = Report
@@ -719,6 +729,8 @@ Public Class reportpreview
                         Report("Para1") = Share.FormatString(Report("Para1")) & " จากเลขที่สัญญา " & AccountNo1 & " ถึง " & AccountNo2
                     End If
                 End If
+                Report("UserName") = Share.FormatString(Session("username"))
+                Report("EmpName") = Share.FormatString(Session("empname"))
                 Report.RegData(ds)
                 'StiWebViewer1.RenderControl = StiRenderMode.AjaxWithCache
                 StiWebViewer1.Report = Report
@@ -1029,7 +1041,8 @@ Public Class reportpreview
 
             'End Try
 
-
+            Report("UserName") = Share.FormatString(Session("username"))
+            Report("EmpName") = Share.FormatString(Session("empname"))
 
             Report.RegData(dtRet)
             StiWebViewer1.Report = Report
@@ -1104,6 +1117,8 @@ Public Class reportpreview
                     Report("Para1") = Share.FormatString(Report("Para1")) & " จากเลขที่สัญญา " & AccountNo1 & " ถึง " & AccountNo2
                 End If
             End If
+            Report("UserName") = Share.FormatString(Session("username"))
+            Report("EmpName") = Share.FormatString(Session("empname"))
             Report.RegData(ds)
             StiWebViewer1.RenderMode = StiRenderMode.AjaxWithCache
             StiWebViewer1.Report = Report
@@ -1181,6 +1196,8 @@ Public Class reportpreview
                     Report("Para1") = Share.FormatString(Report("Para1")) & " จากเลขที่สัญญา " & AccountNo1 & " ถึง " & AccountNo2
                 End If
             End If
+            Report("UserName") = Share.FormatString(Session("username"))
+            Report("EmpName") = Share.FormatString(Session("empname"))
             Report.RegData(ds)
             StiWebViewer1.RenderMode = StiRenderMode.AjaxWithCache
             StiWebViewer1.Report = Report
@@ -1282,7 +1299,8 @@ Public Class reportpreview
                     Report("Para1") &= Share.FormatString(Report("Para1")) & " จากเลขที่สัญญา " & AccountNo1 & " ถึง " & AccountNo2
                 End If
             End If
-
+            Report("UserName") = Share.FormatString(Session("username"))
+            Report("EmpName") = Share.FormatString(Session("empname"))
             Report.RegData(ds)
             StiWebViewer1.RenderMode = StiRenderMode.AjaxWithCache
             StiWebViewer1.Report = Report
@@ -1389,7 +1407,8 @@ Public Class reportpreview
                     Report("Para1") = Share.FormatString(Report("Para1")) & " จากเลขที่สัญญา " & AccountNo1 & " ถึง " & AccountNo2
                 End If
             End If
-
+            Report("UserName") = Share.FormatString(Session("username"))
+            Report("EmpName") = Share.FormatString(Session("empname"))
             Report.RegData(ds)
             StiWebViewer1.RenderMode = StiRenderMode.AjaxWithCache
             StiWebViewer1.Report = Report
@@ -1454,6 +1473,8 @@ Public Class reportpreview
             Report("Para1") = Share.Company.RefundNo
             Report("Para2") = "ประจำเดือน " & Month & " " & Year
             Report("Para1") = Share.FormatString(Report("Para1")) & " จากประเภท " & TypeLoanName1 & " ถึง " & TypeLoanName2
+            Report("UserName") = Share.FormatString(Session("username"))
+            Report("EmpName") = Share.FormatString(Session("empname"))
             Report.RegData(ds)
             StiWebViewer1.RenderMode = StiRenderMode.AjaxWithCache
             StiWebViewer1.Report = Report
@@ -1535,7 +1556,8 @@ Public Class reportpreview
                     Report("Para1") = Share.FormatString(Report("Para1")) & " จากเลขที่สัญญา " & AccountNo1 & " ถึง " & AccountNo2
                 End If
             End If
-
+            Report("UserName") = Share.FormatString(Session("username"))
+            Report("EmpName") = Share.FormatString(Session("empname"))
             Report.RegData(ds)
             StiWebViewer1.RenderMode = StiRenderMode.AjaxWithCache
             StiWebViewer1.Report = Report
@@ -1639,7 +1661,8 @@ Public Class reportpreview
                     Report("Para1") = Share.FormatString(Report("Para1")) & " จากเลขที่สัญญา " & AccountNo1 & " ถึง " & AccountNo2
                 End If
             End If
-
+            Report("UserName") = Share.FormatString(Session("username"))
+            Report("EmpName") = Share.FormatString(Session("empname"))
             Report.RegData(ds)
             StiWebViewer1.RenderMode = StiRenderMode.AjaxWithCache
             StiWebViewer1.Report = Report
@@ -1717,6 +1740,8 @@ Public Class reportpreview
                 End If
             End If
             Report("DividendRate") = Share.FormatDecimal(DividendRate)
+            Report("UserName") = Share.FormatString(Session("username"))
+            Report("EmpName") = Share.FormatString(Session("empname"))
             Report.RegData(ds)
             StiWebViewer1.RenderMode = StiRenderMode.AjaxWithCache
             StiWebViewer1.Report = Report
@@ -1825,7 +1850,8 @@ Public Class reportpreview
             If AccountNo1 <> "" Then
                 Report("Para1") = Share.FormatString(Report("Para1")) & " จากเลขที่สัญญา " & AccountNo1 & " ถึง " & AccountNo2
             End If
-
+            Report("UserName") = Share.FormatString(Session("username"))
+            Report("EmpName") = Share.FormatString(Session("empname"))
             Report.RegData(ds)
             StiWebViewer1.RenderMode = StiRenderMode.AjaxWithCache
             StiWebViewer1.Report = Report
@@ -1912,7 +1938,8 @@ Public Class reportpreview
             If AccountNo1 <> "" Then
                 Report("Para1") = Share.FormatString(Report("Para1")) & " จากเลขที่สัญญา " & AccountNo1 & " ถึง " & AccountNo2
             End If
-
+            Report("UserName") = Share.FormatString(Session("username"))
+            Report("EmpName") = Share.FormatString(Session("empname"))
             Report.RegData(ds)
             StiWebViewer1.RenderMode = StiRenderMode.AjaxWithCache
             StiWebViewer1.Report = Report
@@ -1988,6 +2015,8 @@ Public Class reportpreview
                 Report("Para1") = Share.FormatString(Report("Para1")) & " จากเลขที่สัญญา " & AccountNo1 & " ถึง " & AccountNo2
             End If
             Report("Para2") = "ประจำเดือน " & Month & " " & Year
+            Report("UserName") = Share.FormatString(Session("username"))
+            Report("EmpName") = Share.FormatString(Session("empname"))
             Report.RegData(ds)
             StiWebViewer1.RenderMode = StiRenderMode.AjaxWithCache
             StiWebViewer1.Report = Report
@@ -2148,7 +2177,8 @@ Public Class reportpreview
             If AccountNo1 <> "" Then
                 Report("Para1") = Share.FormatString(Report("Para1")) & " จากเลขที่สัญญา " & AccountNo1 & " ถึง " & AccountNo2
             End If
-
+            Report("UserName") = Share.FormatString(Session("username"))
+            Report("EmpName") = Share.FormatString(Session("empname"))
             Report.RegData(ds)
             StiWebViewer1.RenderMode = StiRenderMode.AjaxWithCache
             StiWebViewer1.Report = Report
@@ -2199,7 +2229,7 @@ Public Class reportpreview
                 ds = obj.Get6_5FinishLoan(1, TypeLoanId1, TypeLoanId2, StDate, Date.Today, PersonId1, PersonId2, BranchId, BranchId2)
             ElseIf optDate = "2" Then
                 ds = obj.Get6_5FinishLoan(2, TypeLoanId1, TypeLoanId2, StDate, RptDate, PersonId1, PersonId2, BranchId, BranchId2)
-            ElseIf optDate = "3" Then
+            ElseIf optDate = "3" OrElse optDate = "4" Then
                 ds = obj.Get6_5FinishLoan(3, TypeLoanId1, TypeLoanId2, StDate, EndDate, PersonId1, PersonId2, BranchId, BranchId2)
             End If
 
@@ -2226,10 +2256,13 @@ Public Class reportpreview
                 Report("Para2") = "ทั้งหมด"
             ElseIf optDate = "2" Then
                 Report("Para2") = "ณ วันที่ " & RptDate.ToString("dd/MM/yyyy")
+            ElseIf optDate = "3" Then
+                Report("Para2") = String.Concat("จากวันที่ ", RptDate.ToString("dd/MM/yyyy"), " - ", RptDate.ToString("dd/MM/yyyy"))
             Else
                 Report("Para2") = "ประจำเดือน " & Month & " " & Year
             End If
-
+            Report("UserName") = Share.FormatString(Session("username"))
+            Report("EmpName") = Share.FormatString(Session("empname"))
             Report.RegData(ds)
             StiWebViewer1.RenderMode = StiRenderMode.AjaxWithCache
             StiWebViewer1.Report = Report
@@ -2293,7 +2326,8 @@ Public Class reportpreview
             If AccountNo1 <> "" Then
                 Report("Para1") &= Share.FormatString(Report("Para1")) & " จากเลขที่สัญญา " & AccountNo1 & " ถึง " & AccountNo2
             End If
-
+            Report("UserName") = Share.FormatString(Session("username"))
+            Report("EmpName") = Share.FormatString(Session("empname"))
             Report.RegData(dt)
             StiWebViewer1.RenderMode = StiRenderMode.AjaxWithCache
             StiWebViewer1.Report = Report
@@ -2349,6 +2383,8 @@ Public Class reportpreview
             Report("Var2") = "ค้าง " & Share.FormatString(Share.FormatInteger(NPL) + 1) & "-" & Share.FormatInteger(NPL) + 3 & " เดือน"
             Report("Var3") = "ค้าง " & Share.FormatString(Share.FormatInteger(NPL) + 3 + 1) & "-12 เดือน"
             Report("SumNpl") = SumNpl
+            Report("UserName") = Share.FormatString(Session("username"))
+            Report("EmpName") = Share.FormatString(Session("empname"))
             Report.RegData(dt)
             StiWebViewer1.RenderMode = StiRenderMode.AjaxWithCache
             StiWebViewer1.Report = Report

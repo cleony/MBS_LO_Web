@@ -6,7 +6,7 @@
     <DataSources isList="true" count="1">
       <DataSource1 Ref="2" type="DataTableSource" isKey="true">
         <Alias>DataSource1</Alias>
-        <Columns isList="true" count="28">
+        <Columns isList="true" count="27">
           <value>TermDate,System.DateTime</value>
           <value>PersonName,System.String</value>
           <value>TotalAmount,System.Decimal</value>
@@ -34,7 +34,6 @@
           <value>CFDate,System.DateTime</value>
           <value>InterestRate,System.Decimal</value>
           <value>TotalTerm,System.Decimal</value>
-          <value>ComName,System.String</value>
         </Columns>
         <Dictionary isRef="1" />
         <Name>DataSource1</Name>
@@ -43,15 +42,14 @@
     </DataSources>
     <Relations isList="true" count="0" />
     <Report isRef="0" />
-    <Resources isList="true" count="0" />
     <Variables isList="true" count="7">
-      <value>,ComName,ComName,,System.String,_x0020_,False,False,False,False</value>
-      <value>,ReportName,ReportName,,System.String,,False,False,False,False</value>
-      <value>,Report1,Report1,,System.String,,False,False,False,False</value>
-      <value>,Para1,Para1,,System.String,,False,False,False,False</value>
-      <value>,Para2,Para2,,System.String,,False,False,False,False</value>
-      <value>,RptDate,RptDate,,System.DateTime,Today,False,True,False,False</value>
-      <value>,InvPayDate,InvPayDate,,System.DateTime,Today,False,True,False,False</value>
+      <value>,ComName,ComName,System.String,_x0020_,False,False</value>
+      <value>,ReportName,ReportName,System.String,,False,False</value>
+      <value>,Report1,Report1,System.String,,False,False</value>
+      <value>,Para1,Para1,System.String,,False,False</value>
+      <value>,Para2,Para2,System.String,,False,False</value>
+      <value>,RptDate,RptDate,System.DateTime,Today,False,True</value>
+      <value>,InvPayDate,InvPayDate,System.DateTime,Today,False,True</value>
     </Variables>
   </Dictionary>
   <EngineVersion>EngineV1</EngineVersion>
@@ -92,7 +90,7 @@
               <Parent isRef="4" />
               <Text>{DataSource1.AccountNo}</Text>
               <TextBrush>Black</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
               <Type>Expression</Type>
             </Text3>
             <Text4 Ref="7" type="Text" isKey="true">
@@ -172,9 +170,9 @@
               <Name>Text12</Name>
               <Page isRef="3" />
               <Parent isRef="4" />
-              <Text>{ComName}</Text>
+              <Text>{DataSource1.RefundName}</Text>
               <TextBrush>Black</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
               <Type>Expression</Type>
             </Text12>
             <Text25 Ref="13" type="Text" isKey="true">
@@ -249,7 +247,7 @@
               <Parent isRef="4" />
               <Text>ลงชื่อ …………………………………………… </Text>
               <TextBrush>Black</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
               <Type>Expression</Type>
             </Text42>
             <Text43 Ref="20" type="Text" isKey="true">
@@ -263,7 +261,7 @@
               <Parent isRef="4" />
               <Text>(……………........…………………………..)</Text>
               <TextBrush>Black</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
             </Text43>
             <Text45 Ref="21" type="Text" isKey="true">
               <Brush>Transparent</Brush>
@@ -304,7 +302,7 @@
               <Name>Text1</Name>
               <Page isRef="3" />
               <Parent isRef="4" />
-              <Text>{ComName}</Text>
+              <Text>{DataSource1.RefundName}</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
             </Text1>
@@ -313,7 +311,6 @@
               <ClientRectangle>0.2,0.6,2.2,1.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <ImageURL>C:\GSB\MBS\Pictures\logo.jpg</ImageURL>
-              <Margins>0,0,0,0</Margins>
               <Name>Image1</Name>
               <Page isRef="3" />
               <Parent isRef="4" />
@@ -331,7 +328,7 @@
               <Parent isRef="4" />
               <Text>{DataSource1.TypeLoan}</Text>
               <TextBrush>Black</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
               <Type>Expression</Type>
             </Text46>
             <Text47 Ref="26" type="Text" isKey="true">
@@ -359,7 +356,7 @@
               <Parent isRef="4" />
               <Text>{DataSource1.RefundAddr}</Text>
               <TextBrush>Black</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
               <Type>Expression</Type>
             </Text48>
             <Text51 Ref="28" type="Text" isKey="true">
@@ -462,7 +459,7 @@
               <Parent isRef="4" />
               <Text>{DataSource1.RefundAddr}</Text>
               <TextBrush>Black</TextBrush>
-              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
               <Type>Expression</Type>
             </Text55>
             <Text6 Ref="35" type="Text" isKey="true">
@@ -974,10 +971,11 @@
   <ReportAlias>Report</ReportAlias>
   <ReportChanged>3/2/2016 12:02:23 PM</ReportChanged>
   <ReportCreated>9/6/2009 12:22:40 PM</ReportCreated>
-  <ReportGuid>10c5fd1580ad411097032cdd2abbbe43</ReportGuid>
+  <ReportFile>D:\GSB\MBS\Report\Cry6_4Invoice.mrt</ReportFile>
+  <ReportGuid>a51e5b8c138c4245b16e9f285060ca24</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
-  <ReportVersion>2018.1.6.0</ReportVersion>
+  <ReportVersion>2011.3.1200</ReportVersion>
   <Script>using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -998,8 +996,7 @@ namespace Reports
         {
             this.InitializeComponent();
         }
-        #region StiReport Designer generated code - do not modify
-		#endregion StiReport Designer generated code - do not modify
+        #region StiReport Designer generated code - do not modify#endregion StiReport Designer generated code - do not modify
     }
 }</Script>
   <ScriptLanguage>CSharp</ScriptLanguage>
@@ -1007,6 +1004,7 @@ namespace Reports
     <Style1 Ref="95" type="Stimulsoft.Report.StiStyle" isKey="true">
       <Brush>WhiteSmoke</Brush>
       <Conditions isList="true" count="0" />
+      <Description />
       <Font>Arial,8</Font>
       <Name>Style1</Name>
       <TextBrush>Black</TextBrush>

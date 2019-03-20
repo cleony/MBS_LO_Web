@@ -64,6 +64,9 @@ Public Class Share
 
     Public Shared TmpAccountNo As String = ""
 
+    Public Shared MinCalMulctRemainRate As Double = 25
+
+
     ''' <summary>
     ''' Check whether object is DBNull or Empty String or not
     ''' </summary>

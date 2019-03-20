@@ -817,18 +817,24 @@ Public Class loanpaysub
                 If MMItem.Orders > 0 AndAlso ((MMItem.PayInterest = 0 And MMItem.PayCapital = 0) OrElse TypeLoanInfo.MuctCalType = "4") AndAlso MMItem.Remain > 0 Then
                     '========================= หายอดเงินผิดนัดชำระ
                     If DateAdd(DateInterval.Day, LoanInfo.OverDueDay, MMItem.TermDate.Date) < PayDate.Date Then
-                        '======== กรณีคิดค่าปรับแบบไม่ได้คิดตามจำนวนวันที่ค้าง
-                        If StDelayDate = PayDate.Date Then
-                            StDelayDate = MMItem.TermDate.Date
+
+                        Dim amount As Double = 0
+                        amount = Share.FormatDouble(MMItem.Amount * Share.FormatDouble(Share.MinCalMulctRemainRate) / 100)
+                        If MMItem.Remain > 0 AndAlso MMItem.Remain > amount Then
+                            '======== กรณีคิดค่าปรับแบบไม่ได้คิดตามจำนวนวันที่ค้าง
+                            If StDelayDate = PayDate.Date Then
+                                StDelayDate = MMItem.TermDate.Date
+                                '====== ใช้เงินงวดที่ไม่ได้มาชำระ
+                                If TypeLoanInfo.MuctCalType = "1" OrElse TypeLoanInfo.MuctCalType = "4" Then
+                                    mulct2 = CalRemain ' ตัวนี้ยอดผิด Share.FormatDouble(MMItem.PayRemain)
+                                End If
+                            End If
                             '====== ใช้เงินงวดที่ไม่ได้มาชำระ
-                            If TypeLoanInfo.MuctCalType = "1" OrElse TypeLoanInfo.MuctCalType = "4" Then
-                                mulct2 = CalRemain ' ตัวนี้ยอดผิด Share.FormatDouble(MMItem.PayRemain)
+                            If TypeLoanInfo.MuctCalType = "2" OrElse TypeLoanInfo.MuctCalType = "3" Then
+                                mulct2 = Share.FormatDouble(mulct2 + MMItem.Amount)
                             End If
                         End If
-                        '====== ใช้เงินงวดที่ไม่ได้มาชำระ
-                        If TypeLoanInfo.MuctCalType = "2" OrElse TypeLoanInfo.MuctCalType = "3" Then
-                            mulct2 = Share.FormatDouble(mulct2 + MMItem.Amount)
-                        End If
+
 
                     Else
 

@@ -380,7 +380,7 @@ Partial Public Class loanpaysub
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnprint As Global.System.Web.UI.HtmlControls.HtmlButton
+    Protected WithEvents btnprint As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
     '''btnprintSlip control.
@@ -389,7 +389,7 @@ Partial Public Class loanpaysub
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnprintSlip As Global.System.Web.UI.HtmlControls.HtmlButton
+    Protected WithEvents btnprintSlip As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
     '''btncancel control.

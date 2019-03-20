@@ -188,12 +188,12 @@ Public Class typeloansub
             txtRefundName.Value = OldInfo.RefundName
             If OldInfo.MuctCalType = "1" Then
                 cboMuclt.Value = "1.คิดจากเงินต้นคงเหลือ (ตามจำนวนวันที่ผิดนัดชำระ)"
-                'ElseIf OldInfo.MuctCalType = "2" Then
-                '    cboMuclt.Value = "2.คิดจากเงินงวด เงินต้น+ดอกเบี้ย (ตามจำนวนวันที่ผิดนัดชำระ)"
+            ElseIf OldInfo.MuctCalType = "2" Then
+                cboMuclt.Value = "2.คิดจากเงินงวด เงินต้น+ดอกเบี้ย (ตามจำนวนวันที่ผิดนัดชำระ)"
                 'ElseIf OldInfo.MuctCalType = "3" Then
                 '    cboMuclt.Value = "3.คิดจากเงินงวด เงินต้น+ดอกเบี้ย"
             ElseIf OldInfo.MuctCalType = "4" Then
-                cboMuclt.Value = "2.คิดจากเงินต้นคงเหลือ (ตามจำนวนวันในงวดที่ผิดนัดชำระ)"
+                cboMuclt.Value = "3.คิดจากเงินต้นคงเหลือ (ตามจำนวนวันในงวดที่ผิดนัดชำระ)"
             End If
             If OldInfo.DelayType = "1" Then
                 cboDeley.Value = "1.คิดดอกเบี้ยตามตาราง"

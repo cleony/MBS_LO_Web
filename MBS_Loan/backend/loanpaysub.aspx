@@ -282,16 +282,15 @@
                                             <div class="col-sm-6">
                                                 <asp:Button Text="บันทึกข้อมูล" ID="btnsave" runat="server" CssClass="btn btn-alt btn-hover btn-info"
                                                     OnClick="savedata" OnClientClick="return confirm('ท่านต้องการบันทีกข้อมูลใช่หรือไม่ ?')"></asp:Button>
-                                                <button runat="server" id="btnprint" class="btn btn-alt btn-hover btn-info"
-                                                    onserverclick="btnprint_Click">
-                                                    <i class="fa fa-print"></i>
-                                                    <span>พิมพ์ใบเสร็จ</span>
-                                                </button>
-                                                <button runat="server" id="btnprintSlip" class="btn btn-alt btn-hover btn-info"
-                                                    onserverclick="btnprintSlip_ServerClick">
-                                                    <i class="fa fa-print"></i>
-                                                    <span>พิมพ์สลิป</span>
-                                                </button>
+
+                                              <asp:Button  Text="พิมพ์ใบเสร็จ" runat="server" id="btnprint" class="btn btn-alt btn-hover btn-info"  OnClientClick ="return confirm('ท่านต้องการบันทีกข้อมูลใช่หรือไม่ ?')"
+                                                    OnClick="btnprint_Click" >
+                                                  
+                                             </asp:Button>
+                                               <asp:Button Text="พิมพ์สลิป"  runat="server" id="btnprintSlip" class="btn btn-alt btn-hover btn-info"
+                                                    OnClick="btnprintSlip_ServerClick" OnClientClick="return confirm('ท่านต้องการบันทีกข้อมูลใช่หรือไม่ ?')">
+                                               
+                                              </asp:Button>
 
                                             </div>
                                         </div>
@@ -670,6 +669,17 @@
     </script>
 
     <script type="text/javascript">
+
+     <%--   Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(BeginRequestHandler);
+        function BeginRequestHandler(sender, args) { var oControl = args.get_postBackElement(); oControl.disabled = true; }
+
+        function preventMultipleSubmissions() {
+            $('#<%=btnprint.ClientID %>').prop('disabled', true);
+        }
+
+        window.onbeforeunload = preventMultipleSubmissions;--%>
+
+
         var nav = window.Event ? true : false;
         if (nav) {
             window.captureEvents(Event.KEYDOWN);

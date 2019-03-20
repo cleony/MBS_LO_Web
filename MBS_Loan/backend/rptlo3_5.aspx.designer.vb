@@ -140,6 +140,24 @@ Partial Public Class rptlo3_5
     Protected WithEvents cboYear As Global.System.Web.UI.HtmlControls.HtmlSelect
     
     '''<summary>
+    '''dtStDate control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents dtStDate As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
+    '''dtEndDate control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents dtEndDate As Global.System.Web.UI.HtmlControls.HtmlInputText
+    
+    '''<summary>
     '''UpdatePanel1 control.
     '''</summary>
     '''<remarks>

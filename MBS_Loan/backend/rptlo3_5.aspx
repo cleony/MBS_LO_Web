@@ -92,6 +92,7 @@
                                                 <option>ทั้งหมด</option>
                                                 <option>ณ วันที่</option>
                                                 <option>ประจำเดือน</option>
+                                                <option>ช่วงวันที่</option>
                                             </select>
                                         </div>
                                     </div>
@@ -129,7 +130,26 @@
                                             </select>
                                         </div>
                                     </div>
-
+                                    <div class="form-group">
+                                    <label class="col-sm-3 control-label">จากวันที่</label>
+                                    <div class="col-sm-2">
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input id="dtStDate" runat="server" class="thai-datepicker form-control" data-date-format="dd/mm/yyyy" />
+                                        </div>
+                                    </div>
+                                    <label class="col-sm-1 control-label"> - </label>
+                                    <div class="col-sm-2">
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input id="dtEndDate" runat="server" class="thai-datepicker form-control" data-date-format="dd/mm/yyyy" />
+                                        </div>
+                                    </div>
+                                </div>
                                 </div>
 
                             </div>

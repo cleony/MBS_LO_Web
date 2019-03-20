@@ -243,7 +243,7 @@ Public Class loansub
 
             AccountNo = Request.QueryString("id")
             OldInfo = Obj.GetLoanById(AccountNo)
-
+            SetReadOnlyTrue(True)
             With OldInfo
                 txtAccountNo.Value = .AccountNo
                 headDescription.InnerText = "ข้อมูลสัญญากู้ - " & .AccountNo
@@ -265,8 +265,11 @@ Public Class loansub
                     selStatus.Items(6).Attributes.Add("disabled", "disabled")
                     selStatus.Items(7).Attributes.Add("disabled", "disabled")
                     selStatus.Items(8).Attributes.Add("disabled", "disabled")
-                    btnPayLoan.Visible = False
-                    btnCloseLoan.Visible = False
+                    Me.btnPayLoan.Visible = False
+                    Me.btnCloseLoan.Visible = False
+                    Me.btnCalculate.Visible = True
+                    Me.btnChangPayDate.Visible = False
+                    Me.SetReadOnlyTrue(False)
                 ElseIf .Status = "7" Then ' อนุมัติสัญญากู้
                     selStatus.Value = "อนุมัติสัญญา" ' 1
                     selStatus.Items(0).Attributes.Add("disabled", "disabled")
@@ -379,6 +382,8 @@ Public Class loansub
                 txtPersonName.Value = .PersonName
                 linkPerson1.HRef = "personsub.aspx?id=" & .PersonId & "&mode=view"
                 linkPerson1.Target = "_blank"
+                linkEditPerson1.HRef = "personsub.aspx?id=" & .PersonId & "&mode=edit"
+                linkEditPerson1.Target = "_blank"
                 'txtBarcodeId.value = .BarcodeId
                 txtPersonId2.Value = .PersonId2
                 txtPersonId3.Value = .PersonId3
@@ -397,7 +402,8 @@ Public Class loansub
                     txtPersonName2.Value = Share.FormatString(JointInfo.Title) & " " & Share.FormatString(JointInfo.FirstName) & " " & Share.FormatString(JointInfo.LastName)
                     linkPerson2.HRef = "personsub.aspx?id=" & .PersonId2 & "&mode=view"
                     linkPerson2.Target = "_blank"
-
+                    linkEditPerson2.HRef = "personsub.aspx?id=" & .PersonId2 & "&mode=edit"
+                    linkEditPerson2.Target = "_blank"
                     gbPerson2.Style.Add("display", "")
                     gbPerson2_1.Style.Add("display", "")
                 End If
@@ -407,6 +413,8 @@ Public Class loansub
                     txtPersonName3.Value = Share.FormatString(JointInfo.Title) & " " & Share.FormatString(JointInfo.FirstName) & " " & Share.FormatString(JointInfo.LastName)
                     linkPerson3.HRef = "personsub.aspx?id=" & .PersonId3 & "&mode=view"
                     linkPerson3.Target = "_blank"
+                    linkEditPerson3.HRef = "personsub.aspx?id=" & .PersonId3 & "&mode=edit"
+                    linkEditPerson3.Target = "_blank"
                     gbPerson3.Style.Add("display", "")
                     gbPerson3_1.Style.Add("display", "")
                 End If
@@ -416,6 +424,8 @@ Public Class loansub
                     txtPersonName4.Value = Share.FormatString(JointInfo.Title) & " " & Share.FormatString(JointInfo.FirstName) & " " & Share.FormatString(JointInfo.LastName)
                     linkPerson4.HRef = "personsub.aspx?id=" & .PersonId4 & "&mode=view"
                     linkPerson4.Target = "_blank"
+                    linkEditPerson4.HRef = "personsub.aspx?id=" & .PersonId4 & "&mode=edit"
+                    linkEditPerson4.Target = "_blank"
                     gbPerson4.Style.Add("display", "")
                     gbPerson4_1.Style.Add("display", "")
                 End If
@@ -425,6 +435,8 @@ Public Class loansub
                     txtPersonName5.Value = Share.FormatString(JointInfo.Title) & " " & Share.FormatString(JointInfo.FirstName) & " " & Share.FormatString(JointInfo.LastName)
                     linkPerson5.HRef = "personsub.aspx?id=" & .PersonId5 & "&mode=view"
                     linkPerson5.Target = "_blank"
+                    linkEditPerson5.HRef = "personsub.aspx?id=" & .PersonId5 & "&mode=edit"
+                    linkEditPerson5.Target = "_blank"
                     gbPerson5.Style.Add("display", "")
                     gbPerson5_1.Style.Add("display", "")
                 End If
@@ -434,6 +446,8 @@ Public Class loansub
                     txtPersonName6.Value = Share.FormatString(JointInfo.Title) & " " & Share.FormatString(JointInfo.FirstName) & " " & Share.FormatString(JointInfo.LastName)
                     linkPerson6.HRef = "personsub.aspx?id=" & .PersonId6 & "&mode=view"
                     linkPerson6.Target = "_blank"
+                    linkEditPerson6.HRef = "personsub.aspx?id=" & .PersonId6 & "&mode=edit"
+                    linkEditPerson6.Target = "_blank"
                 End If
 
                 txtTotalPersonLoan.Value = Share.Cnumber(.TotalPersonLoan, 2)
@@ -478,7 +492,7 @@ Public Class loansub
                 dtCFDate.Value = Share.FormatDate(.CFDate)
                 dtCFLoanDate.Value = Share.FormatDate(.CFLoanDate)
                 dtSTCalDate.Value = Share.FormatDate(.STCalDate)
-                dtSTPayDate.Value = Share.FormatDate(.StPayDate)
+                dtSTPayDate.Text = Share.FormatDate(.StPayDate)
                 dtEndPayDate.Value = Share.FormatDate(.EndPayDate)
 
                 txtTotalCapital.Value = Share.Cnumber(.TotalAmount, 2)
@@ -1021,7 +1035,7 @@ Public Class loansub
                 .TotalInterest = Share.FormatDouble(txtTotalInterest.Value)
                 .MinPayment = Share.FormatDouble(txtMinPayment.Value)
                 .STCalDate = Share.FormatDate(dtSTCalDate.Value)
-                .StPayDate = Share.FormatDate(dtSTPayDate.Value)
+                .StPayDate = Share.FormatDate(dtSTPayDate.Text)
                 .EndPayDate = Share.FormatDate(dtEndPayDate.Value)
                 '======== เพิ่ม วันที่อนุมัติสัญญา CFLoanDate กับวันที่เริ่มคิดดอกเบีย STCalDate
 
@@ -1200,6 +1214,8 @@ Public Class loansub
                         .PayRemain = Share.FormatDouble(DirectCast(item.FindControl("lblPayRemain"), Label).Text)
                         .InterestRate = Share.FormatDouble(DirectCast(item.FindControl("lblInterestRate"), Label).Text)
                         .BranchId = Info.BranchId
+                        .CheckSms = Share.FormatInteger(DirectCast(item.FindControl("lblCheckSms"), Label).Text)
+                        .DateSms = Share.FormatDate(DirectCast(item.FindControl("lblDateSms"), Label).Text)
 
                         .Fee_1 = 0
                         .Fee_2 = 0
@@ -1487,7 +1503,7 @@ Public Class loansub
                 If Share.FormatInteger(txtTerm.Value) = 0 Then Exit Function
                 Dim Term As Integer = Share.FormatInteger(txtTerm.Value)
                 Dim Orders As Integer = 0
-                Dim DateTemp As Date = Share.FormatDate(dtSTPayDate.Value)
+                Dim DateTemp As Date = Share.FormatDate(dtSTPayDate.Text)
                 Dim TotalAmount As Double = Share.FormatDouble(txtTotalCapital.Value)
                 Dim Capital As Double = Share.FormatDouble(TotalAmount / Term)
                 Dim TotalInterest As Double = 0 '= Share.FormatDouble(TotalAmount * Share.FormatDouble(txtInterestRate.Value) * (Share.FormatDouble(txtTerm.Value) * Share.FormatDouble(CbReqMonthTerm.Value)) / (100 * 12))
@@ -1723,8 +1739,8 @@ Public Class loansub
 
                             Else
 
-                                If Date.DaysInMonth(DateTemp.Year, DateTemp.Month) > Share.FormatDate(dtSTPayDate.Value).Day Then
-                                    DateTemp = New Date(DateTemp.Year, DateTemp.Month, Share.FormatDate(dtSTPayDate.Value).Day) ' หาวันที่สิ้นสุด
+                                If Date.DaysInMonth(DateTemp.Year, DateTemp.Month) > Share.FormatDate(dtSTPayDate.Text).Day Then
+                                    DateTemp = New Date(DateTemp.Year, DateTemp.Month, Share.FormatDate(dtSTPayDate.Text).Day) ' หาวันที่สิ้นสุด
                                 Else
                                     DateTemp = New Date(DateTemp.Year, DateTemp.Month, Date.DaysInMonth(DateTemp.Year, DateTemp.Month)) ' หาวันที่สิ้นสุด
                                 End If
@@ -2185,4 +2201,70 @@ Public Class loansub
             Next
         End If
     End Sub
+    Protected Sub SetReadOnlyTrue(ByVal enabled As Boolean)
+        Dim enumerator As IEnumerator = Nothing
+        Try
+            Try
+                enumerator = Me.panelGroupCalculate.Controls.GetEnumerator()
+                While enumerator.MoveNext()
+                    Dim current As Control = DirectCast(enumerator.Current, Control)
+                    If (Not TypeOf current Is TextBox) Then
+                        If (Not TypeOf current Is HtmlInputText) Then
+                            Continue While
+                        End If
+                        DirectCast(current, HtmlInputText).Disabled = enabled
+                    Else
+                        DirectCast(current, TextBox).[ReadOnly] = enabled
+                    End If
+                End While
+            Finally
+                If (TypeOf enumerator Is IDisposable) Then
+                    TryCast(enumerator, IDisposable).Dispose()
+                End If
+            End Try
+            If (Not enabled) Then
+                Me.dtSTPayDate.Attributes.Remove("disabled")
+                Me.dtEndPayDate.Attributes.Remove("disabled")
+                Me.txtMinPayment.Attributes.Remove("readonly")
+                Me.txtTotalInterest.Attributes.Remove("readonly")
+            Else
+                Me.dtSTPayDate.Attributes.Add("disabled", "disabled")
+                Me.dtEndPayDate.Attributes.Add("disabled", "disabled")
+                Me.txtMinPayment.Attributes.Add("readonly", "readonly")
+                Me.txtTotalInterest.Attributes.Add("readonly", "readonly")
+            End If
+        Catch exception As System.Exception
+
+        End Try
+    End Sub
+    Public Sub RecalDate()
+
+
+        Dim LoanSchedul() As Entity.BK_LoanSchedule = Nothing
+        'Dim ObjGenLoanSchedule As New Loan.GenLoanSchedule
+
+        Share.FormatDouble(Me.txtTotalCapital.Value)
+        Share.FormatDouble(Me.txtTotalCapital.Value)
+        Share.FormatInteger(Me.txtTerm.Value)
+        Dim objLoan As New Business.BK_Loan
+        Dim genLoanSchedule As Loan.GenLoanSchedule = New Loan.GenLoanSchedule()
+        Try
+            Dim loanInfo As New Entity.BK_Loan
+            loanInfo = objLoan.GetLoanById(txtAccountNo.Value, Constant.Database.Connection1)
+            loanInfo.StPayDate = Share.FormatDate(dtSTPayDate.Text)
+            If loanInfo.CalculateType <> "2" AndAlso loanInfo.CalculateType <> "10" Then
+                LoanSchedul = genLoanSchedule.RecalDate(loanInfo)
+            End If
+            Me.gvSchedule.DataSource = LoanSchedul
+            Me.gvSchedule.DataBind()
+            If LoanSchedul.Length > 0 Then
+                Dim lastPay = From p As Entity.BK_LoanSchedule In LoanSchedul Select p.TermDate Order By TermDate Descending Take 1
+                dtEndPayDate.Value = Share.FormatDate(lastPay(0))
+            End If
+
+        Catch exception As System.Exception
+
+        End Try
+    End Sub
+
 End Class

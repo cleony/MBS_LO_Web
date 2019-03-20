@@ -92,7 +92,7 @@
                                         <input type="text" runat="server" id="txtPersonName" class="form-control" />
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" hidden>
                                     <label class="col-sm-3 control-label">ผู้ใช้งาน</label>
                                     <div class="col-sm-6">
                                         <asp:DropDownList ID="ddlUser" runat="server" AppendDataBoundItems="true" class="form-control select2" Style="width: 100%;">
@@ -101,7 +101,7 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group" hidden>
                                     <label class="col-sm-3 control-label">ผู้ใช้งาน</label>
                                     <div class="col-sm-6">
                                         <asp:DropDownList ID="ddlUser2" runat="server" AppendDataBoundItems="true" class="form-control select2" Style="width: 100%;">
@@ -135,7 +135,7 @@
                                     <div class="col-sm-6">
                                         <select id="optDate" runat="server" class="custom-select form-control">
                                             <option>สรุปทั้งหมด</option>
-                                            <option>สรุปช่วงวันที่อนุมัติ</option>
+                                            <option>สรุปช่วงวันที่รับชำระ</option>
                                         </select>
                                     </div>
                                 </div>
