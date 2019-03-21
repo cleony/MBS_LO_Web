@@ -1812,10 +1812,10 @@ Public Class reportpreview
                 PartReport = Server.MapPath("..\backend\formreport\report\Cry6_Loan4.mrt")
             ElseIf optReport = 5 Then
                 PartReport = Server.MapPath("..\backend\formreport\report\Cry6_Loan5.mrt")
-                'GetReportOpt5(ds)
+                GetReportOpt5(ds, RptDate)
             ElseIf optReport = 6 Then
                 PartReport = Server.MapPath("..\backend\formreport\report\Cry6_Loan6.mrt")
-                'ds = GetReportOpt6(ds)
+                ds = GetReportOpt6(ds, RptDate)
             End If
             Session("ReportDesign") = PartReport
             Report.Load(PartReport)
@@ -1863,6 +1863,162 @@ Public Class reportpreview
         End Try
 
     End Sub
+
+    Private Sub GetReportOpt5(ByRef Ds As DataSet, ByVal RptDate As DateTime)
+        Try
+            Dim DtRpt As New DataTable
+            DtRpt = Ds.Tables(0)
+
+            For Each Dr As DataRow In DtRpt.Rows
+                Dim TotalTerm As Integer = DtRpt.AsEnumerable().Where(Function(row) row.Field(Of String)("AccountNo") = Share.FormatString(Dr.Item("AccountNo"))).Count
+                Dim FirstTermDate As Date = DtRpt.AsEnumerable().Where(Function(row) row.Field(Of String)("AccountNo") = Share.FormatString(Dr.Item("AccountNo"))).Select(Function(row) row.Field(Of Date)("TermDate")).FirstOrDefault
+                Dim LastTermDate As Date = DtRpt.AsEnumerable().Where(Function(row) row.Field(Of String)("AccountNo") = Share.FormatString(Dr.Item("AccountNo"))).Select(Function(row) row.Field(Of Date)("TermDate")).LastOrDefault
+
+                Dr.Item("TotalTerm") = TotalTerm
+                Dr.Item("FirstTermDate") = FirstTermDate
+
+                Dim TermDiff As Integer = 1
+                TermDiff = Share.FormatInteger(DateDiff(DateInterval.Day, FirstTermDate.Date, RptDate.Date))
+
+                Dr.Item("FirstTermDateDiff") = TermDiff
+
+                If LastTermDate.Date < RptDate.Date AndAlso Share.FormatInteger(Dr.Item("term")) = Share.FormatInteger(Dr.Item("LoanTerm")) Then
+                    Dr.Item("ContractExpired") = "***"
+                Else
+                    Dr.Item("ContractExpired") = ""
+                End If
+
+            Next
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+    Private Function GetReportOpt6(Ds As DataSet, ByVal RptDate As DateTime) As DataSet
+        Try
+            Dim DtRpt As New DataTable
+            DtRpt = Ds.Tables(0)
+            Dim StDate As Date
+            Dim EndDate As Date
+            Dim lastPayDate As Date
+
+            Dim LoanNo As String = ""
+            Dim SumRemainCapital As Double = 0
+            Dim SumRemainInterest As Double = 0
+            Dim ItemNo As Integer = 0
+            Dim DtRet As New DataTable
+            DtRet = DtRpt.Clone
+            For Each Dr As DataRow In DtRpt.Rows
+                Dim TotalTerm As Integer = DtRpt.AsEnumerable().Where(Function(row) row.Field(Of String)("AccountNo") = Share.FormatString(Dr.Item("AccountNo"))).Count
+                Dim FirstTermDate As Date = DtRpt.AsEnumerable().Where(Function(row) row.Field(Of String)("AccountNo") = Share.FormatString(Dr.Item("AccountNo"))).Select(Function(row) row.Field(Of Date)("TermDate")).FirstOrDefault
+                Dim LastTermDate As Date = DtRpt.AsEnumerable().Where(Function(row) row.Field(Of String)("AccountNo") = Share.FormatString(Dr.Item("AccountNo"))).Select(Function(row) row.Field(Of Date)("TermDate")).LastOrDefault
+
+                Dr.Item("TotalTerm") = TotalTerm
+                Dr.Item("FirstTermDate") = FirstTermDate
+
+                Dim TermDiff As Integer = 1
+                TermDiff = Share.FormatInteger(DateDiff(DateInterval.Day, FirstTermDate.Date, RptDate.Date))
+
+                Dr.Item("FirstTermDateDiff") = TermDiff
+
+                If LastTermDate.Date < RptDate.Date AndAlso Share.FormatInteger(Dr.Item("term")) = Share.FormatInteger(Dr.Item("LoanTerm")) Then
+                    Dr.Item("ContractExpired") = "***"
+                Else
+                    Dr.Item("ContractExpired") = ""
+                End If
+
+                '====== หาดอกเบี้ยจริงตามวันที่ค้างชำระ 
+                Dim ObjCalInterest As New LoanCalculate.CalInterest
+                Dim CalInfo As New Entity.CalInterest
+                If LoanNo <> Share.FormatString(Dr.Item("AccountNo")) Then
+
+                    LoanNo = Share.FormatString(Dr.Item("AccountNo"))
+                    Dim ObjPayment As New Business.BK_LoanMovement
+                    Dim PaymentInfo As New Entity.BK_LoanMovement
+                    PaymentInfo = ObjPayment.GetMovementByDate(Share.FormatString(Dr.Item("AccountNo")), RptDate.Date)
+                    If Not (PaymentInfo.AccountNo Is Nothing) Then
+                        StDate = PaymentInfo.MovementDate.Date
+                        lastPayDate = PaymentInfo.MovementDate.Date
+                    Else
+                        StDate = Share.FormatDate(Dr.Item("STCalDate"))
+                        lastPayDate = Share.FormatDate(Dr.Item("STCalDate"))
+                    End If
+                    SumRemainInterest = 0
+                    SumRemainCapital = 0
+                    ItemNo = 1
+                End If
+
+                EndDate = Share.FormatDate(Dr.Item("TermDate"))
+
+
+                If Share.FormatString(Dr.Item("CalculateType")) = "2" OrElse Share.FormatString(Dr.Item("CalculateType")) = "10" Then
+                    If (Share.FormatString(Dr.Item("ContractExpired")) = "") OrElse Share.FormatString(Dr.Item("ContractExpired")) = "***" Then
+                        If Share.FormatString(Dr.Item("ContractExpired")) = "" Then
+                            If lastPayDate <= EndDate Then
+                                CalInfo = ObjCalInterest.CalRealInterestByDate(Share.FormatString(Dr.Item("AccountNo")), StDate, EndDate)
+                                Dr.Item("RemainInterest") = Share.FormatDouble(CalInfo.BackadvancePay_Int - SumRemainInterest)
+                                If Share.FormatDouble(Dr.Item("RemainCapital")) > 0 Then
+                                    Dr.Item("RemainCapital") = Share.FormatDouble(Share.FormatDouble(Dr.Item("MinPayment")) - Share.FormatDouble(Dr.Item("RemainInterest")) - Share.FormatDouble(Dr.Item("PayCapital")) - Share.FormatDouble(Dr.Item("PayInterest")))
+                                    If Share.FormatDouble(Dr.Item("RemainCapital")) < 0 Then Dr.Item("RemainCapital") = 0
+                                End If
+                            End If
+                            '==== เพิ่ม rows เปล่าเข้าไปเพื่อคิดดอกเบี้ยถึง ณ วันที่ปัจจุบัน
+                            If EndDate = LastTermDate AndAlso LastTermDate < RptDate.Date Then
+                                SumRemainInterest = Share.FormatDouble(SumRemainInterest + Share.FormatDouble(Dr.Item("RemainInterest")))
+                                Dim DrRows As DataRow
+                                DrRows = DtRet.NewRow
+                                DrRows.Item("AccountNo") = Share.FormatString(Dr.Item("AccountNo"))
+                                DrRows.Item("PersonName") = Share.FormatString(Dr.Item("PersonName"))
+                                DrRows.Item("FirstTermDateDiff") = Share.FormatString(Dr.Item("FirstTermDateDiff"))
+                                DrRows.Item("FirstTermDate") = Share.FormatString(Dr.Item("FirstTermDate"))
+                                DrRows.Item("Term") = Share.FormatInteger(Dr.Item("Term")) + 1
+                                DrRows.Item("TermDate") = RptDate.Date
+                                Dim CalInfo2 As New Entity.CalInterest
+                                CalInfo2 = ObjCalInterest.CalRealInterestByDate(Share.FormatString(Dr.Item("AccountNo")), EndDate, RptDate.Date)
+                                DrRows.Item("RemainInterest") = Share.FormatDouble(CalInfo2.BackadvancePay_Int - SumRemainInterest)
+                                DrRows.Item("Amount") = Share.FormatDouble(DrRows.Item("RemainInterest"))
+                                'DrRows.Item("PayCapital") = 0
+                                'DrRows.Item("PayInterest") = CalInfo2.Receive_Int
+                                DtRet.Rows.Add(DrRows)
+
+                            End If
+                        Else
+                            '== งวดสุดท้ายต้องหาดอกเบี้ยจนถึงวันที่สั่ง report
+                            CalInfo = ObjCalInterest.CalRealInterestByDate(Share.FormatString(Dr.Item("AccountNo")), StDate, RptDate.Date)
+                            Dr.Item("RemainInterest") = Share.FormatDouble(CalInfo.BackadvancePay_Int - SumRemainInterest)
+                            '==== งวดสุดท้ายให้เอายอดเงินที่ค้างทั้งหมดลบกับยอดที่รับชำระมาแล้ว
+                            Dr.Item("RemainCapital") = Share.FormatDouble(CalInfo.TermArrearsCapital - SumRemainCapital)
+                        End If
+                        Dr.Item("Amount") = Share.FormatDouble(Dr.Item("RemainCapital")) + Share.FormatDouble(Dr.Item("RemainInterest"))
+                    ElseIf Share.FormatString(Dr.Item("ContractExpired")) = "***" Then
+
+                    Else
+
+                    End If
+                End If
+                SumRemainInterest = Share.FormatDouble(SumRemainInterest + Share.FormatDouble(Dr.Item("RemainInterest")))
+                SumRemainCapital = Share.FormatDouble(SumRemainCapital + Share.FormatDouble(Dr.Item("RemainCapital")))
+                StDate = Share.FormatDate(Dr.Item("TermDate"))
+            Next
+
+
+            'Dim dd As String = ""
+            'For Each drAdd As DataRow In DtRet.Rows
+            '    DtRpt.Rows.Add(drAdd)
+            'Next
+
+            Dim result = DtRpt.AsEnumerable().Union(DtRet.AsEnumerable())
+
+            Dim DsRet As New DataSet
+            DsRet.Tables.Add(result.CopyToDataTable)
+            Return DsRet
+        Catch ex As Exception
+
+        End Try
+
+    End Function
+
+
     Private Sub lorpt032()
 
         Dim obj As New Business.Reports

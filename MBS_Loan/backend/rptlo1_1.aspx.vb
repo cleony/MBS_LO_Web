@@ -18,7 +18,7 @@ Public Class rptlo1_1
         Try
             dt = obj.GetAllBranch()
             ddlBranch.DataSource = dt
-            ddlBranch.DataTextField = "Name"
+            ddlBranch.DataTextField = "ShowName"
             ddlBranch.DataValueField = "Id"
             ddlBranch.DataBind()
 

@@ -63,7 +63,7 @@ Namespace SQLData
             Dim dt As New DataTable
             Dim dsManager As New DataSet
             Try
-                sql = "  Select ID,Name,Status  "
+                sql = "  Select ID,Name,Status ,'-'+ ID+'-'+ Name as ShowName"
                 sql &= " From CD_Branch Order by ID "
 
                 cmd = New SqlData.DBCommand(sqlCon, sql, CommandType.Text)

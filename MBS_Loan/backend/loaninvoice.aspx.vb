@@ -170,7 +170,10 @@ Public Class loaninvoice
                 Dim InvoiceTerm As Integer = DtLoan.AsEnumerable().Where(Function(row) row.Field(Of String)("AccountNo") = Share.FormatString(Dr.Item("AccountNo"))).Select(Function(row) row.Field(Of Date)("TermDate")).Count
                 Dim PayRemain As Decimal = DtLoan.AsEnumerable().Where(Function(row) row.Field(Of String)("AccountNo") = Share.FormatString(Dr.Item("AccountNo"))).Select(Function(row) row.Field(Of Decimal)("PayRemain")).FirstOrDefault
 
+
+
                 If rdInvoice.Checked OrElse FirstTermDate.Date < (DateAdd(DateInterval.Day, (-1 * Share.FormatInteger(cboNPL.Value)), Share.FormatDate(dtRptDate.Value))).Date Then
+
                     '= แยกกรณีลดต้นลดดอกกับคงที่เพราะคงที่ต้องเอาดอกทั้งงวดแต่ลดต้นลดดอกเอาเฉพาะดอกเบี้ย ณ วันที่
                     If LoanInfo.CalculateType = "2" OrElse LoanInfo.CalculateType = "10" Then
                         '===== แยกกรณีถ้าเป็นใบแจ้งหนี้ให้คำนวณตามวันที่งวด แต่ถ้าเป็นค้างชำระต้องเป็นวันที่คิด
@@ -199,9 +202,14 @@ Public Class loaninvoice
                     Else
                         '=========== case คงที่หรือวิธีอื่นๆ ใช้ยอดตามงวดคงเหลือเลย
                         If ckMulct.Checked AndAlso LoanInfo.OverDueRate > 0 Then
+
+                            'ยอดคงค้างไม่เกิน 25% ไม่คิดค่าปรับ
+                            Dim minRemain As Double = Share.FormatDouble((LoanInfo.MinPayment * Share.MinCalMulctRemainRate) / 100)
+
                             '========== ค่าปรับ คิดจาก ยอดเงินปรับรวม * อัตราปรับ * วันที่ค้าง/365
                             '==== unpaid คิดค่าปรับจ้างวันที่ ณ วันที่
-                            Dim StLateTermDate As Date = DtLoan.AsEnumerable().Where(Function(row) row.Field(Of String)("AccountNo") = Share.FormatString(Dr.Item("AccountNo")) AndAlso row.Field(Of Decimal)("RecieveAmount") = 0).Select(Function(row) row.Field(Of Date)("TermDate")).FirstOrDefault
+                            Dim StLateTermDate As Date = DtLoan.AsEnumerable().Where(Function(row) row.Field(Of String)("AccountNo") = Share.FormatString(Dr.Item("AccountNo")) AndAlso row.Field(Of Decimal)("RecieveAmount") = 0 _
+                                                                                         AndAlso row.Field(Of Decimal)("Remain") > minRemain).Select(Function(row) row.Field(Of Date)("TermDate")).FirstOrDefault
                             If StLateTermDate < New Date(2000, 1, 1) Then
                                 StLateTermDate = LastTermDate.Date
                             End If

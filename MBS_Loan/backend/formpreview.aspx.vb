@@ -2897,6 +2897,8 @@ Public Class formpreview
             Dt.Columns.Add("TypePay", GetType(String))
             Dt.Columns.Add("CompanyAccNo", GetType(String))
             Dt.Columns.Add("TrackFee", GetType(Double))
+            Dt.Columns.Add("CloseFee", GetType(Double))
+            Dt.Columns.Add("AccNoBankName", GetType(String))
             Dr = Dt.NewRow
             Dr("DocNo") = PayInfo.DocNo
             Dr("AccountNo") = LoanInfo.AccountNo
@@ -2918,7 +2920,7 @@ Public Class formpreview
 
             Dr("Mulct") = Share.FormatDouble(PayInfo.Mulct)
             Dr("TrackFee") = Share.FormatDouble(PayInfo.TrackFee)
-
+            Dr("CloseFee") = Share.FormatDouble(PayInfo.CloseFee)
             Dr("TotalCapital") = LoanInfo.TotalAmount
             Dr("TotalCapitalBath") = Share.FormatDecimal(LoanInfo.TotalAmount).ThaiBahtText
             Dr("LoanTerm") = Share.FormatInteger(LoanInfo.Term)
@@ -3040,9 +3042,12 @@ Public Class formpreview
                 If TransInfo.PayType = "1" Then
                     Dr("TypePay") = "1"
                     Dr("CompanyAccNo") = ""
+                    Dr("AccNoBankName") = ""
                 Else
                     Dr("TypePay") = "2"
                     Dr("CompanyAccNo") = TransInfo.CompanyAccNo
+                    Dim objBank As New Business.CD_Bank
+                    Dr("AccNoBankName") = Share.FormatString(objBank.GetBankByCompanyAcc(TransInfo.CompanyAccNo)?.Name)
                 End If
 
             Catch ex As Exception
@@ -3267,6 +3272,7 @@ Public Class formpreview
             Dt.Columns.Add("CompanyAccNo", GetType(String))
             Dt.Columns.Add("TrackFee", GetType(Double))
             Dt.Columns.Add("CloseFee", GetType(Double))
+            Dt.Columns.Add("AccNoBankName", GetType(String))
             Dr = Dt.NewRow
             Dr("DocNo") = payinfo.DocNo
             Dr("AccountNo") = payinfo.AccountNo
@@ -3415,9 +3421,12 @@ Public Class formpreview
                 If payinfo.PayType = "1" Then
                     Dr("TypePay") = "1"
                     Dr("CompanyAccNo") = ""
+                    Dr("AccNoBankName") = ""
                 Else
                     Dr("TypePay") = "2"
                     Dr("CompanyAccNo") = TransInfo.CompanyAccNo
+                    Dim objBank As New Business.CD_Bank
+                    Dr("AccNoBankName") = Share.FormatString(objBank.GetBankByCompanyAcc(TransInfo.CompanyAccNo)?.Name)
                 End If
 
                 Dt.Rows.Add(Dr)

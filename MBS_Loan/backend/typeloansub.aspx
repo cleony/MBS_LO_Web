@@ -187,8 +187,9 @@
                                                                         <label class="col-sm-3 control-label">วิธีคิดค่าปรับจ่ายล่าช้า</label>
                                                                         <div class="col-sm-6">
                                                                             <select runat="server" id="cboMuclt" class="form-control">
-                                                                                <option>1.คิดจากเงินต้นคงเหลือ (ตามจำนวนวันที่ผิดนัดชำระ)</option>
-                                                                                <option>2.คิดจากเงินต้นคงเหลือ (ตามจำนวนวันในงวดที่ผิดนัดชำระ)</option>
+                                                                                 <option value="1">1.คิดจากเงินต้นคงเหลือ (ตามจำนวนวันที่ผิดนัดชำระ)</option>
+                                                                                <option value ="2">2.คิดจากเงินงวด เงินต้น+ดอกเบี้ย (ตามจำนวนวันที่ผิดนัดชำระ)</option>
+                                                                                <option value="4">3.คิดจากเงินต้นคงเหลือ (ตามจำนวนวันในงวดที่ผิดนัดชำระ)</option>
                                                                             </select>
                                                                         </div>
                                                                     </div>
